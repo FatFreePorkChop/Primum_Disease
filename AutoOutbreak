@@ -1,0 +1,97 @@
+/*This takes
+
+
+*/
+
+namespace Primum_Medicine
+{
+    HediffDef[] diseaseList = new HediffDef[];
+    //Dictionary<HediffDef, float> relativeDiseaseFrequencies = new Dictionary<HediffDef,float>;
+    
+    public class WorldComponent_PeriodicOutbreak : WorldComponent
+    {
+        public int tickCounter = 0;
+        public int ticksToNextOutbreak = 60000 * 60;
+
+
+        public WorldComponent_PeriodicOutbreak(World world) : base(world)
+        {
+        }
+
+        public void SetTicksToNextOutbreak()
+        {
+            (float,float) randomNums; //BADBADBAD = random math ???
+            zScore = Mathf.sqrt(-2*randomNums.Item1) * Mathf.cos(6.283*randomNums.Item2);
+            
+            BiomeDef currentBiome; //= ???
+            
+            int colonistCount; //Decreases standard deviation
+            /*Factors that should affect disease outbreak interval include 
+                Colony biomass: more animals and colonists make for more frequent disease
+                Weighted room cleanliness (3x weight for hospitals, kitchens)?
+                Per epidemiologist friend, could include gender distribution; but difficult to justify given no other gameplay differences between sexes
+            float colonistEquivalentBiomass; //Total biomass of colony, including animals, colonists, prisoners, and slaves*/
+            float outbreaksPerYear = 60/currentBiome.diseaseMtbDays * Mathf.sqrt(colonistEquivalentBiomass/Mathf.sqrt(colonistCount)); //From biome
+            
+            ticksToNextOutbreak = 60000*60 * 
+                (1/outbreaksPerYear) *
+                Mathf.Clamp(1+zScore/Mathf.sqrt(colonistCount), 0.2, 2)
+            ;
+            return ticksToNextOutbreak;
+        }
+        
+        public HediffDef getWeightedDiseaseIncident()
+        {
+            IncidentDef outbreakDiseaseInc;
+            BiomeDef currentBiome; //= ???
+            float partialWeight = 0;
+            
+            for(int i = 0; i < diseaseList.Count; i++)
+            {
+                partialWeight += diseaseList[i].commonality;
+            }
+            //partialWeight*=random
+            for(int i = 0; i < diseaseList.Count; i++)
+            {
+                partialWeight -= diseaseList[i].commonality;
+                if (partialWeight<=0)
+                {
+                    outbreakDiseaseInc = diseaseList[i].diseaseInc;
+                    break;
+                }
+            }
+            return outbreakDiseaseInc
+        }
+        
+        public override void FinalizeInit()
+        {
+            base.FinalizeInit();
+            SetTicksToNextOutbreak();
+        }
+        
+        public override void WorldComponentTick()
+        {
+            base.WorldComponentTick();
+            tickCounter++;
+            if(tickCounter>=ticksToNextOutbreak)
+            {
+                IncidentDef outbreakDiseaseInc = getWeightedDiseaseIncident();
+                //Assign outbreak to colonists
+                SetTicksToNextOutbreak();
+                tickCounter=0;
+            }
+        }
+
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_Values.Look(ref this.tickCounter, nameof(this.tickCounter));
+            Scribe_Values.Look(ref this.ticksToNextOutbreak, nameof(this.ticksToNextOutbreak));
+        }
+    }
+}
+
+
+
+
+
