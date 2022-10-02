@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch> 
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Ideology</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<!--Biosculptors should handle our new diseases-->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "BiosculptorPod"]/comps[key = "medic"]/conditionsToPossiblyCure</xpath>
+					<value>
+						<conditionsToPossiblyCure>
+							<li>PM_Malaria</li>
+							<li>PM_SleepingSickness</li>
+							<li>PM_Flu</li>
+							<li>PM_Plague</li>
+							<li>GutWorms</li>
+							<li>MuscleParasites</li>
+							<li>WoundInfection</li>
+							<li>PM_Sepsis</li>
+							<li>PM_Tuberculosis</li>
+						</conditionsToPossiblyCure>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace"> 
+					<xpath>/Defs/ThingDef[defName = "BiosculptorPod"]/comps[key = "bioregeneration"]/conditionsToPossiblyCure</xpath>
+					<value>
+						<conditionsToPossiblyCure>
+							<li>Asthma</li>
+							<li>BadBack</li>
+							<li>Cataract</li>
+							<li>Frail</li>
+							<li>HearingLoss</li>
+							<li>HeartArteryBlockage</li>
+							<li>PM_BrainArteryBlockage</li>
+							<li>PM_EncapsulatedMalaria</li>
+							<li>PM_EncapsulatedTuberculosis</li>
+							<li>PM_CreutzfeldtRimDisease</li>
+							<li>Cirrhosis</li>
+							<li>PM_Coma</li>
+						</conditionsToPossiblyCure>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+</Patch>

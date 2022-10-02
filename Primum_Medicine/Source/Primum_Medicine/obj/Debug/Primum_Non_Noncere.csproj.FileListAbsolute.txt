@@ -1,0 +1,5 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Primum_Non_Nocere\Source\Primum_Non_Noncere\obj\Debug\Primum_Non_Noncere.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Primum_Non_Nocere\Source\Primum_Non_Noncere\obj\Debug\Primum_Non_Noncere.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Primum_Non_Nocere\1.3\Assemblies\Primum_Non_Noncere.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Primum_Non_Nocere\Source\Primum_Non_Noncere\obj\Debug\Primum_Non_Noncere.csproj.CopyComplete
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Primum_Non_Nocere\Source\Primum_Non_Noncere\obj\Debug\Primum_Non_Noncere.dll

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<HediffDef ParentName="ChronicDiseaseBase"> <!--Brain artery blockage. Nearly identical to heart version-->
+		<defName>PM_BrainArteryBlockage</defName>
+		<label>artery blockage</label>
+		<labelNoun>an artery blockage</labelNoun>
+		<description>A blockage in one of the critical arteries in the brain. Cerebral artery blockages are a signifiant risk factor for strokes.</description>
+		<lethalSeverity>1</lethalSeverity>
+		<comps>
+			<li Class="HediffCompProperties_Immunizable">
+				<severityPerDayNotImmune>0.0007</severityPerDayNotImmune>
+				<severityPerDayNotImmuneRandomFactor>0.5~3</severityPerDayNotImmuneRandomFactor>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>minor</label>
+				<becomeVisible>false</becomeVisible>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>PM_Stroke</hediff>
+						<allowOnLodgers>false</allowOnLodgers>
+						<allowOnQuestRewardPawns>false</allowOnQuestRewardPawns>
+						<allowOnQuestReservedPawns>false</allowOnQuestReservedPawns>
+						<allowOnBeggars>false</allowOnBeggars>
+						<mtbDays>300</mtbDays>
+						<partsToAffect>
+							<li>Brain</li>
+						</partsToAffect>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<minSeverity>0.2</minSeverity>
+				<label>minor</label>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>PM_Stroke</hediff>
+						<allowOnLodgers>false</allowOnLodgers>
+						<allowOnQuestRewardPawns>false</allowOnQuestRewardPawns>
+						<allowOnQuestReservedPawns>false</allowOnQuestReservedPawns>
+						<allowOnBeggars>false</allowOnBeggars>
+						<mtbDays>200</mtbDays>
+						<partsToAffect>
+							<li>Brain</li>
+						</partsToAffect>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<minSeverity>0.4</minSeverity>
+				<label>major</label>
+				<partEfficiencyOffset>-0.05</partEfficiencyOffset>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>PM_Stroke</hediff>
+						<allowOnLodgers>false</allowOnLodgers>
+						<allowOnQuestRewardPawns>false</allowOnQuestRewardPawns>
+						<allowOnQuestReservedPawns>false</allowOnQuestReservedPawns>
+						<allowOnBeggars>false</allowOnBeggars>
+						<mtbDays>100</mtbDays>
+						<partsToAffect>
+							<li>Brain</li>
+						</partsToAffect>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<minSeverity>0.6</minSeverity>
+				<label>major</label>
+				<partEfficiencyOffset>-0.1</partEfficiencyOffset>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>PM_Stroke</hediff>
+						<allowOnLodgers>false</allowOnLodgers>
+						<allowOnQuestRewardPawns>false</allowOnQuestRewardPawns>
+						<allowOnQuestReservedPawns>false</allowOnQuestReservedPawns>
+						<allowOnBeggars>false</allowOnBeggars>
+						<mtbDays>60</mtbDays>
+						<partsToAffect>
+							<li>Brain</li>
+						</partsToAffect>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<minSeverity>0.9</minSeverity>
+				<label>extreme</label>
+				<lifeThreatening>true</lifeThreatening>
+				<partEfficiencyOffset>-0.15</partEfficiencyOffset>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>PM_Stroke</hediff>
+						<allowOnLodgers>false</allowOnLodgers>
+						<allowOnQuestRewardPawns>false</allowOnQuestRewardPawns>
+						<allowOnQuestReservedPawns>false</allowOnQuestReservedPawns>
+						<allowOnBeggars>false</allowOnBeggars>
+						<mtbDays>30</mtbDays>
+						<partsToAffect>
+							<li>Brain</li>
+						</partsToAffect>
+					</li>
+				</hediffGivers>
+			</li>
+		</stages>
+	</HediffDef>
+	<RecipeDef ParentName="SurgeryFlesh"> <!--Brain angioplasty-->
+		<defName>PM_BrainAngioplasty</defName>
+		<label>cerebral angioplasty</label>
+		<description>A special operation to dilate and remove blockages from critical arteries in the brain; requires a skilled physician.</description>
+		<workerClass>Recipe_RemoveHediff</workerClass>
+		<jobString>Performing angioplasty.</jobString>
+		<workAmount>4500</workAmount>
+		<recipeUsers>
+			<li>Human</li>
+		</recipeUsers>
+		<isViolation>false</isViolation>
+		<removesHediff>PM_BrainArteryBlockage</removesHediff>
+		<successfullyRemovedHediffMessage>{0} has successfully cleared {1}'s blocked artery.</successfullyRemovedHediffMessage>
+		<deathOnFailedSurgeryChance>0.3</deathOnFailedSurgeryChance>
+		<surgerySuccessChanceFactor>1</surgerySuccessChanceFactor>
+		<skillRequirements>
+			<Medicine>13</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+			<count>10</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<disallowedThingDefs>
+				<li>MedicineHerbal</li>
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+	<RecipeDef ParentName="SurgeryFlesh"> <!--Remove a blocked artery in the heart-->
+		<defName>PM_HeartAngioplasty</defName>
+		<label>coronary angioplasty</label>
+		<description>A special operation to dilate and remove blockages from critical arteries in the heart; requires a skilled physician.</description>
+		<workerClass>Recipe_RemoveHediff</workerClass>
+		<jobString>Performing angioplasty.</jobString>
+		<workAmount>4500</workAmount>
+		<recipeUsers>
+			<li>Human</li>
+		</recipeUsers>
+		<isViolation>false</isViolation>
+		<removesHediff>HeartArteryBlockage</removesHediff>
+		<successfullyRemovedHediffMessage>{0} has successfully cleared {1}'s blocked artery.</successfullyRemovedHediffMessage>
+		<deathOnFailedSurgeryChance>0.3</deathOnFailedSurgeryChance>
+		<surgerySuccessChanceFactor>1</surgerySuccessChanceFactor>
+		<skillRequirements>
+			<Medicine>13</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+			<count>10</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<disallowedThingDefs>
+				<li>MedicineHerbal</li>
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+
+</Defs>

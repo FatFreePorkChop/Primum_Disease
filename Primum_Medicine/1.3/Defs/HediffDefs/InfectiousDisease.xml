@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--Adds secondary diseases, including sepsis, ischemia, and necrosis
+
+Standard information to keep in mind for vanilla disease:
+
+	T_D (Tending difficulty is minimum q so that immunity catches up: n = i*s + t*q. q = (n-i*s)/t
+	N_C (natural course or time to death untreated) = 1/n
+	I_F (how much each increment by 1 of immunity gain speed affects tending difficulty) = dq/ds = -i/t
+
+	s = immunity gain speed (assumed 1)
+	q = average tending quality (assume = tending difficulty, T_D). 
+
+	n = severity not immune per day = 1/N_C
+	i = immunity per day = (n - t*q)/s = 1/N_C - t*T_D = 1/N_C + i*T_D/I_F = 1/N_C / (1 + T_D/I_F)
+	t = severity tended per day = -i/I_F
+	
+	Flu: N_C = 4, I_F = 3.1, T_D = 0.13
+        <baseTendDurationHours>12</baseTendDurationHours>
+        <severityPerDayTended>-0.0773</severityPerDayTended>
+        <severityPerDayNotImmune>0.2488</severityPerDayNotImmune>
+        <immunityPerDaySick>0.2388</immunityPerDaySick>
+        <severityPerDayImmune>-0.4947</severityPerDayImmune>
+        <immunityPerDayNotSick>-0.06</immunityPerDayNotSick>
+		
+	Plague: N_C = 1.5, I_F = 1.44, T_D = 0.4
+        <baseTendDurationHours>12</baseTendDurationHours>
+        <severityPerDayTended>-0.3628</severityPerDayTended>
+        <severityPerDayNotImmune>0.666</severityPerDayNotImmune>
+        <immunityPerDaySick>0.5224</immunityPerDaySick>
+        <severityPerDayImmune>-0.333</severityPerDayImmune>
+        <immunityPerDayNotSick>-0.02</immunityPerDayNotSick>
+		
+	Malaria: N_C = 2.7, I_F = 1.36, T_D = 0.24
+	    <baseTendDurationHours>12</baseTendDurationHours>
+        <severityPerDayTended>-0.232</severityPerDayTended>
+        <severityPerDayNotImmune>0.3702</severityPerDayNotImmune>
+        <immunityPerDaySick>0.3145</immunityPerDaySick>
+        <severityPerDayImmune>-0.7297</severityPerDayImmune>
+        <immunityPerDayNotSick>-0.03</immunityPerDayNotSick>
+	
+	Sleeping sickness: N_C = 8.33, I_F = 1.43, T_D = 0.29
+        <baseTendDurationHours>32</baseTendDurationHours>
+        <severityPerDayTended>-0.07</severityPerDayTended>
+        <severityPerDayNotImmune>0.12</severityPerDayNotImmune>
+        <immunityPerDaySick>0.10</immunityPerDaySick>
+        <severityPerDayImmune>-0.176</severityPerDayImmune>
+        <immunityPerDayNotSick>-0.02</immunityPerDayNotSick>
+		
+	Wound infection: N_C = 1.2, I_F = 1.22, T_D = 0.37
+        <baseTendDurationHours>12</baseTendDurationHours>
+        <severityPerDayTended>-0.53</severityPerDayTended>
+        <severityPerDayNotImmune>0.84</severityPerDayNotImmune>
+        <immunityPerDaySick>0.6441</immunityPerDaySick>
+        <severityPerDayImmune>-0.70</severityPerDayImmune>
+        <immunityPerDayNotSick>-0.40</immunityPerDayNotSick>
+-->
+<Defs>
+
+	<HediffDef ParentName="InfectionBase"> <!--Brain worms: longer lasting than other parasites. May cause dementia. Lasts 8 days if well treated, 16 if poorly. Should cause dementia 25% of the time if poorly treated.-->
+		<defName>PM_BrainWorms</defName>
+		<label>brain worms</label>
+		<description>Highly evolved parasitic worms in the brain. They cause pain, impaired sleep, and decreased higher functions, and may progress to dementia.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<makesSickThought>true</makesSickThought>
+		<tendable>true</tendable>
+		<stages>
+			<li>
+				<painOffset>0.1</painOffset>
+				<statOffsets>
+					<RestRateMultiplier>-0.40</RestRateMultiplier>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.1</offset>
+					</li>
+				</capMods>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>Dementia</hediff>
+						<mtbDays>65</mtbDays>
+					</li>
+				</hediffGivers>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_TendDuration">
+				<baseTendDurationHours>48</baseTendDurationHours>
+				<disappearsAtTotalTendQuality>4</disappearsAtTotalTendQuality>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<HediffDef ParentName="InfectionBase"> <!--Lung worms: Lasts less time than other worms. May cause asthma, gut worms. Lasts 4-8 days. Should cause asthma 40% of the time if poorly treated, gut worms 100%-->
+		<defName>PM_LungWorms</defName>
+		<label>lung worms</label>
+		<description>Parasitic worms in the lungs. They impair breathing and sleep, and may cause asthma. Additionally, some worms may be coughed up and travel to the gut.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<makesSickThought>true</makesSickThought>
+		<tendable>true</tendable>
+		<stages>
+			<li>
+				<painOffset>0.1</painOffset>
+				<statOffsets>
+					<RestRateMultiplier>-0.30</RestRateMultiplier>
+				</statOffsets>
+				<restFallFactorOffset>0.3</restFallFactorOffset>
+				<partEfficiencyOffset>-0.5</partEfficiencyOffset>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>Asthma</hediff>
+						<mtbDays>20</mtbDays>
+						<partsToAffect>
+							<li>Lung</li>
+						</partsToAffect>
+						<countToAffect>2</countToAffect>
+					</li>
+					<li Class="HediffGiver_Random">
+						<hediff>GutWorms</hediff>
+						<mtbDays>8</mtbDays>
+						<partsToAffect>
+							<li>Stomach</li>
+						</partsToAffect>
+					</li>
+				</hediffGivers>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_TendDuration">
+				<baseTendDurationHours>48</baseTendDurationHours>
+				<disappearsAtTotalTendQuality>2</disappearsAtTotalTendQuality>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	
+	<HediffDef ParentName="InfectionBase"> <!--Tuberculosis: protracted disease that is difficult for the immunocompromised to fight off. N_C = 6, I_F = 4.5, T_D = .2-->
+		<defName>PM_Tuberculosis</defName>
+		<label>tuberculosis</label>
+		<description>Previously known as consumption, tuberculosis has ravaged humanity for millenia, especially those in dry climates. Initially relatively innocuous except in the immunocompromised, tuberculosis also forms complexes within the body--especially the spine and lungs. These complexes both impair immunity and can redevelop into active disease.</description>
+		<makesSickThought>true</makesSickThought>
+		<lethalSeverity>1</lethalSeverity>
+		<tendable>true</tendable>
+		<comps>
+			<li Class="HediffCompProperties_TendDuration">
+				<baseTendDurationHours>24</baseTendDurationHours>
+				<severityPerDayTended>-0.0355</severityPerDayTended>
+			</li>
+			<li Class="HediffCompProperties_Immunizable">
+				<severityPerDayNotImmune>0.167</severityPerDayNotImmune>
+				<immunityPerDaySick>0.160</immunityPerDaySick>
+				<severityPerDayImmune>-0.333</severityPerDayImmune>
+				<immunityPerDayNotSick>-0.033</immunityPerDayNotSick>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>minor</label>
+				<painOffset>0.1</painOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.1</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>-0.2</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.5</minSeverity>
+				<label>major</label>
+				<painOffset>0.25</painOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>-0.4</offset>
+					</li>
+				</capMods>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>PM_EncapsulatedTuberculosis</hediff>
+						<mtbDays>6</mtbDays>
+						<partsToAffect>
+							<li>Lung</li>
+							<li>Spine</li>
+							<li>Skull</li>
+						</partsToAffect>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<minSeverity>0.8</minSeverity>
+				<label>extreme</label>
+				<painOffset>0.4</painOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.3</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>-0.6</offset>
+					</li>
+				</capMods>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>PM_EncapsulatedTuberculosis</hediff>
+						<mtbDays>6</mtbDays>
+						<partsToAffect>
+							<li>Lung</li>
+							<li>Spine</li>
+							<li>Skull</li>
+						</partsToAffect>
+					</li>
+					<li Class="HediffGiver_Random">
+						<hediff>BadBack</hediff>
+						<mtbDays>6</mtbDays> <!--~20% chance of giving bad back-->
+					</li>
+				</hediffGivers>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="DiseaseBase"> <!--Ghon complex: encapsulated tuberculosis -->
+		<defName>PM_EncapsulatedTuberculosis</defName>
+		<label>Ghon complex</label>
+		<description>A granuloma leftover from a tuberculosis infection. Painless, but impairs immunity and may cause a reactivation of tuberculosis in the future. Can only be removed surgically.</description>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<chanceToCauseNoPain>0.75</chanceToCauseNoPain>
+		<stages>
+			<li>
+				<partEfficiencyOffset>-0.1</partEfficiencyOffset>
+				<capMods>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>-0.15</offset>
+					</li>
+				</capMods>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>PM_Tuberculosis</hediff>
+						<mtbDays>90</mtbDays>
+					</li>
+				</hediffGivers>
+			</li>
+		</stages>
+	</HediffDef>	
+	<HediffDef ParentName="DiseaseBase"> <!--Encapsulated malaria -->
+		<defName>PM_EncapsulatedMalaria</defName>
+		<label>Encapsulated malaria</label>
+		<description>The parasite responsible for malaria, plasmodium, may spawn hypnozoites which remain in the musculatrue or liver and may reactivate the primary disease. May be removed surgically, or may resolve spontaneously in roughly a year.</description>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<chanceToCauseNoPain>0.75</chanceToCauseNoPain>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>1800000~5400000</disappearsAfterTicks> <!--30 ! 90 days -->
+				<showRemainingTime>false</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<partEfficiencyOffset>-0.1</partEfficiencyOffset>
+				<painOffset>0.1</painOffset>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>Malaria</hediff>
+						<mtbDays>45</mtbDays>
+					</li>
+				</hediffGivers>
+			</li>
+		</stages>
+	</HediffDef>
+	<RecipeDef ParentName="SurgeryFlesh"> <!--Remove encapsulated malaria-->
+		<defName>PM_RemoveEncapsulatedMalaria</defName>
+		<label>remove encapsulated malaria</label>
+		<description>A special medical operation uses a massive dose of fat-soluble broad-spectrum antibiotics to eradicate all traces of encapsulated malaria; exposing the body to so many antibiotics may be dangerous!</description>
+		<workerClass>Recipe_RemoveHediff</workerClass>
+		<jobString>Infusing fat-soluble antibiotics.</jobString>
+		<workAmount>2000</workAmount>
+		<recipeUsers>
+			<li>Human</li>
+		</recipeUsers>
+		<hideBodyPartNames>true</hideBodyPartNames>
+		<isViolation>false</isViolation>
+		<removesHediff>PM_EncapsulatedMalaria</removesHediff>
+		<successfullyRemovedHediffMessage>{0} has successfully eradicated {1}'s encapsulated malaria.</successfullyRemovedHediffMessage>
+		<deathOnFailedSurgeryChance>0.2</deathOnFailedSurgeryChance>
+		<surgerySuccessChanceFactor>1</surgerySuccessChanceFactor>
+		<skillRequirements>
+			<Medicine>10</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<disallowedThingDefs>
+				<li>MedicineHerbal</li>
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>	
+	<RecipeDef ParentName="SurgeryFlesh"> <!--Remove encapsulated tuberculosis-->
+		<defName>PM_RemoveEncapsulatedTuberculosis</defName>
+		<label>remove encapsulated tuberculosis</label>
+		<description>A special medical operation uses a massive dose of fat-soluble broad-spectrum antibiotics to eradicate all traces of encapsulated tuberculosis; exposing the body to so many antibiotics may be dangerous!</description>
+		<workerClass>Recipe_RemoveHediff</workerClass>
+		<jobString>Infusing fat-soluble antibiotics.</jobString>
+		<workAmount>2000</workAmount>
+		<recipeUsers>
+			<li>Human</li>
+		</recipeUsers>
+		<hideBodyPartNames>true</hideBodyPartNames>
+		<isViolation>false</isViolation>
+		<removesHediff>PM_EncapsulatedTuberculosis</removesHediff>
+		<successfullyRemovedHediffMessage>{0} has successfully eradicated {1}'s encapsulated tuberculosis.</successfullyRemovedHediffMessage>
+		<deathOnFailedSurgeryChance>0.2</deathOnFailedSurgeryChance>
+		<surgerySuccessChanceFactor>1</surgerySuccessChanceFactor>
+		<skillRequirements>
+			<Medicine>10</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<disallowedThingDefs>
+				<li>MedicineHerbal</li>
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+</Defs>

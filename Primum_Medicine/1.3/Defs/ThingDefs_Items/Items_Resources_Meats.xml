@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--  Bases  -->
+	<ThingDef Name="PM_RawMeatBase" Abstract="True" ParentName="OrganicProductBase">
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>2</daysToRotStart>
+				<rotDestroys>True</rotDestroys>
+			</li>
+		</comps>
+		<statBases>
+			<MaxHitPoints>60</MaxHitPoints>
+			<Nutrition>0.05</Nutrition>
+			<Flammability>0.5</Flammability>
+			<FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+			<DeteriorationRate>6</DeteriorationRate>
+			<MarketValue>2</MarketValue>
+		</statBases>
+		<tickerType>Rare</tickerType>
+		<ingestible>
+			<foodType>Meat</foodType>
+			<preferability>DesperateOnly</preferability>
+			<ingestEffect>EatMeat</ingestEffect>
+			<ingestSound>RawMeat_Eat</ingestSound>		
+		</ingestible>
+		<thingCategories>
+			<li>MeatRaw</li>
+		</thingCategories>
+	</ThingDef>
+
+	
+	
+	<ThingDef ParentName="PM_RawMeatBase">
+		<defName>PM_CRD_Meat_Human</defName>
+		<label>LOLOLOL</label>
+		<description>OLOLOLL DESCRIPTION TO COPY.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/MeatFoodRaw/Meat_Human</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ingestible>
+			<specialThoughtDirect>AteRawFood</specialThoughtDirect>
+			<sourceDef>Human</sourceDef>
+		</ingestible>
+	</ThingDef>
+</Defs>
