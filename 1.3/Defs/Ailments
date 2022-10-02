@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HediffDef ParentName="ChronicDiseaseBase"> <!--Creutzfeldt-Rim Disease-->
+		<defName>PD_CreutzfeldtRimDisease</defName>
+		<label>Creutzfeldt-Rim Disease</label>
+		<description>Creutzfeldt-Rim Disease is a variant of the prion-mediated Creutzfeldt-Jacob Disease that occurs spontaneously at much higher rates on the Rim without seeming explantion. While these misfolded proteins are almost invariably deadly and are devilishly difficult to dispose of safely, these are constrained to the brain, so is only spread via cannibalism. This disease begins asymptomatic and hidden, possibly for years, before rapidly destroying its host's central nervous system, resulting in frequent mental breaks and inevitable death. This disease affects a protein highly specific to the human brain, and is no danger to non-humans or most genetically-modified humans</description>
+		<makesSickThought>true</makesSickThought>
+		<initialSeverity>0.01</initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+		<lethalSeverity>1.0</lethalSeverity>
+		<tendable>false</tendable>
+		<comps>
+			<li Class="HediffCompProperties_Immunizable">
+				<severityPerDayNotImmune>0.0056</severityPerDayNotImmune>
+				<severityPerDayNotImmuneRandomFactor>
+					<min>1</min>
+					<max>3</max>
+				</severityPerDayNotImmuneRandomFactor>
+			</li>
+		</comps>
+        <modExtensions>
+            <li Class="PrimumDisease.PD_TransmissionExtension">
+                <transmissionMethods>
+					<li>PD_FoodBorne</li>
+				</transmissionMethods>
+                <transmissivity>1</transmissivity>
+                <survivalOnCooked>1</survivalOnCooked>
+                <resistanceCapacities>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<factor>0.5</factor>
+					</li>
+				</resistanceCapacities>
+            </li>
+        </modExtensions>
+		<stages>
+			<li>
+				<label>latent</label>
+				<becomeVisible>false</becomeVisible>
+			</li>
+			<li>
+				<label>initial</label>
+				<minSeverity>0.94</minSeverity>
+				<lifeThreatening>true</lifeThreatening>
+				<partEfficiencyOffset>-0.25</partEfficiencyOffset>
+				<painOffset>-0.2</painOffset>
+				<mentalStateGivers>
+					<li>
+						<mentalState>Berserk</mentalState>
+						<mtbDays>0.4</mtbDays>
+					</li>
+				</mentalStateGivers>
+			</li>
+			<li>
+				<label>terminal</label>
+				<minSeverity>0.98</minSeverity>
+				<lifeThreatening>true</lifeThreatening>
+				<partEfficiencyOffset>-0.75</partEfficiencyOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.1</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="ChronicDiseaseBase"> <!--Brain artery blockage. Nearly identical to heart version-->
+		<defName>PD_BrainArteryBlockage</defName>
+		<label>artery blockage</label>
+		<labelNoun>an artery blockage</labelNoun>
+		<description>A blockage in one of the critical arteries in the brain. Cerebral artery blockages are a signifiant risk factor for strokes.</description>
+		<lethalSeverity>1</lethalSeverity>
+		
+		<comps>
+			<li Class="HediffCompProperties_Immunizable">
+				<severityPerDayNotImmune>0.0007</severityPerDayNotImmune>
+				<severityPerDayNotImmuneRandomFactor>0.5~3</severityPerDayNotImmuneRandomFactor>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>minor</label>
+				<becomeVisible>false</becomeVisible>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>PD_Stroke</hediff>
+						<allowOnLodgers>false</allowOnLodgers>
+						<allowOnQuestRewardPawns>false</allowOnQuestRewardPawns>
+						<allowOnQuestReservedPawns>false</allowOnQuestReservedPawns>
+						<allowOnBeggars>false</allowOnBeggars>
+						<mtbDays>300</mtbDays>
+						<partsToAffect>
+							<li>Brain</li>
+						</partsToAffect>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<minSeverity>0.2</minSeverity>
+				<label>minor</label>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>PD_Stroke</hediff>
+						<allowOnLodgers>false</allowOnLodgers>
+						<allowOnQuestRewardPawns>false</allowOnQuestRewardPawns>
+						<allowOnQuestReservedPawns>false</allowOnQuestReservedPawns>
+						<allowOnBeggars>false</allowOnBeggars>
+						<mtbDays>200</mtbDays>
+						<partsToAffect>
+							<li>Brain</li>
+						</partsToAffect>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<minSeverity>0.4</minSeverity>
+				<label>major</label>
+				<partEfficiencyOffset>-0.05</partEfficiencyOffset>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>PD_Stroke</hediff>
+						<allowOnLodgers>false</allowOnLodgers>
+						<allowOnQuestRewardPawns>false</allowOnQuestRewardPawns>
+						<allowOnQuestReservedPawns>false</allowOnQuestReservedPawns>
+						<allowOnBeggars>false</allowOnBeggars>
+						<mtbDays>100</mtbDays>
+						<partsToAffect>
+							<li>Brain</li>
+						</partsToAffect>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<minSeverity>0.6</minSeverity>
+				<label>major</label>
+				<partEfficiencyOffset>-0.1</partEfficiencyOffset>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>PD_Stroke</hediff>
+						<allowOnLodgers>false</allowOnLodgers>
+						<allowOnQuestRewardPawns>false</allowOnQuestRewardPawns>
+						<allowOnQuestReservedPawns>false</allowOnQuestReservedPawns>
+						<allowOnBeggars>false</allowOnBeggars>
+						<mtbDays>60</mtbDays>
+						<partsToAffect>
+							<li>Brain</li>
+						</partsToAffect>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<minSeverity>0.9</minSeverity>
+				<label>extreme</label>
+				<lifeThreatening>true</lifeThreatening>
+				<partEfficiencyOffset>-0.15</partEfficiencyOffset>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>PD_Stroke</hediff>
+						<allowOnLodgers>false</allowOnLodgers>
+						<allowOnQuestRewardPawns>false</allowOnQuestRewardPawns>
+						<allowOnQuestReservedPawns>false</allowOnQuestReservedPawns>
+						<allowOnBeggars>false</allowOnBeggars>
+						<mtbDays>30</mtbDays>
+						<partsToAffect>
+							<li>Brain</li>
+						</partsToAffect>
+					</li>
+				</hediffGivers>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="ChronicDiseaseBase"> <!--Leukemia: faster than carcinoma and can't be excised, but better remission-->
+		<defName>PD_Leukemia</defName>
+		<label>leukemia</label>
+		<labelNoun>a leukemia</labelNoun>
+		<description>A nonlocalized cancerous growth of white blood cells, leukemia will progress over time, eventually killing the patient outright--though most patients die of infection.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<initialSeverity>0.3</initialSeverity>
+		<lethalSeverity>1</lethalSeverity>
+		<makesSickThought>true</makesSickThought>
+		<tendable>true</tendable>
+		<removeOnQuestLodgers>true</removeOnQuestLodgers>
+		<comps>
+			<li Class="HediffCompProperties_TendDuration">
+				<baseTendDurationHours>64</baseTendDurationHours>
+				<severityPerDayTended>-0.01</severityPerDayTended>
+			</li>
+			<li Class="PD_HediffCompProperties_GrowthMode">
+				<severityPerDayGrowing>0.01</severityPerDayGrowing> 
+				<severityPerDayRemission>-0.008</severityPerDayRemission>
+				<severityPerDayGrowingRandomFactor>0.7~1.7</severityPerDayGrowingRandomFactor>
+				<severityPerDayRemissionRandomFactor>0.7~1.5</severityPerDayRemissionRandomFactor>
+				
+				<announceGrowth>true</announceGrowth>
+				<growthModeChangeMtbDays>50</growthModeChangeMtbDays>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>early</label>
+				<becomeVisible>false</becomeVisible>
+				<statOffsets>
+					<PsychicSensitivity>0.4</PsychicSensitivity>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.05</minSeverity>
+				<label>minor</label>
+				<painOffset>0.1</painOffset>
+				<capMods>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>-0.3</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<PsychicSensitivity>0.4</PsychicSensitivity>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.4</minSeverity>
+				<label>major</label>
+				<painOffset>0.2</painOffset>
+				<capMods>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>-0.5</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<PsychicSensitivity>0.4</PsychicSensitivity>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>PD_ChronicKidneyDisease</hediff>
+						<mtbDays>120</mtbDays>
+						<partsToAffect>Kidney</partsToAffect>
+						<countToAffect>2</countToAffect>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<minSeverity>0.8</minSeverity>
+				<label>extreme</label>
+				<painOffset>0.3</painOffset>
+				<lifeThreatening>true</lifeThreatening>
+				<capMods>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>-0.7</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<PsychicSensitivity>0.4</PsychicSensitivity>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>PD_ChronicKidneyDisease</hediff>
+						<mtbDays>30</mtbDays>
+						<partsToAffect>Kidney</partsToAffect>
+						<countToAffect>2</countToAffect>
+					</li>
+					<li Class="HediffGiver_Random">
+						<hediff>HeartAttack</hediff>
+						<mtbDays>60</mtbDays>
+						<partsToAffect>
+							<li>Heart</li>
+						</partsToAffect>
+					</li>
+					<li Class="HediffGiver_Random">
+						<hediff>PD_Stroke</hediff>
+						<mtbDays>60</mtbDays>
+						<partsToAffect>
+							<li>Brain</li>
+						</partsToAffect>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<minSeverity>0.9</minSeverity>
+				<label>extreme</label>
+				<painOffset>0.4</painOffset>
+				<lifeThreatening>true</lifeThreatening>
+				<capMods>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>-0.8</offset>
+					</li>
+				</capMods>
+				<statOffsets>
+					<PsychicSensitivity>0.4</PsychicSensitivity>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>PD_ChronicKidneyDisease</hediff>
+						<mtbDays>30</mtbDays>
+						<partsToAffect>Kidney</partsToAffect>
+						<countToAffect>2</countToAffect>
+					</li>
+					<li Class="HediffGiver_Random">
+						<hediff>HeartAttack</hediff>
+						<mtbDays>60</mtbDays>
+						<partsToAffect>
+							<li>Heart</li>
+						</partsToAffect>
+					</li>
+					<li Class="HediffGiver_Random">
+						<hediff>PD_Stroke</hediff>
+						<mtbDays>60</mtbDays>
+						<partsToAffect>
+							<li>Brain</li>
+						</partsToAffect>
+					</li>
+				</hediffGivers>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="ChronicDiseaseBase"> <!--Fibroma: very similar to base game carcinoma with less destructive potential.-->
+		<defName>PD_Fibroma</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>fibroma</label>
+		<description>A cutaneous lump of monoclonal but noncancerous cells. May grow or shrink; if it becomes bothersome, it may be removed surgically in an elective procedure since it is quite ugly.</description>
+		<labelNoun>a fibroma</labelNoun>
+		<initialSeverity>0.01</initialSeverity>
+		<chanceToCauseNoPain>0.7</chanceToCauseNoPain>
+		<tendable>false</tendable>
+		<comps>
+			<li Class="PrimumDisease.PD_HediffCompProperties_GrowthMode">
+				<severityPerDayGrowing>0.003</severityPerDayGrowing>
+				<severityPerDayRemission>-0.003</severityPerDayRemission>
+				<severityPerDayGrowingRandomFactor>
+					<min>0.35</min>
+					<max>1.65</max>
+				</severityPerDayGrowingRandomFactor>
+				<severityPerDayRemissionRandomFactor>
+					<min>0.65</min>
+					<max>1.35</max>
+				</severityPerDayRemissionRandomFactor>
+			</li>
+		</comps>
+		
+		<stages>
+			<li>
+				<label>early</label>
+				<becomeVisible>false</becomeVisible>
+				<partEfficiencyOffset>-0.1</partEfficiencyOffset>
+			</li>
+			<li>
+				<minSeverity>0.2</minSeverity>
+				<label>minor</label>
+				<painOffset>0.1</painOffset>
+				<partEfficiencyOffset>-0.2</partEfficiencyOffset>
+			</li>
+			<li>
+				<minSeverity>0.5</minSeverity>
+				<label>major</label>
+				<painOffset>0.1</painOffset>
+				<partEfficiencyOffset>-0.3</partEfficiencyOffset>
+				<statOffsets>
+				  <PawnBeauty>-0.5</PawnBeauty>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.8</minSeverity>
+				<label>extreme</label>
+				<painOffset>0.2</painOffset>
+				<partEfficiencyOffset>-0.4</partEfficiencyOffset>
+				<statOffsets>
+				  <PawnBeauty>-1</PawnBeauty>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.9</minSeverity>
+				<label>extreme</label>
+				<painOffset>0.3</painOffset>
+				<partEfficiencyOffset>-0.5</partEfficiencyOffset>
+				<statOffsets>
+				  <PawnBeauty>-1.5</PawnBeauty>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="ChronicDiseaseBase"> <!--Bright's disease: old fashioned word for kidney disease, because kidneys should have their own disease..-->
+		<defName>PD_ChronicKidneyDisease</defName>
+		<label>Bright's disease</label>
+		<description>Bright's disease is chronic degeneration of kidney function, leading to severely reduced blood filtration--with subsequent vulnerability to disease. Severe disease leads to electrolyte abnormalities, which may cause heart attack or stroke. The disease progresses slowly; treatment slows progression, but is unlikely to reverse prior damage.</description>
+		<initialSeverity>0.001</initialSeverity>
+		<minSeverity>0.001</minSeverity>
+		<maxSeverity>0.5</maxSeverity>
+		<tendable>true</tendable>
+		<cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
+		<comps>
+			<li Class="HediffCompProperties_Immunizable">
+				<severityPerDayNotImmune>0.0167</severityPerDayNotImmune>
+			</li>
+			<li Class="HediffCompProperties_TendDuration">
+				<baseTendDurationHours>168</baseTendDurationHours>
+				<tendAllAtOnce>true</tendAllAtOnce>
+				<severityPerDayTended>-0.0167</severityPerDayTended>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>minimal</label>
+				<partEfficiencyOffset>-0.2</partEfficiencyOffset>
+			</li>
+			<li>
+				<label>minor</label>
+				<minSeverity>0.25</minSeverity>
+				<partEfficiencyOffset>-0.45</partEfficiencyOffset>
+			</li>
+			<li>
+				<label>major</label>
+				<minSeverity>0.5</minSeverity>
+				<partEfficiencyOffset>-0.7</partEfficiencyOffset>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>Frail</hediff>
+						<mtbDays>300</mtbDays>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<label>end-stage</label>
+				<minSeverity>0.75</minSeverity>
+				<partEfficiencyOffset>-0.95</partEfficiencyOffset>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>HeartArteryBlockage</hediff>
+						<mtbDays>60</mtbDays>
+						<partsToAffect>
+							<li>Heart</li>
+						</partsToAffect>
+					</li>
+					<li Class="HediffGiver_Random">
+						<hediff>PD_BrainArteryBlockage</hediff>
+						<mtbDays>60</mtbDays>
+						<partsToAffect>
+							<li>Brain</li>
+						</partsToAffect>
+					</li>
+					<li Class="HediffGiver_Random">
+						<hediff>Frail</hediff>
+						<mtbDays>300</mtbDays>
+					</li>
+				</hediffGivers>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>
