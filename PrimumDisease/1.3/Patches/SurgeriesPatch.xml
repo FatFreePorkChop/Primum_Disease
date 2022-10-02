@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch> 
+<!--Excise carcinoma-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "ExciseCarcinoma"]/deathOnFailedSurgeryChance</xpath>
+		<value>
+			<deathOnFailedSurgeryChance>0.25</deathOnFailedSurgeryChance>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RecipeDef[defName = "ExciseCarcinoma"]</xpath>
+		<value>
+			<surgerySuccessChanceFactor>1</surgerySuccessChanceFactor>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "ExciseCarcinoma"]/skillRequirements</xpath>
+		<value>
+			<skillRequirements>
+				<Medicine>16</Medicine>
+			</skillRequirements>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "ExciseCarcinoma"]/ingredients</xpath>
+		<value>
+			<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>Medicine</li>
+						</categories>
+					</filter>
+					<count>4</count>
+				</li>
+			</ingredients>
+		</value>
+	</Operation>
+	
+	
+	
+
+</Patch>

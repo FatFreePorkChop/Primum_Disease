@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+	<RecipeDef ParentName="SurgeryFlesh"> <!--Heart angioplasty, ailment tier 2-->
+		<defName>PD_HeartAngioplasty</defName>
+		<label>coronary angioplasty</label>
+		<description>A special operation to dilate and remove blockages from critical arteries in the heart; requires a skilled physician.</description>
+		<workerClass>Recipe_RemoveHediff</workerClass>
+		<jobString>Performing angioplasty.</jobString>
+		<workAmount>4500</workAmount>
+		<recipeUsers>
+			<li>Human</li>
+		</recipeUsers>
+		<isViolation>false</isViolation>
+		<removesHediff>HeartArteryBlockage</removesHediff>
+		<successfullyRemovedHediffMessage>{0} has successfully cleared {1}'s blocked artery.</successfullyRemovedHediffMessage>
+		
+		<deathOnFailedSurgeryChance>0.25</deathOnFailedSurgeryChance>
+		<surgerySuccessChanceFactor>1</surgerySuccessChanceFactor>
+		<skillRequirements>
+			<Medicine>14</Medicine>
+		</skillRequirements>
+		
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+			<count>6</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<disallowedThingDefs>
+				<li>MedicineHerbal</li>
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+	<RecipeDef ParentName="SurgeryFlesh"> <!--Brain angioplasty, ailment tier 2-->
+		<defName>PD_BrainAngioplasty</defName>
+		<label>cerebral angioplasty</label>
+		<description>A special operation to dilate and remove blockages from critical arteries in the brain; requires a skilled physician.</description>
+		<workerClass>Recipe_RemoveHediff</workerClass>
+		<jobString>Performing angioplasty.</jobString>
+		<workAmount>4500</workAmount>
+		<recipeUsers>
+			<li>Human</li>
+		</recipeUsers>
+		<isViolation>false</isViolation>
+		<removesHediff>PD_BrainArteryBlockage</removesHediff>
+		<successfullyRemovedHediffMessage>{0} has successfully cleared {1}'s blocked artery.</successfullyRemovedHediffMessage>
+		
+		<deathOnFailedSurgeryChance>0.25</deathOnFailedSurgeryChance>
+		<surgerySuccessChanceFactor>1</surgerySuccessChanceFactor>
+		<skillRequirements>
+			<Medicine>14</Medicine>
+		</skillRequirements>
+		
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+			<count>6</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<disallowedThingDefs>
+				<li>MedicineHerbal</li>
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+	
+	
+	
+	
+	<RecipeDef ParentName="SurgeryFlesh"> <!--Excise Fibroma, special tier 1-->
+		<defName>PD_ExciseFibroma</defName>
+		<label>excise fibroma</label>
+		<description>Excise a fibroma.</description>
+		<workerClass>Recipe_RemoveHediff</workerClass>
+		<jobString>Excising fibroma.</jobString>
+		<workAmount>3000</workAmount>
+		<recipeUsers>
+			<li>Human</li>
+		</recipeUsers>
+		<removesHediff>PD_Fibroma</removesHediff>
+		<successfullyRemovedHediffMessage>{0} has successfully excised {1}'s fibroma.</successfullyRemovedHediffMessage>
+		
+		<deathOnFailedSurgeryChance>0.1</deathOnFailedSurgeryChance>
+		<surgerySuccessChanceFactor>1</surgerySuccessChanceFactor>
+		<skillRequirements>
+			<Medicine>10</Medicine>
+		</skillRequirements>
+		
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>4</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+		</fixedIngredientFilter>
+	</RecipeDef>
+	
+</Defs>

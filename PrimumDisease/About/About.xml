@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Notes to self
+Consider standardizing more stuff. In vanilla, nuclear stomach causes cancer/120 days, smokeleaf every 180-130 days, toxic buildup 111 days
+
+-->
+<ModMetaData>
+	<name>Primum Disease</name>
+	<author>Nooberthetuber</author>
+	<supportedVersions>
+		<li>1.3</li>
+	</supportedVersions>
+	<packageId>primum.disease</packageId>
+	<modDependencies>
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>brrainz.harmony</li>
+		<li>Ludeon.Rimworld.Royalty</li>
+	</loadAfter>
+	<description>
+		Should:
+			Add new diseases
+			Adjust old disease
+
+		Makes surgery behave more reasonably
+			If you have a surgery that requires 13 skill, then a surgeon with 20 skill should be way better at in than a surgeon with 13.
+			
+			Cleanliness (c): varies from ~-10 to 0.6
+				C = 0.6 +(0.9 * (c+5)/10), in range [0.6, 1.5]
+				At cleanliness 0.6, this factor is 1.1
+			Medical potency (M): varies from 70% to 130%--scaled from 0% to 200%. 0->70, 70->91, 100->100, 160->118
+			Doctor's success factor (d) varies from 0.05 to 1.1 at skill 0 to 20. Additionally influenced by traits, surgery success chance, etc.
+				D = d (~ 0.00017x^3-0.00820x^2+0.14916x+0.04301)
+			Bed success chance factor (B) varies from 0.9 (awful bed) to 1.48 (legendary medical bed with vitals monitor)
+			
+			Default formula
+				P(success) = C*M*D*B
+			New formula
+				P(success) = (C*M*B*D*E)^(1/2). Scaled to min(P, 0.95 + (P-0.95)/5)
+					Surgery success chance factor is a multiplier on E, which has a higher weight!
+					Geometric mean, with E having extra weightMakes it regress toward the lowest factor
+					If P>0.95, P = 0.95 + (P-0.95)/5. 
+					If
+					
+					That last 5% success rate is hard to get.
+					Note that in the code, B and C are mixed together. B and C also include Cleanliness is still a factor!
+				D adjusted to not depend on doctor's skill. Examples include: Inspiration = 2, also increases effective skill by 4 for E calculation, Mad surgeon (VTE) = 1.2, and Medical specialist (ideology) = 1.5. Only dependent on traits, inspiration, etc. This is accomplishd by a patch to stats_pawns_workmedical
+				E is max(1,0.4+0.6*(SurplusSkill/5))	
+	</description>
+</ModMetaData>

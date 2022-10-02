@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<PrimumDisease.PD_ImplantTypeDef>
+		<defName>PD_Natural</defName>
+		<label>Natural</label>
+	</PrimumDisease.PD_ImplantTypeDef>
+	<PrimumDisease.PD_ImplantTypeDef>
+		<defName>PD_Nonnatural</defName>
+		<label>Nonnatural</label>
+	</PrimumDisease.PD_ImplantTypeDef>
+	<PrimumDisease.PD_ImplantTypeDef>
+		<defName>PD_Archotech</defName>
+		<label>Archotech</label>
+	</PrimumDisease.PD_ImplantTypeDef>
+</Defs>

@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+ <!-- General immune-suppression hediff to account for bionics/implants. May go into three categories depending on code:
+	immunosupression: from typical bionic appendages; decreased immunity gain speed. Disease on timer at high levels?
+	metabolic demands: from extraneous vital organs; increased hunger rate. Vomiting on
+	archotech influence: decreased mental break threshold; MB's on timer at high levels?
+	
+	Severity goes from 0 to 1 by increments of 0.1
+	Maybe have luciferum also prevent immunosuppression
+-->
+
+<Defs>
+
+	<HediffDef><!--Immunosupression. Each implant decreases gain speed by 2% and healing speed bt 3%. >=6 implants may cause cataracts, >=8 may cause brain/heart blockages, >=10 implants may cause frailty -->
+		<defName>PD_Immunosuppression</defName>
+		<label>immunosuppression</label>
+		<description>High-tech bionics are integrated with the nervous and vascular systems. To prevent immune rejection, they constantly secrete low levels of steroids to dampen inflammation. Unfortunately, this also makes their owners more susceptible to certain diseases. At high levels, this may cause cataracts, block vital arteries in the heart and brain, or cause general frailty.</description>
+		<!-- <defaultLabelColor>(0.52, 1, 0.95)</defaultLabelColor> -->
+		<hediffClass>HediffWithComps</hediffClass>
+		<initialSeverity>0</initialSeverity>
+		<stages>
+			<li>
+			</li>
+			<li>
+				<minSeverity>0.04</minSeverity>
+				<naturalHealingFactor>0.97</naturalHealingFactor>
+				<statOffsets>
+					<ImmunityGainSpeed>-0.02</ImmunityGainSpeed>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.09</minSeverity>
+				<naturalHealingFactor>0.94</naturalHealingFactor>
+				<statOffsets>
+					<ImmunityGainSpeed>-0.04</ImmunityGainSpeed>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.14</minSeverity>
+				<naturalHealingFactor>0.91</naturalHealingFactor>
+				<statOffsets>
+					<ImmunityGainSpeed>-0.06</ImmunityGainSpeed>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.19</minSeverity>
+				<naturalHealingFactor>0.88</naturalHealingFactor>
+				<statOffsets>
+					<ImmunityGainSpeed>-0.08</ImmunityGainSpeed>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.24</minSeverity>
+				<naturalHealingFactor>0.85</naturalHealingFactor>
+				<statOffsets>
+					<ImmunityGainSpeed>-0.1</ImmunityGainSpeed>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.29</minSeverity>
+				<naturalHealingFactor>0.82</naturalHealingFactor>
+				<statOffsets>
+					<ImmunityGainSpeed>-0.12</ImmunityGainSpeed>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>Cataract</hediff>
+						<mtbDays>320</mtbDays>
+						<partsToAffect>
+							<li>Eye</li>
+						</partsToAffect>
+						<countToAffect>2</countToAffect>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<minSeverity>0.34</minSeverity>
+				<naturalHealingFactor>0.79</naturalHealingFactor>
+				<statOffsets>
+					<ImmunityGainSpeed>-0.14</ImmunityGainSpeed>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>Cataract</hediff>
+						<mtbDays>320</mtbDays>
+						<partsToAffect>
+							<li>Eye</li>
+						</partsToAffect>
+						<countToAffect>2</countToAffect>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<minSeverity>0.39</minSeverity>
+				<naturalHealingFactor>0.76</naturalHealingFactor>
+				<statOffsets>
+					<ImmunityGainSpeed>-0.16</ImmunityGainSpeed>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>Cataract</hediff>
+						<mtbDays>240</mtbDays>
+						<partsToAffect>
+							<li>Eye</li>
+						</partsToAffect>
+						<countToAffect>2</countToAffect>
+					</li>
+					<!--<li Class="HediffGiver_Random">
+						<hediff>PD_BrainArteryBlockage</hediff>
+						<mtbDays>320</mtbDays>
+						<partsToAffect>
+							<li>Brain</li>
+						</partsToAffect>
+					</li>-->
+					<li Class="HediffGiver_Random">
+						<hediff>HeartArteryBlockage</hediff>
+						<mtbDays>320</mtbDays>
+						<partsToAffect>
+							<li>Heart</li>
+						</partsToAffect>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<minSeverity>0.44</minSeverity>
+				<naturalHealingFactor>0.73</naturalHealingFactor>
+				<statOffsets>
+					<ImmunityGainSpeed>-0.18</ImmunityGainSpeed>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>Cataract</hediff>
+						<mtbDays>240</mtbDays>
+						<partsToAffect>
+							<li>Eye</li>
+						</partsToAffect>
+						<countToAffect>2</countToAffect>
+					</li>
+					<!--<li Class="HediffGiver_Random">
+						<hediff>PD_BrainArteryBlockage</hediff>
+						<mtbDays>320</mtbDays>
+						<partsToAffect>
+							<li>Brain</li>
+						</partsToAffect>
+					</li>-->
+					<li Class="HediffGiver_Random">
+						<hediff>HeartArteryBlockage</hediff>
+						<mtbDays>320</mtbDays>
+						<partsToAffect>
+							<li>Heart</li>
+						</partsToAffect>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<minSeverity>0.49</minSeverity>
+				<naturalHealingFactor>0.7</naturalHealingFactor>
+				<statOffsets>
+					<ImmunityGainSpeed>-0.2</ImmunityGainSpeed>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>Cataract</hediff>
+						<mtbDays>160</mtbDays>
+						<partsToAffect>
+							<li>Eye</li>
+						</partsToAffect>
+						<countToAffect>2</countToAffect>
+					</li>
+					<!--<li Class="HediffGiver_Random">
+						<hediff>PD_BrainArteryBlockage</hediff>
+						<mtbDays>240</mtbDays>
+						<partsToAffect>
+							<li>Brain</li>
+						</partsToAffect>
+					</li>-->
+					<li Class="HediffGiver_Random">
+						<hediff>HeartArteryBlockage</hediff>
+						<mtbDays>240</mtbDays>
+						<partsToAffect>
+							<li>Heart</li>
+						</partsToAffect>
+					</li>
+					<li Class="HediffGiver_Random">
+						<hediff>Frail</hediff>
+						<mtbDays>480</mtbDays>
+						<partsToAffect>
+							<li>Torso</li>
+						</partsToAffect>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<minSeverity>0.54</minSeverity>
+				<naturalHealingFactor>0.67</naturalHealingFactor>
+				<statOffsets>
+					<ImmunityGainSpeed>-0.22</ImmunityGainSpeed>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>Cataract</hediff>
+						<mtbDays>160</mtbDays>
+						<partsToAffect>
+							<li>Eye</li>
+						</partsToAffect>
+						<countToAffect>2</countToAffect>
+					</li>
+					<!--<li Class="HediffGiver_Random">
+						<hediff>PD_BrainArteryBlockage</hediff>
+						<mtbDays>240</mtbDays>
+						<partsToAffect>
+							<li>Brain</li>
+						</partsToAffect>
+					</li>-->
+					<li Class="HediffGiver_Random">
+						<hediff>HeartArteryBlockage</hediff>
+						<mtbDays>240</mtbDays>
+						<partsToAffect>
+							<li>Heart</li>
+						</partsToAffect>
+					</li>
+					<li Class="HediffGiver_Random">
+						<hediff>Frail</hediff>
+						<mtbDays>480</mtbDays>
+						<partsToAffect>
+							<li>Torso</li>
+						</partsToAffect>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<minSeverity>0.59</minSeverity>
+				<naturalHealingFactor>0.64</naturalHealingFactor>
+				<statOffsets>
+					<ImmunityGainSpeed>-0.24</ImmunityGainSpeed>
+				</statOffsets>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>Cataract</hediff>
+						<mtbDays>80</mtbDays>
+						<partsToAffect>
+							<li>Eye</li>
+						</partsToAffect>
+						<countToAffect>2</countToAffect>
+					</li>
+					<!--<li Class="HediffGiver_Random">
+						<hediff>PD_BrainArteryBlockage</hediff>
+						<mtbDays>160</mtbDays>
+						<partsToAffect>
+							<li>Brain</li>
+						</partsToAffect>
+					</li>-->
+					<li Class="HediffGiver_Random">
+						<hediff>HeartArteryBlockage</hediff>
+						<mtbDays>160</mtbDays>
+						<partsToAffect>
+							<li>Heart</li>
+						</partsToAffect>
+					</li>
+					<li Class="HediffGiver_Random">
+						<hediff>Frail</hediff>
+						<mtbDays>240</mtbDays>
+						<partsToAffect>
+							<li>Torso</li>
+						</partsToAffect>
+					</li>
+				</hediffGivers>
+			</li>
+		</stages>	
+	</HediffDef>
+	
+	<HediffDef> <!--Archotech influence. Every archotech implant increases break threshold by 5%, but also increases psychic sensitivity by 8% and entropy recover rate by 3%, and global learning speed by 5%-->
+		<defName>PD_ArchotechInfluence</defName>
+		<label>archotech influence</label>
+		<description>While archotech implants are recognized as native by the immune system, they may have strange effects on the mind.</description>
+		<defaultLabelColor>(0.47, 0.48, 0.37)</defaultLabelColor>
+		<hediffClass>HediffWithComps</hediffClass>
+		<initialSeverity>0</initialSeverity>
+		<stages>
+			<li>
+			</li>
+			<li>
+				<minSeverity>0.04</minSeverity>
+				<statOffsets>
+					<MentalBreakThreshold>0.05</MentalBreakThreshold>
+					<PsychicSensitivity>0.08</PsychicSensitivity>
+					<GlobalLearningFactor>0.05</GlobalLearningFactor>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.09</minSeverity>
+				<statOffsets>
+					<MentalBreakThreshold>0.1</MentalBreakThreshold>
+					<PsychicSensitivity>0.16</PsychicSensitivity>
+					<GlobalLearningFactor>0.1</GlobalLearningFactor>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.14</minSeverity>
+				<statOffsets>
+					<MentalBreakThreshold>0.15</MentalBreakThreshold>
+					<PsychicSensitivity>0.24</PsychicSensitivity>
+					<GlobalLearningFactor>0.15</GlobalLearningFactor>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.19</minSeverity>
+				<statOffsets>
+					<MentalBreakThreshold>0.2</MentalBreakThreshold>
+					<PsychicSensitivity>0.32</PsychicSensitivity>
+					<GlobalLearningFactor>0.2</GlobalLearningFactor>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.24</minSeverity>
+				<statOffsets>
+					<MentalBreakThreshold>0.25</MentalBreakThreshold>
+					<PsychicSensitivity>0.4</PsychicSensitivity>
+					<GlobalLearningFactor>0.25</GlobalLearningFactor>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.29</minSeverity>
+				<statOffsets>
+					<MentalBreakThreshold>0.3</MentalBreakThreshold>
+					<PsychicSensitivity>0.48</PsychicSensitivity>
+					<GlobalLearningFactor>0.3</GlobalLearningFactor>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>

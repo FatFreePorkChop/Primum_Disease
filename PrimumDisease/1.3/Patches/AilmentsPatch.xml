@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch> 
+<!--Carcinoma: Should spread and have stages similar to leukemia. Also should give sick thought and have lethality-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/HediffDef[defName = "Carcinoma"]/stages</xpath>
+		<value>
+			<stages>
+				<li>
+					<label>early</label>
+					<becomeVisible>false</becomeVisible>
+					<statOffsets>
+						<PsychicSensitivity>0.2</PsychicSensitivity>
+					</statOffsets>
+				</li>
+				<li>
+					<minSeverity>0.05</minSeverity>
+					<label>minor</label>
+					<painOffset>0.1</painOffset>
+					<statOffsets>
+						<PsychicSensitivity>0.2</PsychicSensitivity>
+					</statOffsets>
+					<hediffGivers>
+						<li Class="HediffGiver_Random">
+							<hediff>Carcinoma</hediff>
+							<mtbDays>180</mtbDays>
+							<partsToAffect>
+								<li>Liver</li>
+								<li>Kidney</li>
+								<li>Lung</li>
+								<li>Heart</li>
+								<li>Brain</li>
+								<li>Tongue</li>
+								<li>Stomach</li>
+								<li>Skull</li>
+								<li>Pelvis</li>
+								<li>Spine</li>
+							</partsToAffect>
+						</li>
+					</hediffGivers>
+				</li>
+				<li>
+					<minSeverity>0.4</minSeverity>
+					<label>major</label>
+					<painOffset>0.25</painOffset>
+					<statOffsets>
+						<PsychicSensitivity>0.2</PsychicSensitivity>
+					</statOffsets>
+					<hediffGivers>
+						<li Class="HediffGiver_Random">
+							<hediff>Carcinoma</hediff>
+							<mtbDays>60</mtbDays>
+							<partsToAffect>
+								<li>Liver</li>
+								<li>Kidney</li>
+								<li>Lung</li>
+								<li>Heart</li>
+								<li>Brain</li>
+								<li>Tongue</li>
+								<li>Stomach</li>
+								<li>Skull</li>
+								<li>Pelvis</li>
+								<li>Spine</li>
+							</partsToAffect>
+						</li>
+					</hediffGivers>
+				</li>
+				<li>
+					<minSeverity>0.8</minSeverity>
+					<label>terminal</label>
+					<painOffset>0.4</painOffset>
+					<statOffsets>
+						<PsychicSensitivity>0.2</PsychicSensitivity>
+					</statOffsets>
+					<hediffGivers>
+						<li Class="HediffGiver_Random">
+							<hediff>Carcinoma</hediff>
+							<mtbDays>20</mtbDays>
+							<partsToAffect>
+								<li>Liver</li>
+								<li>Kidney</li>
+								<li>Lung</li>
+								<li>Heart</li>
+								<li>Brain</li>
+								<li>Tongue</li>
+								<li>Stomach</li>
+								<li>Skull</li>
+								<li>Pelvis</li>
+								<li>Spine</li>
+							</partsToAffect>
+						</li>
+						<li Class="HediffGiver_Random">
+							<hediff>HeartAttack</hediff>
+							<allowOnLodgers>false</allowOnLodgers>
+							<allowOnQuestRewardPawns>false</allowOnQuestRewardPawns>
+							<allowOnQuestReservedPawns>false</allowOnQuestReservedPawns>
+							<allowOnBeggars>false</allowOnBeggars>
+							<mtbDays>150</mtbDays>
+							<partsToAffect>
+								<li>Heart</li>
+							</partsToAffect>
+						</li>
+						<li Class="HediffGiver_Random">
+							<hediff>PD_Stroke</hediff>
+							<allowOnLodgers>false</allowOnLodgers>
+							<allowOnQuestRewardPawns>false</allowOnQuestRewardPawns>
+							<allowOnQuestReservedPawns>false</allowOnQuestReservedPawns>
+							<allowOnBeggars>false</allowOnBeggars>
+							<mtbDays>150</mtbDays>
+							<partsToAffect>
+								<li>Brain</li>
+							</partsToAffect>
+						</li>
+					</hediffGivers>
+				</li>
+			</stages>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/HediffDef[defName = "Carcinoma"]/comps</xpath>
+		<value>
+			<comps>
+				<li Class="HediffCompProperties_TendDuration">
+					<baseTendDurationHours>96</baseTendDurationHours>
+					<severityPerDayTended>-0.005</severityPerDayTended>
+				</li>
+				<li Class="HediffCompProperties_GrowthMode">
+					<severityPerDayGrowing>0.005</severityPerDayGrowing>
+					<severityPerDayRemission>-0.0033</severityPerDayRemission>
+					<severityPerDayGrowingRandomFactor>0.5~1.83</severityPerDayGrowingRandomFactor>
+					<severityPerDayRemissionRandomFactor>0.7~1.5</severityPerDayRemissionRandomFactor>
+				</li>
+			</comps>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/HediffDef[defName = "lethalSeverity"]</xpath>
+		<value>
+			<lethalSeverity>1</lethalSeverity>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/HediffDef[defName = "Carcinoma"]</xpath>
+		<value>
+			<makesSickThought>true</makesSickThought>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/HediffDef[defName = "Carcinoma"]</xpath>
+		<value>
+			<cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
+		</value>	
+	</Operation>
+
+<!--Cirrhosis: should cause liver cancer-->
+	<Operation Class="PatchOperationReplace">
+	
+<!--Resurrection psychosis: Spreads memetically!-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/HediffDef[defName = "ResurrectionPsychosis"]</xpath>
+		<value>
+			<modExtensions>
+				<li Class="PrimumDisease.PD_TransmissionExtension">
+					<transmissionMethods>
+						<li>PD_Memetic</li>
+					</transmissionMethods>
+					<transmissivity>0.25</transmissivity>
+					<survivalOnCooked>1</survivalOnCooked>
+				</li>
+			</modExtensions>
+		</value>
+	</Operation>
+	
+	
+	
+	
+	
+	
+	
+<!--Cirrhosis disease giver: borrows bad back distribution, like bright's disease-->	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/HediffGiverSetDef[defName = "OrganicStandard"]</xpath>
+		<value>
+			<li Class="HediffGiver_Birthday">
+				<hediff>Cirrhosis</hediff>
+				<partsToAffect>
+					<li>Liver</li>
+				</partsToAffect>
+				<ageFractionChanceCurve>
+					<points>
+						<li>(0.5, 0)</li>
+						<li>(0.625, 0.0093)</li>
+						<li>(0.75, 0.01395)</li>
+						<li>(0.875, 0.01395)</li>
+						<li>(1, 0.0186)</li>
+					</points>
+				</ageFractionChanceCurve>
+			</li>
+		</value>
+	</Operation>
+	
+<!--Creutzfeldt rim disease giver-->	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/HediffGiverSetDef[defName = "OrganicStandard"]</xpath>
+		<value>
+			<li Class="HediffGiver_Birthday">
+				<hediff>PD_CreutzfeldtRimDisease</hediff>
+				<ageFractionChanceCurve>
+					<points>
+						<li>(0.25, 0)</li>
+						<li>(0.5, 0.00025)</li>
+						<li>(1, 0.0005)</li>
+					</points>
+				</ageFractionChanceCurve>
+				<averageSeverityPerDayBeforeGeneration>0.0005</averageSeverityPerDayBeforeGeneration>
+			</li>
+		</value>
+	</Operation>
+	
+<!--Brain artery blockage giver-->	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/HediffGiverSetDef[defName = "OrganicStandard"]</xpath>
+		<value>
+			<li Class="HediffGiver_Birthday">
+				<hediff>PD_BrainArteryBlockage</hediff>
+				<partsToAffect>
+					<li>Heart</li>
+				</partsToAffect>
+				<ageFractionChanceCurve>
+					<points>
+						<li>(0.25, 0)</li>
+						<li>(0.3, 0.001)</li>
+						<li>(0.5, 0.00145)</li>
+						<li>(1, 0.0016)</li>
+						<li>(1.5, 0.0017)</li>
+					</points>
+				</ageFractionChanceCurve>
+				<averageSeverityPerDayBeforeGeneration>0.00025</averageSeverityPerDayBeforeGeneration>
+			</li>
+		</value>
+	</Operation>
+	
+<!--Leukemia giver: bimodal distribution, more common in the young or the old.-->	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/HediffGiverSetDef[defName = "OrganicStandard"]</xpath>
+		<value>
+			<li Class="HediffGiver_Birthday">
+				<hediff>PD_Leukemia</hediff>
+				<ageFractionChanceCurve>
+					<points>
+						<li>(0.25, 0.001)</li>
+						<li>(0.5, 0.0001)</li>
+						<li>(1.5, 0.0015)</li>
+					</points>
+				</ageFractionChanceCurve>
+				<averageSeverityPerDayBeforeGeneration>0.0005</averageSeverityPerDayBeforeGeneration>
+			</li>
+		</value>
+	</Operation>
+	
+<!--Fibroma giver: Similar to cancer distribution-->	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/HediffGiverSetDef[defName = "OrganicStandard"]</xpath>
+		<value>
+			<li Class="HediffGiver_Birthday">
+				<hediff>PD_Fibroma</hediff>
+				<canAffectAnyLivePart>true</canAffectAnyLivePart>
+				<ageFractionChanceCurve>
+					<points>
+						<li>(0.28, 0)</li>
+						<li>(1, 0.0011)</li>
+						<li>(1.5, 0.0015)</li>
+					</points>
+				</ageFractionChanceCurve>
+				<averageSeverityPerDayBeforeGeneration>0.0005</averageSeverityPerDayBeforeGeneration>
+			</li>
+		</value>
+	</Operation>
+	
+<!--Bright's disease giver: borrows bad back distribution-->	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/HediffGiverSetDef[defName = "OrganicStandard"]</xpath>
+		<value>
+			<li Class="HediffGiver_Birthday">
+				<hediff>PD_ChronicKidneyDisease</hediff>
+				<partsToAffect>
+					<li>Kidney</li>
+				</partsToAffect>
+				<countToAffect>2</countToAffect>
+				<ageFractionChanceCurve>
+					<points>
+						<li>(0.5, 0)</li>
+						<li>(0.625, 0.0093)</li>
+						<li>(0.75, 0.01395)</li>
+						<li>(0.875, 0.01395)</li>
+						<li>(1, 0.0186)</li>
+					</points>
+				</ageFractionChanceCurve>
+				<averageSeverityPerDayBeforeGeneration>0.0005</averageSeverityPerDayBeforeGeneration>
+			</li>
+		</value>
+	</Operation>
+</Patch>

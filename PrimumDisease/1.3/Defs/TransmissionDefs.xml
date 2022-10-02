@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<PrimumDisease.PD_TransmissionDef>
+		<defName>PD_Contact</defName>
+		<label>Contact</label>
+		<description>One of the most common methods of disease transmission, reduced by practicing cleanliness and good hand hygiene.</description>
+	</PrimumDisease.PD_TransmissionDef>
+	<PrimumDisease.PD_TransmissionDef>
+		<defName>PD_OutdoorsVectorBorne</defName>
+		<label>Outdoors vector-borne</label>
+		<description>This disease spreads via a vector--too small to see--that prefers outdoor spaces.</description>
+	</PrimumDisease.PD_TransmissionDef>
+	<PrimumDisease.PD_TransmissionDef>
+		<defName>PD_IndoorsVectorBorne</defName>
+		<label>Indoors vector-borne</label>
+		<description>This disease spreads via a vector--too small to see--that prefers enclosed spaces.</description>
+	</PrimumDisease.PD_TransmissionDef>
+	<PrimumDisease.PD_TransmissionDef>
+		<defName>PD_UndergroundVectorBorne</defName>
+		<label>Underground vector-borne</label>
+		<description>This disease spreads via a vector--too small to see--that prefers underground environments.</description>
+	</PrimumDisease.PD_TransmissionDef>
+	<PrimumDisease.PD_TransmissionDef>
+		<defName>PD_FoodBorne</defName>
+		<label>Food-borne</label>
+		<description>This disease is spread when a pawn consumes part of the prior host. Most diseases can't spread between animals and humans, so usually this only affects cannibabls.</description>
+	</PrimumDisease.PD_TransmissionDef>
+	<PrimumDisease.PD_TransmissionDef>
+		<defName>PD_Memetic</defName>
+		<label>Memetic</label>
+		<description>This contagion is spread by ideas: quarantine pawns with this disease, and don't let them interact with other pawns.</description>
+	</PrimumDisease.PD_TransmissionDef>
+	<PrimumDisease.PD_TransmissionDef>
+		<defName>PD_Proximity</defName>
+		<label>Proximity</label>
+		<description>This disease is spread by close proximity, and encompasses multiple transmission methods, such as airborne, droplet borne, and contact. It can occasionally spread through doors, but not walls.</description>
+	</PrimumDisease.PD_TransmissionDef>
+	<PrimumDisease.PD_TransmissionDef>
+		<defName>PD_Venereal</defName>
+		<label>Venereal</label>
+		<description>This disease is spread via sexual contact.</description>
+	</PrimumDisease.PD_TransmissionDef>
+</Defs>
