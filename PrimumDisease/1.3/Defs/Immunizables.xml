@@ -9,14 +9,14 @@
 		<tendable>true</tendable>
 		<comps>
 			<li Class="HediffCompProperties_TendDuration">
-				<baseTendDurationHours>24</baseTendDurationHours>
-				<severityPerDayTended>-0.0355</severityPerDayTended>
+				<baseTendDurationHours>18</baseTendDurationHours>
+				<severityPerDayTended>-0.04</severityPerDayTended>
 			</li>
 			<li Class="HediffCompProperties_Immunizable">
-				<severityPerDayNotImmune>0.167</severityPerDayNotImmune>
-				<immunityPerDaySick>0.160</immunityPerDaySick>
-				<severityPerDayImmune>-0.333</severityPerDayImmune>
-				<immunityPerDayNotSick>-0.033</immunityPerDayNotSick>
+				<severityPerDayNotImmune>0.17</severityPerDayNotImmune>
+				<immunityPerDaySick>0.16</immunityPerDaySick>
+				<severityPerDayImmune>-0.33</severityPerDayImmune>
+				<immunityPerDayNotSick>-0.03</immunityPerDayNotSick>
 			</li>
 		</comps>
 		<stages>
@@ -87,6 +87,115 @@
 					<li Class="HediffGiver_Random">
 						<hediff>BadBack</hediff>
 						<mtbDays>6</mtbDays> <!--~20% chance of giving bad back-->
+					</li>
+				</hediffGivers>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="InfectionBase"> <!--Sepsis: severe short disease-->
+		<defName>PD_Sepsis</defName>
+		<label>sepsis</label>
+		<description>Sepsis is a life-threatening condition that arises when the body's response to infection causes injury to its tissues and organs.</description>
+		<makesSickThought>true</makesSickThought>
+		<initialSeverity>0.01</initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+		<lethalSeverity>1.0</lethalSeverity>
+		<tendable>true</tendable>
+		<comps>
+			<li Class="HediffCompProperties_TendDuration">
+				<baseTendDurationHours>6</baseTendDurationHours>
+				<severityPerDayTended>-0.19</severityPerDayTended>
+			</li>
+			<li Class="HediffCompProperties_Immunizable">
+				<severityPerDayNotImmune>0.5</severityPerDayNotImmune>
+				<immunityPerDaySick>0.38</immunityPerDaySick>
+				<severityPerDayImmune>-0.25</severityPerDayImmune>
+				<immunityPerDayNotSick>-0.2</immunityPerDayNotSick>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>early</label>
+				<painOffset>0.1</painOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.1</offset>
+					</li>
+				</capMods>
+				<lifeThreatening>true</lifeThreatening>
+			</li>
+			<li>
+				<label>late</label>
+				<minSeverity>0.33</minSeverity>
+				<lifeThreatening>true</lifeThreatening>
+				<painOffset>0.3</painOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.25</offset>
+					</li>
+				</capMods>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>PD_ChronicKidneyDisease</hediff>
+						<mtbDays>8</mtbDays>
+						<partsToAffect>
+							<li>Kidney</li>
+						</partsToAffect>
+						<countToAffect>2</countToAffect>
+					</li>
+					<li Class="HediffGiver_Random">
+						<hediff>Frail</hediff>
+						<mtbDays>8</mtbDays>
+					</li>
+				</hediffGivers>
+			</li>
+			<li>
+				<label>terminal</label>
+				<minSeverity>0.666</minSeverity>
+				<lifeThreatening>true</lifeThreatening>
+				<painOffset>0.5</painOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.4</offset>
+						<setMax>0.1</setMax>
+					</li>
+				</capMods>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>PD_Necrosis</hediff>
+						<mtbDays>2</mtbDays>
+						<partsToAffect>
+							<li>Jaw</li>
+							<li>Spine</li>
+							<li>Pelvis</li>
+							<li>Ribcage</li>
+							<li>Sternum</li>
+							<li>Femur</li>
+							<li>Humerus</li>
+							<li>Clavicle</li>
+							<li>Tibia</li>
+							<li>Radius</li>
+							<li>Liver</li>
+							<li>Kidney</li>
+							<li>Lung</li>
+							<li>Stomach</li>
+						</partsToAffect>
+					</li>
+					<li Class="HediffGiver_Random">
+						<hediff>PD_ChronicKidneyDisease</hediff>
+						<mtbDays>2</mtbDays>
+						<partsToAffect>
+							<li>Kidney</li>
+						</partsToAffect>
+						<countToAffect>2</countToAffect>
+					</li>
+					<li Class="HediffGiver_Random">
+						<hediff>Frail</hediff>
+						<mtbDays>4</mtbDays>
 					</li>
 				</hediffGivers>
 			</li>
