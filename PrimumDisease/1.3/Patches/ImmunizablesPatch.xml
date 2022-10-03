@@ -7,13 +7,17 @@
 			<comps>
 				<li Class="HediffCompProperties_TendDuration">
 					<baseTendDurationHours>12</baseTendDurationHours>
-					<severityPerDayTended>-0.0773</severityPerDayTended>
+					<severityPerDayTended>-0.13</severityPerDayTended>
 				</li>
 				<li Class="HediffCompProperties_Immunizable">
-					<severityPerDayNotImmune>0.2488</severityPerDayNotImmune>
-					<immunityPerDaySick>0.2388</immunityPerDaySick>
-					<severityPerDayImmune>-0.4947</severityPerDayImmune>
-					<immunityPerDayNotSick>-0.06</immunityPerDayNotSick>
+					<severityPerDayNotImmune>0.4</severityPerDayNotImmune>
+					<immunityPerDaySick>0.41</immunityPerDaySick>
+					<severityPerDayImmune>-0.5</severityPerDayImmune>
+					<immunityPerDayNotSick>-0.1</immunityPerDayNotSick>
+					<severityPerDayNotImmuneRandomFactor>
+						<min>1</min>
+						<max>1.07</max>
+					</severityPerDayNotImmuneRandomFactor>
 				</li>
 			</comps>
 		</value>
@@ -36,23 +40,6 @@
 		</value>
 	</Operation>
 
-
-
-	    <modExtensions>
-            <li Class="PrimumDisease.PD_TransmissionExtension">
-                <transmissionMethods>
-					<li>PD_FoodBorne</li>
-				</transmissionMethods>
-                <transmissivity>1</transmissivity>
-                <survivalOnCooked>1</survivalOnCooked>
-                <resistanceCapacities>
-					<li>
-						<capacity>BloodFiltration</capacity>
-						<factor>0.5</factor>
-					</li>
-				</resistanceCapacities>
-            </li>
-        </modExtensions>
 
 <!--Plague-->
 	<Operation Class="PatchOperationReplace">
