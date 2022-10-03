@@ -43,6 +43,45 @@
 
 <!--Plague-->
 	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/HediffDef[defName = "Plague"]/comps</xpath>
+		<value>
+			<comps>
+				<li Class="HediffCompProperties_TendDuration">
+					<baseTendDurationHours>12</baseTendDurationHours>
+					<severityPerDayTended>-0.15</severityPerDayTended>
+				</li>
+				<li Class="HediffCompProperties_Immunizable">
+					<severityPerDayNotImmune>0.25</severityPerDayNotImmune>
+					<immunityPerDaySick>0.22</immunityPerDaySick>
+					<severityPerDayImmune>-0.33</severityPerDayImmune>
+					<immunityPerDayNotSick>-0.02</immunityPerDayNotSick>
+					<severityPerDayNotImmuneRandomFactor>
+						<min>1</min>
+						<max>1.24</max>
+					</severityPerDayNotImmuneRandomFactor>
+				</li>
+			</comps>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/HediffDef[defName="Plague"]</xpath>
+		<value>
+			<li Class="PrimumDisease.PD_TransmissionExtension">
+				<transmissionMethods>
+					<li>PD_IndoorsVectorBorne</li>
+					<li>PD_UndergroundVectorBorne</li>
+				</transmissionMethods>
+				<transmissivity>1</transmissivity>
+				<resistanceCapacities>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<factor>0.5</factor>
+					</li>
+				</resistanceCapacities>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/HediffDef[defName = "Plague"]/stages</xpath>
 		<value>
 			<stages>
@@ -167,7 +206,46 @@
 
 
 
-	<Operation Class="PatchOperationReplace"> <!--Malaria should encapsulate and rarely cause cirrhosis-->
+<!--Malaria-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/HediffDef[defName = "Malaria"]/comps</xpath>
+		<value>
+			<comps>
+				<li Class="HediffCompProperties_TendDuration">
+					<baseTendDurationHours>12</baseTendDurationHours>
+					<severityPerDayTended>-0.26</severityPerDayTended>
+				</li>
+				<li Class="HediffCompProperties_Immunizable">
+					<severityPerDayNotImmune>0.37</severityPerDayNotImmune>
+					<immunityPerDaySick>0.33</immunityPerDaySick>
+					<severityPerDayImmune>-0.33</severityPerDayImmune>
+					<immunityPerDayNotSick>-0.03</immunityPerDayNotSick>
+					<severityPerDayNotImmuneRandomFactor>
+						<min>1</min>
+						<max>1.14</max>
+					</severityPerDayNotImmuneRandomFactor>
+				</li>
+			</comps>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/HediffDef[defName="Malaria"]</xpath>
+		<value>
+			<li Class="PrimumDisease.PD_TransmissionExtension">
+				<transmissionMethods>
+					<li>PD_OutdoorsVectorBorne</li>
+				</transmissionMethods>
+				<transmissivity>1</transmissivity>
+				<resistanceCapacities>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<factor>1</factor>
+					</li>
+				</resistanceCapacities>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/HediffDef[defName = "Malaria"]/stages</xpath>
 		<value>
 			<stages>
@@ -185,8 +263,8 @@
 					</capMods>
 					<hediffGivers>
 						<li Class="HediffGiver_Random">
-							<hediff>PM_EncapsulatedMalaria</hediff>
-							<mtbDays>5</mtbDays>
+							<hediff>PD_EncapsulatedMalaria</hediff>
+							<mtbDays>5.4</mtbDays>
 							<partsToAffect>
 								<li>Liver</li>
 								<li>Arm</li>
@@ -217,8 +295,8 @@
 					</capMods>
 					<hediffGivers>
 						<li Class="HediffGiver_Random">
-							<hediff>PM_EncapsulatedMalaria</hediff>
-							<mtbDays>5</mtbDays>
+							<hediff>PD_EncapsulatedMalaria</hediff>
+							<mtbDays>5.4</mtbDays>
 							<partsToAffect>
 								<li>Liver</li>
 								<li>Arm</li>
@@ -228,7 +306,7 @@
 						</li>
 						<li Class="HediffGiver_Random">
 							<hediff>Cirrhosis</hediff>
-							<mtbDays>6</mtbDays> <!--~10% chance of giving cirrhosis-->
+							<mtbDays>63.6</mtbDays>
 						</li>
 					</hediffGivers>
 				</li>
@@ -254,8 +332,8 @@
 					</capMods>
 					<hediffGivers>
 						<li Class="HediffGiver_Random">
-							<hediff>PM_EncapsulatedMalaria</hediff>
-							<mtbDays>5</mtbDays>
+							<hediff>PD_EncapsulatedMalaria</hediff>
+							<mtbDays>5.4</mtbDays>
 							<partsToAffect>
 								<li>Liver</li>
 								<li>Arm</li>
@@ -265,7 +343,7 @@
 						</li>
 						<li Class="HediffGiver_Random">
 							<hediff>Cirrhosis</hediff>
-							<mtbDays>6</mtbDays> <!--~10% chance of giving cirrhosis-->
+							<mtbDays>3.6</mtbDays>
 						</li>
 					</hediffGivers>
 				</li>
@@ -279,7 +357,46 @@
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationReplace"> <!--Sleeping sickness should cause coma. Lasts 8-17 days.-->
+<!--Sleeping sickness-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/HediffDef[defName = "SleepingSickness"]/comps</xpath>
+		<value>
+			<comps>
+				<li Class="HediffCompProperties_TendDuration">
+					<baseTendDurationHours>36</baseTendDurationHours>
+					<severityPerDayTended>-0.07</severityPerDayTended>
+				</li>
+				<li Class="HediffCompProperties_Immunizable">
+					<severityPerDayNotImmune>0.12</severityPerDayNotImmune>
+					<immunityPerDaySick>0.11</immunityPerDaySick>
+					<severityPerDayImmune>-0.25</severityPerDayImmune>
+					<immunityPerDayNotSick>-0.01</immunityPerDayNotSick>
+					<severityPerDayNotImmuneRandomFactor>
+						<min>1</min>
+						<max>1.12</max>
+					</severityPerDayNotImmuneRandomFactor>
+				</li>
+			</comps>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/HediffDef[defName="SleepingSickness"]</xpath>
+		<value>
+			<li Class="PrimumDisease.PD_TransmissionExtension">
+				<transmissionMethods>
+					<li>PD_OutdoorsVectorBorne</li>
+				</transmissionMethods>
+				<transmissivity>0.5</transmissivity>
+				<resistanceCapacities>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<factor>1</factor>
+					</li>
+				</resistanceCapacities>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/HediffDef[defName = "SleepingSickness"]/stages</xpath>
 		<value>
 			<stages>
@@ -346,8 +463,8 @@
 					</capMods>
 					<hediffGivers>
 						<li Class="HediffGiver_Random">
-							<hediff>PM_Coma</hediff>
-							<mtbDays>4</mtbDays>
+							<hediff>Dementia</hediff>
+							<mtbDays>6.2</mtbDays>
 							<partsToAffect>
 								<li>Brain</li>
 							</partsToAffect>
@@ -372,8 +489,8 @@
 					</capMods>
 					<hediffGivers>
 						<li Class="HediffGiver_Random">
-							<hediff>PM_Coma</hediff>
-							<mtbDays>1</mtbDays>
+							<hediff>Dementia</hediff>
+							<mtbDays>6.2</mtbDays>
 							<partsToAffect>
 								<li>Brain</li>
 							</partsToAffect>
@@ -386,11 +503,33 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/HediffDef[defName = "SleepingSickness"]/description</xpath>
 		<value>
-			<description>An infectious disease caused by an insect-borne parasite. Sleeping sickness is not as deadly as some other diseases--typically culminating in coma, but progresses slowly. The body takes a long time to clear the infection.</description>
+			<description>An infectious disease caused by an insect-borne parasite. Sleeping sickness is not as deadly as some other diseases, but can permenantly damage the brain. It progresses slowly and the body takes a long time to clear the infection.</description>
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationReplace"> <!--Wound infections should cause sepsis 150%. Very rarely (5%) in the major stage. Lasts 2.5 days.-->
+<!--Wound infection-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/HediffDef[defName = "WoundInfection"]/comps</xpath>
+		<value>
+			<comps>
+				<li Class="HediffCompProperties_TendDuration">
+					<baseTendDurationHours>8</baseTendDurationHours>
+					<severityPerDayTended>-0.41</severityPerDayTended>
+				</li>
+				<li Class="HediffCompProperties_Immunizable">
+					<severityPerDayNotImmune>0.50</severityPerDayNotImmune>
+					<immunityPerDaySick>0.50</immunityPerDaySick>
+					<severityPerDayImmune>-1</severityPerDayImmune>
+					<immunityPerDayNotSick>-0.20</immunityPerDayNotSick>
+					<severityPerDayNotImmuneRandomFactor>
+						<min>1</min>
+						<max>1.41</max>
+					</severityPerDayNotImmuneRandomFactor>
+				</li>
+			</comps>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/HediffDef[defName = "WoundInfection"]/stages</xpath>
 		<value>
 			<stages>
@@ -404,8 +543,8 @@
 					<painOffset>0.08</painOffset>
 					<hediffGivers>
 						<li Class="HediffGiver_Random">
-							<hediff>PM_Sepsis</hediff>
-							<mtbDays>14</mtbDays>
+							<hediff>PD_Sepsis</hediff>
+							<mtbDays>5.4</mtbDays>
 						</li>
 					</hediffGivers>
 				</li>
@@ -422,8 +561,8 @@
 					</capMods>
 					<hediffGivers>
 						<li Class="HediffGiver_Random">
-							<hediff>PM_Sepsis</hediff>
-							<mtbDays>0.5</mtbDays>
+							<hediff>PD_Sepsis</hediff>
+							<mtbDays>5.4</mtbDays>
 						</li>
 					</hediffGivers>
 				</li>
@@ -444,8 +583,8 @@
 					</capMods>
 					<hediffGivers>
 						<li Class="HediffGiver_Random">
-							<hediff>PM_Sepsis</hediff>
-							<mtbDays>0.25</mtbDays>
+							<hediff>PD_Sepsis</hediff>
+							<mtbDays>5.4</mtbDays>
 						</li>
 					</hediffGivers>
 				</li>
@@ -455,8 +594,7 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/HediffDef[defName = "WoundInfection"]/description</xpath>
 		<value>
-			<description>Bacterial infection in a wound. Without treatment, the bacteria will multiply, killing local tissue, and eventually causing blood poisoning and death.
-\nThrough aeons of human warfare, infections have often taken more lives than the wounds themselves. While the initial infection may be easily addressed, subsequent sepsis is not.</description>
+			<description>Bacterial infection in a wound. Without treatment, the bacteria will multiply, killing local tissue, and eventually causing blood poisoning and death. Through aeons of human warfare, infections have often taken more lives than the wounds themselves. While the initial infection may be easily addressed, subsequent sepsis is... not.</description>
 		</value>
 	</Operation>
 </Patch>
