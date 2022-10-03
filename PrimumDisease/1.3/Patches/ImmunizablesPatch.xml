@@ -1,111 +1,392 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Patch> 
-<!--Carcinoma: Should spread and have stages similar to leukemia. Also should give sick thought and have lethality-->
+<Patch>
+<!--Flu-->
 	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/HediffDef[defName = "Carcinoma"]/stages</xpath>
+		<xpath>/Defs/HediffDef[defName = "Flu"]/comps</xpath>
+		<value>
+			<comps>
+				<li Class="HediffCompProperties_TendDuration">
+					<baseTendDurationHours>12</baseTendDurationHours>
+					<severityPerDayTended>-0.0773</severityPerDayTended>
+				</li>
+				<li Class="HediffCompProperties_Immunizable">
+					<severityPerDayNotImmune>0.2488</severityPerDayNotImmune>
+					<immunityPerDaySick>0.2388</immunityPerDaySick>
+					<severityPerDayImmune>-0.4947</severityPerDayImmune>
+					<immunityPerDayNotSick>-0.06</immunityPerDayNotSick>
+				</li>
+			</comps>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/HediffDef[defName="Flu"]</xpath>
+		<value>
+			<li Class="PrimumDisease.PD_TransmissionExtension">
+				<transmissionMethods>
+					<li>PD_Proximity</li>
+				</transmissionMethods>
+				<transmissivity>1</transmissivity>
+				<resistanceCapacities>
+					<li>
+						<capacity>Breathing</capacity>
+						<factor>1</factor>
+					</li>
+				</resistanceCapacities>
+			</li>
+		</value>
+	</Operation>
+
+
+
+	    <modExtensions>
+            <li Class="PrimumDisease.PD_TransmissionExtension">
+                <transmissionMethods>
+					<li>PD_FoodBorne</li>
+				</transmissionMethods>
+                <transmissivity>1</transmissivity>
+                <survivalOnCooked>1</survivalOnCooked>
+                <resistanceCapacities>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<factor>0.5</factor>
+					</li>
+				</resistanceCapacities>
+            </li>
+        </modExtensions>
+
+<!--Plague-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/HediffDef[defName = "Plague"]/stages</xpath>
 		<value>
 			<stages>
 				<li>
-					<label>early</label>
-					<becomeVisible>false</becomeVisible>
-					<statOffsets>
-						<PsychicSensitivity>0.2</PsychicSensitivity>
-					</statOffsets>
-				</li>
-				<li>
-					<minSeverity>0.05</minSeverity>
 					<label>minor</label>
-					<painOffset>0.1</painOffset>
-					<statOffsets>
-						<PsychicSensitivity>0.2</PsychicSensitivity>
-					</statOffsets>
-					<hediffGivers>
-						<li Class="HediffGiver_Random">
-							<hediff>Carcinoma</hediff>
-							<mtbDays>180</mtbDays>
-							<partsToAffect>
-								<li>Liver</li>
-								<li>Kidney</li>
-								<li>Lung</li>
-								<li>Heart</li>
-								<li>Brain</li>
-								<li>Tongue</li>
-								<li>Stomach</li>
-								<li>Skull</li>
-								<li>Pelvis</li>
-								<li>Spine</li>
-							</partsToAffect>
+					<painOffset>0.2</painOffset>
+					<capMods>
+						<li>
+							<capacity>Consciousness</capacity>
+							<offset>-0.05</offset>
 						</li>
-					</hediffGivers>
+						<li>
+							<capacity>Manipulation</capacity>
+							<offset>-0.05</offset>
+						</li>
+					</capMods>
 				</li>
 				<li>
-					<minSeverity>0.4</minSeverity>
+					<minSeverity>0.6</minSeverity>
 					<label>major</label>
-					<painOffset>0.25</painOffset>
-					<statOffsets>
-						<PsychicSensitivity>0.2</PsychicSensitivity>
-					</statOffsets>
+					<painOffset>0.35</painOffset>
+					<capMods>
+						<li>
+							<capacity>Consciousness</capacity>
+							<offset>-0.2</offset>
+						</li>
+						<li>
+							<capacity>Manipulation</capacity>
+							<offset>-0.2</offset>
+						</li>
+					</capMods>
 					<hediffGivers>
 						<li Class="HediffGiver_Random">
-							<hediff>Carcinoma</hediff>
-							<mtbDays>60</mtbDays>
+							<hediff>PD_Fibroma</hediff>
+							<mtbDays>3.2</mtbDays>
 							<partsToAffect>
-								<li>Liver</li>
-								<li>Kidney</li>
-								<li>Lung</li>
-								<li>Heart</li>
-								<li>Brain</li>
-								<li>Tongue</li>
-								<li>Stomach</li>
-								<li>Skull</li>
-								<li>Pelvis</li>
-								<li>Spine</li>
+								<li>Nose</li>
+								<li>Jaw</li>
+								<li>Ear</li>
+								<li>Arm</li>
+								<li>Leg</li>
+								<li>Hand</li>
+								<li>Foot</li>
 							</partsToAffect>
 						</li>
 					</hediffGivers>
 				</li>
 				<li>
 					<minSeverity>0.8</minSeverity>
-					<label>terminal</label>
-					<painOffset>0.4</painOffset>
-					<statOffsets>
-						<PsychicSensitivity>0.2</PsychicSensitivity>
-					</statOffsets>
+					<label>extreme</label>
+					<painOffset>0.6</painOffset>
+					<capMods>
+						<li>
+							<capacity>Consciousness</capacity>
+							<offset>-0.3</offset>
+						</li>
+						<li>
+							<capacity>Manipulation</capacity>
+							<offset>-0.3</offset>
+						</li>
+					</capMods>
 					<hediffGivers>
 						<li Class="HediffGiver_Random">
-							<hediff>Carcinoma</hediff>
-							<mtbDays>20</mtbDays>
+							<hediff>PM_Fibroma</hediff>
+							<mtbDays>3.2</mtbDays>
+							<partsToAffect>
+								<li>Nose</li>
+								<li>Jaw</li>
+								<li>Ear</li>
+								<li>Arm</li>
+								<li>Leg</li>
+								<li>Hand</li>
+								<li>Foot</li>
+							</partsToAffect>
+						</li>
+					</hediffGivers>
+				</li>
+				<li>
+					<minSeverity>0.9</minSeverity>
+					<label>extreme</label>
+					<lifeThreatening>true</lifeThreatening>
+					<painOffset>0.85</painOffset>
+					<capMods>
+						<li>
+							<capacity>Consciousness</capacity>
+							<offset>-0.3</offset>
+						</li>
+						<li>
+							<capacity>Manipulation</capacity>
+							<offset>-0.3</offset>
+						</li>
+						<li>
+							<capacity>Breathing</capacity>
+							<offset>-0.15</offset>
+						</li>
+					</capMods>
+					<hediffGivers>
+						<li Class="HediffGiver_Random">
+							<hediff>PM_Fibroma</hediff>
+							<mtbDays>3.2</mtbDays>
+							<partsToAffect>
+								<li>Nose</li>
+								<li>Jaw</li>
+								<li>Ear</li>
+								<li>Arm</li>
+								<li>Leg</li>
+								<li>Hand</li>
+								<li>Foot</li>
+							</partsToAffect>
+						</li>
+					</hediffGivers>
+				</li>
+			</stages>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/HediffDef[defName = "Plague"]/description</xpath>
+		<value>
+			<description>An infectious disease caused by bacteria. Causes growth of benign fibromas and occasional necrosis.</description>
+		</value>
+	</Operation>
+
+
+
+	<Operation Class="PatchOperationReplace"> <!--Malaria should encapsulate and rarely cause cirrhosis-->
+		<xpath>/Defs/HediffDef[defName = "Malaria"]/stages</xpath>
+		<value>
+			<stages>
+				<li>
+					<label>minor</label>
+					<capMods>
+						<li>
+							<capacity>BloodFiltration</capacity>
+							<offset>-0.1</offset>
+						</li>
+						<li>
+							<capacity>Consciousness</capacity>
+							<offset>-0.05</offset>
+						</li>
+					</capMods>
+					<hediffGivers>
+						<li Class="HediffGiver_Random">
+							<hediff>PM_EncapsulatedMalaria</hediff>
+							<mtbDays>5</mtbDays>
 							<partsToAffect>
 								<li>Liver</li>
-								<li>Kidney</li>
-								<li>Lung</li>
-								<li>Heart</li>
-								<li>Brain</li>
-								<li>Tongue</li>
-								<li>Stomach</li>
-								<li>Skull</li>
-								<li>Pelvis</li>
-								<li>Spine</li>
+								<li>Arm</li>
+								<li>Leg</li>
+								<li>Torso</li>
 							</partsToAffect>
 						</li>
+					</hediffGivers>
+				</li>
+				<li>
+					<minSeverity>0.78</minSeverity>
+					<label>major</label>
+					<vomitMtbDays>1.5</vomitMtbDays>
+					<painOffset>0.3</painOffset>
+					<capMods>
+						<li>
+							<capacity>BloodFiltration</capacity>
+							<offset>-0.2</offset>
+						</li>
+						<li>
+							<capacity>Consciousness</capacity>
+							<offset>-0.12</offset>
+						</li>
+						<li>
+							<capacity>Manipulation</capacity>
+							<offset>-0.08</offset>
+						</li>
+					</capMods>
+					<hediffGivers>
 						<li Class="HediffGiver_Random">
-							<hediff>HeartAttack</hediff>
-							<allowOnLodgers>false</allowOnLodgers>
-							<allowOnQuestRewardPawns>false</allowOnQuestRewardPawns>
-							<allowOnQuestReservedPawns>false</allowOnQuestReservedPawns>
-							<allowOnBeggars>false</allowOnBeggars>
-							<mtbDays>150</mtbDays>
+							<hediff>PM_EncapsulatedMalaria</hediff>
+							<mtbDays>5</mtbDays>
 							<partsToAffect>
-								<li>Heart</li>
+								<li>Liver</li>
+								<li>Arm</li>
+								<li>Leg</li>
+								<li>Torso</li>
 							</partsToAffect>
 						</li>
 						<li Class="HediffGiver_Random">
-							<hediff>PD_Stroke</hediff>
-							<allowOnLodgers>false</allowOnLodgers>
-							<allowOnQuestRewardPawns>false</allowOnQuestRewardPawns>
-							<allowOnQuestReservedPawns>false</allowOnQuestReservedPawns>
-							<allowOnBeggars>false</allowOnBeggars>
-							<mtbDays>150</mtbDays>
+							<hediff>Cirrhosis</hediff>
+							<mtbDays>6</mtbDays> <!--~10% chance of giving cirrhosis-->
+						</li>
+					</hediffGivers>
+				</li>
+				<li>
+					<minSeverity>0.91</minSeverity>
+					<label>extreme</label>
+					<lifeThreatening>true</lifeThreatening>
+					<vomitMtbDays>0.75</vomitMtbDays>
+					<painOffset>0.3</painOffset>
+					<capMods>
+						<li>
+							<capacity>BloodFiltration</capacity>
+							<offset>-0.22</offset>
+						</li>
+						<li>
+							<capacity>Consciousness</capacity>
+							<setMax>0.1</setMax>
+						</li>
+						<li>
+							<capacity>Manipulation</capacity>
+							<offset>-0.1</offset>
+						</li>
+					</capMods>
+					<hediffGivers>
+						<li Class="HediffGiver_Random">
+							<hediff>PM_EncapsulatedMalaria</hediff>
+							<mtbDays>5</mtbDays>
+							<partsToAffect>
+								<li>Liver</li>
+								<li>Arm</li>
+								<li>Leg</li>
+								<li>Torso</li>
+							</partsToAffect>
+						</li>
+						<li Class="HediffGiver_Random">
+							<hediff>Cirrhosis</hediff>
+							<mtbDays>6</mtbDays> <!--~10% chance of giving cirrhosis-->
+						</li>
+					</hediffGivers>
+				</li>
+			</stages>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/HediffDef[defName = "Malaria"]/description</xpath>
+		<value>
+			<description>A deadly infectious disease caused by a mosquito-borne parasite. May encapsulate to avoid the immune system, and occasionally causes cirrhosis.</description>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace"> <!--Sleeping sickness should cause coma. Lasts 8-17 days.-->
+		<xpath>/Defs/HediffDef[defName = "SleepingSickness"]/stages</xpath>
+		<value>
+			<stages>
+				<li>
+					<label>minor</label>
+					<painOffset>0.02</painOffset>
+					<capMods>
+						<li>
+							<capacity>Consciousness</capacity>
+							<offset>-0.02</offset>
+						</li>
+						<li>
+							<capacity>Manipulation</capacity>
+							<offset>-0.02</offset>
+						</li>
+					</capMods>
+				</li>
+				<li>
+					<minSeverity>0.4375</minSeverity>
+					<label>minor</label>
+					<painOffset>0.03</painOffset>
+					<capMods>
+						<li>
+							<capacity>Consciousness</capacity>
+							<offset>-0.04</offset>
+						</li>
+						<li>
+							<capacity>Manipulation</capacity>
+							<offset>-0.04</offset>
+						</li>
+					</capMods>
+				</li>
+				<li>
+					<minSeverity>0.625</minSeverity>
+					<label>major</label>
+					<vomitMtbDays>3.5</vomitMtbDays>
+					<painOffset>0.05</painOffset>
+					<capMods>
+						<li>
+							<capacity>Consciousness</capacity>
+							<offset>-0.15</offset>
+						</li>
+						<li>
+							<capacity>Manipulation</capacity>
+							<offset>-0.06</offset>
+						</li>
+					</capMods>
+				</li>
+				<li>
+					<minSeverity>0.875</minSeverity>
+					<label>extreme</label>
+					<lifeThreatening>true</lifeThreatening>
+					<vomitMtbDays>1.75</vomitMtbDays>
+					<painOffset>0.1</painOffset>
+					<capMods>
+						<li>
+							<capacity>Consciousness</capacity>
+							<offset>-0.2</offset>
+						</li>
+						<li>
+							<capacity>Manipulation</capacity>
+							<offset>-0.2</offset>
+						</li>
+					</capMods>
+					<hediffGivers>
+						<li Class="HediffGiver_Random">
+							<hediff>PM_Coma</hediff>
+							<mtbDays>4</mtbDays>
+							<partsToAffect>
+								<li>Brain</li>
+							</partsToAffect>
+						</li>
+					</hediffGivers>
+				</li>
+				<li>
+					<minSeverity>0.9375</minSeverity>
+					<label>extreme</label>
+					<lifeThreatening>true</lifeThreatening>
+					<vomitMtbDays>1</vomitMtbDays>
+					<painOffset>0.15</painOffset>
+					<capMods>
+						<li>
+							<capacity>Consciousness</capacity>
+							<setMax>0.1</setMax>
+						</li>
+						<li>
+							<capacity>Manipulation</capacity>
+							<offset>-0.2</offset>
+						</li>
+					</capMods>
+					<hediffGivers>
+						<li Class="HediffGiver_Random">
+							<hediff>PM_Coma</hediff>
+							<mtbDays>1</mtbDays>
 							<partsToAffect>
 								<li>Brain</li>
 							</partsToAffect>
@@ -116,187 +397,79 @@
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/HediffDef[defName = "Carcinoma"]/comps</xpath>
+		<xpath>/Defs/HediffDef[defName = "SleepingSickness"]/description</xpath>
 		<value>
-			<comps>
-				<li Class="HediffCompProperties_TendDuration">
-					<baseTendDurationHours>96</baseTendDurationHours>
-					<severityPerDayTended>-0.005</severityPerDayTended>
-				</li>
-				<li Class="HediffCompProperties_GrowthMode">
-					<severityPerDayGrowing>0.005</severityPerDayGrowing>
-					<severityPerDayRemission>-0.0033</severityPerDayRemission>
-					<severityPerDayGrowingRandomFactor>0.5~1.83</severityPerDayGrowingRandomFactor>
-					<severityPerDayRemissionRandomFactor>0.7~1.5</severityPerDayRemissionRandomFactor>
-				</li>
-			</comps>
+			<description>An infectious disease caused by an insect-borne parasite. Sleeping sickness is not as deadly as some other diseases--typically culminating in coma, but progresses slowly. The body takes a long time to clear the infection.</description>
 		</value>
-	</Operation>
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/HediffDef[defName = "lethalSeverity"]</xpath>
-		<value>
-			<lethalSeverity>1</lethalSeverity>
-		</value>
-	</Operation>
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/HediffDef[defName = "Carcinoma"]</xpath>
-		<value>
-			<makesSickThought>true</makesSickThought>
-		</value>
-	</Operation>
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/HediffDef[defName = "Carcinoma"]</xpath>
-		<value>
-			<cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
-		</value>	
 	</Operation>
 
-<!--Cirrhosis: should cause liver cancer-->
-	<Operation Class="PatchOperationReplace">
-	
-<!--Resurrection psychosis: Spreads memetically!-->
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/HediffDef[defName = "ResurrectionPsychosis"]</xpath>
+	<Operation Class="PatchOperationReplace"> <!--Wound infections should cause sepsis 150%. Very rarely (5%) in the major stage. Lasts 2.5 days.-->
+		<xpath>/Defs/HediffDef[defName = "WoundInfection"]/stages</xpath>
 		<value>
-			<modExtensions>
-				<li Class="PrimumDisease.PD_TransmissionExtension">
-					<transmissionMethods>
-						<li>PD_Memetic</li>
-					</transmissionMethods>
-					<transmissivity>0.25</transmissivity>
-					<survivalOnCooked>1</survivalOnCooked>
+			<stages>
+				<li>
+					<label>minor</label>
+					<painOffset>0.05</painOffset>
+				</li> 
+				<li>
+					<minSeverity>0.33</minSeverity>
+					<label>major</label>
+					<painOffset>0.08</painOffset>
+					<hediffGivers>
+						<li Class="HediffGiver_Random">
+							<hediff>PM_Sepsis</hediff>
+							<mtbDays>14</mtbDays>
+						</li>
+					</hediffGivers>
 				</li>
-			</modExtensions>
+				<li>
+					<minSeverity>0.78</minSeverity>
+					<label>extreme</label>
+					<lifeThreatening>true</lifeThreatening>
+					<painOffset>0.12</painOffset>
+					<capMods>
+						<li>
+							<capacity>Consciousness</capacity>
+							<offset>-0.05</offset>
+						</li>
+					</capMods>
+					<hediffGivers>
+						<li Class="HediffGiver_Random">
+							<hediff>PM_Sepsis</hediff>
+							<mtbDays>0.5</mtbDays>
+						</li>
+					</hediffGivers>
+				</li>
+				<li>
+					<minSeverity>0.87</minSeverity>
+					<label>extreme</label>
+					<lifeThreatening>true</lifeThreatening>
+					<painOffset>0.85</painOffset>
+					<capMods>
+						<li>
+							<capacity>Consciousness</capacity>
+							<setMax>0.1</setMax>
+						</li>
+						<li>
+							<capacity>Breathing</capacity>
+							<offset>-0.05</offset>
+						</li>
+					</capMods>
+					<hediffGivers>
+						<li Class="HediffGiver_Random">
+							<hediff>PM_Sepsis</hediff>
+							<mtbDays>0.25</mtbDays>
+						</li>
+					</hediffGivers>
+				</li>
+			</stages>
 		</value>
 	</Operation>
-	
-	
-	
-	
-	
-	
-	
-<!--Cirrhosis disease giver: borrows bad back distribution, like bright's disease-->	
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/HediffGiverSetDef[defName = "OrganicStandard"]</xpath>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/HediffDef[defName = "WoundInfection"]/description</xpath>
 		<value>
-			<li Class="HediffGiver_Birthday">
-				<hediff>Cirrhosis</hediff>
-				<partsToAffect>
-					<li>Liver</li>
-				</partsToAffect>
-				<ageFractionChanceCurve>
-					<points>
-						<li>(0.5, 0)</li>
-						<li>(0.625, 0.0093)</li>
-						<li>(0.75, 0.01395)</li>
-						<li>(0.875, 0.01395)</li>
-						<li>(1, 0.0186)</li>
-					</points>
-				</ageFractionChanceCurve>
-			</li>
-		</value>
-	</Operation>
-	
-<!--Creutzfeldt rim disease giver-->	
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/HediffGiverSetDef[defName = "OrganicStandard"]</xpath>
-		<value>
-			<li Class="HediffGiver_Birthday">
-				<hediff>PD_CreutzfeldtRimDisease</hediff>
-				<ageFractionChanceCurve>
-					<points>
-						<li>(0.25, 0)</li>
-						<li>(0.5, 0.00025)</li>
-						<li>(1, 0.0005)</li>
-					</points>
-				</ageFractionChanceCurve>
-				<averageSeverityPerDayBeforeGeneration>0.0005</averageSeverityPerDayBeforeGeneration>
-			</li>
-		</value>
-	</Operation>
-	
-<!--Brain artery blockage giver-->	
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/HediffGiverSetDef[defName = "OrganicStandard"]</xpath>
-		<value>
-			<li Class="HediffGiver_Birthday">
-				<hediff>PD_BrainArteryBlockage</hediff>
-				<partsToAffect>
-					<li>Heart</li>
-				</partsToAffect>
-				<ageFractionChanceCurve>
-					<points>
-						<li>(0.25, 0)</li>
-						<li>(0.3, 0.001)</li>
-						<li>(0.5, 0.00145)</li>
-						<li>(1, 0.0016)</li>
-						<li>(1.5, 0.0017)</li>
-					</points>
-				</ageFractionChanceCurve>
-				<averageSeverityPerDayBeforeGeneration>0.00025</averageSeverityPerDayBeforeGeneration>
-			</li>
-		</value>
-	</Operation>
-	
-<!--Leukemia giver: bimodal distribution, more common in the young or the old.-->	
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/HediffGiverSetDef[defName = "OrganicStandard"]</xpath>
-		<value>
-			<li Class="HediffGiver_Birthday">
-				<hediff>PD_Leukemia</hediff>
-				<ageFractionChanceCurve>
-					<points>
-						<li>(0.25, 0.001)</li>
-						<li>(0.5, 0.0001)</li>
-						<li>(1.5, 0.0015)</li>
-					</points>
-				</ageFractionChanceCurve>
-				<averageSeverityPerDayBeforeGeneration>0.0005</averageSeverityPerDayBeforeGeneration>
-			</li>
-		</value>
-	</Operation>
-	
-<!--Fibroma giver: Similar to cancer distribution-->	
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/HediffGiverSetDef[defName = "OrganicStandard"]</xpath>
-		<value>
-			<li Class="HediffGiver_Birthday">
-				<hediff>PD_Fibroma</hediff>
-				<canAffectAnyLivePart>true</canAffectAnyLivePart>
-				<ageFractionChanceCurve>
-					<points>
-						<li>(0.28, 0)</li>
-						<li>(1, 0.0011)</li>
-						<li>(1.5, 0.0015)</li>
-					</points>
-				</ageFractionChanceCurve>
-				<averageSeverityPerDayBeforeGeneration>0.0005</averageSeverityPerDayBeforeGeneration>
-			</li>
-		</value>
-	</Operation>
-	
-<!--Bright's disease giver: borrows bad back distribution-->	
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/HediffGiverSetDef[defName = "OrganicStandard"]</xpath>
-		<value>
-			<li Class="HediffGiver_Birthday">
-				<hediff>PD_ChronicKidneyDisease</hediff>
-				<partsToAffect>
-					<li>Kidney</li>
-				</partsToAffect>
-				<countToAffect>2</countToAffect>
-				<ageFractionChanceCurve>
-					<points>
-						<li>(0.5, 0)</li>
-						<li>(0.625, 0.0093)</li>
-						<li>(0.75, 0.01395)</li>
-						<li>(0.875, 0.01395)</li>
-						<li>(1, 0.0186)</li>
-					</points>
-				</ageFractionChanceCurve>
-				<averageSeverityPerDayBeforeGeneration>0.0005</averageSeverityPerDayBeforeGeneration>
-			</li>
+			<description>Bacterial infection in a wound. Without treatment, the bacteria will multiply, killing local tissue, and eventually causing blood poisoning and death.
+\nThrough aeons of human warfare, infections have often taken more lives than the wounds themselves. While the initial infection may be easily addressed, subsequent sepsis is not.</description>
 		</value>
 	</Operation>
 </Patch>
