@@ -17,6 +17,10 @@
 				<immunityPerDaySick>0.16</immunityPerDaySick>
 				<severityPerDayImmune>-0.33</severityPerDayImmune>
 				<immunityPerDayNotSick>-0.03</immunityPerDayNotSick>
+				<severityPerDayNotImmuneRandomFactor>
+					<min>1</min>
+					<max>1.02</max>
+				</severityPerDayNotImmuneRandomFactor>
 			</li>
 		</comps>
 		<stages>
@@ -86,7 +90,15 @@
 					</li>
 					<li Class="HediffGiver_Random">
 						<hediff>BadBack</hediff>
-						<mtbDays>6</mtbDays> <!--~20% chance of giving bad back-->
+						<mtbDays>7.2</mtbDays>
+					</li>
+					<li Class="HediffGiver_Random">
+						<hediff>Asthma</hediff>
+						<mtbDays>7.2</mtbDays>
+						<partsToAffect>
+							<li>Lung</li>
+						</partsToAffect>
+						<countToAffect>2</countToAffect>
 					</li>
 				</hediffGivers>
 			</li>
@@ -105,13 +117,17 @@
 		<comps>
 			<li Class="HediffCompProperties_TendDuration">
 				<baseTendDurationHours>6</baseTendDurationHours>
-				<severityPerDayTended>-0.19</severityPerDayTended>
+				<severityPerDayTended>-0.2</severityPerDayTended>
 			</li>
 			<li Class="HediffCompProperties_Immunizable">
 				<severityPerDayNotImmune>0.5</severityPerDayNotImmune>
-				<immunityPerDaySick>0.38</immunityPerDaySick>
+				<immunityPerDaySick>0.4</immunityPerDaySick>
 				<severityPerDayImmune>-0.25</severityPerDayImmune>
 				<immunityPerDayNotSick>-0.2</immunityPerDayNotSick>
+				<severityPerDayNotImmuneRandomFactor>
+					<min>1</min>
+					<max>1.2</max>
+				</severityPerDayNotImmuneRandomFactor>
 			</li>
 		</comps>
 		<stages>
@@ -140,7 +156,7 @@
 				<hediffGivers>
 					<li Class="HediffGiver_Random">
 						<hediff>PD_ChronicKidneyDisease</hediff>
-						<mtbDays>8</mtbDays>
+						<mtbDays>2.67</mtbDays>
 						<partsToAffect>
 							<li>Kidney</li>
 						</partsToAffect>
@@ -148,7 +164,7 @@
 					</li>
 					<li Class="HediffGiver_Random">
 						<hediff>Frail</hediff>
-						<mtbDays>8</mtbDays>
+						<mtbDays>2.67</mtbDays>
 					</li>
 				</hediffGivers>
 			</li>
@@ -167,7 +183,7 @@
 				<hediffGivers>
 					<li Class="HediffGiver_Random">
 						<hediff>PD_Necrosis</hediff>
-						<mtbDays>2</mtbDays>
+						<mtbDays>1.33</mtbDays>
 						<partsToAffect>
 							<li>Jaw</li>
 							<li>Spine</li>
@@ -187,7 +203,7 @@
 					</li>
 					<li Class="HediffGiver_Random">
 						<hediff>PD_ChronicKidneyDisease</hediff>
-						<mtbDays>2</mtbDays>
+						<mtbDays>2.67</mtbDays>
 						<partsToAffect>
 							<li>Kidney</li>
 						</partsToAffect>
@@ -195,7 +211,7 @@
 					</li>
 					<li Class="HediffGiver_Random">
 						<hediff>Frail</hediff>
-						<mtbDays>4</mtbDays>
+						<mtbDays>2.67</mtbDays>
 					</li>
 				</hediffGivers>
 			</li>
