@@ -746,7 +746,7 @@
 	<Operation Class="PatchOperationAdd">
 		<xpath>/Defs/HediffDef[defName = "FoodPoisoning"]</xpath>
 		<value>
-    			<lethalSeverity>0.01</lethalSeverity>
+    			<lethalSeverity>1</lethalSeverity>
 		</value>
 	</Operation>
 </Patch>
