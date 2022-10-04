@@ -21,16 +21,16 @@
 		<modExtensions>
 		    <li Class="PrimumDisease.PD_TransmissionExtension">
 			<transmissionMethods>
-						<li>PD_FoodBorne</li>
-					</transmissionMethods>
+				<li>PD_FoodBorne</li>
+			</transmissionMethods>
 			<transmissivity>1</transmissivity>
 			<survivalOnCooked>1</survivalOnCooked>
 			<resistanceCapacities>
-						<li>
-							<capacity>BloodFiltration</capacity>
-							<factor>0.5</factor>
-						</li>
-					</resistanceCapacities>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<factor>0.5</factor>
+				</li>
+			</resistanceCapacities>
 		    </li>
 		</modExtensions>
 		<stages>
