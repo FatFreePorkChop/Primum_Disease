@@ -31,7 +31,6 @@
 		</stages>
 	</HediffDef>	
 	
-	
 	<HediffDef ParentName="DiseaseBase"> <!--Encapsulated malaria -->
 		<defName>PD_EncapsulatedMalaria</defName>
 		<label>encapsulated malaria</label>
@@ -56,5 +55,145 @@
 				</hediffGivers>
 			</li>
 		</stages>
-	</HediffDef>	
+	</HediffDef>
+	
+	<HediffDef ParentName="InfectionBase"> <!--Brain worms-->
+		<defName>PD_BrainWorms</defName>
+		<label>brain worms</label>
+		<description>Highly evolved parasitic worms in the brain. They cause pain, impaired sleep, and decreased higher functions which may progress to dementia.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<makesSickThought>true</makesSickThought>
+		<tendable>true</tendable>
+		<comps>
+			<li Class="HediffCompProperties_TendDuration">
+				<baseTendDurationHours>36</baseTendDurationHours>
+				<disappearsAtTotalTendQuality>4</disappearsAtTotalTendQuality>
+			</li>
+		</comps>
+		<modExtensions>
+		    <li Class="PrimumDisease.PD_TransmissionExtension">
+				<transmissionMethods>
+					<li>PD_FoodBorne</li>
+				</transmissionMethods>
+				<transmissivity>1</transmissivity>
+				<survivalOnCooked>0.5</survivalOnCooked>
+				<resistanceCapacities>
+					<li>
+						<capacity>Metabolism</capacity>
+						<factor>0.5</factor>
+					</li>
+				</resistanceCapacities>
+		    </li>
+		</modExtensions>
+		<stages>
+			<li>
+				<painOffset>0.1</painOffset>
+				<statOffsets>
+					<RestRateMultiplier>-0.40</RestRateMultiplier>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.1</offset>
+					</li>
+				</capMods>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>Dementia</hediff>
+						<mtbDays>64</mtbDays>
+						<partsToAffect>
+							<li>Brain</li>
+						<partsToAffect>
+					</li>
+				</hediffGivers>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="InfectionBase"> <!--Lung worms-->
+		<defName>PD_LungWorms</defName>
+		<label>lung worms</label>
+		<description>Parasitic worms in the lungs. They impair breathing and sleep, and may cause asthma. Additionally, some worms may be coughed up and travel to the gut.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<makesSickThought>true</makesSickThought>
+		<tendable>true</tendable>
+		<comps>
+			<li Class="HediffCompProperties_TendDuration">
+				<baseTendDurationHours>48</baseTendDurationHours>
+				<disappearsAtTotalTendQuality>2</disappearsAtTotalTendQuality>
+			</li>
+		</comps>
+		<modExtensions>
+		    <li Class="PrimumDisease.PD_TransmissionExtension">
+				<transmissionMethods>
+					<li>PD_FoodBorne</li>
+				</transmissionMethods>
+				<transmissivity>1</transmissivity>
+				<survivalOnCooked>0.5</survivalOnCooked>
+				<resistanceCapacities>
+					<li>
+						<capacity>Metabolism</capacity>
+						<factor>0.5</factor>
+					</li>
+				</resistanceCapacities>
+		    </li>
+		</modExtensions>
+		<stages>
+			<li>
+				<painOffset>0.1</painOffset>
+				<statOffsets>
+					<RestRateMultiplier>-0.30</RestRateMultiplier>
+				</statOffsets>
+				<restFallFactorOffset>0.3</restFallFactorOffset>
+				<partEfficiencyOffset>-0.5</partEfficiencyOffset>
+        		<vomitMtbDays>2.0</vomitMtbDays>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>Asthma</hediff>
+						<mtbDays>32</mtbDays>
+						<partsToAffect>
+							<li>Lung</li>
+						</partsToAffect>
+						<countToAffect>2</countToAffect>
+					</li>
+					<li Class="HediffGiver_Random">
+						<hediff>GutWorms</hediff>
+						<mtbDays>8</mtbDays>
+						<partsToAffect>
+							<li>Stomach</li>
+						</partsToAffect>
+					</li>
+				</hediffGivers>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef ParentName="InfectionBase"> <!--Necrosis-->
+		<defName>PD_Necrosis</defName>
+		<label>necrosis</label>
+		<description>Necrosis is death of the tissue. Not lethal itself, but the dead tissue promotes bacterial proliferation. Must be surgically excised.</description>
+		<makesSickThought>true</makesSickThought>
+		<chanceToCauseNoPain>0.3</chanceToCauseNoPain>
+		<tendable>false</tendable>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>
+					<min>1200000</min>
+					<max>2400000</max>
+				</disappearsAfterTicks>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<painOffset>0.1</painOffset>
+				<partEfficiencyOffset>-0.5</partEfficiencyOffset>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>PD_Sepsis</hediff>
+						<mtbDays>10</mtbDays>
+					</li>
+				</hediffGivers>
+			</li>
+		</stages>
+	</HediffDef>
 </Defs>
