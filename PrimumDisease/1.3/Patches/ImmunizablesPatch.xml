@@ -737,4 +737,16 @@
 			<label>salmonella</label>
 		</value>
 	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/HediffDef[defName = "FoodPoisoning"]/initialSeverity</xpath>
+		<value>
+    			<initialSeverity>0.01</initialSeverity>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/HediffDef[defName = "FoodPoisoning"]</xpath>
+		<value>
+    			<lethalSeverity>0.01</lethalSeverity>
+		</value>
+	</Operation>
 </Patch>
