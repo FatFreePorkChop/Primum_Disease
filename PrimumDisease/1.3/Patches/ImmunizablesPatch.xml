@@ -200,7 +200,7 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/HediffDef[defName = "Plague"]/description</xpath>
 		<value>
-			<description>An infectious disease caused by bacteria. Causes growth of benign fibromas and occasional necrosis.</description>
+			<description>An infectious disease caused by bacteria. Causes growth of benign fibromas.</description>
 		</value>
 	</Operation>
 
