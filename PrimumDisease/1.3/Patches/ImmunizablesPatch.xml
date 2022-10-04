@@ -205,6 +205,156 @@
 	</Operation>
 
 
+<!--Sleeping sickness-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/HediffDef[defName = "SleepingSickness"]/comps</xpath>
+		<value>
+			<comps>
+				<li Class="HediffCompProperties_TendDuration">
+					<baseTendDurationHours>36</baseTendDurationHours>
+					<severityPerDayTended>-0.07</severityPerDayTended>
+				</li>
+				<li Class="HediffCompProperties_Immunizable">
+					<severityPerDayNotImmune>0.12</severityPerDayNotImmune>
+					<immunityPerDaySick>0.11</immunityPerDaySick>
+					<severityPerDayImmune>-0.25</severityPerDayImmune>
+					<immunityPerDayNotSick>-0.01</immunityPerDayNotSick>
+					<severityPerDayNotImmuneRandomFactor>
+						<min>1</min>
+						<max>1.12</max>
+					</severityPerDayNotImmuneRandomFactor>
+				</li>
+			</comps>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/HediffDef[defName="SleepingSickness"]</xpath>
+		<value>
+			<li Class="PrimumDisease.PD_TransmissionExtension">
+				<transmissionMethods>
+					<li>PD_OutdoorsVectorBorne</li>
+				</transmissionMethods>
+				<transmissivity>0.5</transmissivity>
+				<resistanceCapacities>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<factor>1</factor>
+					</li>
+				</resistanceCapacities>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/HediffDef[defName = "SleepingSickness"]/stages</xpath>
+		<value>
+			<stages>
+				<li>
+					<label>minor</label>
+					<painOffset>0.02</painOffset>
+					<capMods>
+						<li>
+							<capacity>Consciousness</capacity>
+							<offset>-0.02</offset>
+						</li>
+						<li>
+							<capacity>Manipulation</capacity>
+							<offset>-0.02</offset>
+						</li>
+					</capMods>
+				</li>
+				<li>
+					<minSeverity>0.4375</minSeverity>
+					<label>minor</label>
+					<painOffset>0.03</painOffset>
+					<capMods>
+						<li>
+							<capacity>Consciousness</capacity>
+							<offset>-0.04</offset>
+						</li>
+						<li>
+							<capacity>Manipulation</capacity>
+							<offset>-0.04</offset>
+						</li>
+					</capMods>
+				</li>
+				<li>
+					<minSeverity>0.625</minSeverity>
+					<label>major</label>
+					<vomitMtbDays>3.5</vomitMtbDays>
+					<painOffset>0.05</painOffset>
+					<capMods>
+						<li>
+							<capacity>Consciousness</capacity>
+							<offset>-0.15</offset>
+						</li>
+						<li>
+							<capacity>Manipulation</capacity>
+							<offset>-0.06</offset>
+						</li>
+					</capMods>
+				</li>
+				<li>
+					<minSeverity>0.875</minSeverity>
+					<label>extreme</label>
+					<lifeThreatening>true</lifeThreatening>
+					<vomitMtbDays>1.75</vomitMtbDays>
+					<painOffset>0.1</painOffset>
+					<capMods>
+						<li>
+							<capacity>Consciousness</capacity>
+							<offset>-0.2</offset>
+						</li>
+						<li>
+							<capacity>Manipulation</capacity>
+							<offset>-0.2</offset>
+						</li>
+					</capMods>
+					<hediffGivers>
+						<li Class="HediffGiver_Random">
+							<hediff>Dementia</hediff>
+							<mtbDays>6.2</mtbDays>
+							<partsToAffect>
+								<li>Brain</li>
+							</partsToAffect>
+						</li>
+					</hediffGivers>
+				</li>
+				<li>
+					<minSeverity>0.9375</minSeverity>
+					<label>extreme</label>
+					<lifeThreatening>true</lifeThreatening>
+					<vomitMtbDays>1</vomitMtbDays>
+					<painOffset>0.15</painOffset>
+					<capMods>
+						<li>
+							<capacity>Consciousness</capacity>
+							<setMax>0.1</setMax>
+						</li>
+						<li>
+							<capacity>Manipulation</capacity>
+							<offset>-0.2</offset>
+						</li>
+					</capMods>
+					<hediffGivers>
+						<li Class="HediffGiver_Random">
+							<hediff>Dementia</hediff>
+							<mtbDays>6.2</mtbDays>
+							<partsToAffect>
+								<li>Brain</li>
+							</partsToAffect>
+						</li>
+					</hediffGivers>
+				</li>
+			</stages>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/HediffDef[defName = "SleepingSickness"]/description</xpath>
+		<value>
+			<description>An infectious disease caused by an insect-borne parasite. Sleeping sickness is not as deadly as some other diseases, but can permenantly damage the brain. It progresses slowly and the body takes a long time to clear the infection.</description>
+		</value>
+	</Operation>
+
 
 <!--Malaria-->
 	<Operation Class="PatchOperationReplace">
@@ -357,155 +507,7 @@
 		</value>
 	</Operation>
 
-<!--Sleeping sickness-->
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/HediffDef[defName = "SleepingSickness"]/comps</xpath>
-		<value>
-			<comps>
-				<li Class="HediffCompProperties_TendDuration">
-					<baseTendDurationHours>36</baseTendDurationHours>
-					<severityPerDayTended>-0.07</severityPerDayTended>
-				</li>
-				<li Class="HediffCompProperties_Immunizable">
-					<severityPerDayNotImmune>0.12</severityPerDayNotImmune>
-					<immunityPerDaySick>0.11</immunityPerDaySick>
-					<severityPerDayImmune>-0.25</severityPerDayImmune>
-					<immunityPerDayNotSick>-0.01</immunityPerDayNotSick>
-					<severityPerDayNotImmuneRandomFactor>
-						<min>1</min>
-						<max>1.12</max>
-					</severityPerDayNotImmuneRandomFactor>
-				</li>
-			</comps>
-		</value>
-	</Operation>
-	<Operation Class="PatchOperationAddModExtension">
-		<xpath>/Defs/HediffDef[defName="SleepingSickness"]</xpath>
-		<value>
-			<li Class="PrimumDisease.PD_TransmissionExtension">
-				<transmissionMethods>
-					<li>PD_OutdoorsVectorBorne</li>
-				</transmissionMethods>
-				<transmissivity>0.5</transmissivity>
-				<resistanceCapacities>
-					<li>
-						<capacity>BloodFiltration</capacity>
-						<factor>1</factor>
-					</li>
-				</resistanceCapacities>
-			</li>
-		</value>
-	</Operation>
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/HediffDef[defName = "SleepingSickness"]/stages</xpath>
-		<value>
-			<stages>
-				<li>
-					<label>minor</label>
-					<painOffset>0.02</painOffset>
-					<capMods>
-						<li>
-							<capacity>Consciousness</capacity>
-							<offset>-0.02</offset>
-						</li>
-						<li>
-							<capacity>Manipulation</capacity>
-							<offset>-0.02</offset>
-						</li>
-					</capMods>
-				</li>
-				<li>
-					<minSeverity>0.4375</minSeverity>
-					<label>minor</label>
-					<painOffset>0.03</painOffset>
-					<capMods>
-						<li>
-							<capacity>Consciousness</capacity>
-							<offset>-0.04</offset>
-						</li>
-						<li>
-							<capacity>Manipulation</capacity>
-							<offset>-0.04</offset>
-						</li>
-					</capMods>
-				</li>
-				<li>
-					<minSeverity>0.625</minSeverity>
-					<label>major</label>
-					<vomitMtbDays>3.5</vomitMtbDays>
-					<painOffset>0.05</painOffset>
-					<capMods>
-						<li>
-							<capacity>Consciousness</capacity>
-							<offset>-0.15</offset>
-						</li>
-						<li>
-							<capacity>Manipulation</capacity>
-							<offset>-0.06</offset>
-						</li>
-					</capMods>
-				</li>
-				<li>
-					<minSeverity>0.875</minSeverity>
-					<label>extreme</label>
-					<lifeThreatening>true</lifeThreatening>
-					<vomitMtbDays>1.75</vomitMtbDays>
-					<painOffset>0.1</painOffset>
-					<capMods>
-						<li>
-							<capacity>Consciousness</capacity>
-							<offset>-0.2</offset>
-						</li>
-						<li>
-							<capacity>Manipulation</capacity>
-							<offset>-0.2</offset>
-						</li>
-					</capMods>
-					<hediffGivers>
-						<li Class="HediffGiver_Random">
-							<hediff>Dementia</hediff>
-							<mtbDays>6.2</mtbDays>
-							<partsToAffect>
-								<li>Brain</li>
-							</partsToAffect>
-						</li>
-					</hediffGivers>
-				</li>
-				<li>
-					<minSeverity>0.9375</minSeverity>
-					<label>extreme</label>
-					<lifeThreatening>true</lifeThreatening>
-					<vomitMtbDays>1</vomitMtbDays>
-					<painOffset>0.15</painOffset>
-					<capMods>
-						<li>
-							<capacity>Consciousness</capacity>
-							<setMax>0.1</setMax>
-						</li>
-						<li>
-							<capacity>Manipulation</capacity>
-							<offset>-0.2</offset>
-						</li>
-					</capMods>
-					<hediffGivers>
-						<li Class="HediffGiver_Random">
-							<hediff>Dementia</hediff>
-							<mtbDays>6.2</mtbDays>
-							<partsToAffect>
-								<li>Brain</li>
-							</partsToAffect>
-						</li>
-					</hediffGivers>
-				</li>
-			</stages>
-		</value>
-	</Operation>
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/HediffDef[defName = "SleepingSickness"]/description</xpath>
-		<value>
-			<description>An infectious disease caused by an insect-borne parasite. Sleeping sickness is not as deadly as some other diseases, but can permenantly damage the brain. It progresses slowly and the body takes a long time to clear the infection.</description>
-		</value>
-	</Operation>
+
 
 <!--Wound infection-->
 	<Operation Class="PatchOperationReplace">
@@ -595,6 +597,144 @@
 		<xpath>/Defs/HediffDef[defName = "WoundInfection"]/description</xpath>
 		<value>
 			<description>Bacterial infection in a wound. Without treatment, the bacteria will multiply, killing local tissue, and eventually causing blood poisoning and death. Through aeons of human warfare, infections have often taken more lives than the wounds themselves. While the initial infection may be easily addressed, subsequent sepsis is... not.</description>
+		</value>
+	</Operation>
+
+
+
+<!--Salmonella-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/HediffDef[defName = "FoodPoisoning"]/comps</xpath>
+		<value>
+			<comps>
+				<li Class="HediffCompProperties_TendDuration">
+					<baseTendDurationHours>-1</baseTendDurationHours>
+					<severityPerDayTended>-0.63</severityPerDayTended>
+				</li>
+				<li Class="HediffCompProperties_Immunizable">
+					<severityPerDayNotImmune>1.33</severityPerDayNotImmune>
+					<immunityPerDaySick>1.59</immunityPerDaySick>
+					<severityPerDayImmune>-1.00</severityPerDayImmune>
+					<immunityPerDayNotSick>-0.10</immunityPerDayNotSick>
+					<severityPerDayNotImmuneRandomFactor>
+						<min>1</min>
+						<max>1.10</max>
+					</severityPerDayNotImmuneRandomFactor>
+				</li>
+			</comps>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/HediffDef[defName="FoodPoisoning"]</xpath>
+		<value>
+			<li Class="PrimumDisease.PD_TransmissionExtension">
+				<transmissionMethods>
+					<li>PD_Contact</li>
+				</transmissionMethods>
+				<transmissivity>1</transmissivity>
+				<resistanceCapacities>
+					<li>
+						<capacity>Metabolism</capacity>
+						<factor>1</factor>
+					</li>
+				</resistanceCapacities>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/HediffDef[defName = "Malaria"]/stages</xpath>
+		<value>
+			<stages>
+				<li>
+					<label>minor</label>
+					<vomitMtbDays>0.4</vomitMtbDays>
+					<painOffset>0.2</painOffset>
+					<capMods>
+						<li>
+							<capacity>Consciousness</capacity>
+							<postFactor>0.85</postFactor>
+						</li>
+						<li>
+							<capacity>Moving</capacity>
+							<postFactor>0.8</postFactor>
+						</li>
+						<li>
+							<capacity>Manipulation</capacity>
+							<postFactor>0.9</postFactor>
+						</li>
+						<li>
+							<capacity>BloodFiltration</capacity>
+							<postFactor>0.95</postFactor>
+						</li>
+						<li>
+							<capacity>Eating</capacity>
+							<postFactor>0.5</postFactor>
+						</li>
+					</capMods>
+					<hediffGivers>
+						<li Class="HediffGiver_Random">
+							<hediff>Carcinoma</hediff>
+							<mtbDays>12</mtbDays>
+							<partsToAffect>
+								<li>Stomach</li>
+							</partsToAffect>
+						</li>
+					</hediffGivers>
+				</li>
+				<li>
+					<label>major</label>
+					<minSeverity>0.67</minSeverity>
+					<vomitMtbDays>0.2</vomitMtbDays>
+					<painOffset>0.4</painOffset>
+					<capMods>
+						<li>
+							<capacity>Consciousness</capacity>
+							<postFactor>0.7</postFactor>
+						</li>
+						<li>
+							<capacity>Moving</capacity>
+							<postFactor>0.5</postFactor>
+						</li>
+						<li>
+							<capacity>Manipulation</capacity>
+							<postFactor>0.8</postFactor>
+						</li>
+						<li>
+							<capacity>BloodFiltration</capacity>
+							<postFactor>0.85</postFactor>
+						</li>
+						<li>
+							<capacity>Talking</capacity>
+							<postFactor>0.8</postFactor>
+						</li>
+						<li>
+							<capacity>Eating</capacity>
+							<postFactor>0.3</postFactor>
+						</li>
+					</capMods>
+					<hediffGivers>
+						<li Class="HediffGiver_Random">
+							<hediff>Carcinoma</hediff>
+							<mtbDays>12</mtbDays>
+							<partsToAffect>
+								<li>Stomach</li>
+							</partsToAffect>
+						</li>
+					</hediffGivers>
+				</li>
+			</stages>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/HediffDef[defName = "FoodPoisoning"]/description</xpath>
+		<value>
+			<description>A common pathogen spread by poor hygiene and undercooked food. While it can be treated, it is rarely dangerous except in those already very sick. However, the Rim's environment has generated a version of salmonella that can induce stomach cancer.</description>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/HediffDef[defName = "FoodPoisoning"]/label</xpath>
+		<value>
+			<label>salmonella</label>
 		</value>
 	</Operation>
 </Patch>
