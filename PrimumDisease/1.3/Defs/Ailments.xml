@@ -188,7 +188,7 @@
 				<baseTendDurationHours>64</baseTendDurationHours>
 				<severityPerDayTended>-0.01</severityPerDayTended>
 			</li>
-			<li Class="PD_HediffCompProperties_GrowthMode">
+			<li Class="PrimumDisease.PD_HediffCompProperties_GrowthMode">
 				<severityPerDayGrowing>0.01</severityPerDayGrowing> 
 				<severityPerDayRemission>-0.008</severityPerDayRemission>
 				<severityPerDayGrowingRandomFactor>0.7~1.7</severityPerDayGrowingRandomFactor>
