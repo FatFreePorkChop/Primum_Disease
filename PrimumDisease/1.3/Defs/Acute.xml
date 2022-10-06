@@ -1,13 +1,61 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-  <HediffDef> <!-- A brain equivalent to the heart attack.
-  The heart attack class severity changes by -0.4~0.6 every 2 hours. Starting t 0.4, average time to death is 14 hours. Stroke are 0.75 as lethal untreated, so has additional natural recovery rate of .025/hour = 0.6/day
-  -->
-    <defName>PM_Stroke</defName>
+	<HediffDef><!--Stroke-->
+		<defName>PD_Stroke</defName>
+		<hediffClass>PrimumDisease.Hediff_Emergency</hediffClass>
+		<defaultLabelColor>(1, 0.2, 0.2)</defaultLabelColor>
+		<label>stroke</label>
+		<labelNoun>A complete blockage of a critical artery in the brain. Strokes causing lasting neurologic damage, possibly including brain death. They can worsen and lead to death, or recover</labelNoun>
+		<initialSeverity>0.4</initialSeverity>
+		<lethalSeverity>1</lethalSeverity>
+		<tendable>true</tendable>
+		<modExtensions>
+		    <li Class="PrimumDisease.PD_EmergencyExtension">
+				<severityChangeInterval>3750</severityChangeInterval>
+				<severityChangeMin>-0.6</severityChangeMin>
+				<severityChangeMax>0.4</severityChangeMax>
+				<tendSuccessChanceFactor>0.5</tendSuccessChanceFactor>
+				<tendSeverityReduction>0.2</tendSeverityReduction>
+		    </li>
+		</modExtensions>
+		<stages>
+			<li>
+				<label>painful</label>
+				<lifeThreatening>true</lifeThreatening>
+				<painOffset>0.4</painOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<postFactor>0.5</postFactor>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>debilitating</label>
+				<minSeverity>0.6</minSeverity>
+				<lifeThreatening>true</lifeThreatening>
+				<painOffset>0.6</painOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.1</setMax>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>fatal</label>
+				<minSeverity>1</minSeverity>
+			</li>
+		</stages>
+	</HediffDef>
+
+
+  <HediffDef> <!--Stroke-->
+    <defName>PD_Stroke</defName>
     <label>stroke</label>
     <labelNoun>a stroke</labelNoun>
-    <description>A complete blockage of a critical artery in the brain. Strokes are not painful, and are rarely lethal, but causing lasting neurologic damage. They can worsen and lead to death, or recover.</description>
+    <description>A complete blockage of a critical artery in the brain. Strokes causing lasting neurologic damage, possibly including brain death. They can worsen and lead to death, or recover.</description>
     <hediffClass>Hediff_HeartAttack</hediffClass>
     <defaultLabelColor>(1, 0.2, 0.2)</defaultLabelColor>
     <initialSeverity>0.4</initialSeverity>
