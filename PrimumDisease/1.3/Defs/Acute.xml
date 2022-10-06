@@ -21,27 +21,43 @@
 		</modExtensions>
 		<stages>
 			<li>
-				<label>painful</label>
+				<label>initial</label>
 				<lifeThreatening>true</lifeThreatening>
-				<painOffset>0.4</painOffset>
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
 						<postFactor>0.5</postFactor>
 					</li>
 				</capMods>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>Dementia</hediff>
+						<mtbDays>0.75</mtbDays>
+						<partsToAffect>
+							<li>Brain</li>
+						</partsToAffect>
+					</li>
+				</hediffGivers>
 			</li>
 			<li>
 				<label>debilitating</label>
-				<minSeverity>0.6</minSeverity>
+				<minSeverity>0.5</minSeverity>
 				<lifeThreatening>true</lifeThreatening>
-				<painOffset>0.6</painOffset>
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
 						<setMax>0.1</setMax>
 					</li>
 				</capMods>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>Dementia</hediff>
+						<mtbDays>0.75</mtbDays>
+						<partsToAffect>
+							<li>Brain</li>
+						</partsToAffect>
+					</li>
+				</hediffGivers>
 			</li>
 			<li>
 				<label>fatal</label>
@@ -49,81 +65,4 @@
 			</li>
 		</stages>
 	</HediffDef>
-
-
-  <HediffDef> <!--Stroke-->
-    <defName>PD_Stroke</defName>
-    <label>stroke</label>
-    <labelNoun>a stroke</labelNoun>
-    <description>A complete blockage of a critical artery in the brain. Strokes causing lasting neurologic damage, possibly including brain death. They can worsen and lead to death, or recover.</description>
-    <hediffClass>Hediff_HeartAttack</hediffClass>
-    <defaultLabelColor>(1, 0.2, 0.2)</defaultLabelColor>
-    <initialSeverity>0.4</initialSeverity>
-    <lethalSeverity>1</lethalSeverity>
-    <tendable>true</tendable>
-	<comps>
-		<li Class="HediffCompProperties_Immunizable">
-			<severityPerDayNotImmune>-0.6</severityPerDayNotImmune>
-		</li>
-	</comps>
-    <stages>
-		<li>
-			<label>initial</label>
-			<lifeThreatening>true</lifeThreatening>
-			<capMods>
-				<li>
-					<capacity>Consciousness</capacity>
-					<postFactor>0.5</postFactor>
-				</li>
-			</capMods>
-			<hediffGivers>
-				<li Class="HediffGiver_Random">
-					<hediff>Dementia</hediff>
-					<mtbDays>8</mtbDays>
-					<partsToAffect>
-						<li>Brain</li>
-					</partsToAffect>
-				</li>
-				<li Class="HediffGiver_Random">
-					<hediff>PM_SecondaryDamageModerate</hediff>
-					<mtbDays>4</mtbDays>
-					<partsToAffect>
-						<li>Brain</li>
-					</partsToAffect>
-				</li>
-			</hediffGivers>
-		</li>
-		<li>
-			<label>debilitating</label>
-			<minSeverity>0.5</minSeverity>
-			<lifeThreatening>true</lifeThreatening>
-			<capMods>
-				<li>
-					<capacity>Consciousness</capacity>
-					<setMax>0.1</setMax>
-				</li>
-			</capMods>
-			<hediffGivers>
-				<li Class="HediffGiver_Random">
-					<hediff>Dementia</hediff>
-					<mtbDays>2</mtbDays>
-					<partsToAffect>
-						<li>Brain</li>
-					</partsToAffect>
-				</li>
-				<li Class="HediffGiver_Random">
-					<hediff>PM_SecondaryDamageSevere</hediff>
-					<mtbDays>1</mtbDays>
-					<partsToAffect>
-						<li>Brain</li>
-					</partsToAffect>
-				</li>
-			</hediffGivers>
-		</li>
-		<li>
-			<label>fatal</label>
-			<minSeverity>1</minSeverity>
-		</li>
-    </stages>
-  </HediffDef>
 </Defs>
