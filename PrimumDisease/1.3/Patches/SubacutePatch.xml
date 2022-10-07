@@ -28,6 +28,23 @@
 			<description>Parasitic worms in the gut. They cause vomiting and consume the victim's food, which increases hunger. Sometimes originating with worms coughed up from the lungs. Due to blockage of the billiary tract, gut worms may cause cirrhosis.</description>
 		</value>
 	</Operation>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/HediffDef[defName="GutWorms"]</xpath>
+		<value>
+			<li Class="PrimumDisease.PD_TransmissionExtension">
+				<transmissionMethods>
+					<li>PD_Contact</li>
+				</transmissionMethods>
+				<transmissivity>1</transmissivity>
+				<resistanceCapacities>
+					<li>
+						<capacity>Metabolism</capacity>
+						<factor>1</factor>
+					</li>
+				</resistanceCapacities>
+			</li>
+		</value>
+	</Operation>
 
 <!--Muscle parasites-->
 	<Operation Class="PatchOperationReplace">
@@ -61,6 +78,24 @@
 		<xpath>/Defs/HediffDef[defName = "MuscleParasites"]/description</xpath>
 		<value>
 			<description>Parasitic creatures in the muscles. These cause weakness and a lack of coordination which may be complicated by whole-body frailty.</description>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/HediffDef[defName="MuscleParasites"]</xpath>
+		<value>
+			<li Class="PrimumDisease.PD_TransmissionExtension">
+				<transmissionMethods>
+					<li>PD_FoodBorne</li>
+				</transmissionMethods>
+				<transmissivity>1</transmissivity>
+				<survivalOnCooked>0.25</survivalOnCooked>
+				<resistanceCapacities>
+					<li>
+						<capacity>Metabolism</capacity>
+						<factor>1</factor>
+					</li>
+				</resistanceCapacities>
+			</li>
 		</value>
 	</Operation>
 
@@ -179,7 +214,7 @@
 						<comps>
 							<li Class="HediffCompProperties_Immunizable">
 								<severityPerDayNotImmune>0.4</severityPerDayNotImmune>
-								<severityPerDayNotImmuneRandomFactor> 1~1.75 </severityPerDayNotImmuneRandomFactor>
+								<severityPerDayNotImmuneRandomFactor> 1~2.5 </severityPerDayNotImmuneRandomFactor>
 							</li>
 							<li Class="HediffCompProperties_TendDuration">
 								<severityPerDayTended>-1</severityPerDayTended>
@@ -189,6 +224,23 @@
 								<disappearsAfterTicks>1800000~2400000</disappearsAfterTicks> <!-- 30 ! 45 days -->
 							</li>
 						</comps>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/HediffDef[defName="BloodRot"]</xpath>
+					<value>
+						<li Class="PrimumDisease.PD_TransmissionExtension">
+							<transmissionMethods>
+								<li>PD_Venereal</li>
+							</transmissionMethods>
+							<transmissivity>1</transmissivity>
+							<resistanceCapacities>
+								<li>
+									<capacity>BloodFiltration</capacity>
+									<factor>1</factor>
+								</li>
+							</resistanceCapacities>
+						</li>
 					</value>
 				</li>
 				
