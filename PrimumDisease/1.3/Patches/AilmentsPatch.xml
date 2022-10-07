@@ -153,7 +153,7 @@
 
 <!--Cirrhosis: should cause liver cancer-->
 	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/HediffDef[defName = "Carcinoma"]/stages</xpath>
+		<xpath>/Defs/HediffDef[defName = "Cirrhosis"]/stages</xpath>
 		<value>
 			<stages>
 				<li>
@@ -165,6 +165,15 @@
 							<offset>-0.10</offset>
 						</li>
 					</capMods>
+					<hediffGivers>
+						<li Class="HediffGiver_Random">
+							<hediff>Carcinoma</hediff>
+							<mtbDays>240</mtbDays>
+							<partsToAffect>
+								<li>Liver</li>
+							</partsToAffect>
+						</li>
+					</hediffGivers>
 				</li>
 			</stages>
 		</value>

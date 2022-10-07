@@ -5,7 +5,7 @@
 	<RecipeDef ParentName="SurgeryFlesh"> <!--Heart angioplasty-->
 		<defName>PD_HeartAngioplasty</defName>
 		<label>coronary angioplasty</label>
-		<description>A special operation to dilate and remove blockages from critical arteries in the heart; requires a skilled physician.</description>
+		<description>An operation to dilate and remove blockages from critical arteries in the heart; requires a skilled physician.</description>
 		<workerClass>Recipe_RemoveHediff</workerClass>
 		<jobString>Performing angioplasty.</jobString>
 		<workAmount>4500</workAmount>
@@ -44,7 +44,7 @@
 	<RecipeDef ParentName="SurgeryFlesh"> <!--Brain angioplasty-->
 		<defName>PD_BrainAngioplasty</defName>
 		<label>cerebral angioplasty</label>
-		<description>A special operation to dilate and remove blockages from critical arteries in the brain; requires a skilled physician.</description>
+		<description>An operation to dilate and remove blockages from critical arteries in the brain; requires a skilled physician.</description>
 		<workerClass>Recipe_RemoveHediff</workerClass>
 		<jobString>Performing angioplasty.</jobString>
 		<workAmount>4500</workAmount>
@@ -77,6 +77,46 @@
 			</categories>
 			<disallowedThingDefs>
 				<li>MedicineHerbal</li>
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+	<RecipeDef ParentName="SurgeryFlesh"> <!--Cataract surgery-->
+		<defName>PD_CataractSurgery</defName>
+		<label>cataract surgery</label>
+		<description>An operation to remove the opacified lens and replace it with a near perfect duplicate. Duplicating the native lens requires advanced medicine, but the procedure is well-tolerated.</description>
+		<workerClass>Recipe_RemoveHediff</workerClass>
+		<jobString>Performing cataract surgery.</jobString>
+		<workAmount>4500</workAmount>
+		<recipeUsers>
+			<li>Human</li>
+		</recipeUsers>
+		<isViolation>false</isViolation>
+		<removesHediff>Cataract</removesHediff>
+		<successfullyRemovedHediffMessage>{0} has successfully cleared {1}'s cataract</successfullyRemovedHediffMessage>
+		
+		<deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
+		<surgerySuccessChanceFactor>1</surgerySuccessChanceFactor>
+		<skillRequirements>
+			<Medicine>14</Medicine>
+		</skillRequirements>
+		
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+			<count>2</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<disallowedThingDefs>
+				<li>MedicineHerbal</li>
+				<li>MedicineIndustrial</li>
 			</disallowedThingDefs>
 		</fixedIngredientFilter>
 	</RecipeDef>

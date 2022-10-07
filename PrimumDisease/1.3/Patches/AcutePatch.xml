@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch> 
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/HediffDef[defName = "HeartAttack"]/stages</xpath>
+		<value>
+            <stages>
+                <li>
+                    <label>painful</label>
+                    <lifeThreatening>true</lifeThreatening>
+                    <painOffset>0.4</painOffset>
+                    <capMods>
+                        <li>
+                            <capacity>Consciousness</capacity>
+                            <postFactor>0.5</postFactor>
+                        </li>
+                    </capMods>
+                </li>
+                <li>
+                    <label>debilitating</label>
+                    <minSeverity>0.6</minSeverity>
+                    <lifeThreatening>true</lifeThreatening>
+                    <painOffset>0.6</painOffset>
+                    <capMods>
+                        <li>
+                            <capacity>Consciousness</capacity>
+                            <setMax>0.1</setMax>
+                        </li>
+                    </capMods>
+                    <hediffGivers>
+                        <li Class="HediffGiver_Random">
+                            <hediff>Frail</hediff>
+                            <mtbDays>0.9</mtbDays>
+                        </li>
+                        <li Class="HediffGiver_Random">
+                            <hediff>PD_ChronicKidneyDisease</hediff>
+                            <mtbDays>0.9</mtbDays>
+                            <partsToAffect>
+                                <li>Kidney</li>
+                            </partsToAffect>
+						    <countToAffect>2</countToAffect>
+                        </li>
+                        <li Class="HediffGiver_Random">
+                            <hediff>PD_Necrosis</hediff>
+                            <mtbDays>0.9</mtbDays>
+                            <partsToAffect>
+                                <li>Jaw</li>
+                                <li>Spine</li>
+                                <li>Pelvis</li>
+                                <li>Ribcage</li>
+                                <li>Sternum</li>
+                                <li>Femur</li>
+                                <li>Humerus</li>
+                                <li>Clavicle</li>
+                                <li>Tibia</li>
+                                <li>Radius</li>
+                                <li>Liver</li>
+                                <li>Kidney</li>
+                                <li>Lung</li>
+                                <li>Stomach</li>
+                            </partsToAffect>
+                        </li>
+                    </hediffGivers>
+                </li>   
+                <li>
+                    <label>fatal</label>
+                    <minSeverity>1</minSeverity>
+                </li>
+            </stages>
+		</value>
+	</Operation>
+</Patch>
