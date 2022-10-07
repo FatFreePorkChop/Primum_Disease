@@ -413,6 +413,15 @@
 				<label>minor</label>
 				<minSeverity>0.25</minSeverity>
 				<partEfficiencyOffset>-0.45</partEfficiencyOffset>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>BadBack</hediff>
+						<mtbDays>60</mtbDays>
+						<partsToAffect>
+							<li>Spine</li>
+						</partsToAffect>
+					</li>
+				</hediffGivers>
 			</li>
 			<li>
 				<label>major</label>
@@ -420,8 +429,11 @@
 				<partEfficiencyOffset>-0.7</partEfficiencyOffset>
 				<hediffGivers>
 					<li Class="HediffGiver_Random">
-						<hediff>Frail</hediff>
-						<mtbDays>300</mtbDays>
+						<hediff>BadBack</hediff>
+						<mtbDays>60</mtbDays>
+						<partsToAffect>
+							<li>Spine</li>
+						</partsToAffect>
 					</li>
 				</hediffGivers>
 			</li>
@@ -432,21 +444,24 @@
 				<hediffGivers>
 					<li Class="HediffGiver_Random">
 						<hediff>HeartArteryBlockage</hediff>
-						<mtbDays>60</mtbDays>
+						<mtbDays>40</mtbDays>
 						<partsToAffect>
 							<li>Heart</li>
 						</partsToAffect>
 					</li>
 					<li Class="HediffGiver_Random">
 						<hediff>PD_BrainArteryBlockage</hediff>
-						<mtbDays>60</mtbDays>
+						<mtbDays>40</mtbDays>
 						<partsToAffect>
 							<li>Brain</li>
 						</partsToAffect>
 					</li>
 					<li Class="HediffGiver_Random">
-						<hediff>Frail</hediff>
-						<mtbDays>300</mtbDays>
+						<hediff>BadBack</hediff>
+						<mtbDays>60</mtbDays>
+						<partsToAffect>
+							<li>Heart</li>
+						</partsToAffect>
 					</li>
 				</hediffGivers>
 			</li>
