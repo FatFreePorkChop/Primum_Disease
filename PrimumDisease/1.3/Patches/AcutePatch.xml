@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch> 
+<!--Heart attack-->
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/HediffDef[defName = "HeartAttack"]/stages</xpath>
 		<value>

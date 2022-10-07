@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch> 
+<!--Gut worms-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/HediffDef[defName = "GutWorms"]/stages</xpath>
+		<value>
+			<stages>
+				<li>
+					<painOffset>0.2</painOffset>
+					<hungerRateFactorOffset>1</hungerRateFactorOffset>
+					<vomitMtbDays>1.0</vomitMtbDays>
+					<hediffGivers>
+						<li Class="HediffGiver_Random">
+							<hediff>Cirrhosis</hediff>
+							<mtbDays>60</mtbDays>
+							<partsToAffect>
+								<li>Liver</li>
+							</partsToAffect>
+						</li>
+					</hediffGivers>
+				</li>
+			</stages>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/HediffDef[defName = "GutWorms"]/description</xpath>
+		<value>
+			<description>Parasitic worms in the gut. They cause vomiting and consume the victim's food, which increases hunger. Sometimes originating with worms coughed up from the lungs. Due to blockage of the billiary tract, gut worms may cause cirrhosis.</description>
+		</value>
+	</Operation>
+
+<!--Muscle parasites-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/HediffDef[defName = "MuscleParasites"]/stages</xpath>
+		<value>
+			<stages>
+				<li>
+					<painOffset>0.2</painOffset>
+					<restFallFactorOffset>1</restFallFactorOffset>
+					<capMods>
+						<li>
+							<capacity>Manipulation</capacity>
+							<offset>-0.3</offset>
+						</li>
+						<li>
+							<capacity>Moving</capacity>
+							<offset>-0.3</offset>
+						</li>
+					</capMods>
+					<hediffGivers>
+						<li Class="HediffGiver_Random">
+							<hediff>Frail</hediff>
+							<mtbDays>90</mtbDays>
+						</li>
+					</hediffGivers>
+				</li>
+			</stages>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/HediffDef[defName = "MuscleParasites"]/description</xpath>
+		<value>
+			<description>Parasitic creatures in the muscles. These cause weakness and a lack of coordination which may be complicated by whole-body frailty.</description>
+		</value>
+	</Operation>
+</Patch> 
