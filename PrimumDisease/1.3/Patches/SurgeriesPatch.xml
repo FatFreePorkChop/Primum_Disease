@@ -45,7 +45,7 @@
 		<mods>
 			<li>Royalty</li>
 		</mods>
-		<match Class="PatchOperationModSequence">
+		<match Class="PatchOperationSequence">
 			<operations>
 				<li Class="PrimumDisease.PatchOperationAddOrReplace">
 					<xpath>/Defs/RecipeDef[defName = "CureAbasia" or defName = "CureBloodRot"]</xpath>
