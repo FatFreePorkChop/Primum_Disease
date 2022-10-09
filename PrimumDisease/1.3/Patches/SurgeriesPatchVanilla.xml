@@ -1,0 +1,946 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch> 
+<!--Excise carcinoma-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "ExciseCarcinoma"]/deathOnFailedSurgeryChance</xpath>
+		<value>
+			<deathOnFailedSurgeryChance>0.25</deathOnFailedSurgeryChance>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RecipeDef[defName = "ExciseCarcinoma"]</xpath>
+		<value>
+			<surgerySuccessChanceFactor>1</surgerySuccessChanceFactor>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "ExciseCarcinoma"]/skillRequirements</xpath>
+		<value>
+			<skillRequirements>
+				<Medicine>16</Medicine>
+			</skillRequirements>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "ExciseCarcinoma"]/ingredients</xpath>
+		<value>
+			<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>Medicine</li>
+						</categories>
+					</filter>
+					<count>4</count>
+				</li>
+			</ingredients>
+		</value>
+	</Operation>
+	
+	
+<!--InstallNaturalKidney-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RecipeDef[defName = "InstallNaturalKidney"]</xpath>
+		<value>
+			<deathOnFailedSurgeryChance>0.05</deathOnFailedSurgeryChance>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RecipeDef[defName = "InstallNaturalKidney"]</xpath>
+		<value>
+			<surgerySuccessChanceFactor>0.9</surgerySuccessChanceFactor>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallNaturalKidney"]/skillRequirements</xpath>
+		<value>
+			<skillRequirements>
+				<Medicine>12</Medicine>
+			</skillRequirements>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallNaturalKidney"]/ingredients</xpath>
+		<value>
+			<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>Medicine</li>
+						</categories>
+					</filter>
+					<count>3</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>Kidney</li>
+						</thingDefs>
+					</filter>
+					<count>1</count>
+				</li>
+			</ingredients>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallNaturalKidney"]/fixedIngredientFilter</xpath>
+		<value>
+			<fixedIngredientFilter>
+				<categories>
+					<li>Medicine</li>
+				</categories>
+				<disallowedThingDefs>
+					<li>MedicineHerbal</li>
+				</disallowedThingDefs>
+				<thingDefs>
+					<li>Kidney</li>
+				</thingDefs>
+			</fixedIngredientFilter>
+		</value>
+	</Operation>
+
+<!--InstallNaturalLiver-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RecipeDef[defName = "InstallNaturalLiver"]</xpath>
+		<value>
+			<deathOnFailedSurgeryChance>0.05</deathOnFailedSurgeryChance>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RecipeDef[defName = "InstallNaturalLiver"]</xpath>
+		<value>
+			<surgerySuccessChanceFactor>0.9</surgerySuccessChanceFactor>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallNaturalLiver"]/skillRequirements</xpath>
+		<value>
+			<skillRequirements>
+				<Medicine>12</Medicine>
+			</skillRequirements>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallNaturalLiver"]/ingredients</xpath>
+		<value>
+			<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>Medicine</li>
+						</categories>
+					</filter>
+					<count>6</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>Liver</li>
+						</thingDefs>
+					</filter>
+					<count>1</count>
+				</li>
+			</ingredients>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallNaturalLiver"]/fixedIngredientFilter</xpath>
+		<value>
+			<fixedIngredientFilter>
+				<categories>
+					<li>Medicine</li>
+				</categories>
+				<disallowedThingDefs>
+					<li>MedicineHerbal</li>
+				</disallowedThingDefs>
+				<thingDefs>
+					<li>Liver</li>
+				</thingDefs>
+			</fixedIngredientFilter>
+		</value>
+	</Operation>
+
+<!--InstallNaturalLung-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RecipeDef[defName = "InstallNaturalLung"]</xpath>
+		<value>
+			<deathOnFailedSurgeryChance>0.05</deathOnFailedSurgeryChance>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RecipeDef[defName = "InstallNaturalLung"]</xpath>
+		<value>
+			<surgerySuccessChanceFactor>0.9</surgerySuccessChanceFactor>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallNaturalLung"]/skillRequirements</xpath>
+		<value>
+			<skillRequirements>
+				<Medicine>12</Medicine>
+			</skillRequirements>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallNaturalLung"]/ingredients</xpath>
+		<value>
+			<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>Medicine</li>
+						</categories>
+					</filter>
+					<count>3</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>Lung</li>
+						</thingDefs>
+					</filter>
+					<count>1</count>
+				</li>
+			</ingredients>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallNaturalLung"]/fixedIngredientFilter</xpath>
+		<value>
+			<fixedIngredientFilter>
+				<categories>
+					<li>Medicine</li>
+				</categories>
+				<disallowedThingDefs>
+					<li>MedicineHerbal</li>
+				</disallowedThingDefs>
+				<thingDefs>
+					<li>Lung</li>
+				</thingDefs>
+			</fixedIngredientFilter>
+		</value>
+	</Operation>
+
+<!--InstallNaturalHeart-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallNaturalHeart"]/deathOnFailedSurgeryChance</xpath>
+		<value>
+			<deathOnFailedSurgeryChance>0.05</deathOnFailedSurgeryChance>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RecipeDef[defName = "InstallNaturalHeart"]</xpath>
+		<value>
+			<surgerySuccessChanceFactor>0.9</surgerySuccessChanceFactor>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallNaturalHeart"]/skillRequirements</xpath>
+		<value>
+			<skillRequirements>
+				<Medicine>14</Medicine>
+			</skillRequirements>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallNaturalHeart"]/ingredients</xpath>
+		<value>
+			<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>Medicine</li>
+						</categories>
+					</filter>
+					<count>6</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>Heart</li>
+						</thingDefs>
+					</filter>
+					<count>1</count>
+				</li>
+			</ingredients>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallNaturalHeart"]/fixedIngredientFilter</xpath>
+		<value>
+			<fixedIngredientFilter>
+				<categories>
+					<li>Medicine</li>
+				</categories>
+				<disallowedThingDefs>
+					<li>MedicineHerbal</li>
+				</disallowedThingDefs>
+				<thingDefs>
+					<li>Heart</li>
+				</thingDefs>
+			</fixedIngredientFilter>
+		</value>
+	</Operation>
+	
+
+
+<!--Very simple implants: wooden feet, peg legs, and dentures are unchanged from vanilla-->
+
+
+<!--InstallJoywire-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallJoywire"]/deathOnFailedSurgeryChance</xpath>
+		<value>
+			<deathOnFailedSurgeryChance>0.05</deathOnFailedSurgeryChance>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RecipeDef[defName = "InstallJoywire"]</xpath>
+		<value>
+			<surgerySuccessChanceFactor>1</surgerySuccessChanceFactor>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallJoywire"]/skillRequirements</xpath>
+		<value>
+			<skillRequirements>
+				<Medicine>10</Medicine>
+			</skillRequirements>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallJoywire"]/ingredients</xpath>
+		<value>
+			<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>Medicine</li>
+						</categories>
+					</filter>
+					<count>6</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>Joywire</li>
+						</thingDefs>
+					</filter>
+					<count>1</count>
+				</li>
+			</ingredients>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallJoywire"]/fixedIngredientFilter</xpath>
+		<value>
+			<fixedIngredientFilter>
+				<categories>
+					<li>Medicine</li>
+				</categories>
+				<thingDefs>
+					<li>Joywire</li>
+				</thingDefs>
+			</fixedIngredientFilter>
+		</value>
+	</Operation>
+
+<!--InstallPainstopper-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallPainstopper"]/deathOnFailedSurgeryChance</xpath>
+		<value>
+			<deathOnFailedSurgeryChance>0.05</deathOnFailedSurgeryChance>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RecipeDef[defName = "InstallPainstopper"]</xpath>
+		<value>
+			<surgerySuccessChanceFactor>1</surgerySuccessChanceFactor>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallPainstopper"]/skillRequirements</xpath>
+		<value>
+			<skillRequirements>
+				<Medicine>10</Medicine>
+			</skillRequirements>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallPainstopper"]/ingredients</xpath>
+		<value>
+			<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>Medicine</li>
+						</categories>
+					</filter>
+					<count>6</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>Painstopper</li>
+						</thingDefs>
+					</filter>
+					<count>1</count>
+				</li>
+			</ingredients>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallPainstopper"]/fixedIngredientFilter</xpath>
+		<value>
+			<fixedIngredientFilter>
+				<categories>
+					<li>Medicine</li>
+				</categories>
+				<thingDefs>
+					<li>Painstopper</li>
+				</thingDefs>
+			</fixedIngredientFilter>
+		</value>
+	</Operation>
+<!--Simple Prosthetics-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RecipeDef[defName = "InstallSimpleProstheticLeg"]/deathOnFailedSurgeryChance</xpath>
+		<value>
+			<deathOnFailedSurgeryChance>0.05</deathOnFailedSurgeryChance>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallSimpleProstheticLeg"]/skillRequirements</xpath>
+		<value>
+			<skillRequirements>
+				<Medicine>8</Medicine>
+			</skillRequirements>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RecipeDef[defName = "InstallSimpleProstheticArm"]/deathOnFailedSurgeryChance</xpath>
+		<value>
+			<deathOnFailedSurgeryChance>0.05</deathOnFailedSurgeryChance>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallSimpleProstheticArm"]/skillRequirements</xpath>
+		<value>
+			<skillRequirements>
+				<Medicine>8</Medicine>
+			</skillRequirements>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RecipeDef[defName = "InstallSimpleProstheticHeart"]/deathOnFailedSurgeryChance</xpath>
+		<value>
+			<deathOnFailedSurgeryChance>0.1</deathOnFailedSurgeryChance>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallSimpleProstheticHeart"]/skillRequirements</xpath>
+		<value>
+			<skillRequirements>
+				<Medicine>10</Medicine>
+			</skillRequirements>
+		</value>
+	</Operation>
+
+<!--InstallBionicArm-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicArm"]/deathOnFailedSurgeryChance</xpath>
+		<value>
+			<deathOnFailedSurgeryChance>0.05</deathOnFailedSurgeryChance>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicArm"]</xpath>
+		<value>
+			<surgerySuccessChanceFactor>0.9</surgerySuccessChanceFactor>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicArm"]/skillRequirements</xpath>
+		<value>
+			<skillRequirements>
+				<Medicine>12</Medicine>
+			</skillRequirements>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicArm"]/ingredients</xpath>
+		<value>
+			<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>Medicine</li>
+						</categories>
+					</filter>
+					<count>6</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>BionicArm</li>
+						</thingDefs>
+					</filter>
+					<count>1</count>
+				</li>
+			</ingredients>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicArm"]/fixedIngredientFilter</xpath>
+		<value>
+			<fixedIngredientFilter>
+				<categories>
+					<li>Medicine</li>
+				</categories>
+				<disallowedThingDefs>
+					<li>MedicineHerbal</li>
+				</disallowedThingDefs>
+				<thingDefs>
+					<li>BionicArm</li>
+				</thingDefs>
+			</fixedIngredientFilter>
+		</value>
+	</Operation>
+
+
+<!--InstallBionicLeg-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicLeg"]/deathOnFailedSurgeryChance</xpath>
+		<value>
+			<deathOnFailedSurgeryChance>0.05</deathOnFailedSurgeryChance>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicLeg"]</xpath>
+		<value>
+			<surgerySuccessChanceFactor>0.9</surgerySuccessChanceFactor>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicLeg"]/skillRequirements</xpath>
+		<value>
+			<skillRequirements>
+				<Medicine>12</Medicine>
+			</skillRequirements>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicLeg"]/ingredients</xpath>
+		<value>
+			<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>Medicine</li>
+						</categories>
+					</filter>
+					<count>6</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>BionicLeg</li>
+						</thingDefs>
+					</filter>
+					<count>1</count>
+				</li>
+			</ingredients>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicLeg"]/fixedIngredientFilter</xpath>
+		<value>
+			<fixedIngredientFilter>
+				<categories>
+					<li>Medicine</li>
+				</categories>
+				<disallowedThingDefs>
+					<li>MedicineHerbal</li>
+				</disallowedThingDefs>
+				<thingDefs>
+					<li>BionicLeg</li>
+				</thingDefs>
+			</fixedIngredientFilter>
+		</value>
+	</Operation>
+
+<!--InstallBionicSpine-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicSpine"]/deathOnFailedSurgeryChance</xpath>
+		<value>
+			<deathOnFailedSurgeryChance>0.05</deathOnFailedSurgeryChance>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicSpine"]</xpath>
+		<value>
+			<surgerySuccessChanceFactor>0.9</surgerySuccessChanceFactor>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicSpine"]/skillRequirements</xpath>
+		<value>
+			<skillRequirements>
+				<Medicine>12</Medicine>
+			</skillRequirements>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicSpine"]/ingredients</xpath>
+		<value>
+			<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>Medicine</li>
+						</categories>
+					</filter>
+					<count>6</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>BionicSpine</li>
+						</thingDefs>
+					</filter>
+					<count>1</count>
+				</li>
+			</ingredients>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicSpine"]/fixedIngredientFilter</xpath>
+		<value>
+			<fixedIngredientFilter>
+				<categories>
+					<li>Medicine</li>
+				</categories>
+				<disallowedThingDefs>
+					<li>MedicineHerbal</li>
+				</disallowedThingDefs>
+				<thingDefs>
+					<li>BionicSpine</li>
+				</thingDefs>
+			</fixedIngredientFilter>
+		</value>
+	</Operation>
+
+<!--InstallBionicHeart-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicHeart"]/deathOnFailedSurgeryChance</xpath>
+		<value>
+			<deathOnFailedSurgeryChance>0.05</deathOnFailedSurgeryChance>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicHeart"]</xpath>
+		<value>
+			<surgerySuccessChanceFactor>0.9</surgerySuccessChanceFactor>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicHeart"]/skillRequirements</xpath>
+		<value>
+			<skillRequirements>
+				<Medicine>14</Medicine>
+			</skillRequirements>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicHeart"]/ingredients</xpath>
+		<value>
+			<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>Medicine</li>
+						</categories>
+					</filter>
+					<count>6</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>BionicHeart</li>
+						</thingDefs>
+					</filter>
+					<count>1</count>
+				</li>
+			</ingredients>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicHeart"]/fixedIngredientFilter</xpath>
+		<value>
+			<fixedIngredientFilter>
+				<categories>
+					<li>Medicine</li>
+				</categories>
+				<disallowedThingDefs>
+					<li>MedicineHerbal</li>
+				</disallowedThingDefs>
+				<thingDefs>
+					<li>BionicHeart</li>
+				</thingDefs>
+			</fixedIngredientFilter>
+		</value>
+	</Operation>
+
+	
+<!--InstallBionicStomach-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicStomach"]/deathOnFailedSurgeryChance</xpath>
+		<value>
+			<deathOnFailedSurgeryChance>0.05</deathOnFailedSurgeryChance>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicStomach"]</xpath>
+		<value>
+			<surgerySuccessChanceFactor>0.9</surgerySuccessChanceFactor>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicStomach"]/skillRequirements</xpath>
+		<value>
+			<skillRequirements>
+				<Medicine>12</Medicine>
+			</skillRequirements>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicStomach"]/ingredients</xpath>
+		<value>
+			<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>Medicine</li>
+						</categories>
+					</filter>
+					<count>6</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>BionicStomach</li>
+						</thingDefs>
+					</filter>
+					<count>1</count>
+				</li>
+			</ingredients>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicStomach"]/fixedIngredientFilter</xpath>
+		<value>
+			<fixedIngredientFilter>
+				<categories>
+					<li>Medicine</li>
+				</categories>
+				<disallowedThingDefs>
+					<li>MedicineHerbal</li>
+				</disallowedThingDefs>
+				<thingDefs>
+					<li>BionicStomach</li>
+				</thingDefs>
+			</fixedIngredientFilter>
+		</value>
+	</Operation>
+
+	
+<!--InstallBionicEar-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicEar"]/deathOnFailedSurgeryChance</xpath>
+		<value>
+			<deathOnFailedSurgeryChance>0.05</deathOnFailedSurgeryChance>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicEar"]</xpath>
+		<value>
+			<surgerySuccessChanceFactor>0.9</surgerySuccessChanceFactor>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicEar"]/skillRequirements</xpath>
+		<value>
+			<skillRequirements>
+				<Medicine>12</Medicine>
+			</skillRequirements>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicEar"]/ingredients</xpath>
+		<value>
+			<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>Medicine</li>
+						</categories>
+					</filter>
+					<count>3</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>BionicEar</li>
+						</thingDefs>
+					</filter>
+					<count>1</count>
+				</li>
+			</ingredients>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicEar"]/fixedIngredientFilter</xpath>
+		<value>
+			<fixedIngredientFilter>
+				<categories>
+					<li>Medicine</li>
+				</categories>
+				<disallowedThingDefs>
+					<li>MedicineHerbal</li>
+				</disallowedThingDefs>
+				<thingDefs>
+					<li>BionicEar</li>
+				</thingDefs>
+			</fixedIngredientFilter>
+		</value>
+	</Operation>
+
+	
+<!--InstallBionicEye-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicEye"]/deathOnFailedSurgeryChance</xpath>
+		<value>
+			<deathOnFailedSurgeryChance>0.05</deathOnFailedSurgeryChance>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicEye"]</xpath>
+		<value>
+			<surgerySuccessChanceFactor>0.9</surgerySuccessChanceFactor>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicEye"]/skillRequirements</xpath>
+		<value>
+			<skillRequirements>
+				<Medicine>14</Medicine>
+			</skillRequirements>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicEye"]/ingredients</xpath>
+		<value>
+			<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>Medicine</li>
+						</categories>
+					</filter>
+					<count>3</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>BionicEye</li>
+						</thingDefs>
+					</filter>
+					<count>1</count>
+				</li>
+			</ingredients>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicEye"]/fixedIngredientFilter</xpath>
+		<value>
+			<fixedIngredientFilter>
+				<categories>
+					<li>Medicine</li>
+				</categories>
+				<disallowedThingDefs>
+					<li>MedicineHerbal</li>
+				</disallowedThingDefs>
+				<thingDefs>
+					<li>BionicEye</li>
+				</thingDefs>
+			</fixedIngredientFilter>
+		</value>
+	</Operation>
+
+
+	
+<!--InstallPowerClaw-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallPowerClaw"]/deathOnFailedSurgeryChance</xpath>
+		<value>
+			<deathOnFailedSurgeryChance>0.05</deathOnFailedSurgeryChance>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RecipeDef[defName = "InstallPowerClaw"]</xpath>
+		<value>
+			<surgerySuccessChanceFactor>0.9</surgerySuccessChanceFactor>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallPowerClaw"]/skillRequirements</xpath>
+		<value>
+			<skillRequirements>
+				<Medicine>12</Medicine>
+			</skillRequirements>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallPowerClaw"]/ingredients</xpath>
+		<value>
+			<ingredients>
+				<li>
+					<filter>
+						<categories>
+							<li>Medicine</li>
+						</categories>
+					</filter>
+					<count>6</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>PowerClaw</li>
+						</thingDefs>
+					</filter>
+					<count>1</count>
+				</li>
+			</ingredients>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallPowerClaw"]/fixedIngredientFilter</xpath>
+		<value>
+			<fixedIngredientFilter>
+				<categories>
+					<li>Medicine</li>
+				</categories>
+				<disallowedThingDefs>
+					<li>MedicineHerbal</li>
+				</disallowedThingDefs>
+				<thingDefs>
+					<li>PowerClaw</li>
+				</thingDefs>
+			</fixedIngredientFilter>
+		</value>
+	</Operation>
+
+	
+</Patch>
