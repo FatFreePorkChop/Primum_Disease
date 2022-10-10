@@ -27,9 +27,16 @@
 		</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "ExciseCarcinoma"]/ingredients[1]</xpath>
-		<key>count</key>
-		<value>5</value>
+		<xpath>/Defs/RecipeDef[defName = "ExciseCarcinoma"]/ingredients</xpath>
+		<key>li[1]</key>
+		<value>
+			<filter>
+				<categories>
+					<li>Medicine</li>
+				</categories>
+			</filter>
+			<count>5</count>
+		</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
 		<xpath>/Defs/RecipeDef[defName = "ExciseCarcinoma"]/fixedIngredientFilter</xpath>
@@ -70,9 +77,16 @@
 					</value>
 				</li>
 				<li Class="PrimumDisease.PatchOperationAddOrReplace">
-					<xpath>/Defs/RecipeDef[defName = "CureAbasia" or defName = "CureBloodRot"]/ingredients[1]</xpath>
-					<key>count</key>
-					<value>7</value>
+					<xpath>/Defs/RecipeDef[defName = "CureAbasia" or defName = "CureBloodRot"]/ingredients</xpath>
+					<key>li[1]</key>
+					<value>
+						<filter>
+							<categories>
+								<li>Medicine</li>
+							</categories>
+						</filter>
+						<count>10</count>
+					</value>
 				</li>
 				<li Class="PrimumDisease.PatchOperationAddOrReplace">
 					<xpath>/Defs/RecipeDef[defName = "CureAbasia" or defName = "CureBloodRot"]/fixedIngredientFilter</xpath>

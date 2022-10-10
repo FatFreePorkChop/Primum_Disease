@@ -607,10 +607,10 @@
 		<xpath>/Defs/HediffDef[defName = "FoodPoisoning"]/comps</xpath>
 		<value>
 			<comps>
-				<li Class="HediffCompProperties_TendDuration">
+				<!--<li Class="HediffCompProperties_TendDuration">
 					<baseTendDurationHours>-1</baseTendDurationHours>
 					<severityPerDayTended>-0.63</severityPerDayTended>
-				</li>
+				</li>-->
 				<li Class="HediffCompProperties_Immunizable">
 					<severityPerDayNotImmune>1.33</severityPerDayNotImmune>
 					<immunityPerDaySick>1.59</immunityPerDaySick>
@@ -642,7 +642,7 @@
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/HediffDef[defName = "Malaria"]/stages</xpath>
+		<xpath>/Defs/HediffDef[defName = "FoodPoisoning"]/stages</xpath>
 		<value>
 			<stages>
 				<li>
