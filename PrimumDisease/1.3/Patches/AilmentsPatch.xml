@@ -133,12 +133,6 @@
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/HediffDef[defName = "lethalSeverity"]</xpath>
-		<value>
-			<lethalSeverity>1</lethalSeverity>
-		</value>
-	</Operation>
-	<Operation Class="PatchOperationAdd">
 		<xpath>/Defs/HediffDef[defName = "Carcinoma"]</xpath>
 		<value>
 			<makesSickThought>true</makesSickThought>
@@ -203,7 +197,7 @@
 	
 <!--Cirrhosis disease giver: borrows bad back distribution, like bright's disease-->	
 	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/HediffGiverSetDef[defName = "OrganicStandard"]</xpath>
+		<xpath>/Defs/HediffGiverSetDef[defName = "OrganicStandard"]/hediffGivers</xpath>
 		<value>
 			<li Class="HediffGiver_Birthday">
 				<hediff>Cirrhosis</hediff>
@@ -225,7 +219,7 @@
 	
 <!--Creutzfeldt rim disease giver-->	
 	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/HediffGiverSetDef[defName = "OrganicStandard"]</xpath>
+		<xpath>/Defs/HediffGiverSetDef[defName = "OrganicStandard"]/hediffGivers</xpath>
 		<value>
 			<li Class="HediffGiver_Birthday">
 				<hediff>PD_CreutzfeldtRimDisease</hediff>
@@ -243,7 +237,7 @@
 	
 <!--Brain artery blockage giver-->	
 	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/HediffGiverSetDef[defName = "OrganicStandard"]</xpath>
+		<xpath>/Defs/HediffGiverSetDef[defName = "OrganicStandard"]/hediffGivers</xpath>
 		<value>
 			<li Class="HediffGiver_Birthday">
 				<hediff>PD_BrainArteryBlockage</hediff>
@@ -266,7 +260,7 @@
 	
 <!--Leukemia giver: bimodal distribution, more common in the young or the old.-->	
 	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/HediffGiverSetDef[defName = "OrganicStandard"]</xpath>
+		<xpath>/Defs/HediffGiverSetDef[defName = "OrganicStandard"]/hediffGivers</xpath>
 		<value>
 			<li Class="HediffGiver_Birthday">
 				<hediff>PD_Leukemia</hediff>
@@ -284,7 +278,7 @@
 	
 <!--Fibroma giver: Similar to cancer distribution-->	
 	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/HediffGiverSetDef[defName = "OrganicStandard"]</xpath>
+		<xpath>/Defs/HediffGiverSetDef[defName = "OrganicStandard"]/hediffGivers</xpath>
 		<value>
 			<li Class="HediffGiver_Birthday">
 				<hediff>PD_Fibroma</hediff>
@@ -303,7 +297,7 @@
 	
 <!--Bright's disease giver: borrows bad back distribution-->	
 	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/HediffGiverSetDef[defName = "OrganicStandard"]</xpath>
+		<xpath>/Defs/HediffGiverSetDef[defName = "OrganicStandard"]/hediffGivers</xpath>
 		<value>
 			<li Class="HediffGiver_Birthday">
 				<hediff>PD_ChronicKidneyDisease</hediff>

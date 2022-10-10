@@ -3,7 +3,7 @@
 <Defs>
 	<HediffDef><!--Stroke-->
 		<defName>PD_Stroke</defName>
-		<hediffClass>PrimumDisease.Hediff_Emergency</hediffClass>
+		<hediffClass>PrimumDisease.PD_Hediff_Emergency</hediffClass>
 		<defaultLabelColor>(1, 0.2, 0.2)</defaultLabelColor>
 		<label>stroke</label>
 		<labelNoun>A complete blockage of a critical artery in the brain. Strokes causing lasting neurologic damage, possibly including brain death. They can worsen and lead to death, or recover</labelNoun>
