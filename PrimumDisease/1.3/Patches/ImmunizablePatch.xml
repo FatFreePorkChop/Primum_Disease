@@ -145,7 +145,7 @@
 					</capMods>
 					<hediffGivers>
 						<li Class="HediffGiver_Random">
-							<hediff>PM_Fibroma</hediff>
+							<hediff>PD_Fibroma</hediff>
 							<mtbDays>3.2</mtbDays>
 							<partsToAffect>
 								<li>Nose</li>
@@ -180,7 +180,7 @@
 					</capMods>
 					<hediffGivers>
 						<li Class="HediffGiver_Random">
-							<hediff>PM_Fibroma</hediff>
+							<hediff>PD_Fibroma</hediff>
 							<mtbDays>3.2</mtbDays>
 							<partsToAffect>
 								<li>Nose</li>
