@@ -301,7 +301,9 @@
 					<li Class="HediffGiver_Random">
 						<hediff>PD_ChronicKidneyDisease</hediff>
 						<mtbDays>30</mtbDays>
-						<partsToAffect>Kidney</partsToAffect>
+						<partsToAffect>
+							<li>Kidney</li>
+						</partsToAffect>
 						<countToAffect>2</countToAffect>
 					</li>
 					<li Class="HediffGiver_Random">
