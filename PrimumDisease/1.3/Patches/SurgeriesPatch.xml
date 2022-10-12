@@ -49,9 +49,55 @@
 	</Operation>
 
 <!--CureAilment-->
+	<Operation Class="PatchOperation.Context">
+		<xpath>/Defs/RecipeDef[defName = "PD_ExciseFibroma" or defName = "PD_HeartAngioplasty" or defName = "PD_BrainAngioplasty"  or defName = "PD_CataractSurgery"]</xpath>
+		<operations>
+			<li Class="PrimumDisease.PatchOperationAddOrReplace">
+				<xpath>/RecipeDef</xpath>
+				<key>workAmount</key>
+				<value>3000</value>
+			</li>
+			<li Class="PrimumDisease.PatchOperationAddOrReplace">
+				<xpath>/RecipeDef</xpath>
+				<key>deathOnFailedSurgeryChance</key>
+				<value>0.1</value>
+			</li>
+			<li Class="PrimumDisease.PatchOperationAddOrReplace">
+				<xpath>/RecipeDef</xpath>
+				<key>surgerySuccessChanceFactor</key>
+				<value>0.8</value>
+			</li>
+			<li Class="PrimumDisease.PatchOperationAddOrReplace">
+				<xpath>/RecipeDef</xpath>
+				<key>skillRequirements</key>
+				<value>
+					<Medicine>7</Medicine>
+				</value>
+			</li>
+			<li Class="PrimumDisease.PatchOperationAddOrReplace">
+				<xpath>/RecipeDef/ingredients</xpath>
+				<key>li[1]</key>
+				<value>
+					<filter>
+						<categories>
+							<li>Medicine</li>
+						</categories>
+					</filter>
+					<count>7</count>
+				</value>
+			</li>
+			<li Class="PrimumDisease.PatchOperationAddOrReplace">
+				<xpath>/RecipeDef/fixedIngredientFilter</xpath>
+				<key>disallowedThingDefs</key>
+				<value>
+					<li>MedicineHerbal</li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
 <!--CureAilmentComplex-->
 	<Operation Class="PatchOperation.Context">
-		<xpath>/Defs/RecipeDef[defName = "ExciseCarcinoma"]</xpath>
+		<xpath>/Defs/RecipeDef[defName = "ExciseCarcinoma" or defName = "PD_HeartAngioplasty" or defName = "PD_BrainAngioplasty"  or defName = "PD_CataractSurgery"]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
 				<xpath>/RecipeDef</xpath>
@@ -66,7 +112,7 @@
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
 				<xpath>/RecipeDef</xpath>
 				<key>surgerySuccessChanceFactor</key>
-				<value>1</value>
+				<value>0.8</value>
 			</li>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
 				<xpath>/RecipeDef</xpath>
@@ -84,7 +130,7 @@
 							<li>Medicine</li>
 						</categories>
 					</filter>
-					<count>5</count>
+					<count>7</count>
 				</value>
 			</li>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
