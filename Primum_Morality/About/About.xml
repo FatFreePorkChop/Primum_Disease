@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Notes to self
+
+	
+-->
+<ModMetaData>
+	<name>Primum Morality</name>
+	<author>Nooberthetuber</author>
+	<supportedVersions>
+		<li>1.3</li>
+	</supportedVersions>
+	<packageId>primum.morality</packageId>
+	<modDependencies>
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+		</li>
+		<li>
+			<packageId>Ludeon.RimWorld.Ideology</packageId>
+			<displayName>Ideology</displayName>
+		</li>
+		<li>
+			<packageId>VanillaExpanded.VMemesE</packageId>
+			<displayName>Vanilla Ideology Expanded - Memes and Structures</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2636329500</steamWorkshopUrl>
+			<downloadUrl>https://github.com/juanosarg/VanillaIdeologyExpanded-Memes</downloadUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>brrainz.harmony</li>
+		<li>Ludeon.Rimworld.Royalty</li>
+		<li>Ludeon.Rimworld.Ideology</li>
+		<li>VanillaExpanded.VMemesE</li>
+	</loadAfter>
+	<description>
+		Stages:
+			A: in process of implementing
+			B: implemented, needs testing
+			C: finished
+			
+			?: Possible future addition
+			
+			
+			Some actions are moral, some aspects (memes, structures, or precepts) are also moral. Things where it's hard to keep track of each action may also be moral or immoral.
+			Moral things are assigned a category: eg. butchering a human, eating human flesh, and the cannibal meme all fall under MoralityCategory Cannibalism
+			Every so often, adjust morality based on actions taken over the time period. Default time period is quadrum. Morality Ranges from 0 to 100. Morality can change by up to 0.6/year up
+				Calculation starts at 50. If you took a relevant evil action with Count 1, Bad magnitude -25, result would be 25. If initial morality were 80 last quadrum, new morality would be 0.65
+			Morality has 3 modes, set in options
+				Universal morality: framework is independant of other factions' ideologies: even a cannibal faction will think your human leather hats are evil.
+				Conglomerate morality: frammework is determiend based on the average of other factions' ideologies: if everyone else is cannibal, cannibalism is probably  okay.
+				Individual morality: framework is faction-specific, according to their individual precepts.
+			
+			Morality tiers:
+				0-5: Vile
+				5-20: Wicked
+				20-40: Unprincipled
+				40-60: Inoffensive
+				60-80: Principled
+				80-95: Honorable
+				95-100: Blameless
+			
+			
+			Actions and aspects properties
+				Category (eg. cannibalism for human butchery, cannibal meme, and eating human flesh)
+				Weight (how much that aspect or meme contributes; total weight is scaled so that total weight asymptotically approaches 2)
+				ScaleWithColonists (if true, weight will be divided by total number of colonists)
+			Category properties
+				Positive magnitude (how much the category affects morality if other factions like it. Magnitude is per year, so if recalcultaion is done per quadrum, magnitude should be divided by 4)
+				Negative magnitude (as above, but if other factions dislike it)
+				Relevance (Some actions are much more clearly moral than others: nudity is only evil to anti-nude factions with high bigotry, ranges from 0 to 5. Diversity of thought is added to this)
+				Positive memes (if other factions are cannibal, they won't mind that you're also cannibal. If a faction has both the positive and negative memes, the category will be negative)
+				Negative memes 
+				Default state ("Positive", "Negative", or "Neutral")
+				
+			Categories
+				Relevance 4
+					Cannibalism
+						Magnitude 5/25
+						Positive memes Cannibal
+						Default state Negative
+					Betrayal
+						Magnitude 0/35
+						Default state Negative
+				
+				
+				
+				
+				
+				
+			Actions:
+				Vanilla
+					Relevance 4
+						Human butchery/eating human meat
+							Count: 1
+							Magnitude: 0/25
+						Enslavement/buying slave
+							Count: 1
+							Magnitude 5/15
+						Free slave
+							Count: 1
+							Magnitude 15/10
+						Charity
+							Count: 1
+							Magnitude: 25/5
+						Organ harvesting
+							Count: 1
+							Magnitude: 0/25
+						Betrayal (attacking friendlies)
+							Count: 0
+							Magnitude: 0/50
+					Relevance 3
+						Execution (ritual or otherwise)
+							Count: 0
+							Magnitude: 15/15
+						Body modification (SPECIAL CASE: count is #artificial parts in the colony)
+							Count: 1*
+							Magnitude: 15/15
+						Hard drug use
+							Count: 0.5*
+							Magnitude: 10/10
+						Raiding
+							Count: 0
+							Magnitude: 5/20
+						Blinding
+							Count: 0
+							Magnitude: 25/15
+						Burial
+							Count: 1
+							Magnitude: 10/0
+						Own slaves
+							Count 0.2*
+							Magnitude 5/15
+					Relevence 2
+						Slaughtering animals
+							Count: 0.2*
+							Magnitude: 5/15
+						Conversion
+							Count: 1
+							Magnitude: 5/10
+						Marriage
+							Count: 1
+							Magnitude: 10/5
+						Bestowal
+							Count: 1
+							Magnitude: 20/10
+						Divorce
+							Count: 1
+							Magnitude: 0/5
+						Tainted apparel (SPECIAL CASE: count is #tainted clothes worn in colony)
+							Count: 0.5*
+							Magnitude: 0/10
+						Tattered apparel (SPECIAL CASE: count is #tattered clothes worn in colony)
+							Count: 1*
+							Magnitude: 0/5
+					Relevance 1
+						Lovin':
+							Count: 1*
+							Magnitude: 10/10
+						Mining ore:
+							Count: 50
+							Magnitude: 10/10
+						Scarification (SPECIAL CASE: count is #artificial scars in colony)
+							Count: 0.5*
+							Magnitude: 15/10
+						Recreational drug use
+							Count: 1*
+							Magnitude: 5/5
+				
+				Vanilla Expanded
+					Relevance 4
+						
+					
+					
+			Aspects (followed directly by good/bad magnitude as there is no count)
+				Vanilla
+					Relevance 3
+						Cannibal 5/25
+						Collectivist/Gestalt/Anonymity 20/5
+						Female/Male supremacy 15/15
+					Relevance 2
+						Nudism 10/15
+						Blindsight 10/10
+						Flesh purity/Flesh crafting 5/10
+						Guillty 10/0
+						High life/Party life/Hedonism 10/15
+						Pain is virtue 15/10
+						Raider 5/10
+						Rancher/Human supremacy 5/10
+						Supremacist/Nationalist/Loyalist 0/10
+						Transhumanist 15/15
+						Animal personhood/Nature primacy/Tree connection/Gauranlen supremacy 15/5
+						Tunneler 5/5
+					Relevance 1
+				
+				Vanilla Expanded
+					Relevance 3
+						Violent conversion 0/10
+						Vegan 10/5
+						Pacifist/Vow of nonviolence 20/5
+						Flesh crafting 10/20
+						Holy diseases 10/15
+						Bushido 15/5
+						Healthcare 15/5
+						Mechanoid supremacy 10/10
+						Insectoid supremacy/Serketism 10/10
+						Eldritch cult/Esoteric/Madness 0/10
+					Relevance 2
+						Exalted priesthood 5/10
+						Trader 10/5
+						Egalitarian 5/0
+						Fire worship 10/10
+						Blood court 5/10
+						Psychic focus 10/10
+						Morbid/Sadist 5/15
+						Monastic 10/0
+						Psychic focus/psychic vampirism 5/5
+						Iconoclast 5/10
+					Relevance 1
+						Aristocratic 5/5
+						Republic 5/5
+						Astrology 5/5
+						God emperor 5/5
+					
+		
+					
+			Action weights
+			Ideology weights
+				
+		
+			
+	</description>
+</ModMetaData>

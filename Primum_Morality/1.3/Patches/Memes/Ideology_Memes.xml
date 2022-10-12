@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Memes and structures: does NOT scale with colonists by default
+Memes without weight are assigned weight equal to their impact/3
+-->
+<Patch> 
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Ideology</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/MemeDef[defName = "Blindsight"]</xpath>
+					<value>
+						<li Class = "Primum_Morality.MemeDef_ModExtension">
+							<category>Mysticism</category>
+							<weight>1</weight>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/MemeDef[defName = "Cannibal"]</xpath>
+					<value>
+						<li Class = "Primum_Morality.MemeDef_ModExtension">
+							<category>Cannibalism</category>
+							<weight>1</weight>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/MemeDef[defName = "FleshPurity"]</xpath>
+					<value>
+						<li Class = "Primum_Morality.MemeDef_ModExtension">
+							<category>Transhumanism</category>
+							<weight>-1</weight>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/MemeDef[defName = "Guilty"]</xpath>
+					<value>
+						<li Class = "Primum_Morality.MemeDef_ModExtension">
+							<category>Hedonism</category>
+							<weight>-1</weight>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/MemeDef[defName = "HighLife"]</xpath>
+					<value>
+						<li Class = "Primum_Morality.MemeDef_ModExtension">
+							<category>Hedonism</category>
+							<weight>1</weight>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/MemeDef[defName = "HumanSupremacy"]</xpath>
+					<value>
+						<li Class = "Primum_Morality.MemeDef_ModExtension">
+							<category>HumanRights</category>
+							<weight>1</weight>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/MemeDef[defName = "NatureSupremacy"]</xpath>
+					<value>
+						<li Class = "Primum_Morality.MemeDef_ModExtension">
+							<category>Environmentalism</category>
+							<weight>1</weight>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/MemeDef[defName = "Nudism"]</xpath>
+					<value>
+						<li Class = "Primum_Morality.MemeDef_ModExtension">
+							<category>Hedonism</category>
+							<weight>1</weight>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/MemeDef[defName = "PainIsVirtue"]</xpath>
+					<value>
+						<li Class = "Primum_Morality.MemeDef_ModExtension">
+							<category>Hedonism</category>
+							<weight>-1</weight>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/MemeDef[defName = "Raider"]</xpath>
+					<value>
+						<li Class = "Primum_Morality.MemeDef_ModExtension">
+							<category>Peace</category>
+							<weight>-1</weight>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/MemeDef[defName = "Supremacist"]</xpath>
+					<value>
+						<li Class = "Primum_Morality.MemeDef_ModExtension">
+							<category>Peace</category>
+							<weight>-1</weight>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/MemeDef[defName = "Transhumanism"]</xpath>
+					<value>
+						<li Class = "Primum_Morality.MemeDef_ModExtension">
+							<category>Transhumanism</category>
+							<weight>2</weight> <!--LOL-->
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/MemeDef[defName = "TreeConnection"]</xpath>
+					<value>
+						<li Class = "Primum_Morality.MemeDef_ModExtension">
+							<category>Mysticism</category>
+							<weight>1</weight>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+</Patch>

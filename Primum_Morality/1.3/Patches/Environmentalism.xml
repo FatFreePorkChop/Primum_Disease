@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch> 
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Ideology</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+<!--HistoryEvents: scales with colonists by default-->
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/HistoryEventDef[defName = "CutTree"]</xpath>
+					<value>
+						<li Class = "Primum_Morality.HistoryEventDef_ModExtension">
+							<category>Environmentalism</category>
+							<weight>-0.05</weight>
+							<scaleWeightWithColonists>false</scaleWeightWithColonists>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/HistoryEventDef[defName = "MinifiedTreeDied"]</xpath>
+					<value>
+						<li Class = "Primum_Morality.HistoryEventDef_ModExtension">
+							<category>Environmentalism</category>
+							<weight>-0.05</weight>
+							<scaleWeightWithColonists>false</scaleWeightWithColonists>
+						</li>
+					</value>
+				</li>
+				
+				
+				
+				
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/HistoryEventDef[defName = "Mined"]</xpath>
+					<value>
+						<li Class = "Primum_Morality.HistoryEventDef_ModExtension">
+							<category>Environmentalism</category>
+							<weight>-0.02</weight>
+							<scaleWeightWithColonists>false</scaleWeightWithColonists>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/HistoryEventDef[defName = "DestroyedMineable"]</xpath>
+					<value>
+						<li Class = "Primum_Morality.HistoryEventDef_ModExtension">
+							<category>Environmentalism</category>
+							<weight>-0.02</weight>
+							<scaleWeightWithColonists>false</scaleWeightWithColonists>
+						</li>
+					</value>
+				</li>
+				
+				
+				
+				
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/HistoryEventDef[defName = "KilledInnocentAnimal"]</xpath>
+					<value>
+						<li Class = "Primum_Morality.HistoryEventDef_ModExtension">
+							<category>Environmentalism</category>
+							<weight>-0.5</weight>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/HistoryEventDef[defName = "SlaughteredAnimal"]</xpath>
+					<value>
+						<li Class = "Primum_Morality.HistoryEventDef_ModExtension">
+							<category>Environmentalism</category>
+							<weight>-0.5</weight>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+</Patch>

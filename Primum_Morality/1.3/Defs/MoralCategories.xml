@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<Primum_Morality.MoralCategoryDef>
+		<defName>Cannibalism</defName> 
+		<label>cannibalism</label>
+		<negativeLabel>rejection of cannibalism</negativeLabel>
+		<description>The practices and beliefs surrounding the consumption of human flesh</description>
+		
+        <positiveMagnitude>10</positiveMagnitude>
+        <negativeMagnitude>25</negativeMagnitude>
+        <relevance>4</relevance>
+        <defaultState>Negative</defaultState>
+	</Primum_Morality.MoralCategoryDef>
+
+	<Primum_Morality.MoralCategoryDef>
+		<defName>Treachery</defName> 
+		<label>treachery</label>
+		<negativeLabel>loyalty</negativeLabel>
+		<description>"The deepest circle of hell is reserved for betrayers... and mutineers"</description>
+		
+        <positiveMagnitude>0</positiveMagnitude>
+        <negativeMagnitude>30</negativeMagnitude>
+        <relevance>4</relevance>
+        <defaultState>Negative</defaultState>
+	</Primum_Morality.MoralCategoryDef>
+	
+	<Primum_Morality.MoralCategoryDef>
+		<defName>Environmentalism</defName> 
+		<label>environmentalism</label>
+		<negativeLabel>pollution</negativeLabel>
+		<description>"Other factions may appreciate you preserrving the natural landscape"</description>
+		
+        <positiveMagnitude>10</positiveMagnitude>
+        <negativeMagnitude>0</negativeMagnitude>
+        <relevance>3</relevance>
+        <defaultState>Positive</defaultState>
+	</Primum_Morality.MoralCategoryDef>
+	
+	<Primum_Morality.MoralCategoryDef>
+		<defName>Transhumanism</defName> 
+		<label>transhumanism</label>
+		<negativeLabel>body purism</negativeLabel>
+		<description>Pushing the limits of human existence, through genetics, implants, ancient technology, or super-soldier drugs, may be good or evil depending on who you ask</description>
+		
+        <positiveMagnitude>10</positiveMagnitude>
+        <negativeMagnitude>10</negativeMagnitude>
+        <relevance>3</relevance>
+        <defaultState>Negative</defaultState>
+	</Primum_Morality.MoralCategoryDef>
+	
+	<Primum_Morality.MoralCategoryDef>
+		<defName>Mysticism</defName> 
+		<label>mysticism</label>
+		<negativeLabel>rejection of mysticism</negativeLabel>
+		<description>The mystic arts of the rim include imperial or anima psylinks and Gauranlen trees; engaging in these may endear one to those of similar thought</description>
+		
+        <positiveMagnitude>10</positiveMagnitude>
+        <negativeMagnitude>15</negativeMagnitude>
+        <relevance>3</relevance>
+        <defaultState>Neutral</defaultState>
+	</Primum_Morality.MoralCategoryDef>
+		
+	<Primum_Morality.MoralCategoryDef>
+		<defName>Hedonism</defName> 
+		<label>hedonism</label>
+		<negativeLabel>stoicism</negativeLabel>
+		<description>Debauchery and drug use offend many moral sensibilities</description>
+		
+        <positiveMagnitude>10</positiveMagnitude>
+        <negativeMagnitude>15</negativeMagnitude>
+        <relevance>3</relevance>
+        <defaultState>Negative</defaultState>
+	</Primum_Morality.MoralCategoryDef>
+	
+	<Primum_Morality.MoralCategoryDef>
+		<defName>Peace</defName> 
+		<label>peacefulness</label>
+		<negativeLabel>belligerence</negativeLabel>
+		<description>"Blessed are the peacemakers, for they shall be called the children of God"</description>
+		
+        <positiveMagnitude>15</positiveMagnitude>
+        <negativeMagnitude>10</negativeMagnitude>
+        <relevance>4</relevance>
+        <defaultState>Positive</defaultState>
+	</Primum_Morality.MoralCategoryDef>
+	
+	<Primum_Morality.MoralCategoryDef>
+		<defName>HumanRights</defName> 
+		<label>support of human rights</label>
+		<negativeLabel>human rights abuses</negativeLabel>
+		<description>Many cultures hold that certain rights are intrinsic to all humans</description>
+		
+        <positiveMagnitude>10</positiveMagnitude>
+        <negativeMagnitude>20</negativeMagnitude>
+        <relevance>4</relevance>
+        <defaultState>Positive</defaultState>
+	</Primum_Morality.MoralCategoryDef>
+</Defs>

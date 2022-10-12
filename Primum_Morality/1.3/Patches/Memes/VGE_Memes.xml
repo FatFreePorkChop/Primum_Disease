@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Memes and structures: does NOT scale with colonists by default
+Memes without weight are assigned weight equal to their impact/3
+-->
+<Patch> 
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Ideology</li>
+			<li>Vanilla Genetics Expanded</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/MemeDef[defName = "GR_CarefulGeneticists"]</xpath>
+					<value>
+						<li Class = "Primum_Morality.MemeDef_ModExtension">
+							<category>HumanRights</category>
+							<weight>-1</weight>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/MemeDef[defName = "GR_MadScientists"]</xpath>
+					<value>
+						<li Class = "Primum_Morality.MemeDef_ModExtension">
+							<category>HumanRights</category>
+							<weight>1</weight>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+</Patch>
