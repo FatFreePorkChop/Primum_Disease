@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Save Our Ship</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+<!--Basic-->
+<!--RemoveBodyPart-->
+<!--CureAilment-->
+<!--CureAilmentComplex-->
+<!--CureAilmentSpecial-->
+<!--ImplantBasic-->
+<!--ImplantProsthetic-->
+<!--ImplantProstheticComplex-->
+<!--ImplantNatural-->
+<!--ImplantNaturalComplex-->
+<!--ImplantNaturalSpecial-->
+<!--ImplantBionic-->
+<!--ImplantBionicComplex-->
+<!--ImplantBionicSpecial-->
+	<li Class="PatchOperation.Context">
+		<xpath>/Defs/RecipeDef[defName = "SoSInstallPsychicPredictor" or defName = "SoSInstallPsychicManipulator" or  defName = "SoSInstallArchotechEar" or  defName = "SoSInstallArchotechNose" or  defName = "SoSInstallArchotechJaw" or  defName = "SoSInstallArchotechTongue" or  defName = "SoSInstallArchotechHeart" or  defName = "SoSInstallArchotechLung" or  defName = "SoSInstallArchotechStomach" or  defName = "SoSInstallArchotechKidney" or  defName = "SoSInstallArchotechLiver" or  defName = "SoSInstallArchotechSpine" or  defName = "SoSInstallArchotechSkin"] ]</xpath>
+		<operations>
+			<li Class="PrimumDisease.PatchOperationAddOrReplace">
+				<xpath>/RecipeDef</xpath>
+				<key>workAmount</key>
+				<value>4000</value>
+			</li>
+			<li Class="PrimumDisease.PatchOperationAddOrReplace">
+				<xpath>/RecipeDef</xpath>
+				<key>deathOnFailedSurgeryChance</key>
+				<value>0.25</value>
+			</li>
+			<li Class="PrimumDisease.PatchOperationAddOrReplace">
+				<xpath>/RecipeDef</xpath>
+				<key>surgerySuccessChanceFactor</key>
+				<value>1</value>
+			</li>
+			<li Class="PrimumDisease.PatchOperationAddOrReplace">
+				<xpath>/RecipeDef</xpath>
+				<key>skillRequirements</key>
+				<value>
+					<Medicine>15</Medicine>
+				</value>
+			</li>
+			<li Class="PrimumDisease.PatchOperationAddOrReplace">
+				<xpath>/RecipeDef/ingredients</xpath>
+				<key>li[1]</key>
+				<value>
+					<filter>
+						<categories>
+							<li>Medicine</li>
+						</categories>
+					</filter>
+					<count>4</count>
+				</value>
+			</li>
+			<li Class="PrimumDisease.PatchOperationAddOrReplace">
+				<xpath>/RecipeDef/fixedIngredientFilter</xpath>
+				<key>disallowedThingDefs</key>
+				<value>
+					<li>MedicineHerbal</li>
+					<li>MedicineIndustrial</li>
+				</value>
+			</li>
+		</operations>
+	</li>
+
+
+
+			</operations>
+		</match>
+	</Operation>
+</Patch>
