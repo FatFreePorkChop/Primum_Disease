@@ -37,49 +37,56 @@
         <letterDef>NegativeEvent</letterDef>
     </IncidentDef>
 
-    <IncidentDef ParentName="DiseaseIncident">
+    <IncidentDef ParentName="PD_DiseaseIncident_Immunizable">
         <defName>Disease_Flu</defName>
         <label>flu</label>
         <diseaseIncident>Flu</diseaseIncident>
         <letterLabel>Disease (flu)</letterLabel>
     </IncidentDef>
 
-    <IncidentDef ParentName="DiseaseIncident">
+    <IncidentDef ParentName="PD_DiseaseIncident_Immunizable">
         <defName>Disease_Plague</defName>
         <label>plague</label>
         <diseaseIncident>Plague</diseaseIncident>
         <letterLabel>Disease (plague)</letterLabel>
     </IncidentDef>
 
-    <IncidentDef ParentName="DiseaseIncident">
+    <IncidentDef ParentName="PD_DiseaseIncident_Immunizable">
+        <defName>PD_Disease_Tuberculosis</defName>
+        <label>tuberculosis</label>
+        <diseaseIncident>PD_Tuberculosis</diseaseIncident>
+        <letterLabel>Disease (tuberculosis)</letterLabel>
+    </IncidentDef>
+
+    <IncidentDef ParentName="PD_DiseaseIncident_Immunizable">
         <defName>Disease_Malaria</defName>
         <label>malaria</label>
         <diseaseIncident>Malaria</diseaseIncident>
         <letterLabel>Disease (malaria)</letterLabel>
     </IncidentDef>
 
-    <IncidentDef ParentName="DiseaseIncident">
+    <IncidentDef ParentName="PD_DiseaseIncident_Immunizable">
         <defName>Disease_SleepingSickness</defName>
         <label>sleeping sickness</label>
         <diseaseIncident>SleepingSickness</diseaseIncident>
         <letterLabel>Disease (sleeping sickness)</letterLabel>
     </IncidentDef>
 
-    <IncidentDef ParentName="DiseaseIncident">
+    <IncidentDef ParentName="PD_DiseaseIncident_Subacute">
         <defName>Disease_FibrousMechanites</defName>
         <label>fibrous mechanites</label>
         <diseaseIncident>FibrousMechanites</diseaseIncident>
         <letterLabel>Disease (fibrous mechanites)</letterLabel>
     </IncidentDef>
 
-    <IncidentDef ParentName="DiseaseIncident">
+    <IncidentDef ParentName="PD_DiseaseIncident_Subacute">
         <defName>Disease_SensoryMechanites</defName>
         <label>sensory mechanites</label>
         <diseaseIncident>SensoryMechanites</diseaseIncident>
         <letterLabel>Disease (sensory mechanites)</letterLabel>
     </IncidentDef>
 
-    <IncidentDef ParentName="DiseaseIncident">
+    <IncidentDef ParentName="PD_DiseaseIncident_Subacute">
         <defName>Disease_GutWorms</defName>
         <label>gut worms</label>
         <diseaseIncident>GutWorms</diseaseIncident>
@@ -89,7 +96,27 @@
         <letterLabel>Disease (gut worms)</letterLabel>
     </IncidentDef>
 
-    <IncidentDef ParentName="DiseaseIncident">
+    <IncidentDef ParentName="PD_DiseaseIncident_Subacute">
+        <defName>PD_Disease_BrainWorms</defName>
+        <label>brain worms</label>
+        <diseaseIncident>PD_BrainWorms</diseaseIncident>
+        <diseasePartsToAffect>
+            <li>Brain</li>
+        </diseasePartsToAffect>
+        <letterLabel>Disease (brain worms)</letterLabel>
+    </IncidentDef>
+
+    <IncidentDef ParentName="PD_DiseaseIncident_Subacute">
+        <defName>PD_Disease_LungWorms</defName>
+        <label>lung worms</label>
+        <diseaseIncident>PD_LungWorms</diseaseIncident>
+        <diseasePartsToAffect>
+            <li>Lung</li>
+        </diseasePartsToAffect>
+        <letterLabel>Disease (lung worms)</letterLabel>
+    </IncidentDef>
+
+    <IncidentDef ParentName="PD_DiseaseIncident_Subacute">
         <defName>Disease_MuscleParasites</defName>
         <label>muscle parasites</label>
         <diseaseIncident>MuscleParasites</diseaseIncident>
