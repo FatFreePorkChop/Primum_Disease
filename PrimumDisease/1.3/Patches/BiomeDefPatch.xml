@@ -34,10 +34,10 @@
                         <diseaseInc>Disease_Malaria</diseaseInc>
                         <commonality>75</commonality>
                     </li>
-                    <li>
+                    <!--<li>
                         <diseaseInc>Disease_BloodRot</diseaseInc>
                         <commonality>25</commonality>
-                    </li>
+                    </li>-->
 
                 <!--Parasitic-->
                     <li>
@@ -113,10 +113,10 @@
                         <diseaseInc>Disease_Malaria</diseaseInc>
                         <commonality>75</commonality>
                     </li>
-                    <li>
+                    <!--<li>
                         <diseaseInc>Disease_BloodRot</diseaseInc>
                         <commonality>25</commonality>
-                    </li>
+                    </li>-->
 
                 <!--Parasitic-->
                     <li>
@@ -194,10 +194,10 @@
                         <diseaseInc>Disease_Malaria</diseaseInc>
                         <commonality>188</commonality>
                     </li>
-                    <li>
+                    <!--<li>
                         <diseaseInc>Disease_BloodRot</diseaseInc>
                         <commonality>25</commonality>
-                    </li>
+                    </li>-->
 
                 <!--Parasitic-->
                     <li>
@@ -273,10 +273,10 @@
                         <diseaseInc>Disease_Malaria</diseaseInc>
                         <commonality>188</commonality>
                     </li>
-                    <li>
+                    <!--<li>
                         <diseaseInc>Disease_BloodRot</diseaseInc>
                         <commonality>25</commonality>
-                    </li>
+                    </li>-->
 
                 <!--Parasitic-->
                     <li>
@@ -337,55 +337,55 @@
                 <!--Microbial-->
                     <li>
                         <diseaseInc>Disease_Flu</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>50</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_Plague</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>75</commonality>
                     </li>
                     <li>
                         <diseaseInc>PD_Disease_Tuberculosis</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>37.5</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_SleepingSickness</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>50</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_Malaria</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>75</commonality>
                     </li>
-                    <li>
+                    <!--<li>
                         <diseaseInc>Disease_BloodRot</diseaseInc>
-                        <commonality>100</commonality>
-                    </li>
+                        <commonality>25</commonality>
+                    </li>-->
 
                 <!--Parasitic-->
                     <li>
                         <diseaseInc>Disease_MuscleParasites</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>75</commonality>
                     </li>
                     <li>
                         <diseaseInc>PD_Disease_BrainWorms</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>15</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_GutWorms</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>37.5</commonality>
                     </li>
                     <li>
                         <diseaseInc>PD_Disease_LungWorms</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>75</commonality>
                     </li>
 
                 <!--Mechanite-->
                     <li>
                         <diseaseInc>Disease_FibrousMechanites</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_SensoryMechanites</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
 
                 <!--Animal-->
@@ -416,55 +416,55 @@
                 <!--Microbial-->
                     <li>
                         <diseaseInc>Disease_Flu</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>50</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_Plague</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>75</commonality>
                     </li>
                     <li>
                         <diseaseInc>PD_Disease_Tuberculosis</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>37.5</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_SleepingSickness</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_Malaria</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>37.5</commonality>
                     </li>
-                    <li>
+                    <!--<li>
                         <diseaseInc>Disease_BloodRot</diseaseInc>
-                        <commonality>100</commonality>
-                    </li>
+                        <commonality>25</commonality>
+                    </li>-->
 
                 <!--Parasitic-->
                     <li>
                         <diseaseInc>Disease_MuscleParasites</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>75</commonality>
                     </li>
                     <li>
                         <diseaseInc>PD_Disease_BrainWorms</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>15</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_GutWorms</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>37.5</commonality>
                     </li>
                     <li>
                         <diseaseInc>PD_Disease_LungWorms</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>75</commonality>
                     </li>
 
                 <!--Mechanite-->
                     <li>
                         <diseaseInc>Disease_FibrousMechanites</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_SensoryMechanites</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
 
                 <!--Animal-->
@@ -495,55 +495,55 @@
                 <!--Microbial-->
                     <li>
                         <diseaseInc>Disease_Flu</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>50</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_Plague</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>75</commonality>
                     </li>
                     <li>
                         <diseaseInc>PD_Disease_Tuberculosis</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>37.5</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_SleepingSickness</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_Malaria</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>37.5</commonality>
                     </li>
-                    <li>
+                    <!--<li>
                         <diseaseInc>Disease_BloodRot</diseaseInc>
-                        <commonality>100</commonality>
-                    </li>
+                        <commonality>25</commonality>
+                    </li>-->
 
                 <!--Parasitic-->
                     <li>
                         <diseaseInc>Disease_MuscleParasites</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>75</commonality>
                     </li>
                     <li>
                         <diseaseInc>PD_Disease_BrainWorms</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>15</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_GutWorms</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>37.5</commonality>
                     </li>
                     <li>
                         <diseaseInc>PD_Disease_LungWorms</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>75</commonality>
                     </li>
 
                 <!--Mechanite-->
                     <li>
                         <diseaseInc>Disease_FibrousMechanites</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_SensoryMechanites</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
 
                 <!--Animal-->
@@ -580,51 +580,51 @@
                     </li>
                     <li>
                         <diseaseInc>Disease_Plague</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>50</commonality>
                     </li>
                     <li>
                         <diseaseInc>PD_Disease_Tuberculosis</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_SleepingSickness</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>50</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_Malaria</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>75</commonality>
                     </li>
-                    <li>
+                    <!--<li>
                         <diseaseInc>Disease_BloodRot</diseaseInc>
-                        <commonality>100</commonality>
-                    </li>
+                        <commonality>25</commonality>
+                    </li>-->
 
                 <!--Parasitic-->
                     <li>
                         <diseaseInc>Disease_MuscleParasites</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
                     <li>
                         <diseaseInc>PD_Disease_BrainWorms</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>5</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_GutWorms</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>12.5</commonality>
                     </li>
                     <li>
                         <diseaseInc>PD_Disease_LungWorms</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
 
                 <!--Mechanite-->
                     <li>
                         <diseaseInc>Disease_FibrousMechanites</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_SensoryMechanites</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
 
                 <!--Animal-->
@@ -659,51 +659,51 @@
                     </li>
                     <li>
                         <diseaseInc>Disease_Plague</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>50</commonality>
                     </li>
                     <li>
                         <diseaseInc>PD_Disease_Tuberculosis</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_SleepingSickness</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>50</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_Malaria</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>75</commonality>
                     </li>
-                    <li>
+                    <!--<li>
                         <diseaseInc>Disease_BloodRot</diseaseInc>
-                        <commonality>100</commonality>
-                    </li>
+                        <commonality>25</commonality>
+                    </li>-->
 
                 <!--Parasitic-->
                     <li>
                         <diseaseInc>Disease_MuscleParasites</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
                     <li>
                         <diseaseInc>PD_Disease_BrainWorms</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>30</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_GutWorms</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>12.5</commonality>
                     </li>
                     <li>
                         <diseaseInc>PD_Disease_LungWorms</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
 
                 <!--Mechanite-->
                     <li>
                         <diseaseInc>Disease_FibrousMechanites</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_SensoryMechanites</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
 
                 <!--Animal-->
@@ -738,51 +738,51 @@
                     </li>
                     <li>
                         <diseaseInc>Disease_Plague</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>50</commonality>
                     </li>
                     <li>
                         <diseaseInc>PD_Disease_Tuberculosis</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_SleepingSickness</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_Malaria</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>37.5</commonality>
                     </li>
-                    <li>
+                    <!--<li>
                         <diseaseInc>Disease_BloodRot</diseaseInc>
-                        <commonality>100</commonality>
-                    </li>
+                        <commonality>25</commonality>
+                    </li>-->
 
                 <!--Parasitic-->
                     <li>
                         <diseaseInc>Disease_MuscleParasites</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
                     <li>
                         <diseaseInc>PD_Disease_BrainWorms</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>5</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_GutWorms</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>12.5</commonality>
                     </li>
                     <li>
                         <diseaseInc>PD_Disease_LungWorms</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
 
                 <!--Mechanite-->
                     <li>
                         <diseaseInc>Disease_FibrousMechanites</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_SensoryMechanites</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
 
                 <!--Animal-->
@@ -817,51 +817,51 @@
                     </li>
                     <li>
                         <diseaseInc>Disease_Plague</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>50</commonality>
                     </li>
                     <li>
                         <diseaseInc>PD_Disease_Tuberculosis</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_SleepingSickness</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_Malaria</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>37.5</commonality>
                     </li>
-                    <li>
+                    <!--<li>
                         <diseaseInc>Disease_BloodRot</diseaseInc>
-                        <commonality>100</commonality>
-                    </li>
+                        <commonality>25</commonality>
+                    </li>-->
 
                 <!--Parasitic-->
                     <li>
                         <diseaseInc>Disease_MuscleParasites</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
                     <li>
                         <diseaseInc>PD_Disease_BrainWorms</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>5</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_GutWorms</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>12.5</commonality>
                     </li>
                     <li>
                         <diseaseInc>PD_Disease_LungWorms</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
 
                 <!--Mechanite-->
                     <li>
                         <diseaseInc>Disease_FibrousMechanites</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_SensoryMechanites</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
 
                 <!--Animal-->
@@ -896,51 +896,51 @@
                     </li>
                     <li>
                         <diseaseInc>Disease_Plague</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>50</commonality>
                     </li>
                     <li>
                         <diseaseInc>PD_Disease_Tuberculosis</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_SleepingSickness</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_Malaria</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>37.5</commonality>
                     </li>
-                    <li>
+                    <!--<li>
                         <diseaseInc>Disease_BloodRot</diseaseInc>
-                        <commonality>100</commonality>
-                    </li>
+                        <commonality>25</commonality>
+                    </li>-->
 
                 <!--Parasitic-->
                     <li>
                         <diseaseInc>Disease_MuscleParasites</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
                     <li>
                         <diseaseInc>PD_Disease_BrainWorms</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>5</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_GutWorms</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>12.5</commonality>
                     </li>
                     <li>
                         <diseaseInc>PD_Disease_LungWorms</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
 
                 <!--Mechanite-->
                     <li>
                         <diseaseInc>Disease_FibrousMechanites</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
                     <li>
                         <diseaseInc>Disease_SensoryMechanites</diseaseInc>
-                        <commonality>100</commonality>
+                        <commonality>25</commonality>
                     </li>
 
                 <!--Animal-->

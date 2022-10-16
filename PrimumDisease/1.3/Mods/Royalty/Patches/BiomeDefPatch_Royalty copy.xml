@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Royalty</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/BiomeDefDef[defName="TemperateForest" or defName="TemperateSwamp" or defName="TropicalRainforest" or defName="TropicalSwamp" or defName="AridShrubland" or defName="Desert" or defName="ExtremeDesert" or defName="BorealForest" or defName="ColdBog" or defName="Tundra" or defName="IceSheet" or defName="SeaIce"]/diseases</xpath>
+					<value>
+						<li>
+                        	<diseaseInc>Disease_BloodRot</diseaseInc>
+                        	<commonality>25</commonality>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>
