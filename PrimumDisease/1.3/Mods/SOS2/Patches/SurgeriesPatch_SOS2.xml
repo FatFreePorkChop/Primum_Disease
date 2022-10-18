@@ -20,7 +20,7 @@
 <!--ImplantBionic-->
 <!--ImplantBionicComplex-->
 <!--ImplantBionicSpecial-->
-	<li Class="PatchOperation.Context">
+	<li Class="PrimumDisease.PatchOperationContext">
 		<xpath>/Defs/RecipeDef[defName = "SoSInstallPsychicPredictor" or defName = "SoSInstallPsychicManipulator" or  defName = "SoSInstallArchotechEar" or  defName = "SoSInstallArchotechNose" or  defName = "SoSInstallArchotechJaw" or  defName = "SoSInstallArchotechTongue" or  defName = "SoSInstallArchotechHeart" or  defName = "SoSInstallArchotechLung" or  defName = "SoSInstallArchotechStomach" or  defName = "SoSInstallArchotechKidney" or  defName = "SoSInstallArchotechLiver" or  defName = "SoSInstallArchotechSpine" or  defName = "SoSInstallArchotechSkin"] ]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">

@@ -11,7 +11,7 @@
 <!--CureAilment-->
 <!--CureAilmentComplex-->
 <!--CureAilmentSpecial-->
-	<li Class="PatchOperation.Context">
+	<li Class="PrimumDisease.PatchOperationContext">
 		<xpath>/Defs/RecipeDef[defName = "CureAbasia" or defName = "CureBloodRot"]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
@@ -60,7 +60,7 @@
 	</li>
 <!--ImplantBasic-->
 <!--ImplantProsthetic-->
-	<li Class="PatchOperation.Context">
+	<li Class="PrimumDisease.PatchOperationContext">
 		<xpath>/Defs/RecipeDef[defName = "InstallDrillArm" or defName = "InstallFieldHand" or defName = "InstallHandTalon" or defName = "InstallElbowBlade" or defName = "InstallKneeSpike"]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
@@ -108,7 +108,7 @@
 
 
 <!--ImplantProstheticComplex-->
-	<li Class="PatchOperation.Context">
+	<li Class="PrimumDisease.PatchOperationContext">
 		<xpath>/Defs/RecipeDef[defName = "InstallMindscrew"]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
@@ -159,7 +159,7 @@
 <!--ImplantNaturalComplex-->
 <!--ImplantNaturalSpecial-->
 <!--ImplantBionic-->
-	<li Class="PatchOperation.Context">
+	<li Class="PrimumDisease.PatchOperationContext">
 		<xpath>/Defs/RecipeDef[defName = "InstallVenomFangs" or defName = "InstallVenomTalon" or defName = "InstallLoveEnhancer" or defName = "InstallAestheticNose" or defName = "InstallAestheticShaper" or defName = "InstallDetoxiferStomach" or defName = "InstallReprocessorStomach" or defName = "InstallNuclearStomach" or defName = "InstallGastroanalyzer" or defName = "InstallImmunoenhancer" or defName = "InstallCoagulator" or defName = "InstallHealingEnhancer"]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
@@ -208,7 +208,7 @@
 
 
 <!--ImplantBionicComplex-->
-	<li Class="PatchOperation.Context">
+	<li Class="PrimumDisease.PatchOperationContext">
 		<xpath>/Defs/RecipeDef[defName = "InstallNeurocalculator" or defName = "InstallLearningAssistant" or defName = "InstallCircadianAssistant" or defName = "InstallCircadianHalfCycler" or defName = "InstallToughskinGland" or defName = "InstallStoneskinGland" or defName = "InstallArmorskinGland"]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
@@ -257,7 +257,7 @@
 
 
 <!--ImplantBionicSpecial-->
-	<li Class="PatchOperation.Context">
+	<li Class="PrimumDisease.PatchOperationContext">
 		<xpath>/Defs/RecipeDef[defName = "InstallPsychicSensitizer" or defName = "InstallPsychicHarmonizer" or defName = "InstallPsychicReader"]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">

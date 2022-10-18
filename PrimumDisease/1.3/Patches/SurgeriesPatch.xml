@@ -2,7 +2,7 @@
 <Patch>
 <!--Basic-->
 <!--RemoveBodyPart-->
-	<Operation Class="PatchOperation.Context">
+	<Operation Class="PrimumDisease.PatchOperationContext">
 		<xpath>/Defs/RecipeDef[defName = "RemoveBodyPart"]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
@@ -49,7 +49,7 @@
 	</Operation>
 
 <!--CureAilment-->
-	<Operation Class="PatchOperation.Context">
+	<Operation Class="PrimumDisease.PatchOperationContext">
 		<xpath>/Defs/RecipeDef[defName = "PD_ExciseFibroma" or defName = "PD_HeartAngioplasty" or defName = "PD_BrainAngioplasty"  or defName = "PD_CataractSurgery"]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
@@ -96,7 +96,7 @@
 		</operations>
 	</Operation>
 <!--CureAilmentComplex-->
-	<Operation Class="PatchOperation.Context">
+	<Operation Class="PrimumDisease.PatchOperationContext">
 		<xpath>/Defs/RecipeDef[defName = "ExciseCarcinoma" or defName = "PD_HeartAngioplasty" or defName = "PD_BrainAngioplasty"  or defName = "PD_CataractSurgery"]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
@@ -146,7 +146,7 @@
 
 <!--CureAilmentSpecial-->
 <!--ImplantBasic-->
-	<Operation Class="PatchOperation.Context">
+	<Operation Class="PrimumDisease.PatchOperationContext">
 		<xpath>/Defs/RecipeDef[defName = "InstallPegLeg" or defName = "InstallWoodenFoot" or defName = "InstallDenture"]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
@@ -192,7 +192,7 @@
 		</operations>
 	</Operation>
 <!--ImplantProsthetic-->
-	<Operation Class="PatchOperation.Context">
+	<Operation Class="PrimumDisease.PatchOperationContext">
 		<xpath>/Defs/RecipeDef[defName = "InstallSimpleProstheticLeg" or defName = "InstallSimpleProstheticArm" or defName = "InstallCochlearImplant"]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
@@ -238,7 +238,7 @@
 		</operations>
 	</Operation>
 <!--ImplantProstheticComplex-->
-	<Operation Class="PatchOperation.Context">
+	<Operation Class="PrimumDisease.PatchOperationContext">
 		<xpath>/Defs/RecipeDef[defName = "InstallSimpleProstheticHeart" or defName = "InstallJoywire" or defName = "InstallPainstopper"]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
@@ -284,7 +284,7 @@
 		</operations>
 	</Operation>
 <!--ImplantNatural-->
-	<Operation Class="PatchOperation.Context">
+	<Operation Class="PrimumDisease.PatchOperationContext">
 		<xpath>/Defs/RecipeDef[defName = "InstallNaturalKidney" or defName = "InstallNaturalLung" or defName = "InstallNaturalLiver"]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
@@ -330,7 +330,7 @@
 		</operations>
 	</Operation>
 <!--ImplantNaturalComplex-->
-	<Operation Class="PatchOperation.Context">
+	<Operation Class="PrimumDisease.PatchOperationContext">
 		<xpath>/Defs/RecipeDef[defName = "InstallNaturalHeart"]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
@@ -377,7 +377,7 @@
 	</Operation>
 <!--ImplantNaturalSpecial-->
 <!--ImplantBionic-->
-	<Operation Class="PatchOperation.Context">
+	<Operation Class="PrimumDisease.PatchOperationContext">
 		<xpath>/Defs/RecipeDef[defName = "InstallBionicLeg" or defName = "InstallBionicArm" or defName = "InstallBionicSpine" or defName = "InstallBionicStomach" or defName = "InstallPowerclaw"]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
@@ -424,7 +424,7 @@
 		</operations>
 	</Operation>
 <!--ImplantBionicComplex-->
-	<Operation Class="PatchOperation.Context">
+	<Operation Class="PrimumDisease.PatchOperationContext">
 		<xpath>/Defs/RecipeDef[defName = "InstallBionicHeart" or defName = "InstallBionicEye"]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
@@ -471,7 +471,7 @@
 		</operations>
 	</Operation>
 <!--ImplantBionicSpecial-->
-	<Operation Class="PatchOperation.Context">
+	<Operation Class="PrimumDisease.PatchOperationContext">
 		<xpath>/Defs/RecipeDef[defName = "InstallArchotechLeg" or defName = "InstallArchotechArm" or defName = "InstallArchotechEye"]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
