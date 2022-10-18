@@ -52,12 +52,6 @@
 					<count>2</count>
 				</value>
 			</li>
-			<li Class="PrimumDisease.PatchOperationAddOrReplace">
-				<xpath>/RecipeDef/fixedIngredientFilter</xpath>
-				<key>disallowedThingDefs</key>
-				<value>
-				</value>
-			</li>
 		</operations>
 	</Operation>
 <!--ImplantNaturalComplex-->
@@ -98,12 +92,6 @@
 					<count>4</count>
 				</value>
 			</li>
-			<li Class="PrimumDisease.PatchOperationAddOrReplace">
-				<xpath>/RecipeDef/fixedIngredientFilter</xpath>
-				<key>disallowedThingDefs</key>
-				<value>
-				</value>
-			</li>
 		</operations>
 	</Operation>
 <!--ImplantNaturalSpecial-->
@@ -142,12 +130,6 @@
 						</categories>
 					</filter>
 					<count>6</count>
-				</value>
-			</li>
-			<li Class="PrimumDisease.PatchOperationAddOrReplace">
-				<xpath>/RecipeDef/fixedIngredientFilter</xpath>
-				<key>disallowedThingDefs</key>
-				<value>
 				</value>
 			</li>
 		</operations>

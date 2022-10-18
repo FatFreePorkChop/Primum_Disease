@@ -97,12 +97,6 @@
 					<count>2</count>
 				</value>
 			</li>
-			<li Class="PrimumDisease.PatchOperationAddOrReplace">
-				<xpath>/RecipeDef/fixedIngredientFilter</xpath>
-				<key>disallowedThingDefs</key>
-				<value>
-				</value>
-			</li>
 		</operations>
 	</li>
 
@@ -143,12 +137,6 @@
 						</categories>
 					</filter>
 					<count>4</count>
-				</value>
-			</li>
-			<li Class="PrimumDisease.PatchOperationAddOrReplace">
-				<xpath>/RecipeDef/fixedIngredientFilter</xpath>
-				<key>disallowedThingDefs</key>
-				<value>
 				</value>
 			</li>
 		</operations>
