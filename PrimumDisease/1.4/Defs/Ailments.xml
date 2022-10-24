@@ -397,7 +397,7 @@
 		<description>Bright's disease is chronic degeneration of kidney function, leading to severely reduced blood filtration--with subsequent vulnerability to disease. Severe disease leads to electrolyte abnormalities, which may cause heart attack or stroke. The disease progresses slowly; treatment slows progression, but is unlikely to reverse prior damage.</description>
 		<initialSeverity>0.001</initialSeverity>
 		<minSeverity>0.001</minSeverity>
-		<maxSeverity>0.5</maxSeverity>
+		<maxSeverity>1.0</maxSeverity>
 		<tendable>true</tendable>
 		<cureAllAtOnceIfCuredByItem>true</cureAllAtOnceIfCuredByItem>
 		<comps>
