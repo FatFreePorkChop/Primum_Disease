@@ -2,7 +2,7 @@
 <Patch>
 <!--Temperate-->
 	<Operation Class="PrimumDisease.PatchOperationContext">
-		<xpath>/Defs/BiomeDef[defName = "TemperateForest"]</xpath>
+		<xpath>/Defs/BiomeDef[@Name = "TemperateForest"]</xpath>
 		<operations>
             <li Class="PrimumDisease.PatchOperationAddOrReplace">
                 <xpath>/BiomeDef</xpath>
@@ -81,7 +81,7 @@
         </operations>
     </Operation>
 	<Operation Class="PrimumDisease.PatchOperationContext">
-		<xpath>/Defs/BiomeDef[defName = "TemperateSwamp"]</xpath>
+		<xpath>/Defs/BiomeDef[@Name = "TemperateSwamp"]</xpath>
 		<operations>
             <li Class="PrimumDisease.PatchOperationAddOrReplace">
                 <xpath>/BiomeDef</xpath>
@@ -162,7 +162,7 @@
     
 <!--Tropical-->
 	<Operation Class="PrimumDisease.PatchOperationContext">
-		<xpath>/Defs/BiomeDef[defName = "TropicalRainforest"]</xpath>
+		<xpath>/Defs/BiomeDef[@Name = "TropicalRainforest"]</xpath>
 		<operations>
             <li Class="PrimumDisease.PatchOperationAddOrReplace">
                 <xpath>/BiomeDef</xpath>
@@ -241,7 +241,7 @@
         </operations>
     </Operation>
     <Operation Class="PrimumDisease.PatchOperationContext">
-		<xpath>/Defs/BiomeDef[defName = "TropicalSwamp"]</xpath>
+		<xpath>/Defs/BiomeDef[@Name = "TropicalSwamp"]</xpath>
 		<operations>
             <li Class="PrimumDisease.PatchOperationAddOrReplace">
                 <xpath>/BiomeDef</xpath>
@@ -323,7 +323,7 @@
 
 <!--Arid-->
 	<Operation Class="PrimumDisease.PatchOperationContext">
-		<xpath>/Defs/BiomeDef[defName = "AridShrubland"]</xpath>
+		<xpath>/Defs/BiomeDef[@Name = "AridShrubland"]</xpath>
 		<operations>
             <li Class="PrimumDisease.PatchOperationAddOrReplace">
                 <xpath>/BiomeDef</xpath>
@@ -402,7 +402,7 @@
         </operations>
     </Operation>
     <Operation Class="PrimumDisease.PatchOperationContext">
-		<xpath>/Defs/BiomeDef[defName = "Desert"]</xpath>
+		<xpath>/Defs/BiomeDef[@Name = "Desert"]</xpath>
 		<operations>
             <li Class="PrimumDisease.PatchOperationAddOrReplace">
                 <xpath>/BiomeDef</xpath>
@@ -481,7 +481,7 @@
         </operations>
     </Operation>
     <Operation Class="PrimumDisease.PatchOperationContext">
-		<xpath>/Defs/BiomeDef[defName = "ExtremeDesert"]</xpath>
+		<xpath>/Defs/BiomeDef[@Name = "ExtremeDesert"]</xpath>
 		<operations>
             <li Class="PrimumDisease.PatchOperationAddOrReplace">
                 <xpath>/BiomeDef</xpath>
@@ -562,7 +562,7 @@
 
 <!--Cold-->
 	<Operation Class="PrimumDisease.PatchOperationContext">
-		<xpath>/Defs/BiomeDef[defName = "BorealForest"]</xpath>
+		<xpath>/Defs/BiomeDef[@Name = "BorealForest"]</xpath>
 		<operations>
             <li Class="PrimumDisease.PatchOperationAddOrReplace">
                 <xpath>/BiomeDef</xpath>
@@ -641,7 +641,7 @@
         </operations>
     </Operation>
     <Operation Class="PrimumDisease.PatchOperationContext">
-		<xpath>/Defs/BiomeDef[defName = "ColdBog"]</xpath>
+		<xpath>/Defs/BiomeDef[@Name = "ColdBog"]</xpath>
 		<operations>
             <li Class="PrimumDisease.PatchOperationAddOrReplace">
                 <xpath>/BiomeDef</xpath>
@@ -720,7 +720,7 @@
         </operations>
     </Operation>
 	<Operation Class="PrimumDisease.PatchOperationContext">
-		<xpath>/Defs/BiomeDef[defName = "Tundra"]</xpath>
+		<xpath>/Defs/BiomeDef[@Name = "Tundra"]</xpath>
 		<operations>
             <li Class="PrimumDisease.PatchOperationAddOrReplace">
                 <xpath>/BiomeDef</xpath>
@@ -799,7 +799,7 @@
         </operations>
     </Operation>
     <Operation Class="PrimumDisease.PatchOperationContext">
-		<xpath>/Defs/BiomeDef[defName = "IceSheet"]</xpath>
+		<xpath>/Defs/BiomeDef[@Name = "IceSheet"]</xpath>
 		<operations>
             <li Class="PrimumDisease.PatchOperationAddOrReplace">
                 <xpath>/BiomeDef</xpath>
@@ -878,7 +878,7 @@
         </operations>
     </Operation>
     <Operation Class="PrimumDisease.PatchOperationContext">
-		<xpath>/Defs/BiomeDef[defName = "SeaIce"]</xpath>
+		<xpath>/Defs/BiomeDef[@Name = "SeaIce"]</xpath>
 		<operations>
             <li Class="PrimumDisease.PatchOperationAddOrReplace">
                 <xpath>/BiomeDef</xpath>

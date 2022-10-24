@@ -21,7 +21,7 @@
 <!--ImplantBionicComplex-->
 <!--ImplantBionicSpecial-->
 	<li Class="PrimumDisease.PatchOperationContext">
-		<xpath>/Defs/RecipeDef[defName = "SoSInstallPsychicPredictor" or defName = "SoSInstallPsychicManipulator" or  defName = "SoSInstallArchotechEar" or  defName = "SoSInstallArchotechNose" or  defName = "SoSInstallArchotechJaw" or  defName = "SoSInstallArchotechTongue" or  defName = "SoSInstallArchotechHeart" or  defName = "SoSInstallArchotechLung" or  defName = "SoSInstallArchotechStomach" or  defName = "SoSInstallArchotechKidney" or  defName = "SoSInstallArchotechLiver" or  defName = "SoSInstallArchotechSpine" or  defName = "SoSInstallArchotechSkin"] ]</xpath>
+		<xpath>/Defs/RecipeDef[@Name = "SoSInstallPsychicPredictor" or @Name = "SoSInstallPsychicManipulator" or  @Name = "SoSInstallArchotechEar" or  @Name = "SoSInstallArchotechNose" or  @Name = "SoSInstallArchotechJaw" or  @Name = "SoSInstallArchotechTongue" or  @Name = "SoSInstallArchotechHeart" or  @Name = "SoSInstallArchotechLung" or  @Name = "SoSInstallArchotechStomach" or  @Name = "SoSInstallArchotechKidney" or  @Name = "SoSInstallArchotechLiver" or  @Name = "SoSInstallArchotechSpine" or  @Name = "SoSInstallArchotechSkin"] ]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
 				<xpath>/RecipeDef</xpath>
