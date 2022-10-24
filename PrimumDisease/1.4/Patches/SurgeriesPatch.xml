@@ -96,12 +96,12 @@
 				</li>
 				<li Class="PD_SurgeryOutcomeComp_RecipeSkillDifficulty">
 					<range>0~4</range>
-					<logFactor>4</factor>
+					<logFactor>4</logFactor>
 					<minimum>0.5</minimum>
 				</li>
 				<li Class="PD_SurgeryOutcomeComp_SoftClampToRange">
 					<range>0~0.8</range>
-					<logFactor>8</factor>
+					<logFactor>8</logFactor>
 				</li>
 			<comps>
 		</value>
