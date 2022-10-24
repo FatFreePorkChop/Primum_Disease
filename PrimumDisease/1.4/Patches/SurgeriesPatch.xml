@@ -1,5 +1,116 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
+<!--Surgery Outcome Def Changes-->
+	<!--
+	This is used for almost all surgeries.
+
+	Comps: 
+	Vanilla:
+		SurgeonSuccessChance. TQ/BQ is 1.0/0.7. Varies from 0.05 to 1.1, and is increased by other factors (eg. medical specialist role x1.5, surgery items from vanilla expanded mods)
+		BedAndRoomQuality. TQ/BQ is 1.2/0.9.
+		MedicineQuality. TQ/BQ is 1.18/0.88
+		RecipeSuccessChance is custom
+		Inspired gives an additional factor of 2 if inispired
+		ClampToRange confines to 0~0.98, locking the player from acheiving guaranteed surgery success chance
+
+
+	Primum Disease
+		SurgeonSuccessChance. TQ/BQ is 1.15/0.8. Varies from 0.4 to 1.4, and is increased by other factors (eg. medical specialist role x1.5, surgery items from vanilla expanded mods). Also varies uncapped with sight and manipulation.
+		BedAndRoomQuality. TQ/BQ is 1.2/0.9.
+		MedicineQuality. TQ/BQ is 1.18/0.88
+		RecipeSuccessChance is custom
+		Inspired gives an additional factor of 2 if inispired
+		PD_SoftClampToRange makes going past 80% success increasingly difficult.
+			Getting to 90% requires 95% vanilla chance
+			Getting to 95% requires 109% vanilla chance
+			Getting to 100% requires 127% vanilla chance
+		PD_RecipeDifficulty
+	-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/StatDef[defName="MedicalSurgerySuccessChance"]/comps</xpath>
+		<value>
+			<skillNeedFactors>
+				<li Class="SkillNeed_Direct">
+					<skill>Medicine</skill>
+					<valuesPerLevel>
+						<li>0.40</li>
+						<li>0.45</li>
+						<li>0.50</li>
+						<li>0.55</li>
+						<li>0.60</li>
+						<li>0.65</li>
+						<li>0.70</li>
+						<li>0.75</li>
+						<li>0.80</li>
+						<li>0.85</li>
+						<li>0.90</li>
+						<li>0.95</li>
+						<li>1.00</li>
+						<li>1.05</li>
+						<li>1.10</li>
+						<li>1.15</li>
+						<li>1.20</li>
+						<li>1.25</li>
+						<li>1.30</li>
+						<li>1.35</li>
+						<li>1.40</li>
+					</valuesPerLevel>
+				</li>
+			</skillNeedFactors>
+		</value>
+	</Operation><Operation Class="PatchOperationReplace">
+		<xpath>Defs/StatDef[defName="MedicalSurgerySuccessChance"]/comps</xpath>
+		<value>
+			<capacityFactors>
+				<li>
+					<capacity>Sight</capacity>
+					<weight>0.4</weight>
+				</li>
+				<li>
+					<capacity>Manipulation</capacity>
+					<weight>0.6</weight>
+					<max>1.2</max>
+				</li>
+			</capacityFactors>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/SurgeryOutcomeEffectDef[defName="SurgeryOutcomeBase"]/comps</xpath>
+		<value>
+			<comps>
+				<li Class="SurgeryOutcomeComp_SurgeonSuccessChance"/>
+				<li Class="SurgeryOutcomeComp_BedAndRoomQuality"/>
+				<li Class="SurgeryOutcomeComp_MedicineQuality">
+					<curve>
+						<points>
+						<li>(0, 0.7)</li>
+						<li>(1, 1)</li>
+						<li>(2, 1.3)</li>
+						</points>
+					</curve>
+				</li>
+				<li Class="SurgeryOutcomeComp_RecipeSuccessChance"/>
+				<li Class="SurgeryOutcomeComp_Inspired">
+					<inspirationDef>Inspired_Surgery</inspirationDef>
+					<factor>2</factor>
+				</li>
+				<li Class="PD_SurgeryOutcomeComp_RecipeSkillDifficulty">
+					<range>0~4</range>
+					<logFactor>4</factor>
+					<minimum>0.5</minimum>
+				</li>
+				<li Class="PD_SurgeryOutcomeComp_SoftClampToRange">
+					<range>0~0.8</range>
+					<logFactor>8</factor>
+				</li>
+			<comps>
+		</value>
+	</Operation>
+
+
+
+
+
 <!--Basic-->
 <!--RemoveBodyPart-->
 	<Operation Class="PrimumDisease.PatchOperationContext">

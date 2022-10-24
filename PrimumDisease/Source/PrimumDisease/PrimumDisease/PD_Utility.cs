@@ -13,6 +13,18 @@ namespace PrimumDisease
 {
     public class PD_Utility
     {
+        public static float LogClamp(float q, FloatRange range, float logFactor)  //Math to clamp a number to a range, and apply a logarithmic scale--with continuous slope--outside that range.
+        {
+            if (q > range.max)
+            {
+                q = range.max + Mathf.Log((q - range.max) * logFactor + 1) / logFactor;
+            }
+            if (q < range.min)
+            {
+                q = range.max - Mathf.Log((-q + range.min) * logFactor + 1) / logFactor;
+            }
+            return q;
+        }
         public static int CountImplants(Pawn pawn, PD_ImplantTypeDef type) //Type can be Natural, Nonnatural, or Archotech
         {
             int count = 0;
