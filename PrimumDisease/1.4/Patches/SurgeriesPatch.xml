@@ -94,12 +94,12 @@
 					<inspirationDef>Inspired_Surgery</inspirationDef>
 					<factor>2</factor>
 				</li>
-				<li Class="PD_SurgeryOutcomeComp_RecipeSkillDifficulty">
+				<li Class="PrimumDisease.PD_SurgeryOutcomeComp_RecipeSkillDifficulty">
 					<range>0~4</range>
 					<logFactor>4</logFactor>
 					<minimum>0.5</minimum>
 				</li>
-				<li Class="PD_SurgeryOutcomeComp_SoftClampToRange">
+				<li Class="PrimumDisease.PD_SurgeryOutcomeComp_SoftClampToRange">
 					<range>0~0.8</range>
 					<logFactor>8</logFactor>
 				</li>
