@@ -27,7 +27,7 @@
 		PD_RecipeDifficulty
 	-->
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/StatDef[defName="MedicalSurgerySuccessChance"]/comps</xpath>
+		<xpath>Defs/StatDef[defName="MedicalSurgerySuccessChance"]/skillNeedFactors</xpath>
 		<value>
 			<skillNeedFactors>
 				<li Class="SkillNeed_Direct">
@@ -59,7 +59,7 @@
 			</skillNeedFactors>
 		</value>
 	</Operation><Operation Class="PatchOperationReplace">
-		<xpath>Defs/StatDef[defName="MedicalSurgerySuccessChance"]/comps</xpath>
+		<xpath>Defs/StatDef[defName="MedicalSurgerySuccessChance"]/capacityFactors</xpath>
 		<value>
 			<capacityFactors>
 				<li>
