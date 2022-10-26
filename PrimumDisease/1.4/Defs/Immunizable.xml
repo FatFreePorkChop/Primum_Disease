@@ -23,6 +23,20 @@
 				</severityPerDayNotImmuneRandomFactor>
 			</li>
 		</comps>
+        <modExtensions>
+            <li Class="PrimumDisease.PD_TransmissionExtension">
+				<transmissionMethods>
+					<li>PD_Proximity</li>
+				</transmissionMethods>
+				<transmissivity>0.5</transmissivity>
+				<resistanceCapacities>
+					<li>
+						<capacity>Breathing</capacity>
+						<factor>1</factor>
+					</li>
+				</resistanceCapacities>
+            </li>
+        </modExtensions>
 		<stages>
 			<li>
 				<label>minor</label>
