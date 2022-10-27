@@ -29,7 +29,7 @@
 				<transmissionMethods>
 					<li>PD_Proximity</li>
 				</transmissionMethods>
-				<transmissivity>1</transmissivity>
+				<virulenceFactor>1</virulenceFactor>
 				<resistanceCapacities>
 					<li>
 						<capacity>Breathing</capacity>
@@ -71,7 +71,7 @@
 					<li>PD_IndoorsVectorBorne</li>
 					<li>PD_UndergroundVectorBorne</li>
 				</transmissionMethods>
-				<transmissivity>1</transmissivity>
+				<virulenceFactor>1</virulenceFactor>
 				<resistanceCapacities>
 					<li>
 						<capacity>BloodFiltration</capacity>
@@ -234,7 +234,7 @@
 				<transmissionMethods>
 					<li>PD_OutdoorsVectorBorne</li>
 				</transmissionMethods>
-				<transmissivity>0.5</transmissivity>
+				<virulenceFactor>0.5</virulenceFactor>
 				<resistanceCapacities>
 					<li>
 						<capacity>BloodFiltration</capacity>
@@ -385,7 +385,7 @@
 				<transmissionMethods>
 					<li>PD_OutdoorsVectorBorne</li>
 				</transmissionMethods>
-				<transmissivity>1</transmissivity>
+				<virulenceFactor>1</virulenceFactor>
 				<resistanceCapacities>
 					<li>
 						<capacity>BloodFiltration</capacity>
@@ -631,7 +631,7 @@
 				<transmissionMethods>
 					<li>PD_Contact</li>
 				</transmissionMethods>
-				<transmissivity>1</transmissivity>
+				<virulenceFactor>1</virulenceFactor>
 				<resistanceCapacities>
 					<li>
 						<capacity>Metabolism</capacity>

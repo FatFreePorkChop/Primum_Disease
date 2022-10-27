@@ -28,7 +28,7 @@
 				<transmissionMethods>
 					<li>PD_Proximity</li>
 				</transmissionMethods>
-				<transmissivity>0.5</transmissivity>
+				<virulenceFactor>0.5</virulenceFactor>
 				<resistanceCapacities>
 					<li>
 						<capacity>Breathing</capacity>

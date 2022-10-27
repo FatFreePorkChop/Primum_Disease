@@ -35,7 +35,7 @@
 				<transmissionMethods>
 					<li>PD_Contact</li>
 				</transmissionMethods>
-				<transmissivity>1</transmissivity>
+				<virulenceFactor>1</virulenceFactor>
 				<resistanceCapacities>
 					<li>
 						<capacity>Metabolism</capacity>
@@ -87,7 +87,7 @@
 				<transmissionMethods>
 					<li>PD_FoodBorne</li>
 				</transmissionMethods>
-				<transmissivity>1</transmissivity>
+				<virulenceFactor>1</virulenceFactor>
 				<survivalOnCooked>0.25</survivalOnCooked>
 				<resistanceCapacities>
 					<li>
@@ -233,7 +233,7 @@
 							<transmissionMethods>
 								<li>PD_Venereal</li>
 							</transmissionMethods>
-							<transmissivity>1</transmissivity>
+							<virulenceFactor>1</virulenceFactor>
 							<resistanceCapacities>
 								<li>
 									<capacity>BloodFiltration</capacity>

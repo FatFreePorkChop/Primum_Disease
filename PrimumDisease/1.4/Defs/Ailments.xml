@@ -23,7 +23,7 @@
 			<transmissionMethods>
 				<li>PD_FoodBorne</li>
 			</transmissionMethods>
-			<transmissivity>1</transmissivity>
+			<virulenceFactor>1</virulenceFactor>
 			<survivalOnCooked>1</survivalOnCooked>
 			<resistanceCapacities>
 				<li>

@@ -182,7 +182,7 @@
 					<transmissionMethods>
 						<li>PD_Memetic</li>
 					</transmissionMethods>
-					<transmissivity>0.25</transmissivity>
+					<virulenceFactor>0.25</virulenceFactor>
 					<survivalOnCooked>1</survivalOnCooked>
 				</li>
 			</modExtensions>
