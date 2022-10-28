@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
+    <IncidentDef Name="PD_DiseaseIncident_ImmunizableCondition" Abstract="True">
+        <workerClass>IncidentWorker_DiseaseHuman</workerClass>
+        <category>DiseaseHuman</category>
+        <targetTags>
+            <li>Map_PlayerHome</li>
+            <li>Map_TempIncident</li>
+            <li>Map_Misc</li>
+            <li>Map_RaidBeacon</li>
+            <li>Caravan</li>
+        </targetTags>
+        <diseaseVictimFractionRange>
+            <min>0.12</min>
+            <max>0.3</max>
+        </diseaseVictimFractionRange>
+        <letterText>{0} of your {1} have gotten sick from {2}.\n\nEnsure you have a medical bed and a doctor. Make sure that they get proper treatment and spend as much time in bed as possible. This disease may spread, keep your colonists safe!\n\nThe following {1} have gotten sick</letterText>
+        <letterDef>NegativeEvent</letterDef>
+    </IncidentDef>
+
     <IncidentDef Name="PD_DiseaseIncident_Immunizable" Abstract="True">
         <workerClass>IncidentWorker_DiseaseHuman</workerClass>
         <category>DiseaseHuman</category>
@@ -44,11 +62,19 @@
         <letterLabel>Disease (flu)</letterLabel>
     </IncidentDef>
 
-    <IncidentDef ParentName="PD_DiseaseIncident_Immunizable">
+    <!--<IncidentDef ParentName="PD_DiseaseIncident_Immunizable">
         <defName>Disease_Plague</defName>
         <label>plague</label>
         <diseaseIncident>Plague</diseaseIncident>
         <letterLabel>Disease (plague)</letterLabel>
+    </IncidentDef>-->
+    <IncidentDef ParentName="PD_DiseaseIncident_Immunizable">
+        <defName>Disease_Plague</defName>
+        <label>flea infestation</label>
+        <letterLabel>flea infestation (plague)</letterLabel>
+        <workerClass>IncidentWorker_MakeGameCondition</workerClass>
+        <gameCondition>PrimumDisease.PD_GameCondition_Plague</gameCondition>
+        <durationDays>2~4</durationDays> <!--Half to all of the natural course of the disease-->
     </IncidentDef>
 
     <IncidentDef ParentName="PD_DiseaseIncident_Immunizable">
@@ -58,18 +84,34 @@
         <letterLabel>Disease (tuberculosis)</letterLabel>
     </IncidentDef>
 
-    <IncidentDef ParentName="PD_DiseaseIncident_Immunizable">
+    <!--<IncidentDef ParentName="PD_DiseaseIncident_Immunizable">
         <defName>Disease_Malaria</defName>
         <label>malaria</label>
         <diseaseIncident>Malaria</diseaseIncident>
         <letterLabel>Disease (malaria)</letterLabel>
+    </IncidentDef>-->
+    <IncidentDef ParentName="PD_DiseaseIncident_Immunizable">
+        <defName>Disease_Malaria</defName>
+        <label>scourge of musquitoes</label>
+        <letterLabel>scoure of musquitoes (malaria)</letterLabel>
+        <workerClass>IncidentWorker_MakeGameCondition</workerClass>
+        <gameCondition>PrimumDisease.PD_GameCondition_Malaria</gameCondition>
+        <durationDays>1.35~2.7</durationDays> <!--Half to all of the natural course of the disease-->
     </IncidentDef>
 
-    <IncidentDef ParentName="PD_DiseaseIncident_Immunizable">
+    <!--<IncidentDef ParentName="PD_DiseaseIncident_Immunizable">
         <defName>Disease_SleepingSickness</defName>
         <label>sleeping sickness</label>
         <diseaseIncident>SleepingSickness</diseaseIncident>
         <letterLabel>Disease (sleeping sickness)</letterLabel>
+    </IncidentDef>-->
+    <IncidentDef ParentName="PD_DiseaseIncident_Immunizable">
+        <defName>Disease_SleepingSickness</defName>
+        <label>tsestse fly migration</label>
+        <letterLabel>tsestse fly migration (sleeping sickness)</letterLabel>
+        <workerClass>IncidentWorker_MakeGameCondition</workerClass>
+        <gameCondition>PrimumDisease.PD_GameCondition_SleepingSickness</gameCondition>
+        <durationDays>4.16~8.33</durationDays> <!--Half to all of the natural course of the disease-->
     </IncidentDef>
 
     <IncidentDef ParentName="PD_DiseaseIncident_Subacute">
