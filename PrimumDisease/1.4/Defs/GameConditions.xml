@@ -25,7 +25,7 @@
 
     <GameConditionDef>
         <defName>PD_MalariaCondition</defName>
-        <conditionClass>PrimumDisease.PD_GameCondition_MalariaCondittion</conditionClass>
+        <conditionClass>PrimumDisease.PD_GameCondition_MalariaCondition</conditionClass>
         <label>scourge of musquitoes</label>
         <description>A large scourge of musquitoes has invaded the area. While themselves harmless, musquitoes spread malaria everywhere outdoors.</description>
         <descriptionFuture>A large scourge of musquitoes will invade the area. They will spread malaria to everyone outdoors.</descriptionFuture>
