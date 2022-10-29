@@ -73,7 +73,7 @@
         <label>flea infestation</label>
         <letterLabel>flea infestation (plague)</letterLabel>
         <workerClass>IncidentWorker_MakeGameCondition</workerClass>
-        <gameCondition>PrimumDisease.PD_GameCondition_Plague</gameCondition>
+        <gameCondition>PD_PlagueCondition</gameCondition>
         <durationDays>2~4</durationDays> <!--Half to all of the natural course of the disease-->
     </IncidentDef>
 
@@ -95,7 +95,7 @@
         <label>scourge of musquitoes</label>
         <letterLabel>scoure of musquitoes (malaria)</letterLabel>
         <workerClass>IncidentWorker_MakeGameCondition</workerClass>
-        <gameCondition>PrimumDisease.PD_GameCondition_Malaria</gameCondition>
+        <gameCondition>PD_MalariaCondition</gameCondition>
         <durationDays>1.35~2.7</durationDays> <!--Half to all of the natural course of the disease-->
     </IncidentDef>
 
@@ -110,7 +110,7 @@
         <label>tsestse fly migration</label>
         <letterLabel>tsestse fly migration (sleeping sickness)</letterLabel>
         <workerClass>IncidentWorker_MakeGameCondition</workerClass>
-        <gameCondition>PrimumDisease.PD_GameCondition_SleepingSickness</gameCondition>
+        <gameCondition>PD_SleepingSicknessCondition</gameCondition>
         <durationDays>4.16~8.33</durationDays> <!--Half to all of the natural course of the disease-->
     </IncidentDef>
 

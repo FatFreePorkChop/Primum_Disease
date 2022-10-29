@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+    <GameConditionDef>
+        <defName>PD_SleepingSicknessCondition</defName>
+        <conditionClass>PrimumDisease.PD_GameCondition_SleepingSicknessCondition</conditionClass>
+        <label>Tsetse fly migration</label>
+        <description>A large swarm of Tsetse flies has invaded the area, spreading sleeping sickness everywhere but deep underground.</description>
+        <descriptionFuture>A large swarm of Tsetse flies will invade the area. They will spread sleeping sickness to everyone who is not deep underground.</descriptionFuture>
+        <endMessage>The Tsetse fly swarm has moved on!</endMessage>
+        <letterText>A large swarm of Tsetse flies has invaded the area. Move your pawns under mountains to avoid contracting sleeping sickness.</letterText>
+        <letterDef>NegativeEvent</letterDef>
+    </GameConditionDef>
+
+    <GameConditionDef>
+        <defName>PD_PlagueCondition</defName>
+        <conditionClass>PrimumDisease.PD_GameCondition_PlagueCondition</conditionClass>
+        <label>flea infestation</label>
+        <description>Fleas spread plague--the black death--throughout caves and manmade buildings, but are rather less prevelant outside.</description>
+        <descriptionFuture>A large swarm of fleas will envelop the area. Fleas spread plague--the black death--throughout caves and manmade structures, but are rather less prevelant outside.</descriptionFuture>
+        <endMessage>The fleas have moved on!</endMessage>
+        <letterText>A large swarm of fleas has invaded the area. Move your pawns outdoors to avoid contracting plague.</letterText>
+        <letterDef>NegativeEvent</letterDef>
+    </GameConditionDef>
+
+    <GameConditionDef>
+        <defName>PD_MalariaCondition</defName>
+        <conditionClass>PrimumDisease.PD_GameCondition_MalariaCondittion</conditionClass>
+        <label>scourge of musquitoes</label>
+        <description>A large scourge of musquitoes has invaded the area. While themselves harmless, musquitoes spread malaria everywhere outdoors.</description>
+        <descriptionFuture>A large scourge of musquitoes will invade the area. They will spread malaria to everyone outdoors.</descriptionFuture>
+        <endMessage>The musquito scourge has moved on!</endMessage>
+        <letterText>A scourge of musquitoes has invaded the area. Move your pawns indoors to avoid contracting malaria.</letterText>
+        <letterDef>NegativeEvent</letterDef>
+    </GameConditionDef>
+</Defs>
