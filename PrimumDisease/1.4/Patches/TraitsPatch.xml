@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch> 
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/TraitDef[defName = "Immunity"]/degreeDatas</xpath>
+		<value>
+            <degreeDatas>
+                <li>
+                    <label>super-immune</label>
+                    <description>[PAWN_nameDef] has a naturally powerful immune system. [PAWN_pronoun] will gain immunity much faster than a normal person would, and can survive illnesses that would kill others. Additionally, [PAWN_pronoun] will be more resistant to contracting all types of disease.</description>
+                    <degree>1</degree>
+                    <statOffsets>
+                        <ImmunityGainSpeed>0.2</ImmunityGainSpeed>
+                        <PD_DiseaseResistance>0.2</PD_DiseaseResistance>
+                    </statOffsets>
+                </li>
+                <li>
+                    <label>sickly</label>
+                    <description>[PAWN_nameDef] has an awful immune system. [PAWN_pronoun] gets sick more often than usual, frequently with illnesses that nobody in the colony has been afflicted by.</description>
+                    <degree>-1</degree>
+                    <randomDiseaseMtbDays>90</randomDiseaseMtbDays>
+                    <statOffsets>
+                        <ImmunityGainSpeed>-0.1</ImmunityGainSpeed>
+                        <PD_DiseaseResistance>-0.2</PD_DiseaseResistance>
+                    </statOffsets>
+                    <skillGains>
+                        <li>
+                            <key>Medicine</key>
+                            <value>4</value>
+                        </li>
+                    </skillGains>
+                </li>
+            </degreeDatas>
+		</value>
+	</Operation>
+</Patch>

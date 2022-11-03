@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
+<!--InfectionBase BADBADBAD, dunno if this works-->
+	<Operation Class="PatchOperationConditional">
+		<xpath>*/HediffDef[@Name = "InfectionBase"]/comps</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>*/HediffDef[@Name = "InfectionBase"]</xpath>
+			<value>
+				<comps>
+					<li Class="PrimumDisease.PD_HediffCompProperties_Complications" /> <!--Allows infectious di-->
+				</comps>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>*/HediffDef[@Name = "InfectionBase"]/comps</xpath>
+			<value>
+				<li Class="PrimumDisease.PD_HediffCompProperties_Complications" /> 
+			</value>
+		</match>
+	</Operation>
+
+
+
+
 <!--Flu-->
 	<Operation Class="PatchOperationReplace">
 		<xpath>/Defs/HediffDef[defName = "Flu"]/comps</xpath>
