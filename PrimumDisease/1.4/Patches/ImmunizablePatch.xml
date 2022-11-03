@@ -7,7 +7,7 @@
 			<xpath>*/HediffDef[@Name = "InfectionBase"]</xpath>
 			<value>
 				<comps>
-					<li Class="PrimumDisease.PD_HediffCompProperties_Complications" /> <!--Allows infectious di-->
+					<li Class="PrimumDisease.PD_HediffCompProperties_Complications" /> <!--Allows infectious diseases to potentially be much worse, under certain circumstances-->
 				</comps>
 			</value>
 		</nomatch>
