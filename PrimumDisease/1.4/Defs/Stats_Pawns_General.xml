@@ -30,7 +30,7 @@
             </li>
         </capacityFactors>
         <parts>
-            <li Class="PD_StatPart_AgeOffset">
+            <li Class="PrimumDisease.PD_StatPart_AgeOffset">
                 <curve>
                     <points>
                         <li>(0.5,0)</li>
@@ -40,17 +40,17 @@
                     </points>
                 </curve>
             </li>
-            <li Class="PD_StatPart_DiseaseBurdenOffset">
+            <li Class="PrimumDisease.PD_StatPart_DiseaseBurdenOffset">
                 <factor>-0.5</factor>
             </li>
-            <li Class="PD_StatPart_OutdoorsOffset">
+            <li Class="PrimumDisease.PD_StatPart_OutdoorsOffset">
                 <factorTrapped>0</factorTrapped>
                 <factorCabinFeverLight>-0.1</factorCabinFeverLight>
                 <factorCabinFeverSevere>-0.15</factorCabinFeverSevere>
                 <factorNeedFreshAir>-0.2</factorNeedFreshAir>
                 <factorEntombed>-0.3</factorEntombed>
             </li>
-            <li Class="PD_StatPart_RestOffset">
+            <li Class="PrimumDisease.PD_StatPart_RestOffset">
                 <factorTired>-0.04</factorTired>
                 <factorVeryTired>-0.08</factorVeryTired>
                 <factorExhausted>-0.2</factorExhausted>
