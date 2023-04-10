@@ -635,12 +635,12 @@
 				</li>-->
 				<li Class="HediffCompProperties_Immunizable">
 					<severityPerDayNotImmune>1.33</severityPerDayNotImmune>
-					<immunityPerDaySick>1.59</immunityPerDaySick>
-					<severityPerDayImmune>-1.00</severityPerDayImmune>
+					<immunityPerDaySick>1.85</immunityPerDaySick>
+					<severityPerDayImmune>-2.00</severityPerDayImmune>
 					<immunityPerDayNotSick>-0.10</immunityPerDayNotSick>
 					<severityPerDayNotImmuneRandomFactor>
 						<min>1</min>
-						<max>1.10</max>
+						<max>1.11</max>
 					</severityPerDayNotImmuneRandomFactor>
 				</li>
 			</comps>
