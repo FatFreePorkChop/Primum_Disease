@@ -2,7 +2,7 @@
 <Patch>
 	<Operation Class="PatchOperationFindMod">
 		<mods>
-			<li>Save Our Ship 2</li>
+			<li>Biotech</li>
 		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
@@ -20,29 +20,71 @@
 <!--ImplantBionic-->
 <!--ImplantBionicComplex-->
 <!--ImplantBionicSpecial-->
-	<li Class="PrimumDisease.PatchOperationContext">
-		<xpath>/Defs/RecipeDef[defName = "SoSInstallPsychicPredictor" or defName = "SoSInstallPsychicManipulator" or  defName = "SoSInstallArchotechEar" or  defName = "SoSInstallArchotechNose" or  defName = "SoSInstallArchotechJaw" or  defName = "SoSInstallArchotechTongue" or  defName = "SoSInstallArchotechHeart" or  defName = "SoSInstallArchotechLung" or  defName = "SoSInstallArchotechStomach" or  defName = "SoSInstallArchotechKidney" or  defName = "SoSInstallArchotechLiver" or  defName = "SoSInstallArchotechSpine" or  defName = "SoSInstallArchotechSkin"] ]</xpath>
+<!--FertilityBasic-->
+	<Operation Class="PrimumDisease.PatchOperationContext">
+		<xpath>/Defs/RecipeDef[defName = "Vasectomy" or defName = "ImplantIUD" or defName = "RemoveIUD" or defName = "ImplantEmbryo" or defName = "TerminatePregnancy"]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
 				<xpath>/RecipeDef</xpath>
 				<key>workAmount</key>
-				<value>4000</value>
+				<value>2000</value>
 			</li>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
 				<xpath>/RecipeDef</xpath>
 				<key>deathOnFailedSurgeryChance</key>
-				<value>0.25</value>
+				<value>0</value>
 			</li>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
 				<xpath>/RecipeDef</xpath>
 				<key>surgerySuccessChanceFactor</key>
-				<value>1</value>
+				<value>1.00</value>
 			</li>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
 				<xpath>/RecipeDef</xpath>
 				<key>skillRequirements</key>
 				<value>
-					<Medicine>15</Medicine>
+					<Medicine>5</Medicine>
+				</value>
+			</li>
+			<li Class="PrimumDisease.PatchOperationAddOrReplace">
+				<xpath>/RecipeDef/ingredients</xpath>
+				<key>li[1]</key>
+				<value>
+					<filter>
+						<categories>
+							<li>Medicine</li>
+						</categories>
+					</filter>
+					<count>2</count>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+<!--FertilityComplex-->
+	<Operation Class="PrimumDisease.PatchOperationContext">
+		<xpath>/Defs/RecipeDef[defName = "Tubal Ligation" or defName = "ReverseVasectomy" or defName = "ExtractOvum"]</xpath>
+		<operations>
+			<li Class="PrimumDisease.PatchOperationAddOrReplace">
+				<xpath>/RecipeDef</xpath>
+				<key>workAmount</key>
+				<value>3000</value>
+			</li>
+			<li Class="PrimumDisease.PatchOperationAddOrReplace">
+				<xpath>/RecipeDef</xpath>
+				<key>deathOnFailedSurgeryChance</key>
+				<value>0.1</value>
+			</li>
+			<li Class="PrimumDisease.PatchOperationAddOrReplace">
+				<xpath>/RecipeDef</xpath>
+				<key>surgerySuccessChanceFactor</key>
+				<value>1.00</value>
+			</li>
+			<li Class="PrimumDisease.PatchOperationAddOrReplace">
+				<xpath>/RecipeDef</xpath>
+				<key>skillRequirements</key>
+				<value>
+					<Medicine>10</Medicine>
 				</value>
 			</li>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
@@ -62,15 +104,8 @@
 				<key>disallowedThingDefs</key>
 				<value>
 					<li>MedicineHerbal</li>
-					<li>MedicineIndustrial</li>
 				</value>
 			</li>
 		</operations>
-	</li>
-
-
-
-			</operations>
-		</match>
 	</Operation>
 </Patch>

@@ -16,7 +16,7 @@
 <!--ImplantProstheticComplex-->
 <!--ImplantNatural-->
 	<Operation Class="PrimumDisease.PatchOperationContext">
-		<xpath>/Defs/RecipeDef[@Name = "GR_InstallBearClaws" or @Name = "GR_InstallDiggingBearClaws" or @Name = "GR_InstallBearMuscleTissue" or @Name = "GR_InstallOvipositor" or @Name = "GR_InstallMuffaloMuscles" or @Name = "GR_InstallMuffaloMammaries" or @Name = "GR_InstallMuffaloSkin" or @Name = "GR_InstallBoomalopeNodules" or @Name = "GR_InstallChemfuelStomach" or @Name = "GR_InstallWolfMuscularFibers" or @Name = "GR_InstallDevouringJaws" or @Name = "GR_InstallMousePheromones" or @Name = "GR_InstallMoleratNerveDampener" or @Name = "GR_InstallBunnyEar" or @Name = "GR_InstallInsectoidAntennae" or @Name = "GR_InstallPsychicDampeners" or @Name = "GR_InstallKidneyToxicFilters" or @Name = "GR_InstallVenomousFangs" or @Name = "GR_InstallIguanaScales"]</xpath>
+		<xpath>/Defs/RecipeDef[defName = "GR_InstallBearClaws" or defName = "GR_InstallDiggingBearClaws" or defName = "GR_InstallBearMuscleTissue" or defName = "GR_InstallOvipositor" or defName = "GR_InstallMuffaloMuscles" or defName = "GR_InstallMuffaloMammaries" or defName = "GR_InstallMuffaloSkin" or defName = "GR_InstallBoomalopeNodules" or defName = "GR_InstallChemfuelStomach" or defName = "GR_InstallWolfMuscularFibers" or defName = "GR_InstallDevouringJaws" or defName = "GR_InstallMousePheromones" or defName = "GR_InstallMoleratNerveDampener" or defName = "GR_InstallBunnyEar" or defName = "GR_InstallInsectoidAntennae" or defName = "GR_InstallPsychicDampeners" or defName = "GR_InstallKidneyToxicFilters" or defName = "GR_InstallVenomousFangs" or defName = "GR_InstallIguanaScales"]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
 				<xpath>/RecipeDef</xpath>
@@ -56,7 +56,7 @@
 	</Operation>
 <!--ImplantNaturalComplex-->
 	<Operation Class="PrimumDisease.PatchOperationContext">
-		<xpath>/Defs/RecipeDef[@Name = "GR_InstallChemfuelHeart" or @Name = "GR_InstallCompoundEye" or @Name = "GR_InstallCatEye"]</xpath>
+		<xpath>/Defs/RecipeDef[defName = "GR_InstallChemfuelHeart" or defName = "GR_InstallCompoundEye" or defName = "GR_InstallCatEye"]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
 				<xpath>/RecipeDef</xpath>
@@ -96,7 +96,7 @@
 	</Operation>
 <!--ImplantNaturalSpecial-->
 	<Operation Class="PrimumDisease.PatchOperationContext">
-		<xpath>/Defs/RecipeDef[@Name = "GR_InstallHibernationModule" or @Name = "GR_InstallNeuronReinforcement" or @Name = "GR_InstallHumanThrumboHorn" or @Name = "GR_InstallThrumboSkin"]</xpath>
+		<xpath>/Defs/RecipeDef[defName = "GR_InstallHibernationModule" or defName = "GR_InstallNeuronReinforcement" or defName = "GR_InstallHumanThrumboHorn" or defName = "GR_InstallThrumboSkin"]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
 				<xpath>/RecipeDef</xpath>
@@ -127,7 +127,7 @@
 					<filter>
 						<categories>
 							<li>Medicine</li>
-						</categories>
+						</categories>h
 					</filter>
 					<count>6</count>
 				</value>
