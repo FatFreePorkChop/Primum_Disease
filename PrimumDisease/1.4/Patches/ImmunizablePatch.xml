@@ -635,12 +635,12 @@
 				</li>-->
 				<li Class="HediffCompProperties_Immunizable">
 					<severityPerDayNotImmune>1.33</severityPerDayNotImmune>
-					<immunityPerDaySick>1.85</immunityPerDaySick>
+					<immunityPerDaySick>2.22</immunityPerDaySick>
 					<severityPerDayImmune>-2.00</severityPerDayImmune>
 					<immunityPerDayNotSick>-0.10</immunityPerDayNotSick>
 					<severityPerDayNotImmuneRandomFactor>
 						<min>1</min>
-						<max>1.11</max>
+						<max>1.2</max>
 					</severityPerDayNotImmuneRandomFactor>
 				</li>
 			</comps>
@@ -707,6 +707,48 @@
 					<label>major</label>
 					<minSeverity>0.67</minSeverity>
 					<vomitMtbDays>0.2</vomitMtbDays>
+					<painOffset>0.4</painOffset>
+					<capMods>
+						<li>
+							<capacity>Consciousness</capacity>
+							<postFactor>0.7</postFactor>
+						</li>
+						<li>
+							<capacity>Moving</capacity>
+							<postFactor>0.5</postFactor>
+						</li>
+						<li>
+							<capacity>Manipulation</capacity>
+							<postFactor>0.8</postFactor>
+						</li>
+						<li>
+							<capacity>BloodFiltration</capacity>
+							<postFactor>0.85</postFactor>
+						</li>
+						<li>
+							<capacity>Talking</capacity>
+							<postFactor>0.8</postFactor>
+						</li>
+						<li>
+							<capacity>Eating</capacity>
+							<postFactor>0.3</postFactor>
+						</li>
+					</capMods>
+					<hediffGivers>
+						<li Class="HediffGiver_Random">
+							<hediff>Carcinoma</hediff>
+							<mtbDays>12</mtbDays>
+							<partsToAffect>
+								<li>Stomach</li>
+							</partsToAffect>
+						</li>
+					</hediffGivers>
+				</li>
+				<li>
+					<label>extreme</label>
+					<minSeverity>0.9</minSeverity>
+					<vomitMtbDays>0.2</vomitMtbDays>
+					<lifeThreatening>true</lifeThreatening>
 					<painOffset>0.4</painOffset>
 					<capMods>
 						<li>
