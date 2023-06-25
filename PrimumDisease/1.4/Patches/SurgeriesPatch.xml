@@ -401,6 +401,11 @@
 					<count>2</count>
 				</value>
 			</li>
+			<li Class="PrimumDisease.PatchOperationAddOrReplace">
+				<xpath>/RecipeDef</xpath>
+				<key>addsHediff</key>
+				<value>PD_TransplantRejection</value>
+			</li>
 		</operations>
 	</Operation>
 <!--ImplantNaturalComplex-->

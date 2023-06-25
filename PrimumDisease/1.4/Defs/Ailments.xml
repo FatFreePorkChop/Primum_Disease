@@ -90,7 +90,7 @@
 						<allowOnQuestRewardPawns>false</allowOnQuestRewardPawns>
 						<allowOnQuestReservedPawns>false</allowOnQuestReservedPawns>
 						<allowOnBeggars>false</allowOnBeggars>
-						<mtbDays>300</mtbDays>
+						<mtbDays>1200</mtbDays>
 						<partsToAffect>
 							<li>Brain</li>
 						</partsToAffect>
@@ -107,7 +107,7 @@
 						<allowOnQuestRewardPawns>false</allowOnQuestRewardPawns>
 						<allowOnQuestReservedPawns>false</allowOnQuestReservedPawns>
 						<allowOnBeggars>false</allowOnBeggars>
-						<mtbDays>200</mtbDays>
+						<mtbDays>400</mtbDays>
 						<partsToAffect>
 							<li>Brain</li>
 						</partsToAffect>
@@ -125,7 +125,7 @@
 						<allowOnQuestRewardPawns>false</allowOnQuestRewardPawns>
 						<allowOnQuestReservedPawns>false</allowOnQuestReservedPawns>
 						<allowOnBeggars>false</allowOnBeggars>
-						<mtbDays>100</mtbDays>
+						<mtbDays>200</mtbDays>
 						<partsToAffect>
 							<li>Brain</li>
 						</partsToAffect>
@@ -143,7 +143,7 @@
 						<allowOnQuestRewardPawns>false</allowOnQuestRewardPawns>
 						<allowOnQuestReservedPawns>false</allowOnQuestReservedPawns>
 						<allowOnBeggars>false</allowOnBeggars>
-						<mtbDays>60</mtbDays>
+						<mtbDays>120</mtbDays>
 						<partsToAffect>
 							<li>Brain</li>
 						</partsToAffect>
@@ -162,7 +162,7 @@
 						<allowOnQuestRewardPawns>false</allowOnQuestRewardPawns>
 						<allowOnQuestReservedPawns>false</allowOnQuestReservedPawns>
 						<allowOnBeggars>false</allowOnBeggars>
-						<mtbDays>30</mtbDays>
+						<mtbDays>60</mtbDays>
 						<partsToAffect>
 							<li>Brain</li>
 						</partsToAffect>

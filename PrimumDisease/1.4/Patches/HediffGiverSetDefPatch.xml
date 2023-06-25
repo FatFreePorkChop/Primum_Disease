@@ -47,7 +47,7 @@
 			<li Class="HediffGiver_Birthday">
 				<hediff>PD_BrainArteryBlockage</hediff>
 				<partsToAffect>
-					<li>Heart</li>
+					<li>Brain</li>
 				</partsToAffect>
 				<ageFractionChanceCurve>
 					<points>

@@ -214,7 +214,7 @@
 						<comps>
 							<li Class="HediffCompProperties_Immunizable">
 								<severityPerDayNotImmune>0.4</severityPerDayNotImmune>
-								<severityPerDayNotImmuneRandomFactor> 1~2.5 </severityPerDayNotImmuneRandomFactor>
+								<severityPerDayNotImmuneRandomFactor> 1~2 </severityPerDayNotImmuneRandomFactor>
 							</li>
 							<li Class="HediffCompProperties_TendDuration">
 								<severityPerDayTended>-1</severityPerDayTended>
