@@ -17,11 +17,6 @@ Consider standardizing more stuff. In vanilla, nuclear stomach causes cancer/120
 			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
 			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
 		</li>
-		<li>
-			<packageId>ccl.patchoperation.highlander</packageId>
-			<displayName>PatchOperationHighlander</displayName>
-			<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2552002158</steamWorkshopUrl>
-		</li>
 	</modDependencies>
 	<loadAfter>
 		<li>brrainz.harmony</li>
