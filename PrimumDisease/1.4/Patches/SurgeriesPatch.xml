@@ -25,6 +25,35 @@
 			Getting to 95% requires 109% vanilla chance
 			Getting to 100% requires 127% vanilla chance
 		PD_RecipeDifficulty
+
+
+
+	New Primum disease system (TQ/BQ = top quartile/bottom quartile)
+		A. SurgeonSuccessChance
+			Changing ALL of the things that affect medical quality would be nearly impossible. Therefore, we use math.
+			1.5, the vanilla factor for medical specialist, should correspond to a skill increase of 6.
+			Therefore, each skill level shouold increase chance by 7% x^6 = 1.5. x ~= 1.07.
+			Immediately thereafter, surgery chance is adjusted so that the effective skill, eg 26 for a legendary doctor and medical specialist is revealed.
+			Then, the effective skill is used for some reasonable qualities. Everything else is changed based on this.
+			Additionally scales via capacities including sight and manipulation, which cap at 150% for a total bonus of 4 and 6 to skill with archotech, respectively
+		~	*Surgeon success chance is also calculated via relative skill, where relative skill = skill/2 + (skill-base)/max(8,20-base) * 10
+				The easiest way to accomplish this is to have initial skill only affect by 1.07^.5. Then quality is increased further by 1.07^(surplusSkill/2)
+		B. BedAndRoomQuality. Bed goes from 1 to 1.43, approximately 5 skill levels. Vitals monitor increases by 5%, ~1 skill level. Cleanliness is relatively insignificant, going from 1 at cleanliness 0 to 1.21 at a cleanliness of 0.6. ~4 levels.
+		C. MedicineQuality. Given its apparent "vanilla" values: herbal is 0.7, glitterworld is 1.6, corresponding to -5 and +7 respectively.
+		D. RecipeSuccessChance is custom. I've modified all of these, and they vary from 0.8 to 1.5: -3 and +6 levels respectively.
+		E. Inspired gives an additional factor of 2 if inispired, roughly a bonus skill of 10.
+
+		~With all of this in mind, surgery skill can go negative for particularly difficult procedures or VERY positive for easy ones in good environments
+		MAX effective skill, given the above without mods should be 20+6+4+6+5+5+10
+		For a decent surgeon in a clean environment with decent medicine, effectiveskill will likely be ~15
+		This should correspond to a 90% success rate. Every 7.5 effective skill above this should halve the failure rate.
+
+
+		//F. PD_RecipeDifficulty
+		G. PD_PostProcessQuality makes going past 80% success increasingly difficult.
+			Getting to 90% requires 95% vanilla chance
+			Getting to 95% requires 109% vanilla chance
+			Getting to 100% requires 127% vanilla chance
 	-->
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/StatDef[defName="MedicalSurgerySuccessChance"]/skillNeedFactors</xpath>
@@ -33,75 +62,94 @@
 				<li Class="SkillNeed_Direct">
 					<skill>Medicine</skill>
 					<valuesPerLevel>
-						<li>0.40</li>
-						<li>0.45</li>
-						<li>0.50</li>
-						<li>0.55</li>
-						<li>0.60</li>
-						<li>0.65</li>
-						<li>0.70</li>
-						<li>0.75</li>
-						<li>0.80</li>
-						<li>0.85</li>
-						<li>0.90</li>
-						<li>0.95</li>
-						<li>1.00</li>
-						<li>1.05</li>
-						<li>1.10</li>
+						<li>1</li>
+						<li>1.03</li>
+						<li>1.07</li>
+						<li>1.11</li>
 						<li>1.15</li>
-						<li>1.20</li>
-						<li>1.25</li>
-						<li>1.30</li>
-						<li>1.35</li>
+						<li>1.18</li>
+						<li>1.23</li>
+						<li>1.27</li>
+						<li>1.31</li>
+						<li>1.36</li>
 						<li>1.40</li>
+						<li>1.45</li>
+						<li>1.50</li>
+						<li>1.55</li>
+						<li>1.61</li>
+						<li>1.66</li>
+						<li>1.72</li>
+						<li>1.78</li>
+						<li>1.84</li>
+						<li>1.90</li>
+						<li>1.97</li>
 					</valuesPerLevel>
 				</li>
 			</skillNeedFactors>
 		</value>
 	</Operation><Operation Class="PatchOperationReplace">
-		<xpath>Defs/StatDef[defName="MedicalSurgerySuccessChance"]/capacityFactors</xpath>
+	<xpath>Defs/StatDef[defName="MedicalSurgerySuccessChance"]/capacityFactors</xpath>
 		<value>
 			<capacityFactors>
 				<li>
 					<capacity>Sight</capacity>
-					<weight>0.4</weight>
+					<weight>0.6</weight>
+        			<max>1.5</max>
 				</li>
 				<li>
 					<capacity>Manipulation</capacity>
-					<weight>0.6</weight>
-					<max>1.2</max>
+					<weight>1</weight>
+        			<max>1.5</max>
 				</li>
 			</capacityFactors>
+		</value>
+	</Operation>
+	<xpath>Defs/RoomStatDef[defName="SurgerySuccessChanceCleanlinessFactor"]/curve</xpath>
+		<value>
+			<curve>
+				<points>
+					<li>(-5, 0.5)</li>
+					<li>( 0, 1.0)</li>
+					<li>( 2, 1.8)</li>
+				</points>
+			</curve>
+		</value>
+	</Operation>
+	<xpath>Defs/RoomStatDef[defName="SurgerySuccessChanceCleanlinessFactor"]/roomlessScore</xpath>
+		<value>
+			<roomlessScore>0.5</roomlessScore>
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/SurgeryOutcomeEffectDef[defName="SurgeryOutcomeBase"]/comps</xpath>
 		<value>
 			<comps>
-				<li Class="SurgeryOutcomeComp_SurgeonSuccessChance"/>
+				<!--<li Class="SurgeryOutcomeComp_SurgeonSuccessChance"/>-->
+				<li Class="PrimumDisease.PD_SurgeryOutcomeComp_SurgeonSuccessChance"/>
 				<li Class="SurgeryOutcomeComp_BedAndRoomQuality"/>
 				<li Class="SurgeryOutcomeComp_MedicineQuality">
 					<curve>
 						<points>
-						<li>(0, 0.7)</li>
+						<li>(0, 0.25)</li>
 						<li>(1, 1)</li>
-						<li>(2, 1.3)</li>
+						<li>(2, 2)</li>
 						</points>
 					</curve>
 				</li>
-				<li Class="SurgeryOutcomeComp_RecipeSuccessChance"/>
+				<li Class="SurgeryOutcomeComp_RecipeSuccessChance"/>	
 				<li Class="SurgeryOutcomeComp_Inspired">
 					<inspirationDef>Inspired_Surgery</inspirationDef>
 					<factor>2</factor>
 				</li>
-				<li Class="PrimumDisease.PD_SurgeryOutcomeComp_RecipeSkillDifficulty">
+				<!--<li Class="PrimumDisease.PD_SurgeryOutcomeComp_RecipeSkillDifficulty">
 					<range>0~4</range>
 					<logFactor>4</logFactor>
 					<minimum>0.5</minimum>
-				</li>
-				<li Class="PrimumDisease.PD_SurgeryOutcomeComp_SoftClampToRange">
-					<range>0~0.8</range>
-					<logFactor>8</logFactor>
+				</li>-->
+				<li Class="PrimumDisease.PD_PostProcessQuality">
+					<halfLife>7</halfLife>
+					<minimumSuccessChance>0.3</minimumSuccessChance>
+					<logFactor>1.07</logFactor>
 				</li>
 			</comps>
 		</value>
