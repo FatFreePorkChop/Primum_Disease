@@ -10,6 +10,7 @@
         <endMessage>The Tsetse fly swarm has moved on!</endMessage>
         <letterText>A large swarm of Tsetse flies has invaded the area. Move your pawns under mountains to avoid contracting sleeping sickness.</letterText>
         <letterDef>NegativeEvent</letterDef>
+        <canBePermanent>true</canBePermanent>
     </GameConditionDef>
 
     <GameConditionDef>
@@ -21,6 +22,7 @@
         <endMessage>The fleas have moved on!</endMessage>
         <letterText>A large swarm of fleas has invaded the area. Move your pawns outdoors to avoid contracting plague.</letterText>
         <letterDef>NegativeEvent</letterDef>
+        <canBePermanent>true</canBePermanent>
     </GameConditionDef>
 
     <GameConditionDef>
@@ -32,5 +34,6 @@
         <endMessage>The musquito scourge has moved on!</endMessage>
         <letterText>A scourge of musquitoes has invaded the area. Move your pawns indoors to avoid contracting malaria.</letterText>
         <letterDef>NegativeEvent</letterDef>
+        <canBePermanent>true</canBePermanent>
     </GameConditionDef>
 </Defs>
