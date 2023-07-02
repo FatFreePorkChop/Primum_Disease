@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-<!--InfectionBase BADBADBAD, dunno if this works-->
+<!--InfectionBase BADBADBAD, dunno if this works- ->
 	<Operation Class="PatchOperationConditional">
 		<xpath>*/HediffDef[@Name = "InfectionBase"]/comps</xpath>
 		<nomatch Class="PatchOperationAdd">
 			<xpath>*/HediffDef[@Name = "InfectionBase"]</xpath>
 			<value>
 				<comps>
-					<li Class="PrimumDisease.PD_HediffCompProperties_Complications" /> <!--Allows infectious diseases to potentially be much worse, under certain circumstances-->
+					<li Class="PrimumDisease.PD_HediffCompProperties_Complications" /> <!- -Allows infectious diseases to potentially be much worse, under certain circumstances- ->
 				</comps>
 			</value>
 		</nomatch>
@@ -17,7 +17,7 @@
 				<li Class="PrimumDisease.PD_HediffCompProperties_Complications" /> 
 			</value>
 		</match>
-	</Operation>
+	</Operation>-->
 
 
 
@@ -41,6 +41,20 @@
 						<max>1.07</max>
 					</severityPerDayNotImmuneRandomFactor>
 				</li>
+				<li Class="PD_HediffCompProperties_TransmissionProximity">
+					<virulenceFactor>0.75</virulenceFactor>
+					<hediff>Flu</hediff>
+					<range>15</range>
+					<outdoorsRangeFactor>0.5</outdoorsRangeFactor>
+					<frequency>12</frequency>
+					<expectedExposureForDisease>0.3f</expectedExposureForDisease>
+					<capacityFactors>
+						<li>
+							<capacity>Breathing</capacity>
+							<weight>1</weight>
+						</li>
+					</capacityFactors>`
+				</li>
 			</comps>
 		</value>
 	</Operation>
@@ -48,16 +62,8 @@
 		<xpath>/Defs/HediffDef[defName="Flu"]</xpath>
 		<value>
 			<li Class="PrimumDisease.PD_TransmissionExtension">
-				<transmissionMethods>
-					<li>PD_Proximity</li>
-				</transmissionMethods>
-				<virulenceFactor>1</virulenceFactor>
-				<resistanceCapacities>
-					<li>
-						<capacity>Breathing</capacity>
-						<factor>1</factor>
-					</li>
-				</resistanceCapacities>
+				<virulence>1</virulence>
+				<vitalityResistanceFactor>1</vitalityResistanceFactor>
 			</li>
 		</value>
 	</Operation>
@@ -82,6 +88,21 @@
 						<max>1.24</max>
 					</severityPerDayNotImmuneRandomFactor>
 				</li>
+				<li Class="PD_HediffCompProperties_TransmissionFilth">
+					<virulenceFactor>0.75</virulenceFactor>
+					<filthPerDay>20</filthPerDay>
+					<expectedExposureForDisease>0.3f</expectedExposureForDisease>
+					<capacityFactors>
+						<li>
+							<capacity>BloodPumping</capacity>
+							<weight>0.5</weight>
+						</li>
+						<li>
+							<capacity>BloodFiltration</capacity>
+							<weight>0.5</weight>
+						</li>
+					</capacityFactors>
+				</li>
 			</comps>
 		</value>
 	</Operation>
@@ -89,17 +110,8 @@
 		<xpath>/Defs/HediffDef[defName="Plague"]</xpath>
 		<value>
 			<li Class="PrimumDisease.PD_TransmissionExtension">
-				<transmissionMethods>
-					<li>PD_IndoorsVectorBorne</li>
-					<li>PD_UndergroundVectorBorne</li>
-				</transmissionMethods>
-				<virulenceFactor>1</virulenceFactor>
-				<resistanceCapacities>
-					<li>
-						<capacity>BloodFiltration</capacity>
-						<factor>0.5</factor>
-					</li>
-				</resistanceCapacities>
+				<virulence>1</virulence>
+				<vitalityResistanceFactor>1</vitalityResistanceFactor>
 			</li>
 		</value>
 	</Operation>
@@ -253,16 +265,8 @@
 		<xpath>/Defs/HediffDef[defName="SleepingSickness"]</xpath>
 		<value>
 			<li Class="PrimumDisease.PD_TransmissionExtension">
-				<transmissionMethods>
-					<li>PD_OutdoorsVectorBorne</li>
-				</transmissionMethods>
-				<virulenceFactor>0.5</virulenceFactor>
-				<resistanceCapacities>
-					<li>
-						<capacity>BloodFiltration</capacity>
-						<factor>1</factor>
-					</li>
-				</resistanceCapacities>
+				<virulence>1</virulence>
+				<vitalityResistanceFactor>1</vitalityResistanceFactor>
 			</li>
 		</value>
 	</Operation>
@@ -404,16 +408,8 @@
 		<xpath>/Defs/HediffDef[defName="Malaria"]</xpath>
 		<value>
 			<li Class="PrimumDisease.PD_TransmissionExtension">
-				<transmissionMethods>
-					<li>PD_OutdoorsVectorBorne</li>
-				</transmissionMethods>
-				<virulenceFactor>1</virulenceFactor>
-				<resistanceCapacities>
-					<li>
-						<capacity>BloodFiltration</capacity>
-						<factor>1</factor>
-					</li>
-				</resistanceCapacities>
+				<virulence>1</virulence>
+				<vitalityResistanceFactor>1</vitalityResistanceFactor>
 			</li>
 		</value>
 	</Operation>
@@ -650,16 +646,8 @@
 		<xpath>/Defs/HediffDef[defName="FoodPoisoning"]</xpath>
 		<value>
 			<li Class="PrimumDisease.PD_TransmissionExtension">
-				<transmissionMethods>
-					<li>PD_Contact</li>
-				</transmissionMethods>
-				<virulenceFactor>1</virulenceFactor>
-				<resistanceCapacities>
-					<li>
-						<capacity>Metabolism</capacity>
-						<factor>1</factor>
-					</li>
-				</resistanceCapacities>
+				<virulence>1</virulence>
+				<vitalityResistanceFactor>1</vitalityResistanceFactor>
 			</li>
 		</value>
 	</Operation>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>  
+    <ThingDef ParentName="BaseFilth"> <!--Plague Germs -->
+        <defName>PD_Filth_PlagueGerms</defName>
+        <label>plague germs</label>
+        <graphicData>
+            <texPath>Things/Filth/Grainy</texPath>
+            <color>(91,75,65,000)</color>
+        </graphicData>
+        <filth>
+            <disappearsInDays>0.25</disappearsInDays>
+            <cleaningWorkToReduceThickness>5</cleaningWorkToReduceThickness>
+            <canFilthAttach>true</canFilthAttach>
+        </filth>
+        <statBases>
+            <Beauty>0</Beauty>
+            <Cleanliness>-1</Cleanliness>
+        </statBases>
+    </ThingDef>
+    
+    <ThingDef ParentName="BaseFilth"> <!--Gut worms germs -->
+        <defName>PD_Filth_GutWorms</defName>
+        <label>gut worm filarisis</label>
+        <graphicData>
+            <texPath>Things/Filth/Grainy</texPath>
+            <color>(000,255,000,000)</color>
+        </graphicData>
+        <filth>
+            <disappearsInDays>0.5</disappearsInDays>
+            <cleaningWorkToReduceThickness>5</cleaningWorkToReduceThickness>
+            <canFilthAttach>true</canFilthAttach>
+        </filth>
+        <statBases>
+            <Beauty>0</Beauty>
+            <Cleanliness>-1</Cleanliness>
+        </statBases>
+    </ThingDef>
+</Defs>

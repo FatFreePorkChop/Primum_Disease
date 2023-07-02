@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Patch> 
+<Patch>
+<!--Plague via germs-->
+    <Operation Class="PatchOperationAdd">
+		<xpath>Defs/HediffGiverSetDef[defName = "OrganicStandard"]/hediffGivers</xpath>
+		<value>
+			<li Class="PrimumDisease.PD_HediffGiver_CommunicateDiseaseDirect">
+				<diseaseDef>Plague</diseaseDef>
+				<diseaseFilth>PD_Filth_PlagueGerms</diseaseFilth>
+				<germDropRate>20</germDropRate>
+				<humanlikeDisease>true</humanlikeDisease>
+				<animalDisease>false</animalDisease>
+			</li>
+		</value>
+    </Operation>
+
+
+<!--Gut worms via germs-->
+    <Operation Class="PatchOperationAdd">
+		<xpath>Defs/HediffGiverSetDef[defName = "OrganicStandard"]/hediffGivers</xpath>
+		<value>
+			<li Class="PrimumDisease.PD_HediffGiver_CommunicateDiseaseDirect">
+				<diseaseDef>GutWorms</diseaseDef>
+				<diseaseFilth>PD_Filth_GutWorms</diseaseFilth>
+				<germDropRate>5</germDropRate>
+				<humanlikeDisease>true</humanlikeDisease>
+				<animalDisease>false</animalDisease>
+			</li>
+		</value>
+    </Operation>
+
+
 <!--Cirrhosis disease giver: borrows bad back distribution, like bright's disease-->	
 	<Operation Class="PatchOperationAdd">
 		<xpath>/Defs/HediffGiverSetDef[defName = "OrganicStandard"]/hediffGivers</xpath>

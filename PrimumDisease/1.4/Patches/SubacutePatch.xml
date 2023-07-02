@@ -28,20 +28,38 @@
 			<description>Parasitic worms in the gut. They cause vomiting and consume the victim's food, which increases hunger. Sometimes originating with worms coughed up from the lungs. Due to blockage of the billiary tract, gut worms may cause cirrhosis.</description>
 		</value>
 	</Operation>
+
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/HediffDef[defName = "GutWorms"]/comps</xpath>
+		<value>
+			<comps>
+				<li Class="HediffCompProperties_TendDuration">
+					<baseTendDurationHours>48</baseTendDurationHours>
+					<disappearsAtTotalTendQuality>3</disappearsAtTotalTendQuality>
+				</li>
+				<li Class="PD_HediffCompProperties_TransmissionFilth">
+					<virulenceFactor>1</virulenceFactor>
+					<filthPerDay>5</filthPerDay>
+					<expectedExposureForDisease>0.2f</expectedExposureForDisease>
+					<capacityFactors>
+						<li>
+							<capacity>Metabolism</capacity>
+							<weight>1</weight>
+						</li>
+					</capacityFactors>
+				</li>
+			</comps>
+		</value>
+	</Operation>
+
+	
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/HediffDef[defName="GutWorms"]</xpath>
 		<value>
 			<li Class="PrimumDisease.PD_TransmissionExtension">
-				<transmissionMethods>
-					<li>PD_Contact</li>
-				</transmissionMethods>
-				<virulenceFactor>1</virulenceFactor>
-				<resistanceCapacities>
-					<li>
-						<capacity>Metabolism</capacity>
-						<factor>1</factor>
-					</li>
-				</resistanceCapacities>
+				<virulence>1</virulence>
+				<vitalityResistanceFactor>0.5</vitalityResistanceFactor>
 			</li>
 		</value>
 	</Operation>
@@ -84,17 +102,8 @@
 		<xpath>/Defs/HediffDef[defName="MuscleParasites"]</xpath>
 		<value>
 			<li Class="PrimumDisease.PD_TransmissionExtension">
-				<transmissionMethods>
-					<li>PD_FoodBorne</li>
-				</transmissionMethods>
-				<virulenceFactor>1</virulenceFactor>
-				<survivalOnCooked>0.25</survivalOnCooked>
-				<resistanceCapacities>
-					<li>
-						<capacity>Metabolism</capacity>
-						<factor>1</factor>
-					</li>
-				</resistanceCapacities>
+				<virulence>1</virulence>
+				<vitalityResistanceFactor>0.5</vitalityResistanceFactor>
 			</li>
 		</value>
 	</Operation>
@@ -222,6 +231,16 @@
 							</li>
 							<li Class="HediffCompProperties_Disappears">
 								<disappearsAfterTicks>1800000~2400000</disappearsAfterTicks> <!-- 30 ! 45 days -->
+							</li>
+							<li Class="PD_HediffCompProperties_TransmissionVenereal">
+								<virulenceFactor>1</virulenceFactor>
+								<expectedExposureForDisease>2f</expectedExposureForDisease>
+								<capacityFactors>
+									<li>
+										<capacity>BloodFiltration</capacity>
+										<weight>1</weight>
+									</li>
+								</capacityFactors>
 							</li>
 						</comps>
 					</value>

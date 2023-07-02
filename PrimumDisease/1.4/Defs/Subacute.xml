@@ -137,6 +137,20 @@
 				<baseTendDurationHours>48</baseTendDurationHours>
 				<disappearsAtTotalTendQuality>2</disappearsAtTotalTendQuality>
 			</li>
+			<li Class="PD_HediffCompProperties_TransmissionMemetic">
+				<virulenceFactor>1</virulenceFactor>
+				<expectedExposureForDisease>10f</expectedExposureForDisease>
+				<capacityFactors>
+					<li>
+						<capacity>Breathing</capacity>
+						<weight>0.5</weight>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<weight>0.5</weight>
+					</li>
+				</capacityFactors>
+			</li>
 		</comps>
 		<stages>
 			<li>
