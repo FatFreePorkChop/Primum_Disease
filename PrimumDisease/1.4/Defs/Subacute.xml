@@ -43,21 +43,6 @@
 				<showRemainingTime>false</showRemainingTime>
 			</li>
 		</comps>
-		<modExtensions>
-		    <li Class="PrimumDisease.PD_TransmissionExtension">
-				<transmissionMethods>
-					<li>PD_FoodBorne</li>
-				</transmissionMethods>
-				<virulenceFactor>1</virulenceFactor>
-				<survivalOnCooked>0.5</survivalOnCooked>
-				<resistanceCapacities>
-					<li>
-						<capacity>Metabolism</capacity>
-						<factor>0.5</factor>
-					</li>
-				</resistanceCapacities>
-		    </li>
-		</modExtensions>
 		<stages>
 			<li>
 				<partEfficiencyOffset>-0.1</partEfficiencyOffset>
@@ -85,21 +70,6 @@
 				<disappearsAtTotalTendQuality>4</disappearsAtTotalTendQuality>
 			</li>
 		</comps>
-		<modExtensions>
-		    <li Class="PrimumDisease.PD_TransmissionExtension">
-				<transmissionMethods>
-					<li>PD_FoodBorne</li>
-				</transmissionMethods>
-				<virulenceFactor>1</virulenceFactor>
-				<survivalOnCooked>0.5</survivalOnCooked>
-				<resistanceCapacities>
-					<li>
-						<capacity>Metabolism</capacity>
-						<factor>0.5</factor>
-					</li>
-				</resistanceCapacities>
-		    </li>
-		</modExtensions>
 		<stages>
 			<li>
 				<painOffset>0.1</painOffset>

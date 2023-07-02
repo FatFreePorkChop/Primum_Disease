@@ -249,16 +249,8 @@
 					<xpath>/Defs/HediffDef[defName="BloodRot"]</xpath>
 					<value>
 						<li Class="PrimumDisease.PD_TransmissionExtension">
-							<transmissionMethods>
-								<li>PD_Venereal</li>
-							</transmissionMethods>
-							<virulenceFactor>1</virulenceFactor>
-							<resistanceCapacities>
-								<li>
-									<capacity>BloodFiltration</capacity>
-									<factor>1</factor>
-								</li>
-							</resistanceCapacities>
+							<virulence>1.5</virulence>
+							<vitalityResistanceFactor>0.5</vitalityResistanceFactor>
 						</li>
 					</value>
 				</li>

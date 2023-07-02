@@ -42,18 +42,10 @@
 			</li>
 		</comps>
         <modExtensions>
-            <li Class="PrimumDisease.PD_TransmissionExtension">
-				<transmissionMethods>
-					<li>PD_Proximity</li>
-				</transmissionMethods>
-				<virulenceFactor>0.5</virulenceFactor>
-				<resistanceCapacities>
-					<li>
-						<capacity>Breathing</capacity>
-						<factor>1</factor>
-					</li>
-				</resistanceCapacities>
-            </li>
+			<li Class="PrimumDisease.PD_TransmissionExtension">
+				<virulence>1</virulence>
+				<vitalityResistanceFactor>1.5</vitalityResistanceFactor>
+			</li>
         </modExtensions>
 		<stages>
 			<li>

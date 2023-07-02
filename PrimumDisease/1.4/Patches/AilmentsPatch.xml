@@ -179,16 +179,36 @@
 		<value>
 			<modExtensions>
 				<li Class="PrimumDisease.PD_TransmissionExtension">
-					<transmissionMethods>
-						<li>PD_Memetic</li>
-					</transmissionMethods>
-					<virulenceFactor>0.25</virulenceFactor>
-					<survivalOnCooked>1</survivalOnCooked>
+					<virulence>1</virulence>
+					<vitalityResistanceFactor>1</vitalityResistanceFactor>
 				</li>
 			</modExtensions>
 		</value>
 	</Operation>
-	
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/HediffDef[defName = "ResurrectionPsychosis"]/comps</xpath>
+		<value>
+			<comps>
+				<li Class="HediffCompProperties_SeverityPerDay">
+					<severityPerDay>0.01</severityPerDay>
+				</li>
+				<li Class="PD_HediffCompProperties_TransmissionMemetic">
+					<virulenceFactor>1</virulenceFactor>
+					<expectedExposureForDisease>25f</expectedExposureForDisease>
+					<capacityFactors>
+						<li>
+							<capacity>Talking/capacity>
+							<weight>0.5</weight>
+						</li>
+						<li>
+							<capacity>Consciousness</capacity>
+							<weight>0.5</weight>
+						</li>
+					</capacityFactors>
+				</li>
+			</comps>
+		</value>
+	</Operation>
 	
 	
 	

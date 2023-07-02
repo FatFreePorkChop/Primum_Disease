@@ -19,19 +19,10 @@
 			</li>
 		</comps>
 		<modExtensions>
-		    <li Class="PrimumDisease.PD_TransmissionExtension">
-			<transmissionMethods>
-				<li>PD_FoodBorne</li>
-			</transmissionMethods>
-			<virulenceFactor>1</virulenceFactor>
-			<survivalOnCooked>1</survivalOnCooked>
-			<resistanceCapacities>
-				<li>
-					<capacity>BloodFiltration</capacity>
-					<factor>0.5</factor>
-				</li>
-			</resistanceCapacities>
-		    </li>
+			<li Class="PrimumDisease.PD_TransmissionExtension">
+				<virulence>1</virulence>
+				<vitalityResistanceFactor>0</vitalityResistanceFactor>
+			</li>
 		</modExtensions>
 		<stages>
 			<li>
