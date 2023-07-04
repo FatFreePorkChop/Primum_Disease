@@ -90,8 +90,31 @@
 				</li>
 				<li Class="PD_HediffCompProperties_TransmissionFilth">
 					<virulenceFactor>0.75</virulenceFactor>
+					<hediff>Plague</hediff>
 					<filthPerDay>20</filthPerDay>
+					<cleanlinessFactor>0.1</cleanlinessFactor>
 					<expectedExposureForDisease>0.3f</expectedExposureForDisease>
+					<capacityFactors>
+						<li>
+							<capacity>BloodPumping</capacity>
+							<weight>0.5</weight>
+						</li>
+						<li>
+							<capacity>BloodFiltration</capacity>
+							<weight>0.5</weight>
+						</li>
+					</capacityFactors>
+				</li>
+				<li Class="PD_HediffCompProperties_TransmissionEnvironmental">
+					<virulenceFactor>1</virulenceFactor>
+					<hediff>Plague</hediff>
+					<frequency>20</frequency>
+					<expectedExposureForDisease>5f</expectedExposureForDisease>
+					<cleanlinessFactor>0.05</cleanlinessFactor>
+					<roofNoneFactor>0.5</roofNoneFactor>
+					<roofConstructedFactor>1</roofConstructedFactor>
+					<roofRockThinFactor>1</roofRockThinFactor>
+					<roofRockThickFactor>1</roofRockThickFactor>
 					<capacityFactors>
 						<li>
 							<capacity>BloodPumping</capacity>
@@ -258,6 +281,23 @@
 						<max>1.12</max>
 					</severityPerDayNotImmuneRandomFactor>
 				</li>
+				<li Class="PD_HediffCompProperties_TransmissionEnvironmental">
+					<virulenceFactor>1</virulenceFactor>
+					<hediff>SleepingSickness</hediff>
+					<frequency>20</frequency>
+					<expectedExposureForDisease>10f</expectedExposureForDisease>
+					<cleanlinessFactor>0.2</cleanlinessFactor>
+					<roofNoneFactor>1</roofNoneFactor>
+					<roofConstructedFactor>0.05</roofConstructedFactor>
+					<roofRockThinFactor>0.05</roofRockThinFactor>
+					<roofRockThickFactor>0.05</roofRockThickFactor>
+					<capacityFactors>
+						<li>
+							<capacity>BloodFiltration</capacity>
+							<weight>1</weight>
+						</li>
+					</capacityFactors>
+				</li>
 			</comps>
 		</value>
 	</Operation>
@@ -400,6 +440,27 @@
 						<min>1</min>
 						<max>1.14</max>
 					</severityPerDayNotImmuneRandomFactor>
+				</li>
+				<li Class="PD_HediffCompProperties_TransmissionEnvironmental">
+					<virulenceFactor>1</virulenceFactor>
+					<hediff>Malaria</hediff>
+					<frequency>20</frequency>
+					<expectedExposureForDisease>5f</expectedExposureForDisease>
+					<cleanlinessFactor>0.2</cleanlinessFactor>
+					<roofNoneFactor>1</roofNoneFactor>
+					<roofConstructedFactor>0.1</roofConstructedFactor>
+					<roofRockThinFactor>0.1</roofRockThinFactor>
+					<roofRockThickFactor>0.1</roofRockThickFactor>
+					<capacityFactors>
+						<li>
+							<capacity>BloodPumping</capacity>
+							<weight>0.5</weight>
+						</li>
+						<li>
+							<capacity>BloodFiltration</capacity>
+							<weight>0.5</weight>
+						</li>
+					</capacityFactors>
 				</li>
 			</comps>
 		</value>

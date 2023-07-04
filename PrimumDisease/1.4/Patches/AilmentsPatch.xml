@@ -194,6 +194,7 @@
 				</li>
 				<li Class="PD_HediffCompProperties_TransmissionMemetic">
 					<virulenceFactor>1</virulenceFactor>
+					<hediff>ResurrectionPsychosis</hediff>
 					<expectedExposureForDisease>25f</expectedExposureForDisease>
 					<capacityFactors>
 						<li>

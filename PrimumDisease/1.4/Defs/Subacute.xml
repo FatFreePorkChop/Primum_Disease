@@ -109,6 +109,7 @@
 			</li>
 			<li Class="PD_HediffCompProperties_TransmissionMemetic">
 				<virulenceFactor>1</virulenceFactor>
+				<hediff>PD_LungWorms</hediff>
 				<expectedExposureForDisease>10f</expectedExposureForDisease>
 				<capacityFactors>
 					<li>

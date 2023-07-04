@@ -6,7 +6,7 @@
         <conditionClass>PrimumDisease.PD_GameCondition_SleepingSicknessCondition</conditionClass>
         <label>Tsetse fly migration</label>
         <description>A large swarm of Tsetse flies has invaded the area, spreading sleeping sickness everywhere but deep underground.</description>
-        <descriptionFuture>A large swarm of Tsetse flies will invade the area. They will spread sleeping sickness to everyone who is not deep underground.</descriptionFuture>
+        <descriptionFuture>A large swarm of Tsetse flies will invade the area. They will spread sleeping sickness to everyone outdoors.</descriptionFuture>
         <endMessage>The Tsetse fly swarm has moved on!</endMessage>
         <letterText>A large swarm of Tsetse flies has invaded the area. Move your pawns under mountains to avoid contracting sleeping sickness.</letterText>
         <letterDef>NegativeEvent</letterDef>

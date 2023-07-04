@@ -41,6 +41,7 @@
 				<li Class="PD_HediffCompProperties_TransmissionFilth">
 					<virulenceFactor>1</virulenceFactor>
 					<filthPerDay>5</filthPerDay>
+					<cleanlinessFactor>0.05</cleanlinessFactor>
 					<expectedExposureForDisease>0.2f</expectedExposureForDisease>
 					<capacityFactors>
 						<li>
