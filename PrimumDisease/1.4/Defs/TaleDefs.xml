@@ -2,17 +2,41 @@
 
 <Defs>
 
-  <TaleDef>
-    <defName>MosquitoSeason</defName>
-    <label>mosquito season</label>
-    <taleClass>Tale_SinglePawn</taleClass>
-    <type>Volatile</type>
-    <baseInterest>1</baseInterest>
-    <rulePack>
-      <rulesStrings>
-        <li>tale_noun->mosquito season starting in [PAWN_nameDef]'s [Community]</li>
-      </rulesStrings>
-    </rulePack>
-  </TaleDef>
+    <TaleDef>
+        <defName>MalariaTale</defName>
+        <label>musquito scourge</label>
+        <taleClass>Tale_SinglePawn</taleClass>
+        <type>Volatile</type>
+        <baseInterest>1</baseInterest>
+        <rulePack>
+            <rulesStrings>
+                <li>tale_noun->scourge of musquitoes starting in [PAWN_nameDef]'s [Community]</li>
+            </rulesStrings>
+        </rulePack>
+    </TaleDef>
+    <TaleDef>
+        <defName>SleepingSicknessTale</defName>
+        <label>tsestse fly swarm</label>
+        <taleClass>Tale_SinglePawn</taleClass>
+        <type>Volatile</type>
+        <baseInterest>1</baseInterest>
+        <rulePack>
+            <rulesStrings>
+                <li>tale_noun->swarm of tsetse flies starting in [PAWN_nameDef]'s [Community]</li>
+            </rulesStrings>
+        </rulePack>
+    </TaleDef>
+    <TaleDef>
+        <defName>PlagueTale</defName>
+        <label>flea swarm</label>
+        <taleClass>Tale_SinglePawn</taleClass>
+        <type>Volatile</type>
+        <baseInterest>1</baseInterest>
+        <rulePack>
+            <rulesStrings>
+                <li>tale_noun->swarm of fleas starting in [PAWN_nameDef]'s [Community]</li>
+            </rulesStrings>
+        </rulePack>
+    </TaleDef>
   
 </Defs>
