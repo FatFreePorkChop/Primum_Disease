@@ -22,13 +22,13 @@
 					<max>1.02</max>
 				</severityPerDayNotImmuneRandomFactor>
 			</li>
-			<li Class="PD_HediffCompProperties_TransmissionProximity">
+			<li Class="PrimumDisease.PD_HediffCompProperties_TransmissionProximity">
 				<virulenceFactor>1</virulenceFactor>
 				<hediff>PD_Tuberculosis</hediff>
 				<range>10</range>
 				<outdoorsRangeFactor>0.5</outdoorsRangeFactor>
 				<frequency>12</frequency>
-				<expectedExposureForDisease>0.5f</expectedExposureForDisease>
+				<expectedExposureForDisease>0.5</expectedExposureForDisease>
 				<capacityFactors>
 					<li>
 						<capacity>BloodFiltration</capacity>

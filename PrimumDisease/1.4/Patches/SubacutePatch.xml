@@ -38,11 +38,11 @@
 					<baseTendDurationHours>48</baseTendDurationHours>
 					<disappearsAtTotalTendQuality>3</disappearsAtTotalTendQuality>
 				</li>
-				<li Class="PD_HediffCompProperties_TransmissionFilth">
+				<li Class="PrimumDisease.PD_HediffCompProperties_TransmissionFilth">
 					<virulenceFactor>1</virulenceFactor>
 					<filthPerDay>5</filthPerDay>
 					<cleanlinessFactor>0.05</cleanlinessFactor>
-					<expectedExposureForDisease>0.2f</expectedExposureForDisease>
+					<expectedExposureForDisease>0.2</expectedExposureForDisease>
 					<capacityFactors>
 						<li>
 							<capacity>Metabolism</capacity>
@@ -233,9 +233,9 @@
 							<li Class="HediffCompProperties_Disappears">
 								<disappearsAfterTicks>1800000~2400000</disappearsAfterTicks> <!-- 30 ! 45 days -->
 							</li>
-							<li Class="PD_HediffCompProperties_TransmissionVenereal">
+							<li Class="PrimumDisease.PD_HediffCompProperties_TransmissionVenereal">
 								<virulenceFactor>1</virulenceFactor>
-								<expectedExposureForDisease>2f</expectedExposureForDisease>
+								<expectedExposureForDisease>2</expectedExposureForDisease>
 								<capacityFactors>
 									<li>
 										<capacity>BloodFiltration</capacity>

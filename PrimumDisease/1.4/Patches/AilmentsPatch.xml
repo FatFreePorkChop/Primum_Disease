@@ -192,13 +192,13 @@
 				<li Class="HediffCompProperties_SeverityPerDay">
 					<severityPerDay>0.01</severityPerDay>
 				</li>
-				<li Class="PD_HediffCompProperties_TransmissionMemetic">
+				<li Class="PrimumDisease.PD_HediffCompProperties_TransmissionMemetic">
 					<virulenceFactor>1</virulenceFactor>
 					<hediff>ResurrectionPsychosis</hediff>
 					<expectedExposureForDisease>25</expectedExposureForDisease>
 					<capacityFactors>
 						<li>
-							<capacity>Talking/capacity>
+							<capacity>Talking</capacity>
 							<weight>0.5</weight>
 						</li>
 						<li>
