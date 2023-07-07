@@ -7,9 +7,6 @@
 			<li Class="PrimumDisease.PD_HediffGiver_CommunicateDiseaseDirect">
 				<diseaseDef>Plague</diseaseDef>
 				<filthDef>PD_Filth_PlagueGerms</filthDef>
-				<germDropRate>20</germDropRate>
-				<humanlikeDisease>true</humanlikeDisease>
-				<animalDisease>false</animalDisease>
 			</li>
 		</value>
     </Operation>
@@ -22,9 +19,6 @@
 			<li Class="PrimumDisease.PD_HediffGiver_CommunicateDiseaseDirect">
 				<diseaseDef>GutWorms</diseaseDef>
 				<filthDef>PD_Filth_GutWorms</filthDef>
-				<germDropRate>5</germDropRate>
-				<humanlikeDisease>true</humanlikeDisease>
-				<animalDisease>false</animalDisease>
 			</li>
 		</value>
     </Operation>
