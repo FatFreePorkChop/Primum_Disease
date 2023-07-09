@@ -363,7 +363,7 @@
 
 
 	<HediffDef ParentName="DiseaseBase"><!--Cyberpsychosis. Qualifying implants, which includes almost everything above medeval implants add to the severity.  Brain implants and better-than-normal implants count for doubleArchotech  implants do not contribute. Certain pawns have more intrinsic resistance to cyberpsychosis, including transhumanists and those addicted to luciferum.-->
-		<defName>PD_Cyberpsychosis/defName>
+		<defName>PD_Cyberpsychosis</defName>
 		<label>Transplant rejection</label>
 		<description>Cyberpsychosis is a dissociative psychological disorder caused by an overload of psychic augmentations. It is thought that the psyche rebels against the machines taking over the body. Transhumanists, and those with luciferium running through their veins demonstrate some resistance.</description>
 		<hediffClass>HediffWithComps</hediffClass>
