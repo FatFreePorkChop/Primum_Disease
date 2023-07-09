@@ -36,14 +36,16 @@
 						<offset>-0.1</offset>
 					</li>
 				</capMods>
-				<li Class="HediffGiver_Random">
-					<hediff>Cataract</hediff>
-					<mtbDays></mtbDays>
-					<partsToAffect>
-						<li>Eye</li>
-					</partsToAffect>
-					<countToAffect>2</countToAffect>
-				</li>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>Cataract</hediff>
+						<mtbDays></mtbDays>
+						<partsToAffect>
+							<li>Eye</li>
+						</partsToAffect>
+						<countToAffect>2</countToAffect>
+					</li>
+				</hediffGivers>
 			</li>
 			<li>
 				<minSeverity>0.4</minSeverity>
