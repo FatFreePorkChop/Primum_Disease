@@ -165,10 +165,6 @@
 						<mentalState>MurderousRage</mentalState>
 						<mtbDays>360</mtbDays>
 					</li>
-					<li>
-						<mentalState>RunWild</mentalState>
-						<mtbDays>180</mtbDays>
-					</li>
 				</mentalStateGivers>
 			</li>
 			<li>
@@ -223,10 +219,6 @@
 						<mentalState>MurderousRage</mentalState>
 						<mtbDays>30</mtbDays>
 					</li>
-					<li>
-						<mentalState>RunWild</mentalState>
-						<mtbDays>180</mtbDays>
-					</li>
 				</mentalStateGivers>
 			</li>
 			<li>
@@ -251,10 +243,6 @@
 					<li>
 						<mentalState>MurderousRage</mentalState>
 						<mtbDays>20</mtbDays>
-					</li>
-					<li>
-						<mentalState>RunWild</mentalState>
-						<mtbDays>60</mtbDays>
 					</li>
 				</mentalStateGivers>
 			</li>
