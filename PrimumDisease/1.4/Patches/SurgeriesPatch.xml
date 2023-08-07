@@ -199,6 +199,7 @@
 	</Operation>
 
 <!--CureAilment-->
+<!--
 	<Operation Class="PrimumDisease.PatchOperationContext">
 		<xpath>/Defs/RecipeDef[defName = "PD_ExciseFibroma" or defName = "PD_DebrideNecrosis" or defName = "PD_ExciseEncapsulatedMalaria"  or defName = "PD_ExciseEncapsulatedTuberculosis"]</xpath>
 		<operations>
@@ -238,6 +239,7 @@
 			</li>
 		</operations>
 	</Operation>
+-->
 <!--CureAilmentComplex-->
 	<Operation Class="PrimumDisease.PatchOperationContext">
 		<xpath>/Defs/RecipeDef[defName = "ExciseCarcinoma" or defName = "PD_HeartAngioplasty" or defName = "PD_BrainAngioplasty"  or defName = "PD_CataractSurgery"]</xpath>

@@ -7,7 +7,38 @@
 <!--Basic-->
 <!--RemoveBodyPart-->
 <!--CureAilment-->
-	<RecipeDef ParentName="SurgeryFlesh"> <!--Excise fibroma-->
+	<RecipeDef Abstract="True" Name="PD_SurgeryFlesh_CureAilment">
+		<effectWorking>Surgery</effectWorking>
+		<soundWorking>Recipe_Surgery</soundWorking>
+		<workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+		<workSkill>Medicine</workSkill>
+		<workSkillLearnFactor>16</workSkillLearnFactor>
+		<surgeryOutcomeEffect>SurgeryOutcomeBase</surgeryOutcomeEffect>
+
+		<workAmount>3000</workAmount>
+		<deathOnFailedSurgeryChance>0.1</deathOnFailedSurgeryChance>
+		<surgerySuccessChanceFactor>0.8</surgerySuccessChanceFactor>
+		<skillRequirements>
+			<Medicine>7</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+			<count>7</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+		</fixedIngredientFilter>
+	</RecipeDef>
+
+	<RecipeDef ParentName="PD_SurgeryFlesh_CureAilment"> <!--Excise fibroma-->
 		<defName>PD_ExciseFibroma</defName>
 		<label>excise fibroma</label>
 		<description>Excise a fibroma.</description>
@@ -18,30 +49,8 @@
 		</recipeUsers>
 		<removesHediff>PD_Fibroma</removesHediff>
 		<successfullyRemovedHediffMessage>{0} has successfully excised {1}'s fibroma.</successfullyRemovedHediffMessage>
-		
-		<workAmount>2000</workAmount>
-		<deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
-		<surgerySuccessChanceFactor>1</surgerySuccessChanceFactor>
-		<skillRequirements>
-			<Medicine>10</Medicine>
-		</skillRequirements>
-		<ingredients>
-			<li>
-				<filter>
-					<categories>
-						<li>Medicine</li>
-					</categories>
-				</filter>
-			<count>5</count>
-		  </li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<categories>
-				<li>Medicine</li>
-			</categories>
-		</fixedIngredientFilter>
 	</RecipeDef>
-	<RecipeDef ParentName="SurgeryFlesh"> <!--Debride necrosis-->
+	<RecipeDef ParentName="PD_SurgeryFlesh_CureAilment"> <!--Debride necrosis-->
 		<defName>PD_DebrideNecrosis</defName>
 		<label>debride necrotic tissue</label>
 		<description>Cut away dead tissue which may be a nidus for infection</description>
@@ -52,30 +61,8 @@
 		</recipeUsers>
 		<removesHediff>PD_Necrosis</removesHediff>
 		<successfullyRemovedHediffMessage>{0} has successfully debrided {1}'s necrotic tissue.</successfullyRemovedHediffMessage>
-		
-		<workAmount>2000</workAmount>
-		<deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
-		<surgerySuccessChanceFactor>1</surgerySuccessChanceFactor>
-		<skillRequirements>
-			<Medicine>10</Medicine>
-		</skillRequirements>
-		<ingredients>
-			<li>
-				<filter>
-					<categories>
-						<li>Medicine</li>
-					</categories>
-				</filter>
-			<count>5</count>
-		  </li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<categories>
-				<li>Medicine</li>
-			</categories>
-		</fixedIngredientFilter>
 	</RecipeDef>
-	<RecipeDef ParentName="SurgeryFlesh"> <!--Excise encapsulated malaria-->
+	<RecipeDef ParentName="PD_SurgeryFlesh_CureAilment"> <!--Excise encapsulated malaria-->
 		<defName>PD_ExciseEncapsulatedMalaria</defName>
 		<label>excise encapsulated malaria</label>
 		<description>Remove malaria encapsulated in the body.</description>
@@ -86,30 +73,8 @@
 		</recipeUsers>
 		<removesHediff>PD_EncapsulatedMalaria</removesHediff>
 		<successfullyRemovedHediffMessage>{0} has successfully excised {1}'s encapsulated malaria.</successfullyRemovedHediffMessage>
-		
-		<workAmount>2000</workAmount>
-		<deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
-		<surgerySuccessChanceFactor>1</surgerySuccessChanceFactor>
-		<skillRequirements>
-			<Medicine>10</Medicine>
-		</skillRequirements>
-		<ingredients>
-			<li>
-				<filter>
-					<categories>
-						<li>Medicine</li>
-					</categories>
-				</filter>
-			<count>5</count>
-		  </li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<categories>
-				<li>Medicine</li>
-			</categories>
-		</fixedIngredientFilter>
 	</RecipeDef>
-	<RecipeDef ParentName="SurgeryFlesh"> <!--Excise encapsulated tuberculosis-->
+	<RecipeDef ParentName="PD_SurgeryFlesh_CureAilment"> <!--Excise encapsulated tuberculosis-->
 		<defName>PD_ExciseEncapsulatedTuberculosis</defName>
 		<label>excise Ghon complex</label>
 		<description>Remove tuberculosis that has encapsulated, often in the lungs or axial skeleton as a Ghon complex.</description>
@@ -120,12 +85,23 @@
 		</recipeUsers>
 		<removesHediff>PD_EncapsulatedTuberculosis</removesHediff>
 		<successfullyRemovedHediffMessage>{0} has successfully excised {1}'s Ghon complex.</successfullyRemovedHediffMessage>
-		
-		<workAmount>2000</workAmount>
-		<deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
-		<surgerySuccessChanceFactor>1</surgerySuccessChanceFactor>
+	</RecipeDef>
+
+
+<!--CureAilmentComplex-->
+	<RecipeDef Abstract="True" Name="PD_SurgeryFlesh_CureAilmentComplex">
+		<effectWorking>Surgery</effectWorking>
+		<soundWorking>Recipe_Surgery</soundWorking>
+		<workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+		<workSkill>Medicine</workSkill>
+		<workSkillLearnFactor>16</workSkillLearnFactor>
+		<surgeryOutcomeEffect>SurgeryOutcomeBase</surgeryOutcomeEffect>
+
+		<workAmount>4000</workAmount>
+		<deathOnFailedSurgeryChance>0.2</deathOnFailedSurgeryChance>
+		<surgerySuccessChanceFactor>0.8</surgerySuccessChanceFactor>
 		<skillRequirements>
-			<Medicine>10</Medicine>
+			<Medicine>13</Medicine>
 		</skillRequirements>
 		<ingredients>
 			<li>
@@ -134,17 +110,19 @@
 						<li>Medicine</li>
 					</categories>
 				</filter>
-			<count>5</count>
+			<count>7</count>
 		  </li>
 		</ingredients>
 		<fixedIngredientFilter>
 			<categories>
 				<li>Medicine</li>
 			</categories>
+			<disallowedThingDefs>
+				<li>MedicineHerbal</li>
+			</disallowedThingDefs>
 		</fixedIngredientFilter>
 	</RecipeDef>
-<!--CureAilmentComplex-->
-	<RecipeDef ParentName="SurgeryFlesh"> <!--Heart angioplasty-->
+	<RecipeDef ParentName="PD_SurgeryFlesh_CureAilmentComplex"> <!--Heart angioplasty-->
 		<defName>PD_HeartAngioplasty</defName>
 		<label>coronary angioplasty</label>
 		<description>An operation to dilate and remove blockages from critical arteries in the heart; requires a skilled physician.</description>
@@ -156,30 +134,8 @@
 		<isViolation>false</isViolation>
 		<removesHediff>HeartArteryBlockage</removesHediff>
 		<successfullyRemovedHediffMessage>{0} has successfully cleared {1}'s blocked artery.</successfullyRemovedHediffMessage>
-		
-		<workAmount>2000</workAmount>
-		<deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
-		<surgerySuccessChanceFactor>1</surgerySuccessChanceFactor>
-		<skillRequirements>
-			<Medicine>10</Medicine>
-		</skillRequirements>
-		<ingredients>
-			<li>
-				<filter>
-					<categories>
-						<li>Medicine</li>
-					</categories>
-				</filter>
-			<count>5</count>
-		  </li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<categories>
-				<li>Medicine</li>
-			</categories>
-		</fixedIngredientFilter>
 	</RecipeDef>
-	<RecipeDef ParentName="SurgeryFlesh"> <!--Brain angioplasty-->
+	<RecipeDef ParentName="PD_SurgeryFlesh_CureAilmentComplex"> <!--Brain angioplasty-->
 		<defName>PD_BrainAngioplasty</defName>
 		<label>cerebral angioplasty</label>
 		<description>An operation to dilate and remove blockages from critical arteries in the brain; requires a skilled physician.</description>
@@ -191,30 +147,8 @@
 		<isViolation>false</isViolation>
 		<removesHediff>PD_BrainArteryBlockage</removesHediff>
 		<successfullyRemovedHediffMessage>{0} has successfully cleared {1}'s blocked artery.</successfullyRemovedHediffMessage>
-		
-		<workAmount>2000</workAmount>
-		<deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
-		<surgerySuccessChanceFactor>1</surgerySuccessChanceFactor>
-		<skillRequirements>
-			<Medicine>10</Medicine>
-		</skillRequirements>
-		<ingredients>
-			<li>
-				<filter>
-					<categories>
-						<li>Medicine</li>
-					</categories>
-				</filter>
-			<count>5</count>
-		  </li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<categories>
-				<li>Medicine</li>
-			</categories>
-		</fixedIngredientFilter>
 	</RecipeDef>
-	<RecipeDef ParentName="SurgeryFlesh"> <!--Cataract surgery-->
+	<RecipeDef ParentName="PD_SurgeryFlesh_CureAilmentComplex"> <!--Cataract surgery-->
 		<defName>PD_CataractSurgery</defName>
 		<label>cataract surgery</label>
 		<description>An operation to remove the opacified lens and replace it with a near perfect duplicate. Duplicating the native lens requires advanced medicine, but the procedure is well-tolerated.</description>
@@ -226,28 +160,6 @@
 		<isViolation>false</isViolation>
 		<removesHediff>Cataract</removesHediff>
 		<successfullyRemovedHediffMessage>{0} has successfully cleared {1}'s cataract</successfullyRemovedHediffMessage>
-		
-		<workAmount>2000</workAmount>
-		<deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
-		<surgerySuccessChanceFactor>1</surgerySuccessChanceFactor>
-		<skillRequirements>
-			<Medicine>10</Medicine>
-		</skillRequirements>
-		<ingredients>
-			<li>
-				<filter>
-					<categories>
-						<li>Medicine</li>
-					</categories>
-				</filter>
-			<count>5</count>
-		  </li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<categories>
-				<li>Medicine</li>
-			</categories>
-		</fixedIngredientFilter>
 	</RecipeDef>
 <!--CureAilmentSpecial-->
 <!--ImplantBasic-->
