@@ -159,7 +159,7 @@
 <!--Basic-->
 <!--RemoveBodyPart-->
 	<Operation Class="PrimumDisease.PatchOperationContext">
-		<xpath>/Defs/RecipeDef[defName = "RemoveBodyPart"]</xpath>
+		<xpath>/Defs/RecipeDef[@Name = "RemoveBodyPart"]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
 				<xpath>/RecipeDef</xpath>
@@ -201,7 +201,7 @@
 <!--CureAilment-->
 <!--
 	<Operation Class="PrimumDisease.PatchOperationContext">
-		<xpath>/Defs/RecipeDef[defName = "PD_ExciseFibroma" or defName = "PD_DebrideNecrosis" or defName = "PD_ExciseEncapsulatedMalaria"  or defName = "PD_ExciseEncapsulatedTuberculosis"]</xpath>
+		<xpath>/Defs/RecipeDef[@Name = "PD_ExciseFibroma" or @Name = "PD_DebrideNecrosis" or @Name = "PD_ExciseEncapsulatedMalaria"  or @Name = "PD_ExciseEncapsulatedTuberculosis"]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
 				<xpath>/RecipeDef</xpath>
@@ -242,7 +242,7 @@
 -->
 <!--CureAilmentComplex-->
 	<Operation Class="PrimumDisease.PatchOperationContext">
-		<xpath>/Defs/RecipeDef[defName = "ExciseCarcinoma"]</xpath> <!--or defName = "PD_HeartAngioplasty" or defName = "PD_BrainAngioplasty"  or defName = "PD_CataractSurgery"]</xpath>-->
+		<xpath>/Defs/RecipeDef[@Name = "ExciseCarcinoma"]</xpath> <!--or @Name = "PD_HeartAngioplasty" or @Name = "PD_BrainAngioplasty"  or @Name = "PD_CataractSurgery"]</xpath>-->
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
 				<xpath>/RecipeDef</xpath>
@@ -292,7 +292,7 @@
 <!--CureAilmentSpecial-->
 <!--ImplantBasic-->
 	<Operation Class="PrimumDisease.PatchOperationContext">
-		<xpath>/Defs/RecipeDef[defName = "InstallPegLeg" or defName = "InstallWoodenFoot" or defName = "InstallDenture"]</xpath>
+		<xpath>/Defs/RecipeDef[@Name = "InstallPegLeg" or @Name = "InstallWoodenFoot" or @Name = "InstallDenture"]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
 				<xpath>/RecipeDef</xpath>
@@ -332,7 +332,7 @@
 	</Operation>
 <!--ImplantProsthetic-->
 	<Operation Class="PrimumDisease.PatchOperationContext">
-		<xpath>/Defs/RecipeDef[defName = "InstallSimpleProstheticLeg" or defName = "InstallSimpleProstheticArm" or defName = "InstallCochlearImplant"]</xpath>
+		<xpath>/Defs/RecipeDef[@Name = "InstallSimpleProstheticLeg" or @Name = "InstallSimpleProstheticArm" or @Name = "InstallCochlearImplant"]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
 				<xpath>/RecipeDef</xpath>
@@ -372,7 +372,7 @@
 	</Operation>
 <!--ImplantProstheticComplex-->
 	<Operation Class="PrimumDisease.PatchOperationContext">
-		<xpath>/Defs/RecipeDef[defName = "InstallSimpleProstheticHeart" or defName = "InstallJoywire" or defName = "InstallPainstopper"]</xpath>
+		<xpath>/Defs/RecipeDef[@Name = "InstallSimpleProstheticHeart" or @Name = "InstallJoywire" or @Name = "InstallPainstopper"]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
 				<xpath>/RecipeDef</xpath>
@@ -412,7 +412,7 @@
 	</Operation>
 <!--ImplantNatural-->
 	<Operation Class="PrimumDisease.PatchOperationContext">
-		<xpath>/Defs/RecipeDef[defName = "InstallNaturalKidney" or defName = "InstallNaturalLung" or defName = "InstallNaturalLiver"]</xpath>
+		<xpath>/Defs/RecipeDef[@Name = "InstallNaturalKidney" or @Name = "InstallNaturalLung" or @Name = "InstallNaturalLiver"]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
 				<xpath>/RecipeDef</xpath>
@@ -457,7 +457,7 @@
 	</Operation>
 <!--ImplantNaturalComplex-->
 	<Operation Class="PrimumDisease.PatchOperationContext">
-		<xpath>/Defs/RecipeDef[defName = "InstallNaturalHeart"]</xpath>
+		<xpath>/Defs/RecipeDef[@Name = "InstallNaturalHeart"]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
 				<xpath>/RecipeDef</xpath>
@@ -503,7 +503,7 @@
 <!--ImplantNaturalSpecial-->
 <!--ImplantBionic-->
 	<Operation Class="PrimumDisease.PatchOperationContext">
-		<xpath>/Defs/RecipeDef[defName = "InstallBionicLeg" or defName = "InstallBionicArm" or defName = "InstallBionicSpine" or defName = "InstallBionicStomach" or defName = "InstallPowerclaw"]</xpath>
+		<xpath>/Defs/RecipeDef[@Name = "InstallBionicLeg" or @Name = "InstallBionicArm" or @Name = "InstallBionicSpine" or @Name = "InstallBionicStomach" or @Name = "InstallPowerclaw"]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
 				<xpath>/RecipeDef</xpath>
@@ -550,7 +550,7 @@
 	</Operation>
 <!--ImplantBionicComplex-->
 	<Operation Class="PrimumDisease.PatchOperationContext">
-		<xpath>/Defs/RecipeDef[defName = "InstallBionicHeart" or defName = "InstallBionicEye"]</xpath>
+		<xpath>/Defs/RecipeDef[@Name = "InstallBionicHeart" or @Name = "InstallBionicEye"]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
 				<xpath>/RecipeDef</xpath>
@@ -597,7 +597,7 @@
 	</Operation>
 <!--ImplantBionicSpecial-->
 	<Operation Class="PrimumDisease.PatchOperationContext">
-		<xpath>/Defs/RecipeDef[defName = "InstallArchotechLeg" or defName = "InstallArchotechArm" or defName = "InstallArchotechEye"]</xpath>
+		<xpath>/Defs/RecipeDef[@Name = "InstallArchotechLeg" or @Name = "InstallArchotechArm" or @Name = "InstallArchotechEye"]</xpath>
 		<operations>
 			<li Class="PrimumDisease.PatchOperationAddOrReplace">
 				<xpath>/RecipeDef</xpath>
