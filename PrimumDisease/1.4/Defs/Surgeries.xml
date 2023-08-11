@@ -7,14 +7,7 @@
 <!--Basic-->
 <!--RemoveBodyPart-->
 <!--CureAilment-->
-	<RecipeDef Abstract="True" Name="PD_SurgeryFlesh_CureAilment">
-		<effectWorking>Surgery</effectWorking>
-		<soundWorking>Recipe_Surgery</soundWorking>
-		<workSpeedStat>MedicalOperationSpeed</workSpeedStat>
-		<workSkill>Medicine</workSkill>
-		<workSkillLearnFactor>16</workSkillLearnFactor>
-		<surgeryOutcomeEffect>SurgeryOutcomeBase</surgeryOutcomeEffect>
-
+	<RecipeDef Abstract="True" Name="PD_SurgeryFlesh_CureAilment",ParentName="SurgeryFlesh">
 		<workAmount>3000</workAmount>
 		<deathOnFailedSurgeryChance>0.1</deathOnFailedSurgeryChance>
 		<surgerySuccessChanceFactor>0.8</surgerySuccessChanceFactor>
@@ -89,14 +82,7 @@
 
 
 <!--CureAilmentComplex-->
-	<RecipeDef Abstract="True" Name="PD_SurgeryFlesh_CureAilmentComplex">
-		<effectWorking>Surgery</effectWorking>
-		<soundWorking>Recipe_Surgery</soundWorking>
-		<workSpeedStat>MedicalOperationSpeed</workSpeedStat>
-		<workSkill>Medicine</workSkill>
-		<workSkillLearnFactor>16</workSkillLearnFactor>
-		<surgeryOutcomeEffect>SurgeryOutcomeBase</surgeryOutcomeEffect>
-
+	<RecipeDef Abstract="True" Name="PD_SurgeryFlesh_CureAilmentComplex", ParentName="SurgeryFlesh">
 		<workAmount>4000</workAmount>
 		<deathOnFailedSurgeryChance>0.2</deathOnFailedSurgeryChance>
 		<surgerySuccessChanceFactor>0.8</surgerySuccessChanceFactor>
