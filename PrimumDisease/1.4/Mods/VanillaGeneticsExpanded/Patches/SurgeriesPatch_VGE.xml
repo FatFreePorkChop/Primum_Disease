@@ -15,125 +15,112 @@
 <!--ImplantProsthetic-->
 <!--ImplantProstheticComplex-->
 <!--ImplantNatural-->
-	<Operation Class="PrimumDisease.PatchOperationContext">
-		<xpath>/Defs/RecipeDef[defName = "GR_InstallBearClaws" or defName = "GR_InstallDiggingBearClaws" or defName = "GR_InstallBearMuscleTissue" or defName = "GR_InstallOvipositor" or defName = "GR_InstallMuffaloMuscles" or defName = "GR_InstallMuffaloMammaries" or defName = "GR_InstallMuffaloSkin" or defName = "GR_InstallBoomalopeNodules" or defName = "GR_InstallChemfuelStomach" or defName = "GR_InstallWolfMuscularFibers" or defName = "GR_InstallDevouringJaws" or defName = "GR_InstallMousePheromones" or defName = "GR_InstallMoleratNerveDampener" or defName = "GR_InstallBunnyEar" or defName = "GR_InstallInsectoidAntennae" or defName = "GR_InstallPsychicDampeners" or defName = "GR_InstallKidneyToxicFilters" or defName = "GR_InstallVenomousFangs" or defName = "GR_InstallIguanaScales"]</xpath>
-		<operations>
-			<li Class="PrimumDisease.PatchOperationAddOrReplace">
-				<xpath>/RecipeDef</xpath>
-				<key>workAmount</key>
-				<value>2500</value>
-			</li>
-			<li Class="PrimumDisease.PatchOperationAddOrReplace">
-				<xpath>/RecipeDef</xpath>
-				<key>deathOnFailedSurgeryChance</key>
-				<value>0.05</value>
-			</li>
-			<li Class="PrimumDisease.PatchOperationAddOrReplace">
-				<xpath>/RecipeDef</xpath>
-				<key>surgerySuccessChanceFactor</key>
-				<value>0.9</value>
-			</li>
-			<li Class="PrimumDisease.PatchOperationAddOrReplace">
-				<xpath>/RecipeDef</xpath>
-				<key>skillRequirements</key>
-				<value>
-					<Medicine>10</Medicine>
-				</value>
-			</li>
-			<li Class="PrimumDisease.PatchOperationAddOrReplace">
-				<xpath>/RecipeDef/ingredients</xpath>
-				<key>li[1]</key>
-				<value>
-					<filter>
-						<categories>
-							<li>Medicine</li>
-						</categories>
-					</filter>
-					<count>2</count>
-				</value>
-			</li>
-		</operations>
-	</Operation>
+	<li Class="PrimumDisease.PatchOperationAddOrReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallNeurocalculator" or defName = "InstallLearningAssistant" or defName = "InstallCircadianAssistant" or defName = "InstallCircadianHalfCycler" or defName = "InstallToughskinGland" or defName = "InstallStoneskinGland" or defName = "InstallArmorskinGland"]</xpath>
+		<key>workAmount</key>
+		<value>2500</value>
+	</li>
+	<li Class="PrimumDisease.PatchOperationAddOrReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallNeurocalculator" or defName = "InstallLearningAssistant" or defName = "InstallCircadianAssistant" or defName = "InstallCircadianHalfCycler" or defName = "InstallToughskinGland" or defName = "InstallStoneskinGland" or defName = "InstallArmorskinGland"]</xpath>
+		<key>deathOnFailedSurgeryChance</key>
+		<value>0.05</value>
+	</li>
+	<li Class="PrimumDisease.PatchOperationAddOrReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallNeurocalculator" or defName = "InstallLearningAssistant" or defName = "InstallCircadianAssistant" or defName = "InstallCircadianHalfCycler" or defName = "InstallToughskinGland" or defName = "InstallStoneskinGland" or defName = "InstallArmorskinGland"]</xpath>
+		<key>surgerySuccessChanceFactor</key>
+		<value>0.9</value>
+	</li>
+	<li Class="PrimumDisease.PatchOperationAddOrReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallNeurocalculator" or defName = "InstallLearningAssistant" or defName = "InstallCircadianAssistant" or defName = "InstallCircadianHalfCycler" or defName = "InstallToughskinGland" or defName = "InstallStoneskinGland" or defName = "InstallArmorskinGland"]</xpath>
+		<key>skillRequirements</key>
+		<value>
+			<Medicine>10</Medicine>
+		</value>
+	</li>
+	<li Class="PrimumDisease.PatchOperationAddOrReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallNeurocalculator" or defName = "InstallLearningAssistant" or defName = "InstallCircadianAssistant" or defName = "InstallCircadianHalfCycler" or defName = "InstallToughskinGland" or defName = "InstallStoneskinGland" or defName = "InstallArmorskinGland"]/ingredients</xpath>
+		<key>li[1]</key>
+		<value>
+			<filter>
+				<categories>
+					<li>Medicine</li>
+				</categories>
+			</filter>
+			<count>2</count>
+		</value>
+	</li>
+
 <!--ImplantNaturalComplex-->
-	<Operation Class="PrimumDisease.PatchOperationContext">
-		<xpath>/Defs/RecipeDef[defName = "GR_InstallChemfuelHeart" or defName = "GR_InstallCompoundEye" or defName = "GR_InstallCatEye"]</xpath>
-		<operations>
-			<li Class="PrimumDisease.PatchOperationAddOrReplace">
-				<xpath>/RecipeDef</xpath>
-				<key>workAmount</key>
-				<value>3500</value>
-			</li>
-			<li Class="PrimumDisease.PatchOperationAddOrReplace">
-				<xpath>/RecipeDef</xpath>
-				<key>deathOnFailedSurgeryChance</key>
-				<value>0.1</value>
-			</li>
-			<li Class="PrimumDisease.PatchOperationAddOrReplace">
-				<xpath>/RecipeDef</xpath>
-				<key>surgerySuccessChanceFactor</key>
-				<value>0.9</value>
-			</li>
-			<li Class="PrimumDisease.PatchOperationAddOrReplace">
-				<xpath>/RecipeDef</xpath>
-				<key>skillRequirements</key>
-				<value>
-					<Medicine>13</Medicine>
-				</value>
-			</li>
-			<li Class="PrimumDisease.PatchOperationAddOrReplace">
-				<xpath>/RecipeDef/ingredients</xpath>
-				<key>li[1]</key>
-				<value>
-					<filter>
-						<categories>
-							<li>Medicine</li>
-						</categories>
-					</filter>
-					<count>4</count>
-				</value>
-			</li>
-		</operations>
-	</Operation>
+	<li Class="PrimumDisease.PatchOperationAddOrReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallNeurocalculator" or defName = "InstallLearningAssistant" or defName = "InstallCircadianAssistant" or defName = "InstallCircadianHalfCycler" or defName = "InstallToughskinGland" or defName = "InstallStoneskinGland" or defName = "InstallArmorskinGland"]</xpath>
+		<key>workAmount</key>
+		<value>3500</value>
+	</li>
+	<li Class="PrimumDisease.PatchOperationAddOrReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallNeurocalculator" or defName = "InstallLearningAssistant" or defName = "InstallCircadianAssistant" or defName = "InstallCircadianHalfCycler" or defName = "InstallToughskinGland" or defName = "InstallStoneskinGland" or defName = "InstallArmorskinGland"]</xpath>
+		<key>deathOnFailedSurgeryChance</key>
+		<value>0.1</value>
+	</li>
+	<li Class="PrimumDisease.PatchOperationAddOrReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallNeurocalculator" or defName = "InstallLearningAssistant" or defName = "InstallCircadianAssistant" or defName = "InstallCircadianHalfCycler" or defName = "InstallToughskinGland" or defName = "InstallStoneskinGland" or defName = "InstallArmorskinGland"]</xpath>
+		<key>surgerySuccessChanceFactor</key>
+		<value>0.9</value>
+	</li>
+	<li Class="PrimumDisease.PatchOperationAddOrReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallNeurocalculator" or defName = "InstallLearningAssistant" or defName = "InstallCircadianAssistant" or defName = "InstallCircadianHalfCycler" or defName = "InstallToughskinGland" or defName = "InstallStoneskinGland" or defName = "InstallArmorskinGland"]</xpath>
+		<key>skillRequirements</key>
+		<value>
+			<Medicine>13</Medicine>
+		</value>
+	</li>
+	<li Class="PrimumDisease.PatchOperationAddOrReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallNeurocalculator" or defName = "InstallLearningAssistant" or defName = "InstallCircadianAssistant" or defName = "InstallCircadianHalfCycler" or defName = "InstallToughskinGland" or defName = "InstallStoneskinGland" or defName = "InstallArmorskinGland"]/ingredients</xpath>
+		<key>li[1]</key>
+		<value>
+			<filter>
+				<categories>
+					<li>Medicine</li>
+				</categories>
+			</filter>
+			<count>4</count>
+		</value>
+	</li>
+			
 <!--ImplantNaturalSpecial-->
-	<Operation Class="PrimumDisease.PatchOperationContext">
-		<xpath>/Defs/RecipeDef[defName = "GR_InstallHibernationModule" or defName = "GR_InstallNeuronReinforcement" or defName = "GR_InstallHumanThrumboHorn" or defName = "GR_InstallThrumboSkin"]</xpath>
-		<operations>
-			<li Class="PrimumDisease.PatchOperationAddOrReplace">
-				<xpath>/RecipeDef</xpath>
-				<key>workAmount</key>
-				<value>4000</value>
-			</li>
-			<li Class="PrimumDisease.PatchOperationAddOrReplace">
-				<xpath>/RecipeDef</xpath>
-				<key>deathOnFailedSurgeryChance</key>
-				<value>0.15</value>
-			</li>
-			<li Class="PrimumDisease.PatchOperationAddOrReplace">
-				<xpath>/RecipeDef</xpath>
-				<key>surgerySuccessChanceFactor</key>
-				<value>0.9</value>
-			</li>
-			<li Class="PrimumDisease.PatchOperationAddOrReplace">
-				<xpath>/RecipeDef</xpath>
-				<key>skillRequirements</key>
-				<value>
-					<Medicine>15</Medicine>
-				</value>
-			</li>
-			<li Class="PrimumDisease.PatchOperationAddOrReplace">
-				<xpath>/RecipeDef/ingredients</xpath>
-				<key>li[1]</key>
-				<value>
-					<filter>
-						<categories>
-							<li>Medicine</li>
-						</categories>h
-					</filter>
-					<count>6</count>
-				</value>
-			</li>
-		</operations>
-	</Operation>
+	<li Class="PrimumDisease.PatchOperationAddOrReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallNeurocalculator" or defName = "InstallLearningAssistant" or defName = "InstallCircadianAssistant" or defName = "InstallCircadianHalfCycler" or defName = "InstallToughskinGland" or defName = "InstallStoneskinGland" or defName = "InstallArmorskinGland"]</xpath>
+		<key>workAmount</key>
+		<value>4000</value>
+	</li>
+	<li Class="PrimumDisease.PatchOperationAddOrReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallNeurocalculator" or defName = "InstallLearningAssistant" or defName = "InstallCircadianAssistant" or defName = "InstallCircadianHalfCycler" or defName = "InstallToughskinGland" or defName = "InstallStoneskinGland" or defName = "InstallArmorskinGland"]</xpath>
+		<key>deathOnFailedSurgeryChance</key>
+		<value>0.15</value>
+	</li>
+	<li Class="PrimumDisease.PatchOperationAddOrReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallNeurocalculator" or defName = "InstallLearningAssistant" or defName = "InstallCircadianAssistant" or defName = "InstallCircadianHalfCycler" or defName = "InstallToughskinGland" or defName = "InstallStoneskinGland" or defName = "InstallArmorskinGland"]</xpath>
+		<key>surgerySuccessChanceFactor</key>
+		<value>0.9</value>
+	</li>
+	<li Class="PrimumDisease.PatchOperationAddOrReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallNeurocalculator" or defName = "InstallLearningAssistant" or defName = "InstallCircadianAssistant" or defName = "InstallCircadianHalfCycler" or defName = "InstallToughskinGland" or defName = "InstallStoneskinGland" or defName = "InstallArmorskinGland"]</xpath>
+		<key>skillRequirements</key>
+		<value>
+			<Medicine>15</Medicine>
+		</value>
+	</li>
+	<li Class="PrimumDisease.PatchOperationAddOrReplace">
+		<xpath>/Defs/RecipeDef[defName = "InstallNeurocalculator" or defName = "InstallLearningAssistant" or defName = "InstallCircadianAssistant" or defName = "InstallCircadianHalfCycler" or defName = "InstallToughskinGland" or defName = "InstallStoneskinGland" or defName = "InstallArmorskinGland"]/ingredients</xpath>
+		<key>li[1]</key>
+		<value>
+			<filter>
+				<categories>
+					<li>Medicine</li>
+				</categories>h
+			</filter>
+			<count>6</count>
+		</value>
+	</li>
 <!--ImplantBionic-->
 <!--ImplantBionicComplex-->
 <!--ImplantBionicSpecial-->
