@@ -181,7 +181,7 @@
 		</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "RemoveBodyPart"]/RecipeDef/ingredients</xpath>
+		<xpath>/Defs/RecipeDef[defName = "RemoveBodyPart"]/ingredients</xpath>
 		<key>li[1]</key>
 		<value>
 			<filter>
@@ -219,7 +219,7 @@
 		</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "ExciseCarcinoma"]/RecipeDef/ingredients</xpath>
+		<xpath>/Defs/RecipeDef[defName = "ExciseCarcinoma"]/ingredients</xpath>
 		<key>li[1]</key>
 		<value>
 			<filter>
@@ -231,7 +231,7 @@
 		</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "ExciseCarcinoma"]/RecipeDef/fixedIngredientFilter</xpath>
+		<xpath>/Defs/RecipeDef[defName = "ExciseCarcinoma"]/fixedIngredientFilter</xpath>
 		<key>disallowedThingDefs</key>
 		<value>
 			<li>MedicineHerbal</li>
@@ -336,7 +336,7 @@
 		</value>
 	</Operation>
 	<!--<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallSimpleProstheticHeart" or defName = "InstallJoywire" or defName = "InstallPainstopper"]/RecipeDef/ingredients</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallSimpleProstheticHeart" or defName = "InstallJoywire" or defName = "InstallPainstopper"]/ingredients</xpath>
 		<key>li[1]</key>
 		<value>
 			<filter>
@@ -372,7 +372,7 @@
 		</value>
 	</Operation>
 	<!--<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallNaturalKidney" or defName = "InstallNaturalLung" or defName = "InstallNaturalLiver"]/RecipeDef/ingredients</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallNaturalKidney" or defName = "InstallNaturalLung" or defName = "InstallNaturalLiver"]/ingredients</xpath>
 		<key>li[1]</key>
 		<value>
 			<filter>
@@ -413,7 +413,7 @@
 		</value>
 	</Operation>
 	<!--<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallNaturalHeart"]/RecipeDef/ingredients</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallNaturalHeart"]/ingredients</xpath>
 		<key>li[1]</key>
 		<value>
 			<filter>
@@ -455,7 +455,7 @@
 		</value>
 	</Operation>
 	<!--<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallBionicLeg" or defName = "InstallBionicArm" or defName = "InstallBionicSpine" or defName = "InstallBionicStomach" or defName = "InstallPowerclaw"]/RecipeDef/ingredients</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicLeg" or defName = "InstallBionicArm" or defName = "InstallBionicSpine" or defName = "InstallBionicStomach" or defName = "InstallPowerclaw"]/ingredients</xpath>
 		<key>li[1]</key>
 		<value>
 			<filter>
@@ -467,7 +467,7 @@
 		</value>
 	</Operation>-->
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallBionicLeg" or defName = "InstallBionicArm" or defName = "InstallBionicSpine" or defName = "InstallBionicStomach" or defName = "InstallPowerclaw"]/RecipeDef/fixedIngredientFilter</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicLeg" or defName = "InstallBionicArm" or defName = "InstallBionicSpine" or defName = "InstallBionicStomach" or defName = "InstallPowerclaw"]/fixedIngredientFilter</xpath>
 		<key>disallowedThingDefs</key>
 		<value>
 			<li>MedicineHerbal</li>
@@ -498,7 +498,7 @@
 		</value>
 	</Operation>
 	<!--<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallBionicHeart" or defName = "InstallBionicEye"]/RecipeDef/ingredients</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicHeart" or defName = "InstallBionicEye"]/ingredients</xpath>
 		<key>li[1]</key>
 		<value>
 			<filter>
@@ -510,7 +510,7 @@
 		</value>
 	</Operation>-->
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallBionicHeart" or defName = "InstallBionicEye"]/RecipeDef/fixedIngredientFilter</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicHeart" or defName = "InstallBionicEye"]/fixedIngredientFilter</xpath>
 		<key>disallowedThingDefs</key>
 		<value>
 			<li>MedicineHerbal</li>
@@ -541,7 +541,7 @@
 		</value>
 	</Operation>
 	<!--<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallArchotechLeg" or defName = "InstallArchotechArm" or defName = "InstallArchotechEye"]/RecipeDef/ingredients</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallArchotechLeg" or defName = "InstallArchotechArm" or defName = "InstallArchotechEye"]/ingredients</xpath>
 		<key>li[1]</key>
 		<value>
 			<filter>
@@ -553,7 +553,7 @@
 		</value>
 	</Operation>-->
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallArchotechLeg" or defName = "InstallArchotechArm" or defName = "InstallArchotechEye"]/RecipeDef/fixedIngredientFilter</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallArchotechLeg" or defName = "InstallArchotechArm" or defName = "InstallArchotechEye"]/fixedIngredientFilter</xpath>
 		<key>disallowedThingDefs</key>
 		<value>
 			<li>MedicineHerbal</li>
