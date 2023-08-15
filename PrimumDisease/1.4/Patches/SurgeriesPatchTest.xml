@@ -159,22 +159,22 @@
 <!--Basic-->
 <!--RemoveBodyPart-->
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "RemoveBodyPart"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "RemoveBodyPart"]</xpath>
 		<key>workAmount</key>
 		<value>2000</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "RemoveBodyPart"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "RemoveBodyPart"]</xpath>
 		<key>deathOnFailedSurgeryChance</key>
 		<value>0.05</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "RemoveBodyPart"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "RemoveBodyPart"]</xpath>
 		<key>surgerySuccessChanceFactor</key>
 		<value>2</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "RemoveBodyPart"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "RemoveBodyPart"]</xpath>
 		<key>skillRequirements</key>
 		<value>
 			<Medicine>4</Medicine>
@@ -197,22 +197,22 @@
 
 <!--CureAilmentComplex-->
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "ExciseCarcinoma"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "ExciseCarcinoma"]</xpath>
 		<key>workAmount</key>
 		<value>4000</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "ExciseCarcinoma"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "ExciseCarcinoma"]</xpath>
 		<key>deathOnFailedSurgeryChance</key>
 		<value>0.2</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "ExciseCarcinoma"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "ExciseCarcinoma"]</xpath>
 		<key>surgerySuccessChanceFactor</key>
 		<value>0.8</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "ExciseCarcinoma"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "ExciseCarcinoma"]</xpath>
 		<key>skillRequirements</key>
 		<value>
 			<Medicine>13</Medicine>
@@ -242,22 +242,22 @@
 <!--CureAilmentSpecial-->
 <!--ImplantBasic-->
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallPegLeg" or defName = "InstallWoodenFoot" or defName = "InstallDenture"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallPegLeg" or defName = "InstallWoodenFoot" or defName = "InstallDenture"]</xpath>
 		<key>workAmount</key>
 		<value>1000</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallPegLeg" or defName = "InstallWoodenFoot" or defName = "InstallDenture"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallPegLeg" or defName = "InstallWoodenFoot" or defName = "InstallDenture"]</xpath>
 		<key>deathOnFailedSurgeryChance</key>
 		<value>0</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallPegLeg" or defName = "InstallWoodenFoot" or defName = "InstallDenture"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallPegLeg" or defName = "InstallWoodenFoot" or defName = "InstallDenture"]</xpath>
 		<key>surgerySuccessChanceFactor</key>
 		<value>1.25</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallPegLeg" or defName = "InstallWoodenFoot" or defName = "InstallDenture"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallPegLeg" or defName = "InstallWoodenFoot" or defName = "InstallDenture"]</xpath>
 		<key>skillRequirements</key>
 		<value>
 			<Medicine>3</Medicine>
@@ -278,22 +278,22 @@
 
 <!--ImplantProsthetic-->
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallSimpleProstheticLeg" or defName = "InstallSimpleProstheticArm" or defName = "InstallCochlearImplant"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallSimpleProstheticLeg" or defName = "InstallSimpleProstheticArm" or defName = "InstallCochlearImplant"]</xpath>
 		<key>workAmount</key>
 		<value>1500</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallSimpleProstheticLeg" or defName = "InstallSimpleProstheticArm" or defName = "InstallCochlearImplant"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallSimpleProstheticLeg" or defName = "InstallSimpleProstheticArm" or defName = "InstallCochlearImplant"]</xpath>
 		<key>deathOnFailedSurgeryChance</key>
 		<value>0.05</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallSimpleProstheticLeg" or defName = "InstallSimpleProstheticArm" or defName = "InstallCochlearImplant"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallSimpleProstheticLeg" or defName = "InstallSimpleProstheticArm" or defName = "InstallCochlearImplant"]</xpath>
 		<key>surgerySuccessChanceFactor</key>
 		<value>1</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallSimpleProstheticLeg" or defName = "InstallSimpleProstheticArm" or defName = "InstallCochlearImplant"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallSimpleProstheticLeg" or defName = "InstallSimpleProstheticArm" or defName = "InstallCochlearImplant"]</xpath>
 		<key>skillRequirements</key>
 		<value>
 			<Medicine>6</Medicine>
@@ -314,22 +314,22 @@
 
 <!--ImplantProstheticComplex-->
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallSimpleProstheticHeart" or defName = "InstallJoywire" or defName = "InstallPainstopper"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallSimpleProstheticHeart" or defName = "InstallJoywire" or defName = "InstallPainstopper"]</xpath>
 		<key>workAmount</key>
 		<value>2000</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallSimpleProstheticHeart" or defName = "InstallJoywire" or defName = "InstallPainstopper"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallSimpleProstheticHeart" or defName = "InstallJoywire" or defName = "InstallPainstopper"]</xpath>
 		<key>deathOnFailedSurgeryChance</key>
 		<value>0.1</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallSimpleProstheticHeart" or defName = "InstallJoywire" or defName = "InstallPainstopper"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallSimpleProstheticHeart" or defName = "InstallJoywire" or defName = "InstallPainstopper"]</xpath>
 		<key>surgerySuccessChanceFactor</key>
 		<value>1</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallSimpleProstheticHeart" or defName = "InstallJoywire" or defName = "InstallPainstopper"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallSimpleProstheticHeart" or defName = "InstallJoywire" or defName = "InstallPainstopper"]</xpath>
 		<key>skillRequirements</key>
 		<value>
 			<Medicine>9</Medicine>
@@ -350,22 +350,22 @@
 
 <!--ImplantNatural-->
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallNaturalKidney" or defName = "InstallNaturalLung" or defName = "InstallNaturalLiver"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallNaturalKidney" or defName = "InstallNaturalLung" or defName = "InstallNaturalLiver"]</xpath>
 		<key>workAmount</key>
 		<value>2500</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallNaturalKidney" or defName = "InstallNaturalLung" or defName = "InstallNaturalLiver"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallNaturalKidney" or defName = "InstallNaturalLung" or defName = "InstallNaturalLiver"]</xpath>
 		<key>deathOnFailedSurgeryChance</key>
 		<value>0.05</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallNaturalKidney" or defName = "InstallNaturalLung" or defName = "InstallNaturalLiver"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallNaturalKidney" or defName = "InstallNaturalLung" or defName = "InstallNaturalLiver"]</xpath>
 		<key>surgerySuccessChanceFactor</key>
 		<value>0.9</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallNaturalKidney" or defName = "InstallNaturalLung" or defName = "InstallNaturalLiver"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallNaturalKidney" or defName = "InstallNaturalLung" or defName = "InstallNaturalLiver"]</xpath>
 		<key>skillRequirements</key>
 		<value>
 			<Medicine>10</Medicine>
@@ -384,29 +384,29 @@
 		</value>
 	</Operation>-->
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallNaturalKidney" or defName = "InstallNaturalLung" or defName = "InstallNaturalLiver"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallNaturalKidney" or defName = "InstallNaturalLung" or defName = "InstallNaturalLiver"]</xpath>
 		<key>addsHediff</key>
 		<value>PD_TransplantRejection</value>
 	</Operation>
 
 <!--ImplantNaturalComplex-->
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallNaturalHeart"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallNaturalHeart"]</xpath>
 		<key>workAmount</key>
 		<value>3500</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallNaturalHeart"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallNaturalHeart"]</xpath>
 		<key>deathOnFailedSurgeryChance</key>
 		<value>0.1</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallNaturalHeart"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallNaturalHeart"]</xpath>
 		<key>surgerySuccessChanceFactor</key>
 		<value>0.9</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallNaturalHeart"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallNaturalHeart"]</xpath>
 		<key>skillRequirements</key>
 		<value>
 			<Medicine>13</Medicine>
@@ -425,7 +425,7 @@
 		</value>
 	</Operation>-->
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallNaturalHeart"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallNaturalHeart"]</xpath>
 		<key>addsHediff</key>
 		<value>PD_TransplantRejection</value>
 	</Operation>
@@ -433,22 +433,22 @@
 <!--ImplantNaturalSpecial-->
 <!--ImplantBionic-->
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallBionicLeg" or defName = "InstallBionicArm" or defName = "InstallBionicSpine" or defName = "InstallBionicStomach" or defName = "InstallPowerclaw"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicLeg" or defName = "InstallBionicArm" or defName = "InstallBionicSpine" or defName = "InstallBionicStomach" or defName = "InstallPowerclaw"]</xpath>
 		<key>workAmount</key>
 		<value>2500</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallBionicLeg" or defName = "InstallBionicArm" or defName = "InstallBionicSpine" or defName = "InstallBionicStomach" or defName = "InstallPowerclaw"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicLeg" or defName = "InstallBionicArm" or defName = "InstallBionicSpine" or defName = "InstallBionicStomach" or defName = "InstallPowerclaw"]</xpath>
 		<key>deathOnFailedSurgeryChance</key>
 		<value>0.05</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallBionicLeg" or defName = "InstallBionicArm" or defName = "InstallBionicSpine" or defName = "InstallBionicStomach" or defName = "InstallPowerclaw"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicLeg" or defName = "InstallBionicArm" or defName = "InstallBionicSpine" or defName = "InstallBionicStomach" or defName = "InstallPowerclaw"]</xpath>
 		<key>surgerySuccessChanceFactor</key>
 		<value>1</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallBionicLeg" or defName = "InstallBionicArm" or defName = "InstallBionicSpine" or defName = "InstallBionicStomach" or defName = "InstallPowerclaw"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicLeg" or defName = "InstallBionicArm" or defName = "InstallBionicSpine" or defName = "InstallBionicStomach" or defName = "InstallPowerclaw"]</xpath>
 		<key>skillRequirements</key>
 		<value>
 			<Medicine>10</Medicine>
@@ -476,22 +476,22 @@
 
 <!--ImplantBionicComplex-->
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallBionicHeart" or defName = "InstallBionicEye"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicHeart" or defName = "InstallBionicEye"]</xpath>
 		<key>workAmount</key>
 		<value>3500</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallBionicHeart" or defName = "InstallBionicEye"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicHeart" or defName = "InstallBionicEye"]</xpath>
 		<key>deathOnFailedSurgeryChance</key>
 		<value>0.1</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallBionicHeart" or defName = "InstallBionicEye"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicHeart" or defName = "InstallBionicEye"]</xpath>
 		<key>surgerySuccessChanceFactor</key>
 		<value>1</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallBionicHeart" or defName = "InstallBionicEye"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallBionicHeart" or defName = "InstallBionicEye"]</xpath>
 		<key>skillRequirements</key>
 		<value>
 			<Medicine>13</Medicine>
@@ -519,22 +519,22 @@
 
 <!--ImplantBionicSpecial-->
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallArchotechLeg" or defName = "InstallArchotechArm" or defName = "InstallArchotechEye"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallArchotechLeg" or defName = "InstallArchotechArm" or defName = "InstallArchotechEye"]</xpath>
 		<key>workAmount</key>
 		<value>4000</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallArchotechLeg" or defName = "InstallArchotechArm" or defName = "InstallArchotechEye"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallArchotechLeg" or defName = "InstallArchotechArm" or defName = "InstallArchotechEye"]</xpath>
 		<key>deathOnFailedSurgeryChance</key>
 		<value>0.25</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallArchotechLeg" or defName = "InstallArchotechArm" or defName = "InstallArchotechEye"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallArchotechLeg" or defName = "InstallArchotechArm" or defName = "InstallArchotechEye"]</xpath>
 		<key>surgerySuccessChanceFactor</key>
 		<value>1</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "InstallArchotechLeg" or defName = "InstallArchotechArm" or defName = "InstallArchotechEye"]/RecipeDef</xpath>
+		<xpath>/Defs/RecipeDef[defName = "InstallArchotechLeg" or defName = "InstallArchotechArm" or defName = "InstallArchotechEye"]</xpath>
 		<key>skillRequirements</key>
 		<value>
 			<Medicine>15</Medicine>
