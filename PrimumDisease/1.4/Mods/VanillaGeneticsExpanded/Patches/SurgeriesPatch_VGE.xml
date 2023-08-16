@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-	<Operation Class="PatchOperationFindMod">
-		<mods>
-			<li>Vanilla Genetics Expanded</li>
-		</mods>
-		<match Class="PatchOperationSequence">
-			<operations>
+	<Operation Class="PatchOperationSequence">
+		<operations>
 <!--Basic-->
 <!--RemoveBodyPart-->
 <!--CureAilment-->
@@ -124,7 +120,6 @@
 <!--ImplantBionic-->
 <!--ImplantBionicComplex-->
 <!--ImplantBionicSpecial-->
-			</operations>
-		</match>
+		</operations>
 	</Operation>
 </Patch>
