@@ -1,90 +1,86 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-	<Operation Class="PatchOperationSequence">
-		<operations>
-			<li Class="PatchOperationReplace">
-				<xpath>/Defs/GeneDef[defName = "WoundHealing_Slow"]/statFactors</xpath>
-				<value>
-					<statFactors>
-						<InjuryHealingFactor>0.5</InjuryHealingFactor>
-						<PD_DiseaseResistance>0.9</PD_DiseaseResistance>
-					</statFactors>
-				</value>
-			</li>
-			<li Class="PatchOperationReplace">
-				<xpath>/Defs/GeneDef[defName = "WoundHealing_Fast"]/statFactors</xpath>
-				<value>
-					<statFactors>
-						<InjuryHealingFactor>2</InjuryHealingFactor>
-						<PD_DiseaseResistance>1.1</PD_DiseaseResistance>
-					</statFactors>
-				</value>
-			</li>
-			<li Class="PatchOperationReplace">
-				<xpath>/Defs/GeneDef[defName = "WoundHealing_SuperFast"]/statFactors</xpath>
-				<value>
-					<statFactors>
-						<InjuryHealingFactor>4</InjuryHealingFactor>
-						<PD_DiseaseResistance>1.2</PD_DiseaseResistance>
-					</statFactors>
-				</value>
-			</li>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/GeneDef[defName = "WoundHealing_Slow"]/statFactors</xpath>
+		<value>
+			<statFactors>
+				<InjuryHealingFactor>0.5</InjuryHealingFactor>
+				<PD_DiseaseResistance>0.9</PD_DiseaseResistance>
+			</statFactors>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/GeneDef[defName = "WoundHealing_Fast"]/statFactors</xpath>
+		<value>
+			<statFactors>
+				<InjuryHealingFactor>2</InjuryHealingFactor>
+				<PD_DiseaseResistance>1.1</PD_DiseaseResistance>
+			</statFactors>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/GeneDef[defName = "WoundHealing_SuperFast"]/statFactors</xpath>
+		<value>
+			<statFactors>
+				<InjuryHealingFactor>4</InjuryHealingFactor>
+				<PD_DiseaseResistance>1.2</PD_DiseaseResistance>
+			</statFactors>
+		</value>
+	</Operation>
 
-			
-			<li Class="PatchOperationReplace">
-				<xpath>/Defs/GeneDef[defName = "Immunity_Weak"]/statFactors</xpath>
-				<value>
-					<statFactors>
-						<ImmunityGainSpeed>0.9</ImmunityGainSpeed>
-						<PD_DiseaseResistance>0.9</PD_DiseaseResistance>
-					</statFactors>
-				</value>
-			</li>
-			<li Class="PatchOperationReplace">
-				<xpath>/Defs/GeneDef[defName = "Immunity_Strong"]/statFactors</xpath>
-				<value>
-					<statFactors>
-						<ImmunityGainSpeed>1.1</ImmunityGainSpeed>
-						<PD_DiseaseResistance>1.1</PD_DiseaseResistance>
-					</statFactors>
-				</value>
-			</li>
-			<li Class="PatchOperationReplace">
-				<xpath>/Defs/GeneDef[defName = "Immunity_SuperStrong"]/statFactors</xpath>
-				<value>
-					<statFactors>
-						<ImmunityGainSpeed>1.3</ImmunityGainSpeed>
-						<PD_DiseaseResistance>1.3</PD_DiseaseResistance>
-					</statFactors>
-				</value>
-			</li>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/GeneDef[defName = "Immunity_Weak"]/statFactors</xpath>
+		<value>
+			<statFactors>
+				<ImmunityGainSpeed>0.9</ImmunityGainSpeed>
+				<PD_DiseaseResistance>0.9</PD_DiseaseResistance>
+			</statFactors>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/GeneDef[defName = "Immunity_Strong"]/statFactors</xpath>
+		<value>
+			<statFactors>
+				<ImmunityGainSpeed>1.1</ImmunityGainSpeed>
+				<PD_DiseaseResistance>1.1</PD_DiseaseResistance>
+			</statFactors>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/GeneDef[defName = "Immunity_SuperStrong"]/statFactors</xpath>
+		<value>
+			<statFactors>
+				<ImmunityGainSpeed>1.3</ImmunityGainSpeed>
+				<PD_DiseaseResistance>1.3</PD_DiseaseResistance>
+			</statFactors>
+		</value>
+	</Operation>
 
 
-			<li Class="PatchOperationAdd">
-				<xpath>/Defs/GeneDef[defName = "PerfectImmunity"]/statFactors</xpath>
-				<value>
-					<statFactors>
-						<ImmunityGainSpeed>2.5</ImmunityGainSpeed>
-						<PD_DiseaseResistance>2.5</PD_DiseaseResistance>
-					</statFactors>
-				</value>
-			</li>
-			<li Class="PatchOperationReplace">
-				<xpath>/Defs/GeneDef[defName = "PerfectImmunity"]/makeImmuneTo</xpath>
-				<value>
-					<makeImmuneTo>
-						<li>Flu</li>
-						<li>Malaria</li>
-						<li>SleepingSickness</li>
-						<li>Plague</li>
-						<li>WoundInfection</li>
-						<li>LungRot</li>
-						<li>FoodPoisoning</li>
-						<li>PD_Sepsis</li>
-						<li>PD_Tuberculosis</li>
-					</makeImmuneTo>
-				</value>
-			</li>
-		</operations>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/GeneDef[defName = "PerfectImmunity"]/statFactors</xpath>
+		<value>
+			<statFactors>
+				<ImmunityGainSpeed>2.5</ImmunityGainSpeed>
+				<PD_DiseaseResistance>2.5</PD_DiseaseResistance>
+			</statFactors>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/GeneDef[defName = "PerfectImmunity"]/makeImmuneTo</xpath>
+		<value>
+			<makeImmuneTo>
+				<li>Flu</li>
+				<li>Malaria</li>
+				<li>SleepingSickness</li>
+				<li>Plague</li>
+				<li>WoundInfection</li>
+				<li>LungRot</li>
+				<li>FoodPoisoning</li>
+				<li>PD_Sepsis</li>
+				<li>PD_Tuberculosis</li>
+			</makeImmuneTo>
+		</value>
 	</Operation>
 </Patch>
