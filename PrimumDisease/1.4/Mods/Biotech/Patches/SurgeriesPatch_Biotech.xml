@@ -16,29 +16,29 @@
 <!--ImplantBionicSpecial-->
 <!--FertilityBasic-->
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "Vasectomy" or defName = "ImplantIUD" or defName = "RemoveIUD" or defName = "ImplantEmbryo" or defName = "TerminatePregnancy"]</xpath>
+		<xpath>Defs/RecipeDef[defName = "Vasectomy" or defName = "ImplantIUD" or defName = "RemoveIUD" or defName = "ImplantEmbryo" or defName = "TerminatePregnancy"]</xpath>
 		<key>workAmount</key>
 		<value>2000</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "Vasectomy" or defName = "ImplantIUD" or defName = "RemoveIUD" or defName = "ImplantEmbryo" or defName = "TerminatePregnancy"]</xpath>
+		<xpath>Defs/RecipeDef[defName = "Vasectomy" or defName = "ImplantIUD" or defName = "RemoveIUD" or defName = "ImplantEmbryo" or defName = "TerminatePregnancy"]</xpath>
 		<key>deathOnFailedSurgeryChance</key>
 		<value>0</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "Vasectomy" or defName = "ImplantIUD" or defName = "RemoveIUD" or defName = "ImplantEmbryo" or defName = "TerminatePregnancy"]</xpath>
+		<xpath>Defs/RecipeDef[defName = "Vasectomy" or defName = "ImplantIUD" or defName = "RemoveIUD" or defName = "ImplantEmbryo" or defName = "TerminatePregnancy"]</xpath>
 		<key>surgerySuccessChanceFactor</key>
 		<value>1.00</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "Vasectomy" or defName = "ImplantIUD" or defName = "RemoveIUD" or defName = "ImplantEmbryo" or defName = "TerminatePregnancy"]</xpath>
+		<xpath>Defs/RecipeDef[defName = "Vasectomy" or defName = "ImplantIUD" or defName = "RemoveIUD" or defName = "ImplantEmbryo" or defName = "TerminatePregnancy"]</xpath>
 		<key>skillRequirements</key>
 		<value>
 			<Medicine>5</Medicine>
 		</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "Vasectomy" or defName = "ImplantIUD" or defName = "RemoveIUD" or defName = "ImplantEmbryo" or defName = "TerminatePregnancy"]/ingredients</xpath>
+		<xpath>Defs/RecipeDef[defName = "Vasectomy" or defName = "ImplantIUD" or defName = "RemoveIUD" or defName = "ImplantEmbryo" or defName = "TerminatePregnancy"]/ingredients</xpath>
 		<key>li[1]</key>
 		<value>
 			<filter>
@@ -52,29 +52,29 @@
 
 <!--FertilityComplex-->
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "Tubal Ligation" or defName = "ReverseVasectomy" or defName = "ExtractOvum"]</xpath>
+		<xpath>Defs/RecipeDef[defName = "Tubal Ligation" or defName = "ReverseVasectomy" or defName = "ExtractOvum"]</xpath>
 		<key>workAmount</key>
 		<value>3000</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "Tubal Ligation" or defName = "ReverseVasectomy" or defName = "ExtractOvum"]</xpath>
+		<xpath>Defs/RecipeDef[defName = "Tubal Ligation" or defName = "ReverseVasectomy" or defName = "ExtractOvum"]</xpath>
 		<key>deathOnFailedSurgeryChance</key>
 		<value>0.1</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "Tubal Ligation" or defName = "ReverseVasectomy" or defName = "ExtractOvum"]</xpath>
+		<xpath>Defs/RecipeDef[defName = "Tubal Ligation" or defName = "ReverseVasectomy" or defName = "ExtractOvum"]</xpath>
 		<key>surgerySuccessChanceFactor</key>
 		<value>1.00</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "Tubal Ligation" or defName = "ReverseVasectomy" or defName = "ExtractOvum"]</xpath>
+		<xpath>Defs/RecipeDef[defName = "Tubal Ligation" or defName = "ReverseVasectomy" or defName = "ExtractOvum"]</xpath>
 		<key>skillRequirements</key>
 		<value>
 			<Medicine>10</Medicine>
 		</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "Tubal Ligation" or defName = "ReverseVasectomy" or defName = "ExtractOvum"]/ingredients</xpath>
+		<xpath>Defs/RecipeDef[defName = "Tubal Ligation" or defName = "ReverseVasectomy" or defName = "ExtractOvum"]/ingredients</xpath>
 		<key>li[1]</key>
 		<value>
 			<filter>
@@ -86,7 +86,7 @@
 		</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>/Defs/RecipeDef[defName = "Tubal Ligation" or defName = "ReverseVasectomy" or defName = "ExtractOvum"]/fixedIngredientFilter</xpath>
+		<xpath>Defs/RecipeDef[defName = "Tubal Ligation" or defName = "ReverseVasectomy" or defName = "ExtractOvum"]/fixedIngredientFilter</xpath>
 		<key>disallowedThingDefs</key>
 		<value>
 			<li>MedicineHerbal</li>

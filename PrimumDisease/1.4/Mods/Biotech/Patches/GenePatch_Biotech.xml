@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/GeneDef[defName = "WoundHealing_Slow"]/statFactors</xpath>
+		<xpath>Defs/GeneDef[defName = "WoundHealing_Slow"]/statFactors</xpath>
 		<value>
 			<statFactors>
 				<InjuryHealingFactor>0.5</InjuryHealingFactor>
@@ -10,7 +10,7 @@
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/GeneDef[defName = "WoundHealing_Fast"]/statFactors</xpath>
+		<xpath>Defs/GeneDef[defName = "WoundHealing_Fast"]/statFactors</xpath>
 		<value>
 			<statFactors>
 				<InjuryHealingFactor>2</InjuryHealingFactor>
@@ -19,7 +19,7 @@
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/GeneDef[defName = "WoundHealing_SuperFast"]/statFactors</xpath>
+		<xpath>Defs/GeneDef[defName = "WoundHealing_SuperFast"]/statFactors</xpath>
 		<value>
 			<statFactors>
 				<InjuryHealingFactor>4</InjuryHealingFactor>
@@ -30,7 +30,7 @@
 
 	
 	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/GeneDef[defName = "Immunity_Weak"]/statFactors</xpath>
+		<xpath>Defs/GeneDef[defName = "Immunity_Weak"]/statFactors</xpath>
 		<value>
 			<statFactors>
 				<ImmunityGainSpeed>0.9</ImmunityGainSpeed>
@@ -39,7 +39,7 @@
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/GeneDef[defName = "Immunity_Strong"]/statFactors</xpath>
+		<xpath>Defs/GeneDef[defName = "Immunity_Strong"]/statFactors</xpath>
 		<value>
 			<statFactors>
 				<ImmunityGainSpeed>1.1</ImmunityGainSpeed>
@@ -48,7 +48,7 @@
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/GeneDef[defName = "Immunity_SuperStrong"]/statFactors</xpath>
+		<xpath>Defs/GeneDef[defName = "Immunity_SuperStrong"]/statFactors</xpath>
 		<value>
 			<statFactors>
 				<ImmunityGainSpeed>1.3</ImmunityGainSpeed>
@@ -59,7 +59,7 @@
 
 
 	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/GeneDef[defName = "PerfectImmunity"]/statFactors</xpath>
+		<xpath>Defs/GeneDef[defName = "PerfectImmunity"]/statFactors</xpath>
 		<value>
 			<statFactors>
 				<ImmunityGainSpeed>2.5</ImmunityGainSpeed>
@@ -68,7 +68,7 @@
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/GeneDef[defName = "PerfectImmunity"]/makeImmuneTo</xpath>
+		<xpath>Defs/GeneDef[defName = "PerfectImmunity"]/makeImmuneTo</xpath>
 		<value>
 			<makeImmuneTo>
 				<li>Flu</li>
