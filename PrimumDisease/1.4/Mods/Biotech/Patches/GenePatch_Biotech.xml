@@ -59,7 +59,7 @@
 
 
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/GeneDef[defName = "PerfectImmunity"]/statFactors</xpath>
+		<xpath>Defs/GeneDef[defName = "PerfectImmunity"]</xpath>
 		<value>
 			<statFactors>
 				<ImmunityGainSpeed>2.5</ImmunityGainSpeed>

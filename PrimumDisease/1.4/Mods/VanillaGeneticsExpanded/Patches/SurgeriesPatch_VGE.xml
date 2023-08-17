@@ -31,7 +31,7 @@
 			<Medicine>10</Medicine>
 		</value>
 	</Operation>
-	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
+	<!--<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
 		<xpath>Defs/RecipeDef[defName = "InstallNeurocalculator" or defName = "InstallLearningAssistant" or defName = "InstallCircadianAssistant" or defName = "InstallCircadianHalfCycler" or defName = "InstallToughskinGland" or defName = "InstallStoneskinGland" or defName = "InstallArmorskinGland"]/ingredients</xpath>
 		<key>li[1]</key>
 		<value>
@@ -42,7 +42,7 @@
 			</filter>
 			<count>2</count>
 		</value>
-	</Operation>
+	</Operation>-->
 
 <!--ImplantNaturalComplex-->
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
@@ -67,7 +67,7 @@
 			<Medicine>13</Medicine>
 		</value>
 	</Operation>
-	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
+	<!--<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
 		<xpath>Defs/RecipeDef[defName = "InstallNeurocalculator" or defName = "InstallLearningAssistant" or defName = "InstallCircadianAssistant" or defName = "InstallCircadianHalfCycler" or defName = "InstallToughskinGland" or defName = "InstallStoneskinGland" or defName = "InstallArmorskinGland"]/ingredients</xpath>
 		<key>li[1]</key>
 		<value>
@@ -78,7 +78,7 @@
 			</filter>
 			<count>4</count>
 		</value>
-	</Operation>
+	</Operation>-->
 			
 <!--ImplantNaturalSpecial-->
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
@@ -103,7 +103,7 @@
 			<Medicine>15</Medicine>
 		</value>
 	</Operation>
-	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
+	<!--<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
 		<xpath>Defs/RecipeDef[defName = "InstallNeurocalculator" or defName = "InstallLearningAssistant" or defName = "InstallCircadianAssistant" or defName = "InstallCircadianHalfCycler" or defName = "InstallToughskinGland" or defName = "InstallStoneskinGland" or defName = "InstallArmorskinGland"]/ingredients</xpath>
 		<key>li[1]</key>
 		<value>
@@ -114,7 +114,7 @@
 			</filter>
 			<count>6</count>
 		</value>
-	</Operation>
+	</Operation>-->
 <!--ImplantBionic-->
 <!--ImplantBionicComplex-->
 <!--ImplantBionicSpecial-->

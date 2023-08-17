@@ -72,7 +72,7 @@
 			<Medicine>6</Medicine>
 		</value>
 	</Operation>
-	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
+	<!--<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
 		<xpath>Defs/RecipeDef[defName = "InstallDrillArm" or defName = "InstallFieldHand" or defName = "InstallHandTalon" or defName = "InstallElbowBlade" or defName = "InstallKneeSpike"]/ingredients</xpath>
 		<key>li[1]</key>
 		<value>
@@ -83,7 +83,7 @@
 			</filter>
 			<count>2</count>
 		</value>
-	</Operation>
+	</Operation>-->
 
 
 <!--ImplantProstheticComplex-->
@@ -109,7 +109,7 @@
 			<Medicine>9</Medicine>
 		</value>
 	</Operation>
-	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
+	<!--<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
 		<xpath>Defs/RecipeDef[defName = "InstallMindscrew"]/ingredients</xpath>
 		<key>li[1]</key>
 		<value>
@@ -120,7 +120,7 @@
 			</filter>
 			<count>4</count>
 		</value>
-	</Operation>
+	</Operation>-->
 
 
 <!--ImplantNatural-->
@@ -149,7 +149,7 @@
 			<Medicine>10</Medicine>
 		</value>
 	</Operation>
-	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
+	<!--<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
 		<xpath>Defs/RecipeDef[defName = "InstallVenomFangs" or defName = "InstallVenomTalon" or defName = "InstallLoveEnhancer" or defName = "InstallAestheticNose" or defName = "InstallAestheticShaper" or defName = "InstallDetoxiferStomach" or defName = "InstallReprocessorStomach" or defName = "InstallNuclearStomach" or defName = "InstallGastroanalyzer" or defName = "InstallImmunoenhancer" or defName = "InstallCoagulator" or defName = "InstallHealingEnhancer"]/ingredients</xpath>
 		<key>li[1]</key>
 		<value>
@@ -160,7 +160,7 @@
 			</filter>
 			<count>2</count>
 		</value>
-	</Operation>
+	</Operation>-->
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
 		<xpath>Defs/RecipeDef[defName = "InstallVenomFangs" or defName = "InstallVenomTalon" or defName = "InstallLoveEnhancer" or defName = "InstallAestheticNose" or defName = "InstallAestheticShaper" or defName = "InstallDetoxiferStomach" or defName = "InstallReprocessorStomach" or defName = "InstallNuclearStomach" or defName = "InstallGastroanalyzer" or defName = "InstallImmunoenhancer" or defName = "InstallCoagulator" or defName = "InstallHealingEnhancer"]/fixedIngredientFilter</xpath>
 		<key>disallowedThingDefs</key>
@@ -193,7 +193,7 @@
 			<Medicine>13</Medicine>
 		</value>
 	</Operation>
-	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
+	<!--<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
 		<xpath>Defs/RecipeDef[defName = "InstallNeurocalculator" or defName = "InstallLearningAssistant" or defName = "InstallCircadianAssistant" or defName = "InstallCircadianHalfCycler" or defName = "InstallToughskinGland" or defName = "InstallStoneskinGland" or defName = "InstallArmorskinGland"]/ingredients</xpath>
 		<key>li[1]</key>
 		<value>
@@ -204,7 +204,7 @@
 			</filter>
 			<count>4</count>
 		</value>
-	</Operation>
+	</Operation>-->
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
 		<xpath>Defs/RecipeDef[defName = "InstallNeurocalculator" or defName = "InstallLearningAssistant" or defName = "InstallCircadianAssistant" or defName = "InstallCircadianHalfCycler" or defName = "InstallToughskinGland" or defName = "InstallStoneskinGland" or defName = "InstallArmorskinGland"]/fixedIngredientFilter</xpath>
 		<key>disallowedThingDefs</key>
@@ -216,29 +216,29 @@
 
 <!--ImplantBionicSpecial-->
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>Defs/RecipeDef[defName = "InstallNeurocalculator" or defName = "InstallLearningAssistant" or defName = "InstallCircadianAssistant" or defName = "InstallCircadianHalfCycler" or defName = "InstallToughskinGland" or defName = "InstallStoneskinGland" or defName = "InstallArmorskinGland"]</xpath>
+		<xpath>Defs/RecipeDef[defName = "InstallPsychicSensitizer" or defName = "InstallPsychicHarmonizer" or defName = "InstallPsychicReader"]</xpath>
 		<key>workAmount</key>
 		<value>4000</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>Defs/RecipeDef[defName = "InstallNeurocalculator" or defName = "InstallLearningAssistant" or defName = "InstallCircadianAssistant" or defName = "InstallCircadianHalfCycler" or defName = "InstallToughskinGland" or defName = "InstallStoneskinGland" or defName = "InstallArmorskinGland"]</xpath>
+		<xpath>Defs/RecipeDef[defName = "InstallPsychicSensitizer" or defName = "InstallPsychicHarmonizer" or defName = "InstallPsychicReader"]</xpath>
 		<key>deathOnFailedSurgeryChance</key>
 		<value>0.25</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>Defs/RecipeDef[defName = "InstallNeurocalculator" or defName = "InstallLearningAssistant" or defName = "InstallCircadianAssistant" or defName = "InstallCircadianHalfCycler" or defName = "InstallToughskinGland" or defName = "InstallStoneskinGland" or defName = "InstallArmorskinGland"]</xpath>
+		<xpath>Defs/RecipeDef[defName = "InstallPsychicSensitizer" or defName = "InstallPsychicHarmonizer" or defName = "InstallPsychicReader"]</xpath>
 		<key>surgerySuccessChanceFactor</key>
 		<value>1</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>Defs/RecipeDef[defName = "InstallNeurocalculator" or defName = "InstallLearningAssistant" or defName = "InstallCircadianAssistant" or defName = "InstallCircadianHalfCycler" or defName = "InstallToughskinGland" or defName = "InstallStoneskinGland" or defName = "InstallArmorskinGland"]</xpath>
+		<xpath>Defs/RecipeDef[defName = "InstallPsychicSensitizer" or defName = "InstallPsychicHarmonizer" or defName = "InstallPsychicReader"]</xpath>
 		<key>skillRequirements</key>
 		<value>
 			<Medicine>15</Medicine>
 		</value>
 	</Operation>
-	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>Defs/RecipeDef[defName = "InstallNeurocalculator" or defName = "InstallLearningAssistant" or defName = "InstallCircadianAssistant" or defName = "InstallCircadianHalfCycler" or defName = "InstallToughskinGland" or defName = "InstallStoneskinGland" or defName = "InstallArmorskinGland"]/ingredients</xpath>
+	<!--<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
+		<xpath>Defs/RecipeDef[defName = "InstallPsychicSensitizer" or defName = "InstallPsychicHarmonizer" or defName = "InstallPsychicReader"]/ingredients</xpath>
 		<key>li[1]</key>
 		<value>
 			<filter>
@@ -248,9 +248,9 @@
 			</filter>
 			<count>4</count>
 		</value>
-	</Operation>
+	</Operation>-->
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>Defs/RecipeDef[defName = "InstallNeurocalculator" or defName = "InstallLearningAssistant" or defName = "InstallCircadianAssistant" or defName = "InstallCircadianHalfCycler" or defName = "InstallToughskinGland" or defName = "InstallStoneskinGland" or defName = "InstallArmorskinGland"]/fixedIngredientFilter</xpath>
+		<xpath>Defs/RecipeDef[defName = "InstallPsychicSensitizer" or defName = "InstallPsychicHarmonizer" or defName = "InstallPsychicReader"]/fixedIngredientFilter</xpath>
 		<key>disallowedThingDefs</key>
 		<value>
 			<li>MedicineHerbal</li>
