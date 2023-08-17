@@ -86,7 +86,7 @@
 		</value>
 	</Operation>
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
-		<xpath>Defs/RecipeDef[defName = "Tubal Ligation" or defName = "ReverseVasectomy" or defName = "ExtractOvum"]/fixedIngredientFilter</xpath>
+		<xpath>Defs/RecipeDef[defName = "Tubal Ligation" or defName = "ReverseVasectomy" or defName = "ExtractOvum"]</xpath>
 		<key>fixedIngredientFilter</key>
 		<value>
 			<disallowedThingDefs>
