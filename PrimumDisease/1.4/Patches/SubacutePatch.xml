@@ -40,9 +40,9 @@
 				</li>
 				<li Class="PrimumDisease.PD_HediffCompProperties_TransmissionFilth">
 					<virulenceFactor>1</virulenceFactor>
-					<filthPerDay>5</filthPerDay>
+					<filthPerDay>20</filthPerDay>
 					<cleanlinessFactor>0.05</cleanlinessFactor>
-					<expectedExposureForDisease>0.2</expectedExposureForDisease>
+					<expectedExposureForDisease>0.1</expectedExposureForDisease>
 					<capacityFactors>
 						<li>
 							<capacity>Metabolism</capacity>

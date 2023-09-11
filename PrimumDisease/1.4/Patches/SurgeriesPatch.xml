@@ -383,11 +383,11 @@
 			<count>2</count>
 		</value>
 	</Operation>-->
-	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
+	<!--<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
 		<xpath>/Defs/RecipeDef[defName = "InstallNaturalKidney" or defName = "InstallNaturalLung" or defName = "InstallNaturalLiver"]</xpath>
 		<key>addsHediff</key>
 		<value>PD_TransplantRejection</value>
-	</Operation>
+	</Operation>-->
 
 <!--ImplantNaturalComplex-->
 	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
@@ -424,11 +424,11 @@
 			<count>4</count>
 		</value>
 	</Operation>-->
-	<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
+	<!--<Operation Class="PrimumDisease.PatchOperationAddOrReplace">
 		<xpath>/Defs/RecipeDef[defName = "InstallNaturalHeart"]</xpath>
 		<key>addsHediff</key>
 		<value>PD_TransplantRejection</value>
-	</Operation>
+	</Operation>-->
 
 <!--ImplantNaturalSpecial-->
 <!--ImplantBionic-->

@@ -15,7 +15,7 @@
         <gameCondition>PD_MalariaCondition</gameCondition>
         <letterLabel>scourge of musquitoes (malaria)</letterLabel>
         <letterDef>NegativeEvent</letterDef>
-        <baseChance>1.0</baseChance>
+        <baseChance>8.0</baseChance>
         <earliestDay>10</earliestDay>
         <minRefireDays>50</minRefireDays>
         <durationDays>3~7</durationDays>
@@ -35,7 +35,7 @@
         <gameCondition>PD_SleepingSicknessCondition</gameCondition>
         <letterLabel>swarm of tsetse flies (sleeping sickness)</letterLabel>
         <letterDef>NegativeEvent</letterDef>
-        <baseChance>1.0</baseChance>
+        <baseChance>8.0</baseChance>
         <earliestDay>10</earliestDay>
         <minRefireDays>50</minRefireDays>
         <durationDays>2~5</durationDays>
@@ -55,7 +55,7 @@
         <gameCondition>PD_PlagueCondition</gameCondition>
         <letterLabel>swarm of fleas (plague)</letterLabel>
         <letterDef>NegativeEvent</letterDef>
-        <baseChance>1.0</baseChance>
+        <baseChance>8.0</baseChance>
         <earliestDay>10</earliestDay>
         <minRefireDays>50</minRefireDays>
         <durationDays>4~9</durationDays>
