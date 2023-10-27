@@ -745,7 +745,7 @@
 					<hediffGivers>
 						<li Class="HediffGiver_Random">
 							<hediff>Carcinoma</hediff>
-							<mtbDays>12</mtbDays>
+							<mtbDays>24</mtbDays>
 							<partsToAffect>
 								<li>Stomach</li>
 							</partsToAffect>
@@ -786,7 +786,7 @@
 					<hediffGivers>
 						<li Class="HediffGiver_Random">
 							<hediff>Carcinoma</hediff>
-							<mtbDays>12</mtbDays>
+							<mtbDays>24</mtbDays>
 							<partsToAffect>
 								<li>Stomach</li>
 							</partsToAffect>
@@ -828,7 +828,7 @@
 					<hediffGivers>
 						<li Class="HediffGiver_Random">
 							<hediff>Carcinoma</hediff>
-							<mtbDays>12</mtbDays>
+							<mtbDays>24</mtbDays>
 							<partsToAffect>
 								<li>Stomach</li>
 							</partsToAffect>
