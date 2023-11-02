@@ -15,13 +15,13 @@
 	<HediffDef ParentName="DiseaseBase"><!--Transplant rejection. Applied when transplanting a natural organ-->
 		<defName>PD_TransplantRejection</defName>
 		<label>Transplant rejection</label>
-		<description>This organ was transplanted recently, and requires regular immunosuppresive treatment to keep the  body from rejecting it--and destroying the organ. Transplant rejection resolves by itself, but this may take years.</description>
+		<description>This organ was transplanted recently, and requires regular immunosuppresive treatment to keep the  body from rejecting it--and destroying the organ. Overly aggressive treatment may result in cataracts; herabl medicine is perfect for minimizing side-effects. Transplant rejection resolves by itself</description>
 		<descriptionShort>The recipient's body rejects foreign organs, and requires regular immunosupression. Eventually resolves.</descriptionShort>
 		<hediffClass>HediffWithComps</hediffClass>
 		<!--<lethalSeverity>1</lethalSeverity>-->
 		<!--<makesSickThought>true</makesSickThought>-->
 		<minSeverity>0.001</minSeverity>
-		<initialSeverity>0.5</initialSeverity>
+		<initialSeverity>0.45</initialSeverity>
 		<stages>
 			<li>
 				<label>immunosuppression</label>
@@ -48,7 +48,7 @@
 				</hediffGivers>
 			</li>
 			<li>
-				<minSeverity>0.4</minSeverity>
+				<minSeverity>0.1</minSeverity>
 				<label>minor rejection</label>
 				<painOffset>0.05</painOffset>
 				<partEfficiencyOffset>-0.3</partEfficiencyOffset>
@@ -91,15 +91,14 @@
 		<tendable>true</tendable>
 		<comps>
 			<li Class="HediffCompProperties_Immunizable">
-				<severityPerDayNotImmune>0.15</severityPerDayNotImmune>
-				<severityPerDayNotImmuneRandomFactor> 1~3 </severityPerDayNotImmuneRandomFactor>
+				<severityPerDayNotImmune>0.195</severityPerDayNotImmune>
 			</li>	
 			<li Class="HediffCompProperties_TendDuration">
-				<severityPerDayTended>-0.6</severityPerDayTended>
+				<severityPerDayTended>-0.3</severityPerDayTended>
 				<baseTendDurationHours>48</baseTendDurationHours>
 			</li>
 			<li Class="HediffCompProperties_Disappears">
-				<disappearsAfterTicks>1800000~10800000</disappearsAfterTicks> <!-- 30 ! 180 days -->
+				<disappearsAfterTicks>900000~3600000</disappearsAfterTicks> <!-- 15 ! 60 days -->
 				<showRemainingTime>false</showRemainingTime>
 			</li>
 		</comps>

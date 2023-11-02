@@ -39,10 +39,10 @@
 					<disappearsAtTotalTendQuality>3</disappearsAtTotalTendQuality>
 				</li>
 				<li Class="PrimumDisease.PD_HediffCompProperties_TransmissionFilth">
-					<virulenceFactor>0.25</virulenceFactor>
+					<virulenceFactor>0.75</virulenceFactor>
 					<filthPerDay>10</filthPerDay>
 					<cleanlinessFactor>0.05</cleanlinessFactor>
-					<expectedExposureForDisease>0.1</expectedExposureForDisease>
+					<expectedExposureForDisease>1</expectedExposureForDisease>
 					<capacityFactors>
 						<li>
 							<capacity>Metabolism</capacity>
