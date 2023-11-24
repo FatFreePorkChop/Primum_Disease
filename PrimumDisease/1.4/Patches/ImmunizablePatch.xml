@@ -93,7 +93,7 @@
 					<hediff>Plague</hediff>
 					<filthPerDay>40</filthPerDay>
 					<cleanlinessFactor>0.1</cleanlinessFactor>
-					<expectedExposureForDisease>0.05</expectedExposureForDisease>
+					<expectedExposureForDisease>0.2</expectedExposureForDisease>
 					<capacityFactors>
 						<li>
 							<capacity>BloodPumping</capacity>
