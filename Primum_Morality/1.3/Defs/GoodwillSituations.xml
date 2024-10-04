@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<Defs>
-  <GoodwillSituationDef>
-    <defName>Karma</defName>
-    <label>Effect of karma</label>
-    <workerClass>Primum_Morality.GoodwillSituationWorker_Karma</workerClass>
-    <naturalGoodwillOffset>0</naturalGoodwillOffset>
-  </GoodwillSituationDef>
-</Defs>
