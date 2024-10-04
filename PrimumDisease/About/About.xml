@@ -7,7 +7,7 @@ Consider standardizing more stuff. In vanilla, nuclear stomach causes cancer/120
 	<name>Primum Disease</name>
 	<author>Nooberthetuber</author>
 	<supportedVersions>
-		<li>1.4</li>
+		<li>1.5</li>
 	</supportedVersions>
 	<packageId>primum.disease</packageId>
 	<modDependencies>
